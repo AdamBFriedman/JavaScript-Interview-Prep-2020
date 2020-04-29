@@ -185,18 +185,19 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb12 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  largestNumber = nums => \{\cb1 \
-\cb12   \cf4 \strokec4 const\cf6 \strokec6  sortedNums = nums.map(elem => elem.toString() );\cb1 \
+\cb12   \cf4 \strokec4 const\cf6 \strokec6  finalNums = nums.map(elem => elem.toString());\cb1 \
 \cb12     \cf13 \strokec13 // -1 a goes before b\cf6 \cb1 \strokec6 \
 \cb12     \cf13 \strokec13 // 0  no change\cf6 \cb1 \strokec6 \
 \cb12     \cf13 \strokec13 // 1  b goes before a\cf6 \cb1 \strokec6 \
 \cb12     \cf4 \strokec4 const\cf6 \strokec6  compareFunc = (a, b) => \cf14 \strokec14 `\cf6 \strokec6 $\{b\}$\{a\}\cf14 \strokec14 `\cf6 \strokec6  - \cf14 \strokec14 `\cf6 \strokec6 $\{a\}$\{b\}\cf14 \strokec14 `\cf6 \cb1 \strokec6 \
 \
-\cb12     sortedNums.sort(compareFunc);\cb1 \
+\cb12     finalNums.sort(compareFunc);\cb1 \
 \cb12     \cb1 \
-\cb12     \cf4 \strokec4 if\cf6 \strokec6 (sortedNums[\cf15 \strokec15 0\cf6 \strokec6 ] === \cf14 \strokec14 '0'\cf6 \strokec6 ) \cf4 \strokec4 return\cf6 \strokec6  \cf14 \strokec14 '0'\cf6 \strokec6 ;\cb1 \
+\cb12     \cf4 \strokec4 if\cf6 \strokec6 (finalNums[\cf15 \strokec15 0\cf6 \strokec6 ] === \cf14 \strokec14 '0'\cf6 \strokec6 ) \cf4 \strokec4 return\cf6 \strokec6  \cf14 \strokec14 '0'\cf6 \strokec6 ;\cb1 \
 \cb12     \cb1 \
-\cb12     \cf4 \strokec4 return\cf6 \strokec6  sortedNums.join(\cf14 \strokec14 ''\cf6 \strokec6 );\cb1 \
+\cb12     \cf4 \strokec4 return\cf6 \strokec6  finalNums.join(\cf14 \strokec14 ''\cf6 \strokec6 );\cb1 \
 \cb12 \};\cb1 \
+\
 \
 \cf16 \cb12 \strokec16 Input\cf6 \strokec6 : [\cf15 \strokec15 3\cf6 \strokec6 ,\cf15 \strokec15 30\cf6 \strokec6 ,\cf15 \strokec15 34\cf6 \strokec6 ,\cf15 \strokec15 5\cf6 \strokec6 ,\cf15 \strokec15 9\cf6 \strokec6 ]\cb1 \
 \cf16 \cb12 \strokec16 Output\cf6 \strokec6 : \cf14 \strokec14 "9534330"\cf6 \cb1 \strokec6 \
