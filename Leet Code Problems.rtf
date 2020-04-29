@@ -3,10 +3,10 @@
 }
 {\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red255\green255\blue255;\red0\green0\blue255;
 \red255\green255\blue254;\red0\green0\blue0;\red14\green110\blue109;\red19\green120\blue72;\red154\green154\blue154;
-\red191\green28\blue37;\red255\green255\blue254;}
+\red191\green28\blue37;\red255\green255\blue254;\red144\green1\blue18;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c100000;
 \cssrgb\c100000\c100000\c99608;\cssrgb\c0\c0\c0;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c66667\c66667\c66667;
-\cssrgb\c80392\c19216\c19216;\cssrgb\c100000\c100000\c99608;}
+\cssrgb\c80392\c19216\c19216;\cssrgb\c100000\c100000\c99608;\cssrgb\c63922\c8235\c8235;}
 \margl1440\margr1440\vieww13720\viewh17440\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
@@ -144,6 +144,41 @@
 \cb5     \cf4 \strokec4 return\cf6 \strokec6  count\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 \outl0\strokewidth0 // Number of Islands
+\f2\b0\fs28 \cf6 \cb11 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  numIslands = grid => \{\cb1 \
+\cb5   \cf4 \strokec4 const\cf6 \strokec6  height = grid.length;\cb1 \
+\cb5   \cf4 \strokec4 const\cf6 \strokec6  width = height && grid[\cf8 \strokec8 0\cf6 \strokec6 ].length;\cb1 \
+\cb5   \cf4 \strokec4 let\cf6 \strokec6  count = \cf8 \strokec8 0\cf6 \strokec6 ;\cb1 \
+\cb5   \cb1 \
+\cb5   \cf4 \strokec4 for\cf6 \strokec6  (\cf4 \strokec4 let\cf6 \strokec6  row = \cf8 \strokec8 0\cf6 \strokec6 ; row < height; row++) \{\cb1 \
+\cb5     \cf4 \strokec4 for\cf6 \strokec6  (\cf4 \strokec4 let\cf6 \strokec6  col = \cf8 \strokec8 0\cf6 \strokec6 ; col < width; col++) \{\cb1 \
+\cb5       \cf4 \strokec4 if\cf6 \strokec6  (grid[row][col] === \cf12 \strokec12 '0'\cf6 \strokec6 ) \cf4 \strokec4 continue\cf6 \strokec6 ;\cb1 \
+\cb5       \cb1 \
+\cb5       count++;\cb1 \
+\cb5       dfs(row, col);\cb1 \
+\cb5     \}\cb1 \
+\cb5   \}\cb1 \
+\cb5   \cf4 \strokec4 return\cf6 \strokec6  count;\cb1 \
+\cb5   \cb1 \
+\cb5   \cf4 \strokec4 function\cf6 \strokec6  dfs(row, col) \{\cb1 \
+\cb5     \cf4 \strokec4 if\cf6 \strokec6  (row < \cf8 \strokec8 0\cf6 \strokec6  || col < \cf8 \strokec8 0\cf6 \strokec6  || row === height || col === width || grid[row][col] === \cf12 \strokec12 '0'\cf6 \strokec6 ) \cf4 \strokec4 return\cf6 \strokec6 ;\cb1 \
+\cb5     \cb1 \
+\cb5     grid[row][col] = \cf12 \strokec12 '0'\cf6 \strokec6 ;\cb1 \
+\cb5     dfs(row-\cf8 \strokec8 1\cf6 \strokec6 , col);\cb1 \
+\cb5     dfs(row+\cf8 \strokec8 1\cf6 \strokec6 , col);\cb1 \
+\cb5     dfs(row, col-\cf8 \strokec8 1\cf6 \strokec6 );\cb1 \
+\cb5     dfs(row, col+\cf8 \strokec8 1\cf6 \strokec6 );\cb1 \
+\cb5   \}\cb1 \
+\cb5 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b\fs36 \cf2 \cb3 \outl0\strokewidth0 // Next Problem
