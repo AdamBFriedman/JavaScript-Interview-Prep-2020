@@ -9,7 +9,7 @@
 \cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c100000\c99608;\cssrgb\c66667\c66667\c66667;
 \cssrgb\c1680\c19835\c100000;\cssrgb\c25098\c25098\c25490;\cssrgb\c80392\c19216\c19216;\cssrgb\c100000\c100000\c99608;\cssrgb\c0\c50196\c50196;
 \cssrgb\c3529\c53333\c35294;\cssrgb\c0\c0\c0\c83922;}
-\margl1440\margr1440\vieww15720\viewh17380\viewkind0
+\margl1440\margr1440\vieww16020\viewh17440\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -641,14 +641,16 @@ Bob\'92s initial position will be represented by a \'91B\'92 and the house locat
 \cb13   removeConnection(fr, to) \{\cb1 \
 \cb13     \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[fr][to]\cb1 \
 \cb13     \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[to][fr]\cb1 \
-\cb13   \}\cb1 \
-\
+\cb13   \}\cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
+\cb8   hasConnection(fr, to) \{\cb1 \
+\cb8     \cf5 return\cf4  \cf5 this\cf4 .storage[fr].hasOwnProperty(to);\cb1 \
+\cb8   \}\cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
 \cb13   contains(target) \{\cb1 \
 \cb13     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage.hasOwnProperty(target);\cb1 \
-\cb13   \}\cb1 \
-\
-\cb13   hasConnection(fr, to) \{\cb1 \
-\cb13     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[fr].hasOwnProperty(to);\cb1 \
 \cb13   \}\cb1 \
 \
 \cb13   remove(value) \{\cb1 \
