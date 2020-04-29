@@ -287,7 +287,7 @@ reverse() \{\
 \
   search(key) \{\
     \cf5 let\cf4  idx = hash(key, \cf5 this\cf4 .size)\
-    \cf5 return\cf4  \cf5 this\cf4 .buckets[idx].\cf5 get\cf4 (key)\
+    \cf5 return\cf4  \cf5 this\cf4 .buckets[idx].\cf5 get\cf4 (key) || null\
   \}\
 \}
 \f2\fs36 \cf0 \kerning1\expnd0\expndtw0 \
