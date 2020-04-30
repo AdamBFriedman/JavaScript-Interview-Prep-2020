@@ -3,11 +3,11 @@
 \f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 CourierNewPSMT;}
 {\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red255\green255\blue255;\red0\green0\blue0;
 \red0\green0\blue255;\red14\green110\blue109;\red19\green120\blue72;\red255\green255\blue254;\red255\green255\blue254;
-\red14\green110\blue109;\red154\green154\blue154;\red19\green120\blue72;\red154\green154\blue154;\red0\green0\blue255;
+\red14\green110\blue109;\red19\green120\blue72;\red154\green154\blue154;\red154\green154\blue154;\red0\green0\blue255;
 \red49\green49\blue50;\red191\green28\blue37;\red0\green0\blue0;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
 \cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c100000\c99608;\cssrgb\c100000\c100000\c99608;
-\cssrgb\c0\c50196\c50196;\cssrgb\c66667\c66667\c66667;\cssrgb\c3529\c53333\c35294;\cssrgb\c66667\c66667\c66667;\cssrgb\c1680\c19835\c100000;
+\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c66667\c66667\c66667;\cssrgb\c66667\c66667\c66667;\cssrgb\c1680\c19835\c100000;
 \cssrgb\c25098\c25098\c25490;\cssrgb\c80392\c19216\c19216;\cssrgb\c0\c0\c0\c83922;}
 \margl1440\margr1440\vieww16020\viewh17440\viewkind0
 \deftab720
@@ -79,42 +79,64 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 // Priority Queue (FIFO)
 \f2\b0 \cf0 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-\cf0 function PriorityQueue () \{\
-    var collection = [];\
-    this.printCollection = function() \{\
-      (console.log(collection));\
-    \};\
-    this.enqueue = function(element)\{\
-        if (this.isEmpty())\{ \
-            collection.push(element);\
-        \} else \{\
-            var added = false;\
-            for (var i=0; i<collection.length; i++)\{\
-                 if (element[1] < collection[i][1])\{ //checking priorities\
-                    collection.splice(i,0,element);\
-                    added = true;\
-                    break;\
-                \}\
-            \}\
-            if (!added)\{\
-                collection.push(element);\
-            \}\
-        \}\
-    \};\
-    this.dequeue = function() \{\
-        var value = collection.shift();\
-        return value[0];\
-    \};\
-    this.front = function() \{\
-        return collection[0];\
-    \};\
-    this.size = function() \{\
-        return collection.length; \
-    \};\
-    this.isEmpty = function() \{\
-        return (collection.length === 0); \
-    \};\
-\}\
+\cf0 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f1\fs28 \cf5 \cb9 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 PriorityQueue\cf4 \strokec4  \{\cb1 \
+\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 .collection = [];\cb1 \
+\cb9   \}\cb1 \
+\
+\cb9   print() \{\cb1 \
+\cb9       (console.log(\cf5 \strokec5 this\cf4 \strokec4 .collection));\cb1 \
+\cb9     \};\cb1 \
+\
+\cb9   enqueue(element)\{\cb1 \
+\cb9       \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .isEmpty())\{ \cb1 \
+\cb9           \cf5 \strokec5 this\cf4 \strokec4 .collection.push(element);\cb1 \
+\cb9       \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
+\cb9           \cf5 \strokec5 var\cf4 \strokec4  added = \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
+\cb9           \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 var\cf4 \strokec4  i=\cf11 \strokec11 0\cf4 \strokec4 ; i<\cf5 \strokec5 this\cf4 \strokec4 .collection.length; i++)\{\cb1 \
+\cb9                 \cf5 \strokec5 if\cf4 \strokec4  (element[\cf11 \strokec11 1\cf4 \strokec4 ] < \cf5 \strokec5 this\cf4 \strokec4 .collection[i][\cf11 \strokec11 1\cf4 \strokec4 ])\{ \cf12 \strokec12 //checking priorities\cf4 \cb1 \strokec4 \
+\cb9                   \cf5 \strokec5 this\cf4 \strokec4 .collection.splice(i,\cf11 \strokec11 0\cf4 \strokec4 ,element);\cb1 \
+\cb9                   added = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
+\cb9                   \cf5 \strokec5 break\cf4 \strokec4 ;\cb1 \
+\cb9               \}\cb1 \
+\cb9           \}\cb1 \
+\cb9           \cf5 \strokec5 if\cf4 \strokec4  (!added)\{\cb1 \
+\cb9               \cf5 \strokec5 this\cf4 \strokec4 .collection.push(element);\cb1 \
+\cb9           \}\cb1 \
+\cb9       \}\cb1 \
+\cb9   \};\cb1 \
+\
+\cb9   dequeue() \{\cb1 \
+\cb9       \cf5 \strokec5 var\cf4 \strokec4  value = \cf5 \strokec5 this\cf4 \strokec4 .collection.shift();\cb1 \
+\cb9       \cf5 \strokec5 return\cf4 \strokec4  value[\cf11 \strokec11 0\cf4 \strokec4 ];\cb1 \
+\cb9   \};\cb1 \
+\
+\cb9   front() \{\cb1 \
+\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .collection[\cf11 \strokec11 0\cf4 \strokec4 ];\cb1 \
+\cb9   \};\cb1 \
+\
+\cb9   size() \{\cb1 \
+\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .collection.length; \cb1 \
+\cb9   \};\cb1 \
+\
+\cb9   isEmpty() \{\cb1 \
+\cb9       \cf5 \strokec5 return\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .collection.length === \cf11 \strokec11 0\cf4 \strokec4 ); \cb1 \
+\cb9   \};\cb1 \
+\cb9 \}\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf12 \cb9 \strokec12 // let pq = new PriorityQueue(); \cf4 \cb1 \strokec4 \
+\cf12 \cb9 \strokec12 // pq.enqueue(['PS4', 3]); \cf4 \cb1 \strokec4 \
+\cf12 \cb9 \strokec12 // pq.enqueue(['XBox', 2]);\cf4 \cb1 \strokec4 \
+\cf12 \cb9 \strokec12 // pq.enqueue(['Nintendo', 1])\cf4 \cb1 \strokec4 \
+\cf12 \cb9 \strokec12 // pq.enqueue(['PC', 3])\cf4 \cb1 \strokec4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\fs36 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -130,26 +152,26 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9 \}\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf11 \cb9 \strokec11 // Create/Get/Remove Nodes From Linked List\cf4 \cb1 \strokec4 \
+\cf12 \cb9 \strokec12 // Create/Get/Remove Nodes From Linked List\cf4 \cb1 \strokec4 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf5 \cb9 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 LinkedList\cf4 \strokec4  \{\cb1 \
 \cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Insert first node\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Insert first node\cf4 \cb1 \strokec4 \
 \cb9   insertFirst(data) \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data, \cf5 \strokec5 this\cf4 \strokec4 .head);\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Insert last node\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Insert last node\cf4 \cb1 \strokec4 \
 \cb9   insertLast(data) \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data);\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current;\cb1 \
 \
-\cb9     \cf11 \strokec11 // If empty, make head\cf4 \cb1 \strokec4 \
+\cb9     \cf12 \strokec12 // If empty, make head\cf4 \cb1 \strokec4 \
 \cb9     \cf5 \strokec5 if\cf4 \strokec4  (!\cf5 \strokec5 this\cf4 \strokec4 .head) \{\cb1 \
 \cb9       \cf5 \strokec5 this\cf4 \strokec4 .head = node;\cb1 \
 \cb9     \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
@@ -165,15 +187,15 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Insert at index\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Insert at index\cf4 \cb1 \strokec4 \
 \cb9   insertAt(data, index) \{\cb1 \
-\cb9     \cf11 \strokec11 //  If index is out of range\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf12 \strokec12 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
+\cb9     \cf12 \strokec12 //  If index is out of range\cf4 \cb1 \strokec4 \
+\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
 \cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
 \cb9     \}\cb1 \
 \
-\cb9     \cf11 \strokec11 // If first index\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf12 \strokec12 0\cf4 \strokec4 ) \{\cb1 \
+\cb9     \cf12 \strokec12 // If first index\cf4 \cb1 \strokec4 \
+\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
 \cb9       \cf5 \strokec5 this\cf4 \strokec4 .insertFirst(data);\cb1 \
 \cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
 \cb9     \}\cb1 \
@@ -181,14 +203,14 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9     \cf5 \strokec5 const\cf4 \strokec4  node = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data);\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current, previous;\cb1 \
 \
-\cb9     \cf11 \strokec11 // Set current to first\cf4 \cb1 \strokec4 \
+\cb9     \cf12 \strokec12 // Set current to first\cf4 \cb1 \strokec4 \
 \cb9     current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \
 \cb9     \cf5 \strokec5 while\cf4 \strokec4  (count < index) \{\cb1 \
-\cb9       previous = current; \cf11 \strokec11 // Node before index\cf4 \cb1 \strokec4 \
+\cb9       previous = current; \cf12 \strokec12 // Node before index\cf4 \cb1 \strokec4 \
 \cb9       count++;\cb1 \
-\cb9       current = current.next; \cf11 \strokec11 // Node after index\cf4 \cb1 \strokec4 \
+\cb9       current = current.next; \cf12 \strokec12 // Node after index\cf4 \cb1 \strokec4 \
 \cb9     \}\cb1 \
 \
 \cb9     node.next = current;\cb1 \
@@ -197,10 +219,10 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Get at index\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Get at index\cf4 \cb1 \strokec4 \
 \cb9   getAt(index) \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \
 \cb9     \cf5 \strokec5 while\cf4 \strokec4  (current) \{\cb1 \
 \cb9       \cf5 \strokec5 if\cf4 \strokec4  (count == index) \{\cb1 \
@@ -213,18 +235,18 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Remove at index\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Remove at index\cf4 \cb1 \strokec4 \
 \cb9   removeAt(index) \{\cb1 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf12 \strokec12 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
+\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
 \cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
 \cb9     \}\cb1 \
 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  previous;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \
-\cb9     \cf11 \strokec11 // Remove first\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf12 \strokec12 0\cf4 \strokec4 ) \{\cb1 \
+\cb9     \cf12 \strokec12 // Remove first\cf4 \cb1 \strokec4 \
+\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
 \cb9       \cf5 \strokec5 this\cf4 \strokec4 .head = current.next;\cb1 \
 \cb9     \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
 \cb9       \cf5 \strokec5 while\cf4 \strokec4  (count < index) \{\cb1 \
@@ -239,13 +261,13 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size--;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Clear list\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Clear list\cf4 \cb1 \strokec4 \
 \cb9   clearList() \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   \cf11 \strokec11 // Print list data\cf4 \cb1 \strokec4 \
+\cb9   \cf12 \strokec12 // Print list data\cf4 \cb1 \strokec4 \
 \cb9   printListData() \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
 \
@@ -768,7 +790,7 @@ Bob\'92s initial position will be represented by a \'91B\'92 and the house locat
 \cf5 \cb9 \outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Graph\cf4 \strokec4  \{\cb1 \
 \cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .storage = \{\};\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   add(value) \{\cb1 \

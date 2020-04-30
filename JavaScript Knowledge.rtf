@@ -674,6 +674,31 @@ XSS - Cross Site Scripting is \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
+\f2\b\fs36 \cf4 \cb3 // Improve Web Latency
+\f1\b0\fs30 \cf17 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f10\fs29\fsmilli14667 \cf10 \cb1 //BASELINE\
+Open \'93Audits\'94 panel (where \'93Console\'94 panel is).  In Audits is Throttling - how the page performs on a mobile device.  You then click the \'93Run Audits\'94 button and that will return a performance evaluation that measures load performance and looks for bottlenecks.  Number at top is your overall score (the higher the better).  \
+Below that is the Metrics section.\
+Below that is an image section that shows thumbnails of how your page loads.  \
+Below that is an Opportunities section that offer specific tips.\
+Below that is the Diagnostics section.\
+Below that is the Passed Audits section which shows what you\'92re doing well.\
+\
+ //EXPERIMENT\
+Change one thing from Opportunities section\
+Run Audit to see if performance improved\
+\
+1.  Enable Text Compression\
+2.  Handling Images\
+	a. Resize during build process\
+	b. Create multiple sizes and use secret\
+	c. Use an image CDN\
+3.  Render Blocking (3rd party libraries)\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
 \f2\b\fs36 \cf4 \cb3 // Etc Etc Etc
 \f1\b0\fs30 \cf17 \
 \pard\pardeftab720\sl400\partightenfactor0
