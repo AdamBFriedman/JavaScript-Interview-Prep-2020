@@ -27,20 +27,20 @@
 
 \f2\fs28 \cf4 \cb5 \expnd0\expndtw0\kerning0
 let\cf6  twoSum = (nums, target) => \{\cb1 \
-\cb5     \cf4 let\cf6  numberIndex = \cf4 new\cf6  \cf7 Map\cf6 ();\cb1 \
+\cb5     \cf4 let\cf6  idx = \cf4 new\cf6  \cf7 Map\cf6 ();\cb1 \
 \cb5     \cf4 let\cf6  result = [];\cb1 \
 \
 \cb5     nums.forEach((num, i) => \{\cb1 \
 \cb5       \cf4 let\cf6  complement = target - num;\cb1 \
 \
-\cb5       \cf4 if\cf6  (numberIndex.has(complement)) \{\cb1 \
-\cb5         result[\cf8 0\cf6 ] = numberIndex.\cf4 get\cf6 (complement);\cb1 \
+\cb5       \cf4 if\cf6  (idx.has(complement)) \{\cb1 \
+\cb5         result[\cf8 0\cf6 ] = idx.\cf4 get\cf6 (complement);\cb1 \
 \cb5         result[\cf8 1\cf6 ] = i;\cb1 \
 \
 \cb5         \cf4 return\cf6  result;\cb1 \
 \cb5       \}\cb1 \
 \
-\cb5       numberIndex.\cf4 set\cf6 (num, i);\cb1 \
+\cb5       idx.\cf4 set\cf6 (num, i);\cb1 \
 \cb5     \})\cb1 \
 \
 \cb5     \cf4 return\cf6  result;\cb1 \
