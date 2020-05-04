@@ -407,6 +407,122 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 
 \f0\b\fs36 \cf2 \cb3 // Next Problem
 \f2\b0\fs28 \cf6 \cb5 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 On an\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 N
+\f3\fs28 \cf17 \cb3 \strokec17 x
+\f4\fs26 \cf18 \cb19 \strokec18 N
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0chessboard, a knight starts at the\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 r
+\f3\fs28 \cf17 \cb3 \strokec17 -th row and\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 c
+\f3\fs28 \cf17 \cb3 \strokec17 -th column and attempts to make exactly\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 K
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0moves. The rows and columns are 0 indexed, so the top-left square is\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 (0, 0)
+\f3\fs28 \cf17 \cb3 \strokec17 , and the bottom-right square is\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 (N-1, N-1)
+\f3\fs28 \cf17 \cb3 \strokec17 .\
+A chess knight has 8 possible moves it can make, as illustrated below. Each move is two squares in a cardinal direction, then one square in an orthogonal direction.\
+Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even if the piece would go off the chessboard) and moves there.\
+The knight continues moving until it has made exactly\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 K
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0moves or has moved off the chessboard. Return the probability that the knight remains on the board after it has stopped moving.\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f2\b0  3, 2, 0, 0\
+
+\f0\b Output:
+\f2\b0  0.0625\
+
+\f0\b Explanation:
+\f2\b0  There are two moves (to (1,2), (2,1)) that will keep the knight on the board.\
+From each of those positions, there are also two moves that will keep the knight on the board.\
+The total probability the knight stays on the board is 0.0625.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf6 \cb5 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb12 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  knightProbability = (\cf16 \strokec16 N\cf6 \strokec6 , \cf16 \strokec16 K\cf6 \strokec6 , r, c) => \{\cb1 \
+\cb12     \cb1 \
+\cb12     \cf4 \strokec4 const\cf6 \strokec6  dp = \cf4 \strokec4 new\cf6 \strokec6  \cf16 \strokec16 Array\cf6 \strokec6 (\cf16 \strokec16 N\cf6 \strokec6 );\cb1 \
+\cb12     \cf4 \strokec4 const\cf6 \strokec6  movesR = [\cf15 \strokec15 2\cf6 \strokec6 ,\cf15 \strokec15 2\cf6 \strokec6 ,-\cf15 \strokec15 2\cf6 \strokec6 ,-\cf15 \strokec15 2\cf6 \strokec6 ,\cf15 \strokec15 1\cf6 \strokec6 ,\cf15 \strokec15 1\cf6 \strokec6 ,-\cf15 \strokec15 1\cf6 \strokec6 ,-\cf15 \strokec15 1\cf6 \strokec6 ];\cb1 \
+\cb12     \cf4 \strokec4 const\cf6 \strokec6  movesC = [\cf15 \strokec15 1\cf6 \strokec6 ,-\cf15 \strokec15 1\cf6 \strokec6 ,\cf15 \strokec15 1\cf6 \strokec6 ,-\cf15 \strokec15 1\cf6 \strokec6 ,\cf15 \strokec15 2\cf6 \strokec6 ,-\cf15 \strokec15 2\cf6 \strokec6 ,\cf15 \strokec15 2\cf6 \strokec6 ,-\cf15 \strokec15 2\cf6 \strokec6 ]; \cb1 \
+\cb12     \cb1 \
+\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  col = \cf15 \strokec15 0\cf6 \strokec6 ; col < dp.length; col++) \{\cb1 \
+\cb12         dp[col] = \cf4 \strokec4 new\cf6 \strokec6  \cf16 \strokec16 Array\cf6 \strokec6 (\cf16 \strokec16 N\cf6 \strokec6 );\cb1 \
+\cb12         \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  k = \cf15 \strokec15 0\cf6 \strokec6 ; k < dp[col].length; k++) \{\cb1 \
+\cb12             dp[col][k] = [\cf15 \strokec15 1\cf6 \strokec6 ]; \cf13 \strokec13 // 0 move has 100% of staying on the board\cf6 \cb1 \strokec6 \
+\cb12         \}\cb1 \
+\cb12     \}\cb1 \
+\cb12     \cb1 \
+\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  s = \cf15 \strokec15 1\cf6 \strokec6 ; s < \cf16 \strokec16 K\cf6 \strokec6  + \cf15 \strokec15 1\cf6 \strokec6 ; s++) \{\cb1 \
+\cb12         \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  i = \cf15 \strokec15 0\cf6 \strokec6 ; i < \cf16 \strokec16 N\cf6 \strokec6 ; i++) \{\cb1 \
+\cb12             \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  j = \cf15 \strokec15 0\cf6 \strokec6 ; j < \cf16 \strokec16 N\cf6 \strokec6 ; j++) \{\cb1 \
+\cb12                 \cf4 \strokec4 let\cf6 \strokec6  probability = \cf15 \strokec15 0.0\cf6 \strokec6 ;\cb1 \
+\cb12                 \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  m = \cf15 \strokec15 0\cf6 \strokec6 ; m < \cf15 \strokec15 8\cf6 \strokec6 ; m++) \{\cb1 \
+\cb12                     \cf4 \strokec4 const\cf6 \strokec6  nextRow = i + movesR[m];\cb1 \
+\cb12                     \cf4 \strokec4 const\cf6 \strokec6  nextCol = j + movesC[m];\cb1 \
+\cb12                     \cf4 \strokec4 if\cf6 \strokec6 (nextRow >= \cf15 \strokec15 0\cf6 \strokec6  && nextRow < \cf16 \strokec16 N\cf6 \strokec6  && nextCol >= \cf15 \strokec15 0\cf6 \strokec6  && nextCol < \cf16 \strokec16 N\cf6 \strokec6 ) \{\cb1 \
+\cb12                         probability += dp[nextRow][nextCol][s-\cf15 \strokec15 1\cf6 \strokec6 ]/\cf15 \strokec15 8.0\cf6 \strokec6 ; \cf13 \strokec13 // % of chance out of 8 moves\cf6 \cb1 \strokec6 \
+\cb12                     \}\cb1 \
+\cb12                 \}\cb1 \
+\cb12                 dp[i][j][s] = probability;\cb1 \
+\cb12             \}\cb1 \
+\cb12         \}\cb1 \
+\cb12     \}\cb1 \
+\cb12     \cb1 \
+\cb12     \cf4 \strokec4 return\cf6 \strokec6  dp[r][c][\cf16 \strokec16 K\cf6 \strokec6 ];\cb1 \
+\cb12 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f2\b0\fs28 \cf6 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 const\cf6  functionName = arr => \{\cb1 \
+\
+\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f2\b0\fs28 \cf6 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 const\cf6  functionName = arr => \{\cb1 \
+\
+\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f2\b0\fs28 \cf6 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 const\cf6  functionName = arr => \{\cb1 \
+\
+\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f2\b0\fs28 \cf6 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 const\cf6  functionName = arr => \{\cb1 \
+\
+\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f2\b0\fs28 \cf6 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 const\cf6  functionName = arr => \{\cb1 \
