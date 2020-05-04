@@ -310,7 +310,7 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb12 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  createTargetArray = (nums, idx) => \{\cb1 \
 \cb12     \cf4 \strokec4 let\cf6 \strokec6  target = []\cb1 \
-\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 const\cf6 \strokec6  i \cf4 \strokec4 in\cf6 \strokec6  nums)target.splice(idx[i], \cf15 \strokec15 0\cf6 \strokec6 , nums[i])\cb1 \
+\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  num \cf4 \strokec4 in\cf6 \strokec6  nums)target.splice(idx[num], \cf15 \strokec15 0\cf6 \strokec6 , nums[num])\cb1 \
 \cb12     \cf4 \strokec4 return\cf6 \strokec6  target\cb1 \
 \cb12 \};\cb1 \
 \
