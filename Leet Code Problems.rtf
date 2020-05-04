@@ -14,7 +14,7 @@
 }
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\margl1440\margr1440\vieww14020\viewh17440\viewkind0
+\margl1440\margr1440\vieww14320\viewh17440\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -96,7 +96,7 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \cb5     \cf4 if\cf6  (mid * mid < num) left = mid + \cf8 1\cf6 ;\cb1 \
 \cb5   \}\cb1 \
 \
-\cb5   \cf4 return\cf6  left - \cf8 1\cf6 ;\cb1 \
+\cb5   \cf4 return\cf6  left;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
@@ -118,7 +118,7 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \cb5     \cf9 /* the second index will be the greater value of the first house or the second house */\cf6 \cb1 \
 \cb5     runningTotal[\cf8 1\cf6 ] = \cf7 Math\cf6 .max(nums[\cf8 0\cf6 ], nums[\cf8 1\cf6 ]);\cb1 \
 \
-\cb5     \cf9 /* start at index 2 since we already have already made our 0th and 1st decisions (which correspond to our first and second houses) */\cf6 \cb1 \
+\cb5     \cf9 /* start at index 2 since we have already made our 0th and 1st decisions (which correspond to our first and second houses) */\cf6 \cb1 \
 \cb5     \cf4 for\cf6  (\cf4 let\cf6  i = \cf8 2\cf6 ; i < nums.length; i++) \{\cb1 \
 \cb5         \cf9 /* for each index, we choose the greater of (the current house's value plus the total from two houses ago) or (the total through the last house)  */\cf6 \cb1 \
 \cb5         runningTotal[i] = \cf7 Math\cf6 .max(nums[i] + runningTotal[i - \cf8 2\cf6 ], runningTotal[i - \cf8 1\cf6 ]);\cb1 \
@@ -130,7 +130,7 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Number of Steps
+\f0\b\fs36 \cf2 \cb3 // Number of Steps to Reach Zero
 \f2\b0\fs28 \cf6 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -152,7 +152,7 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Number of Islands
+\f0\b\fs36 \cf2 \cb3 // Number of Islands (Backtracking)
 \f2\b0\fs28 \cf6 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -327,23 +327,53 @@ let\cf6  solution = \cf4 function\cf6 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f0\b\fs36 \cf2 \cb3 // Climb Stairs (Recursion/Fibonacci sequence)
 \f2\b0\fs28 \cf6 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 const\cf6  functionName = arr => \{\cb1 \
-\
-\}\
+\cf4 \cb12 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  climbStairs = n => \{\cb1 \
+\cb12     \cf4 \strokec4 let\cf6 \strokec6  arr=[\cf15 \strokec15 1\cf6 \strokec6 , \cf15 \strokec15 2\cf6 \strokec6 , \cf15 \strokec15 3\cf6 \strokec6 ];\cb1 \
+\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 let\cf6 \strokec6  i = \cf15 \strokec15 3\cf6 \strokec6 ;i<n;i++)\{\cb1 \
+\cb12         arr[i]=arr[i-\cf15 \strokec15 1\cf6 \strokec6 ] + arr[i-\cf15 \strokec15 2\cf6 \strokec6 ];\cb1 \
+\cb12     \}\cb1 \
+\cb12     \cf4 \strokec4 return\cf6 \strokec6  arr[n-\cf15 \strokec15 1\cf6 \strokec6 ];\cb1 \
+\cb12 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
+\f0\b\fs36 \cf2 \cb3 // Transpose Matrix 
 \f2\b0\fs28 \cf6 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 const\cf6  functionName = arr => \{\cb1 \
+\cf4 \cb12 \outl0\strokewidth0 \strokec4 const\cf6 \strokec6  transpose = arr => \{\cb1 \
+\cb12     \cf4 \strokec4 if\cf6 \strokec6 (arr.length === \cf15 \strokec15 0\cf6 \strokec6 ) \cf4 \strokec4 return\cf6 \strokec6  [];\cb1 \
+\cb12     \cf4 \strokec4 let\cf6 \strokec6  width = arr[\cf15 \strokec15 0\cf6 \strokec6 ].length \cb1 \
+\cb12     \cf4 \strokec4 let\cf6 \strokec6  height = arr.length;\cb1 \
+\cb12     \cf4 \strokec4 var\cf6 \strokec6  result = [];\cb1 \
+\cb12     \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 var\cf6 \strokec6  i = \cf15 \strokec15 0\cf6 \strokec6 ; i < width; i ++) \{\cb1 \
+\cb12         result[i] = [];\cb1 \
+\cb12         \cf4 \strokec4 for\cf6 \strokec6 (\cf4 \strokec4 var\cf6 \strokec6  j = \cf15 \strokec15 0\cf6 \strokec6 ; j < height; j ++)\{\cb1 \
+\cb12             result[i][j] = arr[j][i];\cb1 \
+\cb12         \}\cb1 \
+\cb12     \}\cb1 \
+\cb12     \cf4 \strokec4 return\cf6 \strokec6  result;\cb1 \
+\cb12 \};\
 \
-\}\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 \strokec17 Input: 
+\f2\b0 [[1,2,3],[4,5,6],[7,8,9]]\
+
+\f0\b Output: 
+\f2\b0 [[1,4,7],[2,5,8],[3,6,9]]\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf6 \cb1 \strokec6 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
