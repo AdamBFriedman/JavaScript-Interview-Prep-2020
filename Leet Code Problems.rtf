@@ -6,21 +6,21 @@
 \red255\green255\blue254;\red0\green0\blue255;\red144\green1\blue18;\red19\green120\blue72;\red14\green110\blue109;
 \red154\green154\blue154;\red191\green28\blue37;\red255\green255\blue254;\red154\green154\blue154;\red144\green1\blue18;
 \red19\green120\blue72;\red14\green110\blue109;\red29\green38\blue42;\red67\green91\blue103;\red245\green247\blue249;
-}
+\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
 \cssrgb\c100000\c100000\c99608;\cssrgb\c0\c0\c100000;\cssrgb\c63922\c8235\c8235;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;
 \cssrgb\c66667\c66667\c66667;\cssrgb\c80392\c19216\c19216;\cssrgb\c100000\c100000\c99608;\cssrgb\c66667\c66667\c66667;\cssrgb\c63922\c8235\c8235;
 \cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;\cssrgb\c14902\c19608\c21961;\cssrgb\c32941\c43137\c47843;\cssrgb\c96863\c97647\c98039;
-}
+\cssrgb\c100000\c100000\c100000;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
 \margl1440\margr1440\vieww14320\viewh17440\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
 // Anagram
-\f1\b0\fs28 \cf4 \cb5 \
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  anagram = ((str1, str2) => \{\cb1 \
@@ -32,8 +32,8 @@
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Sum All #\'92s In Range
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Sum All #\'92s In Range
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  sumAll = arr => \{\cb1 \
@@ -45,9 +45,9 @@
 \cb5 \}\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 \
+\f0\b \cf2 \cb3 \
 // Fibonacci O(2^n) or O(n) with memoization
-\f1\b0\fs28 \cf4 \cb5 \
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb1 \
 \cf6 \cb5 const\cf4  fibonacci = (n, memo) => \{\cb1 \
@@ -59,15 +59,15 @@
 \cb5     \}\cb1 \
 \cb5     \cf6 return\cf4  memo[n]\cb1 \
 \cb5 \}
-\f0\b\fs36 \cf2 \cb3 \
+\f0\b \cf2 \cb3 \
 \
 // Two Sum
-\f2\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\f2\b0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1\fs28 \cf6 \cb5 \expnd0\expndtw0\kerning0
+\f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
 let\cf4  twoSum = (nums, target) => \{\cb1 \
 \cb5     \cf6 let\cf4  idx = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
 \cb5     \cf6 let\cf4  result = [];\cb1 \
@@ -92,13 +92,13 @@ let\cf4  twoSum = (nums, target) => \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // FIRST BAD VERSION (binary search)
-\f2\b0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\f0\b \cf2 \cb3 // FIRST BAD VERSION (binary search)
+\f2\b0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 \cf0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1\fs28 \cf6 \cb5 \expnd0\expndtw0\kerning0
+\f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
 let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5     \cf6 return\cf4  \cf6 function\cf4 (n) \{\cb1 \
 \cb5         \cf6 let\cf4  left = \cf8 1\cf4 ;\cb1 \
@@ -119,8 +119,8 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Sqrt(x) (binary search)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Sqrt(x) (binary search)
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  mySqrt = num => \{\cf11 \'a0\cf4 \cb1 \
 \cb5   \cf6 if\cf4  (num <= \cf8 1\cf4 ) \{\cb1 \
@@ -141,11 +141,10 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5   \cf6 return\cf4  left;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // HOUSE ROBBER (dynamic programming)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // HOUSE ROBBER (dynamic programming)
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  rob = nums => \{\cb1 \
 \cb5     \cf6 if\cf4  (nums === \cf6 null\cf4  || nums.length === \cf8 0\cf4 ) \{ \cf10 // if there are no houses, the total is zero\cf4 \cb1 \
@@ -172,8 +171,8 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Number of Steps to Reach Zero
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Number of Steps to Reach Zero
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  numberOfSteps = num => \{\cb1 \
@@ -194,8 +193,8 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Number of Islands (Backtracking)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Number of Islands (Backtracking)
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  numIslands = grid => \{\cb1 \
@@ -222,13 +221,12 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5     dfs(row, col-\cf8 1\cf4 );\cb1 \
 \cb5     dfs(row, col+\cf8 1\cf4 );\cb1 \
 \cb5   \}\cb1 \
-\cb5 \}\cb1 \
-\cb5 \
+\cb5 \}\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Largest Number in Array
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Largest Number in Array
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  largestNumber = nums => \{\cb1 \
@@ -250,11 +248,10 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cf16 \cb12 \strokec16 Output\cf4 \strokec4 : \cf14 \strokec14 "9534330"\cf4 \cb1 \strokec4 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Get All Permutations
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Get All Permutations
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  getPermutations = arr => \{\cb1 \
@@ -296,15 +293,15 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cf4 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Create Target Array from Two Arrays
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Create Target Array from Two Arrays
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given two arrays of integers\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0and\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 index
-\f3\fs28 \cf17 \cb3 \strokec17 . Your task is to create\'a0
+\f4 \cf18 \cb19 \strokec18 nums
+\f3 \cf17 \cb3 \strokec17 \'a0and\'a0
+\f4 \cf18 \cb19 \strokec18 index
+\f3 \cf17 \cb3 \strokec17 . Your task is to create\'a0
 \f5\i target
 \f3\i0 \'a0array under the following rules:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
@@ -314,18 +311,18 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \f3\i0 \'a0array is empty.\cb1 \
 \ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec17 From left to right read nums[i] and index[i], insert at index\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 index[i]
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0the value\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums[i]
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0in\'a0
+\f4 \cf18 \cb19 \strokec18 index[i]
+\f3 \cf17 \cb3 \strokec17 \'a0the value\'a0
+\f4 \cf18 \cb19 \strokec18 nums[i]
+\f3 \cf17 \cb3 \strokec17 \'a0in\'a0
 \f5\i target
 \f3\i0 \'a0array.\cb1 \
 \ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 \outl0\strokewidth0 \strokec17 Repeat the previous step until there are no elements to read in\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0and\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 index.
-\f3\fs28 \cf17 \cb1 \strokec17 \
+\f4 \cf18 \cb19 \strokec18 nums
+\f3 \cf17 \cb3 \strokec17 \'a0and\'a0
+\f4 \cf18 \cb19 \strokec18 index.
+\f3 \cf17 \cb1 \strokec17 \
 \pard\pardeftab720\sa280\partightenfactor0
 \cf17 \cb3 Return the\'a0
 \f5\i target
@@ -350,11 +347,10 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cf13 \cb12 \strokec13 //Output: [0,4,1,3,2]\cf4 \cb1 \strokec4 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Climb Stairs (Recursion/Fibonacci sequence)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Climb Stairs (Recursion/Fibonacci sequence)
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  climbStairs = n => \{\cb1 \
@@ -366,11 +362,10 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb12 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Transpose Matrix 
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Transpose Matrix 
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  transpose = arr => \{\cb1 \
@@ -389,27 +384,22 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \
 \pard\pardeftab720\sl400\partightenfactor0
 
-\f0\b\fs26 \cf17 \cb19 \strokec17 Input: 
+\f0\b \cf17 \cb20 \strokec17 Input: 
 \f1\b0 [[1,2,3],[4,5,6],[7,8,9]]\
 
 \f0\b Output: 
-\f1\b0 [[1,4,7],[2,5,8],[3,6,9]]\
+\f1\b0 [[1,4,7],[2,5,8],[3,6,9]]\cf4 \cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\fs28 \cf4 \cb1 \strokec4 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \outl0\strokewidth0 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-
-\f0\b\fs36 \cf2 \cb3 // Maximum Subarray (Kadane\'92s Algorithm)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Maximum Subarray (Kadane\'92s Algorithm)
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\partightenfactor0
 
 \f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given an integer array\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums
-\f3\fs28 \cf17 \cb3 \strokec17 , find the contiguous subarray\'a0(containing at least one number) which has the largest sum and return its sum.\
+\f4 \cf18 \cb19 \strokec18 nums
+\f3 \cf17 \cb3 \strokec17 , find the contiguous subarray\'a0(containing at least one number) which has the largest sum and return its sum.\
 
 \f1 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -428,36 +418,35 @@ let\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb12 maxSubArray([\cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 3\cf4 \strokec4 , -\cf15 \strokec15 4\cf4 \strokec4 , \cf15 \strokec15 4\cf4 \strokec4 , -\cf15 \strokec15 6\cf4 \strokec4 , \cf15 \strokec15 3\cf4 \strokec4 , \cf15 \strokec15 9\cf4 \strokec4 , -\cf15 \strokec15 11\cf4 \strokec4 , \cf15 \strokec15 10\cf4 \strokec4 ])\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Knight Probability
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Knight Probability
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 On an\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 N
-\f3\fs28 \cf17 \cb3 \strokec17 x
-\f4\fs26 \cf18 \cb19 \strokec18 N
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0chessboard, a knight starts at the\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 r
-\f3\fs28 \cf17 \cb3 \strokec17 -th row and\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 c
-\f3\fs28 \cf17 \cb3 \strokec17 -th column and attempts to make exactly\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 K
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0moves. The rows and columns are 0 indexed, so the top-left square is\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 (0, 0)
-\f3\fs28 \cf17 \cb3 \strokec17 , and the bottom-right square is\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 (N-1, N-1)
-\f3\fs28 \cf17 \cb3 \strokec17 .\
+\f4 \cf18 \cb19 \strokec18 N
+\f3 \cf17 \cb3 \strokec17 x
+\f4 \cf18 \cb19 \strokec18 N
+\f3 \cf17 \cb3 \strokec17 \'a0chessboard, a knight starts at the\'a0
+\f4 \cf18 \cb19 \strokec18 r
+\f3 \cf17 \cb3 \strokec17 -th row and\'a0
+\f4 \cf18 \cb19 \strokec18 c
+\f3 \cf17 \cb3 \strokec17 -th column and attempts to make exactly\'a0
+\f4 \cf18 \cb19 \strokec18 K
+\f3 \cf17 \cb3 \strokec17 \'a0moves. The rows and columns are 0 indexed, so the top-left square is\'a0
+\f4 \cf18 \cb19 \strokec18 (0, 0)
+\f3 \cf17 \cb3 \strokec17 , and the bottom-right square is\'a0
+\f4 \cf18 \cb19 \strokec18 (N-1, N-1)
+\f3 \cf17 \cb3 \strokec17 .\
 A chess knight has 8 possible moves it can make, as illustrated below. Each move is two squares in a cardinal direction, then one square in an orthogonal direction.\
 Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even if the piece would go off the chessboard) and moves there.\
 The knight continues moving until it has made exactly\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 K
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0moves or has moved off the chessboard. Return the probability that the knight remains on the board after it has stopped moving.\
+\f4 \cf18 \cb19 \strokec18 K
+\f3 \cf17 \cb3 \strokec17 \'a0moves or has moved off the chessboard. Return the probability that the knight remains on the board after it has stopped moving.\
 \pard\pardeftab720\sl400\partightenfactor0
 
-\f0\b\fs26 \cf17 \cb19 Input:
+\f0\b \cf17 \cb19 Input:
 \f1\b0  3, 2, 0, 0\
 
 \f0\b Output:
@@ -468,8 +457,7 @@ The knight continues moving until it has made exactly\'a0
 From each of those positions, there are also two moves that will keep the knight on the board.\
 The total probability the knight stays on the board is 0.0625.\
 \pard\pardeftab720\sl420\partightenfactor0
-
-\fs28 \cf4 \cb5 \outl0\strokewidth0 \
+\cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  knightProbability = (\cf16 \strokec16 N\cf4 \strokec4 , \cf16 \strokec16 K\cf4 \strokec4 , r, c) => \{\cb1 \
 \cb12     \cb1 \
@@ -504,42 +492,41 @@ The total probability the knight stays on the board is 0.0625.\
 \cb12 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Product Except Self
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Product Except Self
+\f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given an array\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0of\'a0
+\f4 \cf18 \cb19 \strokec18 nums
+\f3 \cf17 \cb3 \strokec17 \'a0of\'a0
 \f5\i n
 \f3\i0 \'a0integers where\'a0
 \f5\i n
 \f3\i0 \'a0> 1, \'a0return an array\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 output
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0such that\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 output[i]
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0is equal to the product of all the elements of\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums
-\f3\fs28 \cf17 \cb3 \strokec17 \'a0except\'a0
-\f4\fs26 \cf18 \cb19 \strokec18 nums[i]
-\f3\fs28 \cf17 \cb3 \strokec17 .\
+\f4 \cf18 \cb19 \strokec18 output
+\f3 \cf17 \cb3 \strokec17 \'a0such that\'a0
+\f4 \cf18 \cb19 \strokec18 output[i]
+\f3 \cf17 \cb3 \strokec17 \'a0is equal to the product of all the elements of\'a0
+\f4 \cf18 \cb19 \strokec18 nums
+\f3 \cf17 \cb3 \strokec17 \'a0except\'a0
+\f4 \cf18 \cb19 \strokec18 nums[i]
+\f3 \cf17 \cb3 \strokec17 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f6\b \cf17 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
-\f0\b\fs26 \cf17 \cb19 Input:
+\f0\b \cf17 \cb19 Input:
 \f1\b0   [1,2,3,4]\
 
 \f0\b Output:
 \f1\b0  [24,12,8,6]\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f6\b\fs28 \cf17 \cb3 Constraint:
+\f6\b \cf17 \cb3 Constraint:
 \f3\b0 \'a0It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.\
 
 \f6\b Note:\'a0
@@ -567,11 +554,10 @@ The total probability the knight stays on the board is 0.0625.\
 \cb12 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Largest Square in Grid
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Largest Square in Grid
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb12 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  largestSquare = grid => \{\cb1 \
@@ -600,14 +586,13 @@ The total probability the knight stays on the board is 0.0625.\
 \cb12   [\cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 ],\cb1 \
 \cb12   [\cf15 \strokec15 0\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 ],\cb1 \
 \cb12   [\cf15 \strokec15 0\cf4 \strokec4 , \cf15 \strokec15 0\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 , \cf15 \strokec15 0\cf4 \strokec4 , \cf15 \strokec15 1\cf4 \strokec4 ]\cb1 \
-\cb12 ]\cb1 \
+\cb12 ]\cb1 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \outl0\strokewidth0 \
-\
+\cf4 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Tower of Hanoi (Recursion)
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Tower of Hanoi (Recursion)
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  hanoiTower = (height, srcP, destP, bufferP) => \{\cb1 \
@@ -627,13 +612,11 @@ The total probability the knight stays on the board is 0.0625.\
 \cb5 \}\cb1 \
 \
 \cb5 hanoiTower(\cf8 3\cf4 , \cf7 "A"\cf4 , \cf7 "C"\cf4 , \cf7 "B"\cf4 );\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -642,8 +625,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -652,8 +635,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -662,8 +645,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -672,8 +655,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -682,8 +665,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -692,8 +675,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
@@ -702,8 +685,8 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b\fs36 \cf2 \cb3 // Next Problem
-\f1\b0\fs28 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Next Problem
+\f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  functionName = arr => \{\cb1 \
