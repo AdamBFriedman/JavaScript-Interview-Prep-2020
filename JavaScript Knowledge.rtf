@@ -7,11 +7,11 @@
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red255\green255\blue255;\red251\green2\blue7;
 \red66\green1\blue120;\red38\green38\blue38;\red242\green239\blue236;\red0\green0\blue255;\red255\green255\blue254;
 \red0\green0\blue0;\red19\green120\blue72;\red255\green255\blue254;\red19\green120\blue72;\red144\green1\blue18;
-\red154\green154\blue154;\red0\green0\blue0;\red49\green49\blue50;}
+\red154\green154\blue154;\red144\green1\blue18;\red0\green0\blue0;\red49\green49\blue50;}
 {\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c100000\c100000\c100000;\cssrgb\c100000\c14913\c0;
 \cssrgb\c33333\c10196\c54510;\cssrgb\c20000\c20000\c20000;\cssrgb\c96078\c94902\c94118;\cssrgb\c0\c0\c100000;\cssrgb\c100000\c100000\c99608;
 \cssrgb\c0\c0\c0;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c100000\c99608;\cssrgb\c3529\c53333\c35294;\cssrgb\c63922\c8235\c8235;
-\cssrgb\c66667\c66667\c66667;\cssrgb\c0\c0\c0\c84314;\cssrgb\c25098\c25098\c25490;}
+\cssrgb\c66667\c66667\c66667;\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c0\c0\c84314;\cssrgb\c25098\c25098\c25490;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -354,32 +354,37 @@ function\cf10  countDown(n) \{\cb1 \
 \cb12   \cf15 // ???\cf10 \cb1 \
 \cb12 \}\cb1 \
 \
-\cf8 \cb12 function\cf10  printChildrenRecursive(tree) \{\cb1 \
-\cb12   \cf8 if\cf10  (tree.children.length === \cf13 0\cf10 ) \{\cb1 \
-\cb12     \cf8 return\cf10 \cb1 \
-\cb12   \} \cb1 \
-\cb12   tree.children.forEach(child => \{\cb1 \
-\cb12     console.log(child.name)\cb1 \
-\cb12     printChildrenRecursive(child)\cb1 \
-\cb12   \})\cb1 \
-\cb12 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb9 \outl0\strokewidth0 \strokec8 const\cf10 \strokec10  printChildrenRecursive = tree => \{\cb1 \
+\cb9   \cf8 \strokec8 if\cf10 \strokec10  (tree.children.length === \cf11 \strokec11 0\cf10 \strokec10 ) \{\cb1 \
+\cb9     \cf8 \strokec8 return\cf10 \cb1 \strokec10 \
+\cb9   \} \cb1 \
+\cb9   tree.children.forEach(child => \{\cb1 \
+\cb9     console.log(child.name)\cb1 \
+\cb9     printChildrenRecursive(child)\cb1 \
+\cb9   \})\cb1 \
+\cb9 \}\cb1 \
 \
-\cf8 \cb12 const\cf10  tree = \{\cb1 \
-\cb12   name: \cf14 \cb12 'John'\cf10 \cb12 ,\cb1 \
-\cb12   children: [\cb1 \
-\cb12     \{\cb1 \
-\cb12       name: \cf14 \cb12 'Jim'\cf10 \cb12 ,\cb1 \
-\cb12       children: []\cb1 \
-\cb12     \},\cb1 \
-\cb12     \{\cb1 \
-\cb12       name: \cf14 \cb12 'Zoe'\cf10 \cb12 ,\cb1 \
-\cb12       children: [\cb1 \
-\cb12         \{ name: \cf14 \cb12 'Kyle'\cf10 \cb12 , children: [] \},\cb1 \
-\cb12         \{ name: \cf14 \cb12 'Sophia'\cf10 \cb12 , children: [] \}\cb1 \
-\cb12       ]\cb1 \
-\cb12     \}\cb1 \
-\cb12   ]\cb1 \
-\cb12 \}\cb1 \
+\cf8 \cb9 \strokec8 const\cf10 \strokec10  tree = \{\cb1 \
+\cb9   name: \cf16 \strokec16 'John'\cf10 \strokec10 ,\cb1 \
+\cb9   children: [\cb1 \
+\cb9     \{\cb1 \
+\cb9       name: \cf16 \strokec16 'Jim'\cf10 \strokec10 ,\cb1 \
+\cb9       children: []\cb1 \
+\cb9     \},\cb1 \
+\cb9     \{\cb1 \
+\cb9       name: \cf16 \strokec16 'Zoe'\cf10 \strokec10 ,\cb1 \
+\cb9       children: [\cb1 \
+\cb9         \{ name: \cf16 \strokec16 'Kyle'\cf10 \strokec10 , children: [] \},\cb1 \
+\cb9         \{ name: \cf16 \strokec16 'Sophia'\cf10 \strokec10 , children: [] \}\cb1 \
+\cb9       ]\cb1 \
+\cb9     \}\cb1 \
+\cb9   ]\cb1 \
+\cb9 \}\cb1 \
+\
+\cb9 printChildrenRecursive(tree)\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf10 \outl0\strokewidth0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f1\fs36 \cf0 \cb3 \kerning1\expnd0\expndtw0 \
@@ -453,7 +458,7 @@ Math.PI;\
 
 \f2\b \cf4 \expnd0\expndtw0\kerning0
 // BIG O
-\f6\b0\fs42 \cf16 \
+\f6\b0\fs42 \cf17 \
 \pard\pardeftab720\sl280\partightenfactor0
 
 \f7\fs24 \cf10 Algorithm complexity is just a way to formally measure how fast a program or algorithm runs\
@@ -461,7 +466,7 @@ Math.PI;\
 Algorithms - Ideas of how something is computed\
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f1\fs30 \cf17 \'a0\'93an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values as output.\'94\
+\f1\fs30 \cf18 \'a0\'93an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values as output.\'94\
 \pard\pardeftab720\sl340\partightenfactor0
 
 \f7\fs24 \cf10 \
@@ -548,19 +553,19 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \f7\b0\fs24 \cf10 \
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f1\fs30 \cf17 quicksort, heapsort and mergesort\
+\f1\fs30 \cf18 quicksort, heapsort and mergesort\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 // Shortest Path
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl340\partightenfactor0
-\cf17 Djikstra\'92s Algorithm (Shortest distance from A to B ie: Google Maps)\
+\cf18 Djikstra\'92s Algorithm (Shortest distance from A to B ie: Google Maps)\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 // Calculate run time of function
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 let time1 = Date.now();
@@ -600,7 +605,7 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Reverse String
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 function reverse(str) \{
@@ -623,7 +628,7 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Call, Apply, Bind
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 Call - \
@@ -633,7 +638,7 @@ Bind - \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Test Your Code!!!
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 \
@@ -663,7 +668,7 @@ Bind - \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Security
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 CSRF - Cross-Site Request Forgery is an attack that forces an end user to execute unwanted actions on a web application in which they\'92re currently authenticated.  With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker\'92s choosing\
@@ -675,7 +680,7 @@ XSS - Cross Site Scripting is \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Improve Web Latency
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 //BASELINE\
@@ -700,7 +705,7 @@ Run Audit to see if performance improved\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f2\b\fs36 \cf4 \cb3 // Etc Etc Etc
-\f1\b0\fs30 \cf17 \
+\f1\b0\fs30 \cf18 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f10\fs29\fsmilli14667 \cf10 \cb1 \'93use strict\'94; - ie if you forget to declare your variable in your for loop (var i) - normally it would then be available outside of the function but use strict will prevent that\
@@ -733,7 +738,7 @@ Deep - JSON.parse(JSON.stringify())\
 \f0\b \cf2 //Interview Tips\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f6\b0\fs42 \cf16 \expnd0\expndtw0\kerning0
+\f6\b0\fs42 \cf17 \expnd0\expndtw0\kerning0
 1.  Speak out loud\
 2.  Ask clarification questions\
 3.  Call out assumptions\
@@ -749,7 +754,7 @@ Deep - JSON.parse(JSON.stringify())\
 \f0\b\fs36 \cf2 \kerning1\expnd0\expndtw0 //What you should fully comprehend\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f6\b0\fs42 \cf16 \expnd0\expndtw0\kerning0
+\f6\b0\fs42 \cf17 \expnd0\expndtw0\kerning0
 Data Structures (a way of organizing data so that it can be used effectively) to know:\
 Arrays\
 Linked Lists\
@@ -763,7 +768,7 @@ Graphs
 \f0\b\fs36 \cf2 \kerning1\expnd0\expndtw0 \
 \
 
-\f6\b0\fs42 \cf16 \expnd0\expndtw0\kerning0
+\f6\b0\fs42 \cf17 \expnd0\expndtw0\kerning0
 Algorithms to know how to code:\
 Sorting, searching, binary search\
 Divide-and-conquer\
