@@ -847,45 +847,91 @@ Bob\'92s initial position will be represented by a \'91B\'92 and the house locat
 \pard\pardeftab720\sl420\partightenfactor0
 \cf5 \cb9 \outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Graph\cf4 \strokec4  \{\cb1 \
 \cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .storage = \{\};\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 .adjList = \{\}\cb1 \
 \cb9   \}\cb1 \
 \
-\cb9   add(value) \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .storage[value] = \{\};\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
-\cb9   \}\cb1 \
 \
-\cb9   addConnection(fr, to) \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .storage[fr][to] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .storage[to][fr] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9   \}\cb1 \
+\cb9 addVertex (vertex) \{\cb1 \
+\cb9   \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex] = []\cb1 \
+\cb9 \}\cb1 \
 \
-\cb9   removeConnection(fr, to) \{\cb1 \
-\cb9     \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[fr][to]\cb1 \
-\cb9     \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[to][fr]\cb1 \
-\cb9   \}\cb1 \outl0\strokewidth0 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
-\cb8   hasConnection(fr, to) \{\cb1 \
-\cb8     \cf5 return\cf4  \cf5 this\cf4 .storage[fr].hasOwnProperty(to);\cb1 \
-\cb8   \}\cb1 \outl0\strokewidth0 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
-\cb9   contains(target) \{\cb1 \
-\cb9     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage.hasOwnProperty(target);\cb1 \
-\cb9   \}\cb1 \
+\cb9 addEdge (vertex1, vertex2) \{\cb1 \
+\cb9   \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex1].push(vertex2)\cb1 \
+\cb9 \}\cb1 \
 \
-\cb9   remove(value) \{\cb1 \
-\cb9     \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[value];\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size--;\cb1 \
-\cb9     \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  key \cf5 \strokec5 in\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage) \{\cb1 \
-\cb9       \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .storage[key][value]) \{\cb1 \
-\cb9         \cf5 \strokec5 delete\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .storage[key][value];\cb1 \
-\cb9       \}\cb1 \
+\cb9 dfs () \{\cb1 \
+\cb9   \cf5 \strokec5 const\cf4 \strokec4  nodes = \cf10 \strokec10 Object\cf4 \strokec4 .keys(\cf5 \strokec5 this\cf4 \strokec4 .adjList)\cb1 \
+\cb9   \cf5 \strokec5 const\cf4 \strokec4  visited = \{\}\cb1 \
+\cb9   \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < nodes.length; i++) \{\cb1 \
+\cb9     \cf5 \strokec5 const\cf4 \strokec4  node = nodes[i]\cb1 \
+\cb9     \cf5 \strokec5 this\cf4 \strokec4 ._dfsUtil(node, visited)\cb1 \
+\cb9   \}\cb1 \
+\cb9 \}\cb1 \
+\cb9   \cb1 \
+\cb9 _dfsUtil (vertex, visited) \{\cb1 \
+\cb9   \cf5 \strokec5 if\cf4 \strokec4  (!visited[vertex])\{  \cb1 \
+\cb9     visited[vertex] = \cf5 \strokec5 true\cf4 \cb1 \strokec4 \
+\cb9     console.log(vertex, visited)\cb1 \
+\cb9     \cf5 \strokec5 const\cf4 \strokec4  neighbors = \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex]\cb1 \
+\cb9     \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < neighbors.length; i++) \{\cb1 \
+\cb9       \cf5 \strokec5 const\cf4 \strokec4  neighbor = neighbors[i] \cb1 \
+\cb9         \cf5 \strokec5 this\cf4 \strokec4 ._dfsUtil(neighbor, visited)\cb1 \
 \cb9     \}\cb1 \
 \cb9   \}\cb1 \
 \cb9 \}\cb1 \
+\
+\cb9 detectCycle () \{\cb1 \
+\cb9   \cf5 \strokec5 const\cf4 \strokec4  graphNodes = \cf10 \strokec10 Object\cf4 \strokec4 .keys(\cf5 \strokec5 this\cf4 \strokec4 .adjList);\cb1 \
+\cb9   \cf5 \strokec5 const\cf4 \strokec4  visited = \{\};\cb1 \
+\cb9   \cf5 \strokec5 const\cf4 \strokec4  recStack = \{\};\cb1 \
+\cb9   \cb1 \
+\cb9   \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < graphNodes.length; i++) \{\cb1 \
+\cb9     \cf5 \strokec5 const\cf4 \strokec4  node = graphNodes[i]\cb1 \
+\cb9     \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 ._detectCycleUtil(node, visited , recStack)) \cb1 \
+\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf17 \strokec17 \'91There is a cycle!\'92\cf4 \cb1 \strokec4 \
+\cb9   \}\cb1 \
+\cb9   \cf5 \strokec5 return\cf4 \strokec4  \cf17 \strokec17 \'91No cycle!'\cf4 \cb1 \strokec4 \
+\cb9 \}\cb1 \
+\
+\cb9 _detectCycleUtil (vertex, visited, recStack) \{\cb1 \
+\cb9   \cf5 \strokec5 if\cf4 \strokec4 (!visited[vertex])\{\cb1 \
+\cb9     visited[vertex] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
+\cb9     recStack[vertex] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
+\cb9     \cf5 \strokec5 const\cf4 \strokec4  nodeNeighbors = \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex];\cb1 \
+\cb9     \cf5 \strokec5 for\cf4 \strokec4 (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < nodeNeighbors.length; i++)\{\cb1 \
+\cb9       \cf5 \strokec5 const\cf4 \strokec4  currentNode = nodeNeighbors[i];\cb1 \
+\cb9 \'a0\'a0  console.log(\cf17 \strokec17 'parent'\cf4 \strokec4 , vertex, \cf17 \strokec17 'Child'\cf4 \strokec4 , currentNode);\cb1 \
+\cb9       \cf5 \strokec5 if\cf4 \strokec4 (!visited[currentNode] && \cf5 \strokec5 this\cf4 \strokec4 ._detectCycleUtil(currentNode, visited, recStack))\{\cb1 \
+\cb9         \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
+\cb9       \} \cf5 \strokec5 else\cf4 \strokec4  \cf5 \strokec5 if\cf4 \strokec4  (recStack[currentNode])\{\cb1 \
+\cb9         \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
+\cb9       \}\cb1 \
+\cb9     \}\cb1 \
+\cb9   \}\cb1 \
+\cb9   recStack[vertex] = \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
+\cb9   \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
+\cb9 \}\cb1 \
+\cb9 \}\cb1 \
+\
+\cf5 \cb9 \strokec5 const\cf4 \strokec4  graph = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Graph\cf4 \strokec4 ()\cb1 \
+\
+\cb9 graph.addVertex(\cf17 \strokec17 'A'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addVertex(\cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addVertex(\cf17 \strokec17 'C'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addVertex(\cf17 \strokec17 'D'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addVertex(\cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
+\
+\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'D'\cf4 \strokec4 , \cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'C'\cf4 \strokec4 , \cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'D'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'C'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'E'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'D'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
+\cb9 graph.addEdge(\cf17 \strokec17 'E'\cf4 \strokec4 , \cf17 \strokec17 'A'\cf4 \strokec4 )\cb1 \
+\
+\cb9 graph.dfs()\cb1 \
+\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
