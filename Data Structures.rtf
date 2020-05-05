@@ -161,13 +161,13 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Insert first node\cf4 \cb1 \strokec4 \
-\cb9   append(data) \{\cb1 \
+\cb9   append (data) \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data, \cf5 \strokec5 this\cf4 \strokec4 .head);\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Insert last node\cf4 \cb1 \strokec4 \
-\cb9   prepend(data) \{\cb1 \
+\cb9   prepend (data) \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data);\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current;\cb1 \
 \
@@ -188,7 +188,7 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Insert at index\cf4 \cb1 \strokec4 \
-\cb9   insertAt(data, index) \{\cb1 \
+\cb9   insertAt (data, index) \{\cb1 \
 \cb9     \cf12 \strokec12 //  If index is out of range\cf4 \cb1 \strokec4 \
 \cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
 \cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
@@ -220,7 +220,7 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Get at index\cf4 \cb1 \strokec4 \
-\cb9   getAt(index) \{\cb1 \
+\cb9   getAt (index) \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \
@@ -236,7 +236,7 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Remove at index\cf4 \cb1 \strokec4 \
-\cb9   removeAt(index) \{\cb1 \
+\cb9   removeAt (index) \{\cb1 \
 \cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
 \cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
 \cb9     \}\cb1 \
@@ -262,13 +262,13 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Clear list\cf4 \cb1 \strokec4 \
-\cb9   clearList() \{\cb1 \
+\cb9   clear () \{\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
 \cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
 \cb9   \}\cb1 \
 \
 \cb9   \cf12 \strokec12 // Print list data\cf4 \cb1 \strokec4 \
-\cb9   printListData() \{\cb1 \
+\cb9   print () \{\cb1 \
 \cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
 \
 \cb9     \cf5 \strokec5 while\cf4 \strokec4  (current) \{\cb1 \
@@ -276,7 +276,28 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cb9       current = current.next;\cb1 \
 \cb9     \}\cb1 \
 \cb9   \}\cb1 \
+\
+\cb9   reverse() \{\cb1 \
+\cb9   \cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 this\cf4 \strokec4 .head,\cb1 \
+\cb9       previous,\cb1 \
+\cb9       tmp;\cb1 \
+\
+\cb9   \cf5 \strokec5 while\cf4 \strokec4  (node) \{\cb1 \
+\cb9     \cf12 \strokec12 // save next before we overwrite node.next!\cf4 \cb1 \strokec4 \
+\cb9     tmp = node.next;\cb1 \
+\
+\cb9     \cf12 \strokec12 // reverse pointer\cf4 \cb1 \strokec4 \
+\cb9     node.next = previous;\cb1 \
+\
+\cb9     \cf12 \strokec12 // step forward in the list\cf4 \cb1 \strokec4 \
+\cb9     previous = node;\cb1 \
+\cb9     node = tmp;\cb1 \
+\cb9   \}\cb1 \
+\
+\cb9   \cf5 \strokec5 return\cf4 \strokec4  previous;\cb1 \
 \cb9 \}\cb1 \
+\cb9 \}\cb1 \
+\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
 \f2\fs36 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
