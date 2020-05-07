@@ -2,19 +2,20 @@
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
 \f3\fmodern\fcharset0 CourierNewPSMT;}
 {\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red255\green255\blue255;\red0\green0\blue0;
-\red0\green0\blue255;\red14\green110\blue109;\red19\green120\blue72;\red255\green255\blue254;\red255\green255\blue254;
-\red14\green110\blue109;\red19\green120\blue72;\red154\green154\blue154;\red154\green154\blue154;\red0\green0\blue255;
-\red49\green49\blue50;\red191\green28\blue37;\red144\green1\blue18;\red0\green0\blue0;}
+\red0\green0\blue255;\red14\green110\blue109;\red19\green120\blue72;\red255\green255\blue254;\red154\green154\blue154;
+\red0\green0\blue255;\red255\green255\blue254;\red154\green154\blue154;\red49\green49\blue50;\red191\green28\blue37;
+\red144\green1\blue18;\red0\green0\blue0;}
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
-\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c100000\c99608;\cssrgb\c100000\c100000\c99608;
-\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c66667\c66667\c66667;\cssrgb\c66667\c66667\c66667;\cssrgb\c1680\c19835\c100000;
-\cssrgb\c25098\c25098\c25490;\cssrgb\c80392\c19216\c19216;\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c0\c0\c83922;}
-\margl1440\margr1440\vieww16320\viewh17440\viewkind0
+\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c100000\c99608;\cssrgb\c66667\c66667\c66667;
+\cssrgb\c1680\c19835\c100000;\cssrgb\c100000\c100000\c99608;\cssrgb\c66667\c66667\c66667;\cssrgb\c25098\c25098\c25490;\cssrgb\c80392\c19216\c19216;
+\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c0\c0\c83922;}
+\margl1440\margr1440\vieww16020\viewh17140\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
 // STACK (LIFO.  Think of the \'93Undo\'94 button)\
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f1\b0 \cf4 \
 \cf5 class\cf4  \cf6 Stack\cf4  \{\
@@ -46,13 +47,16 @@
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \expnd0\expndtw0\kerning0
-// QUEUE (FIFO)
+// QUEUE (FIFO)\
+\pard\pardeftab720\sl420\partightenfactor0
+
 \f2\b0 \cf0 \kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf5 \cb8 \expnd0\expndtw0\kerning0
 class\cf4  \cf6 Queue\cf4  \{\cb1 \
-\cb8   \cf5 constructor\cf4 () \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8   \cf5 constructor\cf4 () \{\cb1 \
 \cb8     \cf5 this\cf4 .storage = \{\}\cb1 \
 \cb8     \cf5 this\cf4 .head = \cf7 0\cf4 \cb1 \
 \cb8     \cf5 this\cf4 .tail = \cf7 0\cf4 \cb1 \
@@ -82,225 +86,223 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 \cf0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1 \cf5 \cb9 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 PriorityQueue\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .collection = [];\cb1 \
-\cb9   \}\cb1 \
+\f1 \cf5 \cb8 \expnd0\expndtw0\kerning0
+class\cf4  \cf6 PriorityQueue\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 () \{\cb1 \
+\cb8     \cf5 this\cf4 .collection = [];\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   print() \{\cb1 \
-\cb9       console.log(\cf5 \strokec5 this\cf4 \strokec4 .collection);\cb1 \
-\cb9     \};\cb1 \
+\cb8   print() \{\cb1 \
+\cb8       console.log(\cf5 this\cf4 .collection);\cb1 \
+\cb8     \};\cb1 \
 \
-\cb9   enqueue(element)\{\cb1 \
-\cb9       \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .isEmpty())\{ \cb1 \
-\cb9           \cf5 \strokec5 this\cf4 \strokec4 .collection.push(element);\cb1 \
-\cb9       \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9           \cf5 \strokec5 var\cf4 \strokec4  added = \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9           \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 var\cf4 \strokec4  i=\cf11 \strokec11 0\cf4 \strokec4 ; i<\cf5 \strokec5 this\cf4 \strokec4 .collection.length; i++)\{\cb1 \
-\cb9                 \cf5 \strokec5 if\cf4 \strokec4  (element[\cf11 \strokec11 1\cf4 \strokec4 ] < \cf5 \strokec5 this\cf4 \strokec4 .collection[i][\cf11 \strokec11 1\cf4 \strokec4 ])\{ \cf12 \strokec12 //checking priorities\cf4 \cb1 \strokec4 \
-\cb9                   \cf5 \strokec5 this\cf4 \strokec4 .collection.splice(i,\cf11 \strokec11 0\cf4 \strokec4 ,element);\cb1 \
-\cb9                   added = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9                   \cf5 \strokec5 break\cf4 \strokec4 ;\cb1 \
-\cb9               \}\cb1 \
-\cb9           \}\cb1 \
-\cb9           \cf5 \strokec5 if\cf4 \strokec4  (!added)\{\cb1 \
-\cb9               \cf5 \strokec5 this\cf4 \strokec4 .collection.push(element);\cb1 \
-\cb9           \}\cb1 \
-\cb9       \}\cb1 \
-\cb9   \};\cb1 \
+\cb8   enqueue(element)\{\cb1 \
+\cb8       \cf5 if\cf4  (\cf5 this\cf4 .isEmpty())\{ \cb1 \
+\cb8           \cf5 this\cf4 .collection.push(element);\cb1 \
+\cb8       \} \cf5 else\cf4  \{\cb1 \
+\cb8           \cf5 var\cf4  added = \cf5 false\cf4 ;\cb1 \
+\cb8           \cf5 for\cf4  (\cf5 var\cf4  i=\cf7 0\cf4 ; i<\cf5 this\cf4 .collection.length; i++)\{\cb1 \
+\cb8                 \cf5 if\cf4  (element[\cf7 1\cf4 ] < \cf5 this\cf4 .collection[i][\cf7 1\cf4 ])\{ \cf9 //checking priorities\cf4 \cb1 \
+\cb8                   \cf5 this\cf4 .collection.splice(i,\cf7 0\cf4 ,element);\cb1 \
+\cb8                   added = \cf5 true\cf4 ;\cb1 \
+\cb8                   \cf5 break\cf4 ;\cb1 \
+\cb8               \}\cb1 \
+\cb8           \}\cb1 \
+\cb8           \cf5 if\cf4  (!added)\{\cb1 \
+\cb8               \cf5 this\cf4 .collection.push(element);\cb1 \
+\cb8           \}\cb1 \
+\cb8       \}\cb1 \
+\cb8   \};\cb1 \
 \
-\cb9   dequeue() \{\cb1 \
-\cb9       \cf5 \strokec5 var\cf4 \strokec4  value = \cf5 \strokec5 this\cf4 \strokec4 .collection.shift();\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4  value[\cf11 \strokec11 0\cf4 \strokec4 ];\cb1 \
-\cb9   \};\cb1 \
+\cb8   dequeue() \{\cb1 \
+\cb8       \cf5 var\cf4  value = \cf5 this\cf4 .collection.shift();\cb1 \
+\cb8       \cf5 return\cf4  value[\cf7 0\cf4 ];\cb1 \
+\cb8   \};\cb1 \
 \
-\cb9   front() \{\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .collection[\cf11 \strokec11 0\cf4 \strokec4 ];\cb1 \
-\cb9   \};\cb1 \
+\cb8   front() \{\cb1 \
+\cb8       \cf5 return\cf4  \cf5 this\cf4 .collection[\cf7 0\cf4 ];\cb1 \
+\cb8   \};\cb1 \
 \
-\cb9   size() \{\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .collection.length; \cb1 \
-\cb9   \};\cb1 \
+\cb8   size() \{\cb1 \
+\cb8       \cf5 return\cf4  \cf5 this\cf4 .collection.length; \cb1 \
+\cb8   \};\cb1 \
 \
-\cb9   isEmpty() \{\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .collection.length === \cf11 \strokec11 0\cf4 \strokec4 ); \cb1 \
-\cb9   \};\cb1 \
-\cb9 \}\cb1 \
+\cb8   isEmpty() \{\cb1 \
+\cb8       \cf5 return\cf4  (\cf5 this\cf4 .collection.length === \cf7 0\cf4 ); \cb1 \
+\cb8   \};\cb1 \
+\cb8 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf12 \cb9 \strokec12 // let pq = new PriorityQueue(); \cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // pq.enqueue(['PS4', 3]); \cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // pq.enqueue(['XBox', 2]);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // pq.enqueue(['Nintendo', 1])\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // pq.enqueue(['PC', 3])\cf4 \cb1 \strokec4 \
+\cf9 \cb8 // let pq = new PriorityQueue(); \cf4 \cb1 \
+\cf9 \cb8 // pq.enqueue(['PS4', 3]); \cf4 \cb1 \
+\cf9 \cb8 // pq.enqueue(['XBox', 2]);\cf4 \cb1 \
+\cf9 \cb8 // pq.enqueue(['Nintendo', 1])\cf4 \cb1 \
+\cf9 \cb8 // pq.enqueue(['PC', 3])\cf4 \cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
-\f2 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f2 \cf0 \cb3 \kerning1\expnd0\expndtw0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \expnd0\expndtw0\kerning0
-// SINGLY LINKED LIST
-\f1\b0 \cf4 \cb1 \outl0\strokewidth0 \strokec4 \
+// SINGLY LINKED LIST\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf5 \cb9 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 (data, next = \cf5 \strokec5 null\cf4 \strokec4 ) \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .data = data;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .next = next;\cb1 \
-\cb9   \}\cb1 \
-\cb9 \}\cb1 \
+
+\f1\b0 \cf4 \cb1 \
+\cf5 \cb8 class\cf4  \cf6 Node\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 (data, next = \cf5 null\cf4 ) \{\cb1 \
+\cb8     \cf5 this\cf4 .data = data;\cb1 \
+\cb8     \cf5 this\cf4 .next = next;\cb1 \
+\cb8   \}\cb1 \
+\cb8 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf12 \cb9 \strokec12 // Create/Get/Remove Nodes From Linked List\cf4 \cb1 \strokec4 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf5 \cb9 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 LinkedList\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
-\cb9   \}\cb1 \
+\cf9 \cb8 // Create/Get/Remove Nodes From Linked List\cf4 \cb1 \
+\cf5 \cb8 class\cf4  \cf6 LinkedList\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 () \{\cb1 \
+\cb8     \cf5 this\cf4 .head = \cf5 null\cf4 ;\cb1 \
+\cb8     \cf5 this\cf4 .size = \cf7 0\cf4 ;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Insert first node\cf4 \cb1 \strokec4 \
-\cb9   append (data) \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data, \cf5 \strokec5 this\cf4 \strokec4 .head);\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
-\cb9   \}\cb1 \
+\cb8   \cf9 // Insert first node\cf4 \cb1 \
+\cb8   append (data) \{\cb1 \
+\cb8     \cf5 this\cf4 .head = \cf5 new\cf4  \cf6 Node\cf4 (data, \cf5 this\cf4 .head);\cb1 \
+\cb8     \cf5 this\cf4 .size++;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Insert last node\cf4 \cb1 \strokec4 \
-\cb9   prepend (data) \{\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data);\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  current;\cb1 \
+\cb8   \cf9 // Insert last node\cf4 \cb1 \
+\cb8   prepend (data) \{\cb1 \
+\cb8     \cf5 let\cf4  node = \cf5 new\cf4  \cf6 Node\cf4 (data);\cb1 \
+\cb8     \cf5 let\cf4  current;\cb1 \
 \
-\cb9     \cf12 \strokec12 // If empty, make head\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (!\cf5 \strokec5 this\cf4 \strokec4 .head) \{\cb1 \
-\cb9       \cf5 \strokec5 this\cf4 \strokec4 .head = node;\cb1 \
-\cb9     \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9       current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
+\cb8     \cf9 // If empty, make head\cf4 \cb1 \
+\cb8     \cf5 if\cf4  (!\cf5 this\cf4 .head) \{\cb1 \
+\cb8       \cf5 this\cf4 .head = node;\cb1 \
+\cb8     \} \cf5 else\cf4  \{\cb1 \
+\cb8       current = \cf5 this\cf4 .head;\cb1 \
 \
-\cb9       \cf5 \strokec5 while\cf4 \strokec4  (current.next) \{\cb1 \
-\cb9         current = current.next;\cb1 \
-\cb9       \}\cb1 \
+\cb8       \cf5 while\cf4  (current.next) \{\cb1 \
+\cb8         current = current.next;\cb1 \
+\cb8       \}\cb1 \
 \
-\cb9       current.next = node;\cb1 \
-\cb9     \}\cb1 \
+\cb8       current.next = node;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf5 this\cf4 .size++;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Insert at index\cf4 \cb1 \strokec4 \
-\cb9   insertAt (data, index) \{\cb1 \
-\cb9     \cf12 \strokec12 //  If index is out of range\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
-\cb9     \}\cb1 \
+\cb8   \cf9 // Insert at index\cf4 \cb1 \
+\cb8   insertAt (data, index) \{\cb1 \
+\cb8     \cf9 //  If index is out of range\cf4 \cb1 \
+\cb8     \cf5 if\cf4  (index > \cf7 0\cf4  && index > \cf5 this\cf4 .size) \{\cb1 \
+\cb8       \cf5 return\cf4 ;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf12 \strokec12 // If first index\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
-\cb9       \cf5 \strokec5 this\cf4 \strokec4 .insertFirst(data);\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
-\cb9     \}\cb1 \
+\cb8     \cf9 // If first index\cf4 \cb1 \
+\cb8     \cf5 if\cf4  (index === \cf7 0\cf4 ) \{\cb1 \
+\cb8       \cf5 this\cf4 .insertFirst(data);\cb1 \
+\cb8       \cf5 return\cf4 ;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf5 \strokec5 const\cf4 \strokec4  node = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 (data);\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  current, previous;\cb1 \
+\cb8     \cf5 const\cf4  node = \cf5 new\cf4  \cf6 Node\cf4 (data);\cb1 \
+\cb8     \cf5 let\cf4  current, previous;\cb1 \
 \
-\cb9     \cf12 \strokec12 // Set current to first\cf4 \cb1 \strokec4 \
-\cb9     current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb8     \cf9 // Set current to first\cf4 \cb1 \
+\cb8     current = \cf5 this\cf4 .head;\cb1 \
+\cb8     \cf5 let\cf4  count = \cf7 0\cf4 ;\cb1 \
 \
-\cb9     \cf5 \strokec5 while\cf4 \strokec4  (count < index) \{\cb1 \
-\cb9       previous = current; \cf12 \strokec12 // Node before index\cf4 \cb1 \strokec4 \
-\cb9       count++;\cb1 \
-\cb9       current = current.next; \cf12 \strokec12 // Node after index\cf4 \cb1 \strokec4 \
-\cb9     \}\cb1 \
+\cb8     \cf5 while\cf4  (count < index) \{\cb1 \
+\cb8       previous = current; \cf9 // Node before index\cf4 \cb1 \
+\cb8       count++;\cb1 \
+\cb8       current = current.next; \cf9 // Node after index\cf4 \cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     node.next = current;\cb1 \
-\cb9     previous.next = node;\cb1 \
+\cb8     node.next = current;\cb1 \
+\cb8     previous.next = node;\cb1 \
 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size++;\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf5 this\cf4 .size++;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Get at index\cf4 \cb1 \strokec4 \
-\cb9   getAt (index) \{\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb8   \cf9 // Get at index\cf4 \cb1 \
+\cb8   getAt (index) \{\cb1 \
+\cb8     \cf5 let\cf4  current = \cf5 this\cf4 .head;\cb1 \
+\cb8     \cf5 let\cf4  count = \cf7 0\cf4 ;\cb1 \
 \
-\cb9     \cf5 \strokec5 while\cf4 \strokec4  (current) \{\cb1 \
-\cb9       \cf5 \strokec5 if\cf4 \strokec4  (count == index) \{\cb1 \
-\cb9         console.log(current.data);\cb1 \
-\cb9       \}\cb1 \
-\cb9       count++;\cb1 \
-\cb9       current = current.next;\cb1 \
-\cb9     \}\cb1 \
+\cb8     \cf5 while\cf4  (current) \{\cb1 \
+\cb8       \cf5 if\cf4  (count == index) \{\cb1 \
+\cb8         console.log(current.data);\cb1 \
+\cb8       \}\cb1 \
+\cb8       count++;\cb1 \
+\cb8       current = current.next;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf5 return\cf4  \cf5 null\cf4 ;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Remove at index\cf4 \cb1 \strokec4 \
-\cb9   removeAt (index) \{\cb1 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index > \cf11 \strokec11 0\cf4 \strokec4  && index > \cf5 \strokec5 this\cf4 \strokec4 .size) \{\cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
-\cb9     \}\cb1 \
+\cb8   \cf9 // Remove at index\cf4 \cb1 \
+\cb8   removeAt (index) \{\cb1 \
+\cb8     \cf5 if\cf4  (index > \cf7 0\cf4  && index > \cf5 this\cf4 .size) \{\cb1 \
+\cb8       \cf5 return\cf4 ;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  previous;\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  count = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb8     \cf5 let\cf4  current = \cf5 this\cf4 .head;\cb1 \
+\cb8     \cf5 let\cf4  previous;\cb1 \
+\cb8     \cf5 let\cf4  count = \cf7 0\cf4 ;\cb1 \
 \
-\cb9     \cf12 \strokec12 // Remove first\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (index === \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
-\cb9       \cf5 \strokec5 this\cf4 \strokec4 .head = current.next;\cb1 \
-\cb9     \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9       \cf5 \strokec5 while\cf4 \strokec4  (count < index) \{\cb1 \
-\cb9         count++;\cb1 \
-\cb9         previous = current;\cb1 \
-\cb9         current = current.next;\cb1 \
-\cb9       \}\cb1 \
+\cb8     \cf9 // Remove first\cf4 \cb1 \
+\cb8     \cf5 if\cf4  (index === \cf7 0\cf4 ) \{\cb1 \
+\cb8       \cf5 this\cf4 .head = current.next;\cb1 \
+\cb8     \} \cf5 else\cf4  \{\cb1 \
+\cb8       \cf5 while\cf4  (count < index) \{\cb1 \
+\cb8         count++;\cb1 \
+\cb8         previous = current;\cb1 \
+\cb8         current = current.next;\cb1 \
+\cb8       \}\cb1 \
 \
-\cb9       previous.next = current.next;\cb1 \
-\cb9     \}\cb1 \
+\cb8       previous.next = current.next;\cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size--;\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf5 this\cf4 .size--;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Clear list\cf4 \cb1 \strokec4 \
-\cb9   clear () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .head = \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .size = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
-\cb9   \}\cb1 \
+\cb8   \cf9 // Clear list\cf4 \cb1 \
+\cb8   clear () \{\cb1 \
+\cb8     \cf5 this\cf4 .head = \cf5 null\cf4 ;\cb1 \
+\cb8     \cf5 this\cf4 .size = \cf7 0\cf4 ;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf12 \strokec12 // Print list data\cf4 \cb1 \strokec4 \
-\cb9   print () \{\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  current = \cf5 \strokec5 this\cf4 \strokec4 .head;\cb1 \
+\cb8   \cf9 // Print list data\cf4 \cb1 \
+\cb8   print () \{\cb1 \
+\cb8     \cf5 let\cf4  current = \cf5 this\cf4 .head;\cb1 \
 \
-\cb9     \cf5 \strokec5 while\cf4 \strokec4  (current) \{\cb1 \
-\cb9       console.log(current.data);\cb1 \
-\cb9       current = current.next;\cb1 \
-\cb9     \}\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf5 while\cf4  (current) \{\cb1 \
+\cb8       console.log(current.data);\cb1 \
+\cb8       current = current.next;\cb1 \
+\cb8     \}\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   reverse() \{\cb1 \
-\cb9   \cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 this\cf4 \strokec4 .head,\cb1 \
-\cb9       previous,\cb1 \
-\cb9       tmp;\cb1 \
+\cb8   reverse() \{\cb1 \
+\cb8   \cf5 let\cf4  node = \cf5 this\cf4 .head,\cb1 \
+\cb8       previous,\cb1 \
+\cb8       tmp;\cb1 \
 \
-\cb9   \cf5 \strokec5 while\cf4 \strokec4  (node) \{\cb1 \
-\cb9     \cf12 \strokec12 // save next before we overwrite node.next!\cf4 \cb1 \strokec4 \
-\cb9     tmp = node.next;\cb1 \
+\cb8   \cf5 while\cf4  (node) \{\cb1 \
+\cb8     \cf9 // save next before we overwrite node.next!\cf4 \cb1 \
+\cb8     tmp = node.next;\cb1 \
 \
-\cb9     \cf12 \strokec12 // reverse pointer\cf4 \cb1 \strokec4 \
-\cb9     node.next = previous;\cb1 \
+\cb8     \cf9 // reverse pointer\cf4 \cb1 \
+\cb8     node.next = previous;\cb1 \
 \
-\cb9     \cf12 \strokec12 // step forward in the list\cf4 \cb1 \strokec4 \
-\cb9     previous = node;\cb1 \
-\cb9     node = tmp;\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf9 // step forward in the list\cf4 \cb1 \
+\cb8     previous = node;\cb1 \
+\cb8     node = tmp;\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf5 \strokec5 return\cf4 \strokec4  previous;\cb1 \
-\cb9 \}\cb1 \
-\cb9 \}\cb1 \
+\cb8   \cf5 return\cf4  previous;\cb1 \
+\cb8 \}\cb1 \
+\cb8 \}\cb1 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
-\f2 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f2 \cf0 \cb3 \kerning1\expnd0\expndtw0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -308,18 +310,19 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
 // DOUBLY LINKED LIST
 \f1\b0 \cf4 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 \cf5 class\cf4  \cf6 LinkedList\cf4  \{\
   \cf5 constructor\cf4  () \{\
     \cf5 this\cf4 .head = \cf5 this\cf4 .tail = \cf5 null\cf4 \
   \}\
 \
-  \cf13 // add to the end of the list / tail\cf4 \
+  \cf9 // add to the end of the list / tail\cf4 \
   append(value) \{\
-    \cf13 // if list is empty\cf4 \
+    \cf9 // if list is empty\cf4 \
     \cf5 if\cf4  (!\cf5 this\cf4 .tail) \{\
       \cf5 this\cf4 .head = \cf5 this\cf4 .tail = \cf5 new\cf4  \cf6 Node\cf4 (value)\
     \}\
-    \cf13 // if linkedlist has >= one node\cf4 \
+    \cf9 // if linkedlist has >= one node\cf4 \
     \cf5 else\cf4  \{\
       \cf5 let\cf4  oldTail = \cf5 this\cf4 .tail\
       \cf5 this\cf4 .tail = \cf5 new\cf4  \cf6 Node\cf4 (value)\
@@ -328,13 +331,13 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
     \}\
   \}\
 \
-  \cf13 //add to beginning of list / head\cf4 \
+  \cf9 //add to beginning of list / head\cf4 \
   prepend(value) \{\
-    \cf13 // if list is empty\cf4 \
+    \cf9 // if list is empty\cf4 \
     \cf5 if\cf4  (!\cf5 this\cf4 .head) \{\
       \cf5 this\cf4 .head = \cf5 this\cf4 .tail = \cf5 new\cf4  \cf6 Node\cf4 (value)\
     \}\
-    \cf13 // if linkedlist has >= one node\cf4 \
+    \cf9 // if linkedlist has >= one node\cf4 \
     \cf5 else\cf4  \{\
       \cf5 let\cf4  oldHead = \cf5 this\cf4 .head\
       \cf5 this\cf4 .head = \cf5 new\cf4  \cf6 Node\cf4 (value)\
@@ -344,18 +347,18 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
   \}\
 \
   deleteHead() \{\
-    \cf13 // if list is empty (no head)\cf4 \
+    \cf9 // if list is empty (no head)\cf4 \
     \cf5 if\cf4  (!\cf5 this\cf4 .head) \{\
       \cf5 return\cf4  \cf5 null\cf4 \
     \}\
-    \cf13 // if linkedlist has >= 1 node\cf4 \
+    \cf9 // if linkedlist has >= 1 node\cf4 \
     \cf5 else\cf4  \{\
       \cf5 let\cf4  removedHead = \cf5 this\cf4 .head\
-      \cf13 // if list has only 1 node left\cf4 \
+      \cf9 // if list has only 1 node left\cf4 \
       \cf5 if\cf4  (\cf5 this\cf4 .head === \cf5 this\cf4 .tail) \{\
         \cf5 this\cf4 .head = \cf5 this\cf4 .tail = \cf5 null\cf4 \
       \}\
-      \cf13 //if list has >1 node\cf4 \
+      \cf9 //if list has >1 node\cf4 \
       \cf5 else\cf4  \{\
         \cf5 this\cf4 .head = \cf5 this\cf4 .head.next\
         \cf5 this\cf4 .head.prev = \cf5 null\cf4 \
@@ -365,18 +368,18 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
   \}\
 \
   deleteTail() \{\
-    \cf13 // if list is empty (no tail)\cf4 \
+    \cf9 // if list is empty (no tail)\cf4 \
     \cf5 if\cf4  (!\cf5 this\cf4 .tail) \{\
       \cf5 return\cf4  \cf5 null\cf4 \
     \}\
-    \cf13 // if linkedlist has >= one node\cf4 \
+    \cf9 // if linkedlist has >= one node\cf4 \
     \cf5 else\cf4  \{\
       \cf5 let\cf4  removedTail = \cf5 this\cf4 .tail\
-      \cf13 // if list has only 1 node left\cf4 \
+      \cf9 // if list has only 1 node left\cf4 \
       \cf5 if\cf4  (\cf5 this\cf4 .head === \cf5 this\cf4 .tail) \{\
         \cf5 this\cf4 .tail = \cf5 this\cf4 .head = \cf5 null\cf4 \
       \}\
-      \cf13 //if list has >1 node\cf4 \
+      \cf9 //if list has > 1 node\cf4 \
       \cf5 else\cf4  \{\
         \cf5 this\cf4 .tail = \cf5 this\cf4 .tail.prev\
         \cf5 this\cf4 .tail.next = \cf5 null\cf4 \
@@ -399,27 +402,27 @@ class\cf4  \cf6 Queue\cf4  \{\cb1 \
   \}\
 \
 reverse() \{\
-    \cf14 if\cf4  (!\cf14 this\cf4 .head) \{\
-      \cf14 return\cf4  null;\
+    \cf10 if\cf4  (!\cf10 this\cf4 .head) \{\
+      \cf10 return\cf4  null;\
     \}\
 \
-    \cf14 let\cf4  currentNode = 
+    \cf10 let\cf4  currentNode = 
 \f0\b this
 \f1\b0 .head;\
-    \cf14 this\cf4 .tail = currentNode;\
+    \cf10 this\cf4 .tail = currentNode;\
 \
-    \cf14 while\cf4  (currentNode) \{\
-      \cf14 let
+    \cf10 while\cf4  (currentNode) \{\
+      \cf10 let
 \f0\b  
 \f1\b0 \cf4 prev = currentNode.prev;\
       currentNode.prev = currentNode.next;\
       currentNode.next = prev;\
 \
-      \cf14 if\cf4  (currentNode.prev) \{\
+      \cf10 if\cf4  (currentNode.prev) \{\
         currentNode = currentNode.prev;\
-      \} \cf14 else\cf4  \{\
-        \cf14 this.\cf4 head = currentNode;\
-        \cf14 break\cf4 ;\
+      \} \cf10 else\cf4  \{\
+        \cf10 this.\cf4 head = currentNode;\
+        \cf10 break\cf4 ;\
       \}\
     \}\
 \}\
@@ -440,6 +443,7 @@ reverse() \{\
 // HASH TABLE (store keys and values) (Subarray problems)
 \f1\b0 \cf4 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 \cf5 const\cf4  hash = (key, size) => \{\
   \cf5 let\cf4  hashedKey = \cf7 0\cf4 \
   \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < key.length; i++) \{\
@@ -453,7 +457,7 @@ reverse() \{\
     \cf5 this\cf4 .size = \cf7 20\cf4 \
     \cf5 this\cf4 .buckets = \cf6 Array\cf4 (\cf5 this\cf4 .size) \
 \
-    \cf13 // populate each bucket with a Map()\cf4 \
+    \cf9 // populate each bucket with a Map()\cf4 \
     \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; \cf5 this\cf4 .buckets.length; i++) \{\
       \cf5 this\cf4 .buckets[i] = \cf5 new\cf4  \cf6 Map\cf4 ()\
     \}\
@@ -485,6 +489,7 @@ reverse() \{\
 // BINARY SEARCH TREE (Access and process large amounts of ordered data)
 \f1\b0 \cf4 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 \cf5 class\cf4  \cf6 Node\cf4  \{\
   \cf5 constructor\cf4 (value) \{\
     \cf5 this\cf4 .value = value\
@@ -509,24 +514,24 @@ reverse() \{\
     \cf5 let\cf4  newNode = \cf5 new\cf4  \cf6 Node\cf4 (value)\
 \
     \cf5 const\cf4  searchTree = node => \{\
-      \cf13 // if value < node.value, go left\cf4 \
+      \cf9 // if value < node.value, go left\cf4 \
       \cf5 if\cf4  (value < node.value) \{\
-        \cf13 // if no left child, append new node\cf4 \
+        \cf9 // if no left child, append new node\cf4 \
         \cf5 if\cf4  (!node.left) \{\
           node.left = newNode\
         \} \
-        \cf13 // if left child, look left again\cf4 \
+        \cf9 // if left child, look left again\cf4 \
         \cf5 else\cf4  \{\
           searchTree(node.left)\
         \}\
       \}\
-      \cf13 // if value > node.value, go right\cf4 \
+      \cf9 // if value > node.value, go right\cf4 \
       \cf5 else\cf4  \{\
-        \cf13 // if no right child, append new node\cf4 \
+        \cf9 // if no right child, append new node\cf4 \
         \cf5 if\cf4  (!node.right) \{\
           node.right = newNode\
         \}\
-        \cf13 // if right child, look right again\cf4 \
+        \cf9 // if right child, look right again\cf4 \
         \cf5 else\cf4  \{\
           searchTree(node.right)\
         \}\
@@ -539,7 +544,7 @@ reverse() \{\
   min() \{\
     \cf5 let\cf4  currentNode = \cf5 this\cf4 .root\
 \
-    \cf13 // continue traversing left until no more children\cf4 \
+    \cf9 // continue traversing left until no more children\cf4 \
     \cf5 while\cf4  (currentNode.left) \{\
       currentNode = currentNode.left\
     \}\
@@ -550,7 +555,7 @@ reverse() \{\
   max() \{\
     \cf5 let\cf4  currentNode = \cf5 this\cf4 .root\
 \
-    \cf13 // continue traversing right until no more children\cf4 \
+    \cf9 // continue traversing right until no more children\cf4 \
     \cf5 while\cf4  (currentNode.right) \{\
       currentNode = currentNode.right\
     \}\
@@ -564,7 +569,7 @@ reverse() \{\
     \cf5 while\cf4  (currentNode) \{\
       \cf5 if\cf4  (value === currentNode.value) \{\
         \cf5 return\cf4  \cf5 true\cf4 \
-      \} \cf14 else\cf4  \cf5 if\cf4  (value < currentNode.value) \{\
+      \} \cf10 else\cf4  \cf5 if\cf4  (value < currentNode.value) \{\
         currentNode = currentNode.left\
       \} \cf5 else\cf4  \{\
         currentNode = currentNode.right\
@@ -574,20 +579,19 @@ reverse() \{\
     \cf5 return\cf4  \cf5 false\cf4 \
   \}\
 \
-  \cf13 // depth first search - branch by branch\cf4 \
+  \cf9 // depth first search - branch by branch\cf4 \
 \
-  \cf13 // in-order\cf4 \
-  \cf13 // left, root, right\cf4 \
-  \cf13 // 2, 3, 12, 15, 28, 36, 39\cf4 \
+  \cf9 // in-order\cf4 \
+  \cf9 // left, root, right\cf4 \
   dfsInOrder() \{\
     \cf5 let\cf4  result = []\
 \
     \cf5 const\cf4  traverse = node => \{\
-      \cf13 // if left child exists, go left again\cf4 \
+      \cf9 // if left child exists, go left again\cf4 \
       \cf5 if\cf4  (node.left) traverse(node.left)\
-      \cf13 // capture root node value\cf4 \
+      \cf9 // capture root node value\cf4 \
       result.push(node.value)\
-      \cf13 // if right child exists, go right again\cf4 \
+      \cf9 // if right child exists, go right again\cf4 \
       \cf5 if\cf4  (node.right) traverse(node.right)\
     \}\
 \
@@ -596,18 +600,17 @@ reverse() \{\
     \cf5 return\cf4  result\
   \}\
 \
-  \cf13 // pre-order\cf4 \
-  \cf13 // root, left, right\cf4 \
-  \cf13 // 15, 3, 2, 12, 36, 28, 39\cf4 \
+  \cf9 // pre-order\cf4 \
+  \cf9 // root, left, right\cf4 \
   dfsPreOrder() \{\
     \cf5 let\cf4  result = []\
 \
     \cf5 const\cf4  traverse = node => \{\
-      \cf13 // capture root node value\cf4 \
+      \cf9 // capture root node value\cf4 \
       result.push(node.value)\
-      \cf13 // if left child exists, go left again\cf4 \
+      \cf9 // if left child exists, go left again\cf4 \
       \cf5 if\cf4  (node.left) traverse(node.left)      \
-      \cf13 // if right child exists, go right again\cf4 \
+      \cf9 // if right child exists, go right again\cf4 \
       \cf5 if\cf4  (node.right) traverse(node.right)\
     \}\
 \
@@ -616,18 +619,17 @@ reverse() \{\
     \cf5 return\cf4  result    \
   \}\
 \
-  \cf13 // post-order\cf4 \
-  \cf13 // left, right, root\cf4 \
-  \cf13 // 2, 12, 3, 28, 39, 36, 15\cf4 \
+  \cf9 // post-order\cf4 \
+  \cf9 // left, right, root\cf4 \
   dfsPostOrder() \{\
     \cf5 let\cf4  result = []\
 \
     \cf5 const\cf4  traverse = node => \{\
-      \cf13 // if left child exists, go left again\cf4 \
+      \cf9 // if left child exists, go left again\cf4 \
       \cf5 if\cf4  (node.left) traverse(node.left)      \
-      \cf13 // if right child exists, go right again\cf4 \
+      \cf9 // if right child exists, go right again\cf4 \
       \cf5 if\cf4  (node.right) traverse(node.right)\
-      \cf13 // capture root node value\cf4 \
+      \cf9 // capture root node value\cf4 \
       result.push(node.value)\
     \}\
 \
@@ -636,200 +638,230 @@ reverse() \{\
     \cf5 return\cf4  result   \
   \}\
 \
-  \cf13 // breadth first search - level by level\cf4 \
-\
-  \cf13 // use a queue!\cf4 \
-  \cf13 // 15, 3, 36, 2, 12, 28, 39\cf4 \
+  \cf9 // breadth first search - level by level\cf4 \
+  \cf9 // use a queue!\cf4 \
   \cb8 bfs() \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb8     \cf5 \cb8 let\cf4  result = []\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb8     \cf5 let\cf4  queue = []\cb1 \
+\cf4 \cb8     \cf5 \cb8 let\cf4 \cb8  result = []\cb1 \
+\cb8     \cf5 \cb8 let\cf4 \cb8  queue = []\cb1 \
 \
-\cb8     queue.push(\cf5 this\cf4 .root)\cb1 \
+\cb8     queue.push(\cf5 \cb8 this\cf4 \cb8 .root)\cb1 \
 \
-\cb8     \cf5 while\cf4 (queue.length) \{\cb1 \
-\cb8       \cf5 let\cf4  currentNode = queue.shift()\cb1 \
+\cb8     \cf5 \cb8 while\cf4 \cb8 (queue.length) \{\cb1 \
+\cb8       \cf5 \cb8 let\cf4 \cb8  currentNode = queue.shift()\cb1 \
 \
 \cb8       result.push(currentNode.value)\cb1 \
 \
-\cb8       \cf5 if\cf4  (currentNode.left) queue.push(currentNode.left)\cb1 \
-\cb8       \cf5 if\cf4  (currentNode.right) queue.push(currentNode.right)\cb1 \
+\cb8       \cf5 \cb8 if\cf4 \cb8  (currentNode.left) queue.push(currentNode.left)\cb1 \
+\cb8       \cf5 \cb8 if\cf4 \cb8  (currentNode.right) queue.push(currentNode.right)\cb1 \
 \cb8     \}\cb1 \
-\cb8     \cf5 return\cf4  result\cb1 \
+\cb8     \cf5 \cb8 return\cf4 \cb8  result\cb1 \
 \cb8   \}\cb1 \
-\cb8 \}\cb1 \
-\
+\cb8 \}\
+//InOrder Successor\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf12 \cb9 \outl0\strokewidth0 \strokec12 let bst = new BST(3);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(4);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(6);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(14);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(16);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(44);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(63);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(24);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.insert(68);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // bst.dfsInOrder()\cf4 \cb1 \strokec4 \
+\cf5 \cb11 \outl0\strokewidth0 \strokec5 function\cf4 \strokec4  inOrderSuccessor(node) \{\cb1 \
+\cb11   \cf5 \strokec5 if\cf4 \strokec4  (!node) \{\cb1 \
+\cb11     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
+\cb11   \}\cb1 \
+\
+\cb11   \cf5 \strokec5 if\cf4 \strokec4  (node.right) \{\cb1 \
+\cb11     \cf5 \strokec5 return\cf4 \strokec4  leftMostChild(node.right);\cb1 \
+\cb11   \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
+\cb11     \cf5 \strokec5 var\cf4 \strokec4  currentNode = node;\cb1 \
+\cb11     \cf12 \strokec12 // Assuming each node has a reference to its parent\cf4 \cb1 \strokec4 \
+\cb11     \cf5 \strokec5 var\cf4 \strokec4  parentNode = currentNode.parent;\cb1 \
+\
+\cb11     \cf12 \strokec12 // Go up until we find deepest ancestor for which node would be in left sub tree\cf4 \cb1 \strokec4 \
+\cb11     \cf5 \strokec5 while\cf4 \strokec4  (parentNode && parentNode.left !== currentNode) \{\cb1 \
+\cb11       currentNode = parentNode;\cb1 \
+\cb11       parentNode = parentNode.parent;\cb1 \
+\cb11     \}\cb1 \
+\
+\cb11     \cf5 \strokec5 return\cf4 \strokec4  parentNode;\cb1 \
+\cb11   \}\cb1 \
+\cb11 \}\cb1 \
+\
+\cf5 \cb11 \strokec5 function\cf4 \strokec4  leftMostChild(node) \{\cb1 \
+\cb11   \cf5 \strokec5 if\cf4 \strokec4  (!node) \{\cb1 \
+\cb11     \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
+\cb11   \}\cb1 \
+\cb11   \cf5 \strokec5 while\cf4 \strokec4  (node.left) \{\cb1 \
+\cb11     node = node.left;\cb1 \
+\cb11   \}\cb1 \
+\cb11   \cf5 \strokec5 return\cf4 \strokec4  node;\cb1 \
+\cb11 \}\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \outl0\strokewidth0 \
+\
+\cf9 \cb8 let bst = new BST(3);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(4);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(6);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(14);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(16);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(44);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(63);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(24);\cf4 \cb1 \
+\cf9 \cb8 // bst.insert(68);\cf4 \cb1 \
+\cf9 \cb8 // bst.dfsInOrder()\cf4 \cb1 \
+\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb3 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 // MIN HEAP (Used primarily for its sort method O(n log n))
-\f2\b0 \cf15 \
+\f2\b0 \cf13 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1 \cf5 \cb9 \outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 MinHeap\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .heap = [\cf5 \strokec5 null\cf4 \strokec4 ];\cb1 \
-\cb9   \}\cb1 \
+\f1 \cf5 \cb8 class\cf4  \cf6 MinHeap\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 () \{\cb1 \
+\cb8     \cf5 this\cf4 .heap = [\cf5 null\cf4 ];\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   insert(num) \{\cb1 \
+\cb8   insert(num) \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .heap.push(num);\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 this\cf4 .heap.push(num);\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap.length > \cf11 \strokec11 2\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  idx = \cf5 \strokec5 this\cf4 \strokec4 .heap.length - \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap.length > \cf7 2\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 let\cf4  idx = \cf5 this\cf4 .heap.length - \cf7 1\cf4 ;\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 while\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap[idx] < \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf10 \strokec10 Math\cf4 \strokec4 .floor(idx/\cf11 \strokec11 2\cf4 \strokec4 )]) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (idx >= \cf11 \strokec11 1\cf4 \strokec4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 while\cf4  (\cf5 this\cf4 .heap[idx] < \cf5 this\cf4 .heap[\cf6 Math\cf4 .floor(idx/\cf7 2\cf4 )]) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (idx >= \cf7 1\cf4 ) \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9         \cf12 \strokec12 //swap\cf4 \cb1 \strokec4 \
+\cf4 \cb8         \cf9 //swap\cf4 \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 [\cf5 \strokec5 this\cf4 \strokec4 .heap[\cf10 \strokec10 Math\cf4 \strokec4 .floor(idx/\cf11 \strokec11 2\cf4 \strokec4 )], \cf5 \strokec5 this\cf4 \strokec4 .heap[idx]] = \cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 [\cf5 this\cf4 .heap[\cf6 Math\cf4 .floor(idx/\cf7 2\cf4 )], \cf5 this\cf4 .heap[idx]] = \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9           [\cf5 \strokec5 this\cf4 \strokec4 .heap[idx], \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf10 \strokec10 Math\cf4 \strokec4 .floor(idx/\cf11 \strokec11 2\cf4 \strokec4 )]];\cb1 \
+\cf4 \cb8           [\cf5 this\cf4 .heap[idx], \cf5 this\cf4 .heap[\cf6 Math\cf4 .floor(idx/\cf7 2\cf4 )]];\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf10 \strokec10 Math\cf4 \strokec4 .floor(idx/\cf11 \strokec11 2\cf4 \strokec4 ) > \cf11 \strokec11 1\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 idx = \cf10 \strokec10 Math\cf4 \strokec4 .floor(idx/\cf11 \strokec11 2\cf4 \strokec4 );\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 break\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \cb1 \strokec4 \
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \strokec4 remove() \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  smallest = \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 1\cf4 \strokec4 ];\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf6 Math\cf4 .floor(idx/\cf7 2\cf4 ) > \cf7 1\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 idx = \cf6 Math\cf4 .floor(idx/\cf7 2\cf4 );\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \} \cf5 else\cf4  \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 break\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 \cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 remove() \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 let\cf4  smallest = \cf5 this\cf4 .heap[\cf7 1\cf4 ];\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap.length > \cf11 \strokec11 2\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 1\cf4 \strokec4 ] = \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf5 \strokec5 this\cf4 \strokec4 .heap.length - \cf11 \strokec11 1\cf4 \strokec4 ];\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .heap.splice(\cf5 \strokec5 this\cf4 \strokec4 .heap.length - \cf11 \strokec11 1\cf4 \strokec4 );\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap.length > \cf7 2\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 this\cf4 .heap[\cf7 1\cf4 ] = \cf5 this\cf4 .heap[\cf5 this\cf4 .heap.length - \cf7 1\cf4 ];\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 this\cf4 .heap.splice(\cf5 this\cf4 .heap.length - \cf7 1\cf4 );\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap.length == \cf11 \strokec11 3\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 1\cf4 \strokec4 ] > \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 2\cf4 \strokec4 ]) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap.length == \cf7 3\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap[\cf7 1\cf4 ] > \cf5 this\cf4 .heap[\cf7 2\cf4 ]) \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9           \cf12 \strokec12 //swap\cf4 \cb1 \strokec4 \
+\cf4 \cb8           \cf9 //swap\cf4 \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 [\cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 1\cf4 \strokec4 ], \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 2\cf4 \strokec4 ]] = [\cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 2\cf4 \strokec4 ], \cf5 \strokec5 this\cf4 \strokec4 .heap[\cf11 \strokec11 1\cf4 \strokec4 ]];\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  smallest;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 [\cf5 this\cf4 .heap[\cf7 1\cf4 ], \cf5 this\cf4 .heap[\cf7 2\cf4 ]] = [\cf5 this\cf4 .heap[\cf7 2\cf4 ], \cf5 this\cf4 .heap[\cf7 1\cf4 ]];\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4  smallest;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  left = \cf11 \strokec11 2\cf4 \strokec4  * i;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  right = \cf11 \strokec11 2\cf4 \strokec4  * i + \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 let\cf4  i = \cf7 1\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 let\cf4  left = \cf7 2\cf4  * i;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 let\cf4  right = \cf7 2\cf4  * i + \cf7 1\cf4 ;\cb1 \
 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 while\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap[i] >= \cf5 \strokec5 this\cf4 \strokec4 .heap[left] || \cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 while\cf4  (\cf5 this\cf4 .heap[i] >= \cf5 this\cf4 .heap[left] || \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9             \cf5 \strokec5 this\cf4 \strokec4 .heap[i] >= \cf5 \strokec5 this\cf4 \strokec4 .heap[right]) \{\cb1 \
+\cf4 \cb8             \cf5 this\cf4 .heap[i] >= \cf5 this\cf4 .heap[right]) \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap[left] < \cf5 \strokec5 this\cf4 \strokec4 .heap[right]) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 [\cf5 \strokec5 this\cf4 \strokec4 .heap[i], \cf5 \strokec5 this\cf4 \strokec4 .heap[left]] = [\cf5 \strokec5 this\cf4 \strokec4 .heap[left], \cf5 \strokec5 this\cf4 \strokec4 .heap[i]];\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 i = \cf11 \strokec11 2\cf4 \strokec4  * i\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 [\cf5 \strokec5 this\cf4 \strokec4 .heap[i], \cf5 \strokec5 this\cf4 \strokec4 .heap[right]] = [\cf5 \strokec5 this\cf4 \strokec4 .heap[right], \cf5 \strokec5 this\cf4 \strokec4 .heap[i]];\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 i = \cf11 \strokec11 2\cf4 \strokec4  * i + \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 left = \cf11 \strokec11 2\cf4 \strokec4  * i;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 right = \cf11 \strokec11 2\cf4 \strokec4  * i + \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap[left] == \cf5 \strokec5 undefined\cf4 \strokec4  || \cf5 \strokec5 this\cf4 \strokec4 .heap[right] == \cf5 \strokec5 undefined\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 break\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf4 \strokec4 \} \cf5 \strokec5 else\cf4 \strokec4  \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap.length == \cf11 \strokec11 2\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .heap.splice(\cf11 \strokec11 1\cf4 \strokec4 , \cf11 \strokec11 1\cf4 \strokec4 );\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf4 \strokec4 \} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 null\cf4 \strokec4 ;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  smallest;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \strokec4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap[left] < \cf5 this\cf4 .heap[right]) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 [\cf5 this\cf4 .heap[i], \cf5 this\cf4 .heap[left]] = [\cf5 this\cf4 .heap[left], \cf5 this\cf4 .heap[i]];\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 i = \cf7 2\cf4  * i\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \} \cf5 else\cf4  \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 [\cf5 this\cf4 .heap[i], \cf5 this\cf4 .heap[right]] = [\cf5 this\cf4 .heap[right], \cf5 this\cf4 .heap[i]];\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 i = \cf7 2\cf4  * i + \cf7 1\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 left = \cf7 2\cf4  * i;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 right = \cf7 2\cf4  * i + \cf7 1\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .heap[left] == \cf5 undefined\cf4  || \cf5 this\cf4 .heap[right] == \cf5 undefined\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 break\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf4 \} \cf5 else\cf4  \cf5 if\cf4  (\cf5 this\cf4 .heap.length == \cf7 2\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 this\cf4 .heap.splice(\cf7 1\cf4 , \cf7 1\cf4 );\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf4 \} \cf5 else\cf4  \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4  \cf5 null\cf4 ;\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 return\cf4  smallest;\cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9   \cb1 \
+\cf4 \cb8   \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \strokec4 sort() \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  result = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Array\cf4 \strokec4 ();\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 while\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 .heap.length > \cf11 \strokec11 1\cf4 \strokec4 ) \{\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 \strokec4 result.push(\cf5 \strokec5 this\cf4 \strokec4 .remove());\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf4 \strokec4 \};\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  result;\cb1 \
-\cf16 \cb9 \strokec16 \'a0\'a0\cf4 \strokec4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 sort() \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 let\cf4  result = \cf5 new\cf4  \cf6 Array\cf4 ();\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 while\cf4  (\cf5 this\cf4 .heap.length > \cf7 1\cf4 ) \{\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf4 result.push(\cf5 this\cf4 .remove());\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf4 \};\cb1 \
+\cf14 \cb8 \'a0\'a0\'a0\'a0\cf5 return\cf4  result;\cb1 \
+\cf14 \cb8 \'a0\'a0\cf4 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb9 \}\cb1 \
+\cf4 \cb8 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf12 \cb9 \strokec12 let heap = new MinHeap();\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(4);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(3);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(44);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(1);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(76);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.insert(7);\cf4 \cb1 \strokec4 \
-\cf12 \cb9 \strokec12 // heap.sort()\cf4 \cb1 \strokec4 \
+\cf9 \cb8 let heap = new MinHeap();\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(4);\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(3);\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(44);\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(1);\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(76);\cf4 \cb1 \
+\cf9 \cb8 // heap.insert(7);\cf4 \cb1 \
+\cf9 \cb8 // heap.sort()\cf4 \cb1 \
 \
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f2 \cf15 \cb3 \outl0\strokewidth0 \
+\f2 \cf13 \cb3 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 // SET
-\f2\b0 \cf15 \
+\f2\b0 \cf13 \
 \pard\pardeftab720\sl340\partightenfactor0
-\cf15 \
+\cf13 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1 \cf5 \cb8 class\cf4  \cf6 Set\cf4  \{\cb1 \
-\cf5 \cb8 constructor\cf4 () \{\cb1 \
-\cb8   \cf5 this\cf4 .collection = [];\cb1 \
+\f1 \cf5 \cb8 class\cf4 \cb8  \cf6 \cb8 Set\cf4 \cb8  \{\cb1 \
+\cf5 \cb8 constructor\cf4 \cb8 () \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8   \cf5 \cb8 this\cf4 \cb8 .collection = [];\cb1 \
 \cb8 \}\cb1 \
 \
 \cb8   has(element) \{\cb1 \
-\cb8 \'a0\'a0\cf5 return\cf4  (\cf5 this\cf4 .collection.indexOf(element) !== -\cf7 1\cf4 );\cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 return\cf4 \cb8  (\cf5 \cb8 this\cf4 \cb8 .collection.indexOf(element) !== -\cf7 \cb8 1\cf4 \cb8 );\cb1 \
 \cb8 \};\cb1 \
 \
 \cb8   values() \{\cb1 \
-\cb8 \'a0\'a0\cf5 return\cf4  \cf5 this\cf4 .collection;\cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 this\cf4 \cb8 .collection;\cb1 \
 \cb8 \};\cb1 \
 \
 \cb8   add(element) \{\cb1 \
-\cb8 \'a0\'a0\cf5 if\cf4  (!\cf5 this\cf4 .has(element)) \{\cb1 \
-\cb8 \'a0\'a0  \cf5 this\cf4 .collection.push(element);\cb1 \
-\cb8 \'a0\'a0  \cf5 return\cf4  \cf5 true\cf4 ;\cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 if\cf4 \cb8  (!\cf5 \cb8 this\cf4 \cb8 .has(element)) \{\cb1 \
+\cb8 \'a0\'a0  \cf5 \cb8 this\cf4 \cb8 .collection.push(element);\cb1 \
+\cb8 \'a0\'a0  \cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 true\cf4 \cb8 ;\cb1 \
 \cb8 \'a0\'a0\}\cb1 \
-\cb8 \'a0\'a0\cf5 return\cf4  \cf5 false\cf4 \cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 false\cf4 \cb1 \
 \cb8 \};\cb1 \
 \
 \cb8   remove(element) \{\cb1 \
-\cb8 \'a0\'a0\cf5 if\cf4  (\cf5 this\cf4 .has(element)) \{\cb1 \
-\cb8 \'a0\'a0  index = \cf5 this\cf4 .collection.indexOf(element);\cb1 \
-\cb8 \'a0\'a0  \cf5 this\cf4 .collection.splice(index, \cf7 1\cf4 );\cb1 \
-\cb8 \'a0\'a0  \cf5 return\cf4  \cf5 true\cf4 ;\cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 if\cf4 \cb8  (\cf5 \cb8 this\cf4 \cb8 .has(element)) \{\cb1 \
+\cb8 \'a0\'a0  index = \cf5 \cb8 this\cf4 \cb8 .collection.indexOf(element);\cb1 \
+\cb8 \'a0\'a0  \cf5 \cb8 this\cf4 \cb8 .collection.splice(index, \cf7 \cb8 1\cf4 \cb8 );\cb1 \
+\cb8 \'a0\'a0  \cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 true\cf4 \cb8 ;\cb1 \
 \cb8 \'a0\'a0\}\cb1 \
-\cb8 \'a0\'a0\cf5 return\cf4  \cf5 false\cf4 \cb1 \
+\cb8 \'a0\'a0\cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 false\cf4 \cb1 \
 \cb8 \};\cb1 \
 \
 \cb8   size () \{\cb1 \
-\cb8     \cf5 return\cf4  \cf5 this\cf4 .collection.length;\cb1 \
+\cb8     \cf5 \cb8 return\cf4 \cb8  \cf5 \cb8 this\cf4 \cb8 .collection.length;\cb1 \
 \cb8 \}\cb1 \
 \
 \cb8 \}\cb1 \
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f2 \cf15 \cb3 \
+\f2 \cf13 \cb3 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb1 \
@@ -838,242 +870,239 @@ reverse() \{\
 \f0\b \cf2 \cb3 // GRAPH (used for BFS - social networks, GPS: shortest path problems)\
 \pard\pardeftab720\sl500\sa200\partightenfactor0
 
-\f2\b0 \cf15 Nearly all graph problems will somehow use a grid or network in the problem, but sometimes these will be well disguised. Secondly, if you are required to find a path of any sort, it is usually a graph problem as well. Some common keywords associated with graph problems are: vertices, nodes, edges, connections, connectivity, paths, cycles and direction. An example of a description of a simple problem that exhibits some of these characteristics is:\
+\f2\b0 \cf13 Nearly all graph problems will somehow use a grid or network in the problem, but sometimes these will be well disguised. Secondly, if you are required to find a path of any sort, it is usually a graph problem as well. Some common keywords associated with graph problems are: vertices, nodes, edges, connections, connectivity, paths, cycles and direction. An example of a description of a simple problem that exhibits some of these characteristics is:\
 "Bob has become lost in his neighborhood. He needs to get from his current position back to his home. Bob\'92s neighborhood is a 2 dimensional grid, that starts at (0, 0) and (width \'96 1, height \'96 1). There are empty spaces upon which bob can walk with no difficulty, and houses, which Bob cannot pass through. Bob may only move horizontally or vertically by one square at a time.\
 Bob\'92s initial position will be represented by a \'91B\'92 and the house location will be represented by an \'91H\'92. Empty squares on the grid are represented by \'91.\'92 and houses are represented by \'91X\'92. Find the minimum number of steps it takes Bob to get back home, but if it is not possible for Bob to return home, return -1.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf5 \cb9 \outl0\strokewidth0 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Graph\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 () \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .adjList = \{\}\cb1 \
-\cb9   \}\cb1 \
+\cf5 \cb8 class\cf4  \cf6 Graph\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 () \{\cb1 \
+\cb8     \cf5 this\cf4 .adjList = \{\}\cb1 \
+\cb8   \}\cb1 \
 \
 \
-\cb9 addVertex (vertex) \{\cb1 \
-\cb9   \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex] = []\cb1 \
-\cb9 \}\cb1 \
+\cb8 addVertex (vertex) \{\cb1 \
+\cb8   \cf5 this\cf4 .adjList[vertex] = []\cb1 \
+\cb8 \}\cb1 \
 \
-\cb9 addEdge (vertex1, vertex2) \{\cb1 \
-\cb9   \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex1].push(vertex2)\cb1 \
-\cb9 \}\cb1 \
+\cb8 addEdge (vertex1, vertex2) \{\cb1 \
+\cb8   \cf5 this\cf4 .adjList[vertex1].push(vertex2)\cb1 \
+\cb8 \}\cb1 \
 \
-\cb9 dfs () \{\cb1 \
-\cb9   \cf5 \strokec5 const\cf4 \strokec4  nodes = \cf10 \strokec10 Object\cf4 \strokec4 .keys(\cf5 \strokec5 this\cf4 \strokec4 .adjList)\cb1 \
-\cb9   \cf5 \strokec5 const\cf4 \strokec4  visited = \{\}\cb1 \
-\cb9   \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < nodes.length; i++) \{\cb1 \
-\cb9     \cf5 \strokec5 const\cf4 \strokec4  node = nodes[i]\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 ._dfsUtil(node, visited)\cb1 \
-\cb9   \}\cb1 \
-\cb9 \}\cb1 \
-\cb9   \cb1 \
-\cb9 _dfsUtil (vertex, visited) \{\cb1 \
-\cb9   \cf5 \strokec5 if\cf4 \strokec4  (!visited[vertex])\{  \cb1 \
-\cb9     visited[vertex] = \cf5 \strokec5 true\cf4 \cb1 \strokec4 \
-\cb9     console.log(vertex, visited)\cb1 \
-\cb9     \cf5 \strokec5 const\cf4 \strokec4  neighbors = \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex]\cb1 \
-\cb9     \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < neighbors.length; i++) \{\cb1 \
-\cb9       \cf5 \strokec5 const\cf4 \strokec4  neighbor = neighbors[i] \cb1 \
-\cb9         \cf5 \strokec5 this\cf4 \strokec4 ._dfsUtil(neighbor, visited)\cb1 \
-\cb9     \}\cb1 \
-\cb9   \}\cb1 \
-\cb9 \}\cb1 \
+\cb8 dfs () \{\cb1 \
+\cb8   \cf5 const\cf4  nodes = \cf6 Object\cf4 .keys(\cf5 this\cf4 .adjList)\cb1 \
+\cb8   \cf5 const\cf4  visited = \{\}\cb1 \
+\cb8   \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < nodes.length; i++) \{\cb1 \
+\cb8     \cf5 const\cf4  node = nodes[i]\cb1 \
+\cb8     \cf5 this\cf4 ._dfsUtil(node, visited)\cb1 \
+\cb8   \}\cb1 \
+\cb8 \}\cb1 \
+\cb8   \cb1 \
+\cb8 _dfsUtil (vertex, visited) \{\cb1 \
+\cb8   \cf5 if\cf4  (!visited[vertex])\{  \cb1 \
+\cb8     visited[vertex] = \cf5 true\cf4 \cb1 \
+\cb8     console.log(vertex, visited)\cb1 \
+\cb8     \cf5 const\cf4  neighbors = \cf5 this\cf4 .adjList[vertex]\cb1 \
+\cb8     \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < neighbors.length; i++) \{\cb1 \
+\cb8       \cf5 const\cf4  neighbor = neighbors[i] \cb1 \
+\cb8         \cf5 this\cf4 ._dfsUtil(neighbor, visited)\cb1 \
+\cb8     \}\cb1 \
+\cb8   \}\cb1 \
+\cb8 \}\cb1 \
 \
-\cb9 detectCycle () \{\cb1 \
-\cb9   \cf5 \strokec5 const\cf4 \strokec4  graphNodes = \cf10 \strokec10 Object\cf4 \strokec4 .keys(\cf5 \strokec5 this\cf4 \strokec4 .adjList);\cb1 \
-\cb9   \cf5 \strokec5 const\cf4 \strokec4  visited = \{\};\cb1 \
-\cb9   \cf5 \strokec5 const\cf4 \strokec4  recStack = \{\};\cb1 \
-\cb9   \cb1 \
-\cb9   \cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < graphNodes.length; i++) \{\cb1 \
-\cb9     \cf5 \strokec5 const\cf4 \strokec4  node = graphNodes[i]\cb1 \
-\cb9     \cf5 \strokec5 if\cf4 \strokec4  (\cf5 \strokec5 this\cf4 \strokec4 ._detectCycleUtil(node, visited , recStack)) \cb1 \
-\cb9       \cf5 \strokec5 return\cf4 \strokec4  \cf17 \strokec17 \'91There is a cycle!\'92\cf4 \cb1 \strokec4 \
-\cb9   \}\cb1 \
-\cb9   \cf5 \strokec5 return\cf4 \strokec4  \cf17 \strokec17 \'91No cycle!'\cf4 \cb1 \strokec4 \
-\cb9 \}\cb1 \
+\cb8 detectCycle () \{\cb1 \
+\cb8   \cf5 const\cf4  graphNodes = \cf6 Object\cf4 .keys(\cf5 this\cf4 .adjList);\cb1 \
+\cb8   \cf5 const\cf4  visited = \{\};\cb1 \
+\cb8   \cf5 const\cf4  recStack = \{\};\cb1 \
+\cb8   \cb1 \
+\cb8   \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < graphNodes.length; i++) \{\cb1 \
+\cb8     \cf5 const\cf4  node = graphNodes[i]\cb1 \
+\cb8     \cf5 if\cf4  (\cf5 this\cf4 ._detectCycleUtil(node, visited , recStack)) \cb1 \
+\cb8       \cf5 return\cf4  \cf15 \cb8 \'91There is a cycle!\'92\cf4 \cb1 \
+\cb8   \}\cb1 \
+\cb8   \cf5 return\cf4  \cf15 \cb8 \'91No cycle!'\cf4 \cb1 \
+\cb8 \}\cb1 \
 \
-\cb9 _detectCycleUtil (vertex, visited, recStack) \{\cb1 \
-\cb9   \cf5 \strokec5 if\cf4 \strokec4 (!visited[vertex])\{\cb1 \
-\cb9     visited[vertex] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9     recStack[vertex] = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9     \cf5 \strokec5 const\cf4 \strokec4  nodeNeighbors = \cf5 \strokec5 this\cf4 \strokec4 .adjList[vertex];\cb1 \
-\cb9     \cf5 \strokec5 for\cf4 \strokec4 (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < nodeNeighbors.length; i++)\{\cb1 \
-\cb9       \cf5 \strokec5 const\cf4 \strokec4  currentNode = nodeNeighbors[i];\cb1 \
-\cb9 \'a0\'a0  console.log(\cf17 \strokec17 'parent'\cf4 \strokec4 , vertex, \cf17 \strokec17 'Child'\cf4 \strokec4 , currentNode);\cb1 \
-\cb9       \cf5 \strokec5 if\cf4 \strokec4 (!visited[currentNode] && \cf5 \strokec5 this\cf4 \strokec4 ._detectCycleUtil(currentNode, visited, recStack))\{\cb1 \
-\cb9         \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9       \} \cf5 \strokec5 else\cf4 \strokec4  \cf5 \strokec5 if\cf4 \strokec4  (recStack[currentNode])\{\cb1 \
-\cb9         \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9       \}\cb1 \
-\cb9     \}\cb1 \
-\cb9   \}\cb1 \
-\cb9   recStack[vertex] = \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9   \cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9 \}\cb1 \
-\cb9 \}\cb1 \
+\cb8 _detectCycleUtil (vertex, visited, recStack) \{\cb1 \
+\cb8   \cf5 if\cf4 (!visited[vertex])\{\cb1 \
+\cb8     visited[vertex] = \cf5 true\cf4 ;\cb1 \
+\cb8     recStack[vertex] = \cf5 true\cf4 ;\cb1 \
+\cb8     \cf5 const\cf4  nodeNeighbors = \cf5 this\cf4 .adjList[vertex];\cb1 \
+\cb8     \cf5 for\cf4 (\cf5 let\cf4  i = \cf7 0\cf4 ; i < nodeNeighbors.length; i++)\{\cb1 \
+\cb8       \cf5 const\cf4  currentNode = nodeNeighbors[i];\cb1 \
+\cb8 \'a0\'a0  console.log(\cf15 \cb8 'parent'\cf4 \cb8 , vertex, \cf15 \cb8 'Child'\cf4 \cb8 , currentNode);\cb1 \
+\cb8       \cf5 if\cf4 (!visited[currentNode] && \cf5 this\cf4 ._detectCycleUtil(currentNode, visited, recStack))\{\cb1 \
+\cb8         \cf5 return\cf4  \cf5 true\cf4 ;\cb1 \
+\cb8       \} \cf5 else\cf4  \cf5 if\cf4  (recStack[currentNode])\{\cb1 \
+\cb8         \cf5 return\cf4  \cf5 true\cf4 ;\cb1 \
+\cb8       \}\cb1 \
+\cb8     \}\cb1 \
+\cb8   \}\cb1 \
+\cb8   recStack[vertex] = \cf5 false\cf4 ;\cb1 \
+\cb8   \cf5 return\cf4  \cf5 false\cf4 ;\cb1 \
+\cb8 \}\cb1 \
+\cb8 \}\cb1 \
 \
-\cf5 \cb9 \strokec5 const\cf4 \strokec4  graph = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Graph\cf4 \strokec4 ()\cb1 \
+\cf5 \cb8 const\cf4  graph = \cf5 new\cf4  \cf6 Graph\cf4 ()\cb1 \
 \
-\cb9 graph.addVertex(\cf17 \strokec17 'A'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addVertex(\cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addVertex(\cf17 \strokec17 'C'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addVertex(\cf17 \strokec17 'D'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addVertex(\cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
+\cb8 graph.addVertex(\cf15 \cb8 'A'\cf4 \cb8 )\cb1 \
+\cb8 graph.addVertex(\cf15 \cb8 'B'\cf4 \cb8 )\cb1 \
+\cb8 graph.addVertex(\cf15 \cb8 'C'\cf4 \cb8 )\cb1 \
+\cb8 graph.addVertex(\cf15 \cb8 'D'\cf4 \cb8 )\cb1 \
+\cb8 graph.addVertex(\cf15 \cb8 'E'\cf4 \cb8 )\cb1 \
 \
-\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'D'\cf4 \strokec4 , \cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'C'\cf4 \strokec4 , \cf17 \strokec17 'E'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'D'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'A'\cf4 \strokec4 , \cf17 \strokec17 'C'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'E'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'D'\cf4 \strokec4 , \cf17 \strokec17 'B'\cf4 \strokec4 )\cb1 \
-\cb9 graph.addEdge(\cf17 \strokec17 'E'\cf4 \strokec4 , \cf17 \strokec17 'A'\cf4 \strokec4 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'A'\cf4 \cb8 , \cf15 \cb8 'B'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'D'\cf4 \cb8 , \cf15 \cb8 'E'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'C'\cf4 \cb8 , \cf15 \cb8 'E'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'A'\cf4 \cb8 , \cf15 \cb8 'D'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'A'\cf4 \cb8 , \cf15 \cb8 'C'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'E'\cf4 \cb8 , \cf15 \cb8 'B'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'D'\cf4 \cb8 , \cf15 \cb8 'B'\cf4 \cb8 )\cb1 \
+\cb8 graph.addEdge(\cf15 \cb8 'E'\cf4 \cb8 , \cf15 \cb8 'A'\cf4 \cb8 )\cb1 \
 \
-\cb9 graph.dfs()\cb1 \
+\cb8 graph.dfs()\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 \outl0\strokewidth0 // GRAPH BFS
-\f1\b0 \cf4 \cb1 \outl0\strokewidth0 \strokec4 \
+\f0\b \cf2 \cb3 // GRAPH BFS
+\f1\b0 \cf4 \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf5 \cb9 \strokec5 let\cf4 \strokec4  bfs = (graph, root) => \{\cb1 \
-\cb9   \cf5 \strokec5 let\cf4 \strokec4  nodesLen = \{\};\cb1 \
+\cf5 \cb8 let\cf4  bfs = (graph, root) => \{\cb1 \
+\cb8   \cf5 let\cf4  nodesLen = \{\};\cb1 \
 \
-\cb9   \cf5 \strokec5 for\cf4 \strokec4 (\cf5 \strokec5 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < graph.length; i++)\{\cb1 \
-\cb9     nodesLen[i] = \cf10 \strokec10 Infinity\cf4 \strokec4 ; \cf12 \strokec12 // Indicates that a node is not reachable from the start node\cf4 \cb1 \strokec4 \
-\cb9   \}\cb1 \
-\cb9   nodesLen[root] = \cf11 \strokec11 0\cf4 \strokec4 ; \cf12 \strokec12 // The distance of the root node from the root node is set to 0\cf4 \cb1 \strokec4 \
+\cb8   \cf5 for\cf4 (\cf5 let\cf4  i = \cf7 0\cf4 ; i < graph.length; i++)\{\cb1 \
+\cb8     nodesLen[i] = \cf6 Infinity\cf4 ; \cf9 // Indicates that a node is not reachable from the start node\cf4 \cb1 \
+\cb8   \}\cb1 \
+\cb8   nodesLen[root] = \cf7 0\cf4 ; \cf9 // The distance of the root node from the root node is set to 0\cf4 \cb1 \
 \
-\cb9   \cf5 \strokec5 let\cf4 \strokec4  queue = [root] \cf12 \strokec12 // Keep track of nodes we visit\cf4 \cb1 \strokec4 \
-\cb9   \cf5 \strokec5 let\cf4 \strokec4  current; \cf12 \strokec12 // Keep track of the current node we are traversing\cf4 \cb1 \strokec4 \
+\cb8   \cf5 let\cf4  queue = [root] \cf9 // Keep track of nodes we visit\cf4 \cb1 \
+\cb8   \cf5 let\cf4  current; \cf9 // Keep track of the current node we are traversing\cf4 \cb1 \
 \
-\cb9   \cf12 \strokec12 // This loop will keep traversing nodes in the queue until we have no other node to traverse\cf4 \cb1 \strokec4 \
-\cb9   \cf5 \strokec5 while\cf4 \strokec4 (queue.length != \cf11 \strokec11 0\cf4 \strokec4 )\{\cb1 \
-\cb9     current  = queue.shift() \cf12 \strokec12 // Removes the first element in the array\cf4 \cb1 \strokec4 \
+\cb8   \cf9 // This loop will keep traversing nodes in the queue until we have no other node to traverse\cf4 \cb1 \
+\cb8   \cf5 while\cf4 (queue.length != \cf7 0\cf4 )\{\cb1 \
+\cb8     current  = queue.shift() \cf9 // Removes the first element in the array\cf4 \cb1 \
 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  curConnected = graph[current] \cf12 \strokec12 // We get all the nodes connected to the current node\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  neighborIdx = []\cb1 \
-\cb9     \cf5 \strokec5 let\cf4 \strokec4  idx = curConnected.indexOf(\cf11 \strokec11 1\cf4 \strokec4 ) \cf12 \strokec12 // Gets the index of the first node connected to the current node because the number one in our array shows that the node is connected to anothe node on that index\cf4 \cb1 \strokec4 \
+\cb8     \cf5 let\cf4  curConnected = graph[current] \cf9 // We get all the nodes connected to the current node\cf4 \cb1 \
+\cb8     \cf5 let\cf4  neighborIdx = []\cb1 \
+\cb8     \cf5 let\cf4  idx = curConnected.indexOf(\cf7 1\cf4 ) \cf9 // Gets the index of the first node connected to the current node because the number one in our array shows that the node is connected to anothe node on that index\cf4 \cb1 \
 \
-\cb9     \cf12 \strokec12 // If there is no node at the index of one, the index variable will be set to -1. \cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 while\cf4 \strokec4 (idx != -\cf11 \strokec11 1\cf4 \strokec4 )\{\cb1 \
-\cb9       neighborIdx.push(idx) \cf12 \strokec12 // So while index does not equals to -1, push our index onto our list of neighbors.\cf4 \cb1 \strokec4 \
-\cb9       idx = curConnected.indexOf(\cf11 \strokec11 1\cf4 \strokec4 , idx + \cf11 \strokec11 1\cf4 \strokec4 ) \cf12 \strokec12 // This line searches for the next connected node.\cf4 \cb1 \strokec4 \
-\cb9     \}\cb1 \
+\cb8     \cf9 // If there is no node at the index of one, the index variable will be set to -1. \cf4 \cb1 \
+\cb8     \cf5 while\cf4 (idx != -\cf7 1\cf4 )\{\cb1 \
+\cb8       neighborIdx.push(idx) \cf9 // So while index does not equals to -1, push our index onto our list of neighbors.\cf4 \cb1 \
+\cb8       idx = curConnected.indexOf(\cf7 1\cf4 , idx + \cf7 1\cf4 ) \cf9 // This line searches for the next connected node.\cf4 \cb1 \
+\cb8     \}\cb1 \
 \
-\cb9     \cf12 \strokec12 // Now that we know all the nodes connected to the current node, we loop through this connected nodes, and get the distance\cf4 \cb1 \strokec4 \
-\cb9     \cf5 \strokec5 for\cf4 \strokec4  ( \cf5 \strokec5 let\cf4 \strokec4  j = \cf11 \strokec11 0\cf4 \strokec4 ; j < neighborIdx.length; j++)\{\cb1 \
-\cb9       \cf5 \strokec5 if\cf4 \strokec4  (nodesLen[neighborIdx[j]] == \cf10 \strokec10 Infinity\cf4 \strokec4 )\{ \cf12 \strokec12 // This line we haven't set the distance from the nodesLen[neighborIdx[j]] yet so we will set now. \cf4 \cb1 \strokec4 \
-\cb9         nodesLen[neighborIdx[j]] = nodesLen[current] + \cf11 \strokec11 1\cf4 \cb1 \strokec4 \
-\cb9         queue.push(neighborIdx[j]) \cf12 \strokec12 // We push the neighbor to the queue so the next time we go through the while loop, we will check the neighbors of that node too.\cf4 \cb1 \strokec4 \
-\cb9       \}\cb1 \
-\cb9     \}\cb1 \
-\cb9   \}\cb1 \
+\cb8     \cf9 // Now that we know all the nodes connected to the current node, we loop through this connected nodes, and get the distance\cf4 \cb1 \
+\cb8     \cf5 for\cf4  ( \cf5 let\cf4  j = \cf7 0\cf4 ; j < neighborIdx.length; j++)\{\cb1 \
+\cb8       \cf5 if\cf4  (nodesLen[neighborIdx[j]] == \cf6 Infinity\cf4 )\{ \cf9 // This line we haven't set the distance from the nodesLen[neighborIdx[j]] yet so we will set now. \cf4 \cb1 \
+\cb8         nodesLen[neighborIdx[j]] = nodesLen[current] + \cf7 1\cf4 \cb1 \
+\cb8         queue.push(neighborIdx[j]) \cf9 // We push the neighbor to the queue so the next time we go through the while loop, we will check the neighbors of that node too.\cf4 \cb1 \
+\cb8       \}\cb1 \
+\cb8     \}\cb1 \
+\cb8   \}\cb1 \
 \
-\cb9   \cf5 \strokec5 return\cf4 \strokec4  nodesLen\cb1 \
-\cb9 \}\cb1 \
+\cb8   \cf5 return\cf4  nodesLen\cb1 \
+\cb8 \}\cb1 \
 \
-\cf5 \cb9 \strokec5 let\cf4 \strokec4  exBFSGraph = [\cb1 \
-\cb9   [\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ],\cb1 \
-\cb9   [\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ],\cb1 \
-\cb9   [\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ],\cb1 \
-\cb9   [\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ],\cb1 \
-\cb9   [\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 1\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ,\cf11 \strokec11 0\cf4 \strokec4 ]\cb1 \
-\cb9 ]\cb1 \
+\cf5 \cb8 let\cf4  exBFSGraph = [\cb1 \
+\cb8   [\cf7 0\cf4 ,\cf7 1\cf4 ,\cf7 1\cf4 ,\cf7 1\cf4 ,\cf7 0\cf4 ],\cb1 \
+\cb8   [\cf7 0\cf4 ,\cf7 0\cf4 ,\cf7 1\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ],\cb1 \
+\cb8   [\cf7 1\cf4 ,\cf7 1\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ],\cb1 \
+\cb8   [\cf7 0\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ,\cf7 1\cf4 ,\cf7 0\cf4 ],\cb1 \
+\cb8   [\cf7 0\cf4 ,\cf7 1\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ,\cf7 0\cf4 ]\cb1 \
+\cb8 ]\cb1 \
 \
-\cb9 bfs(exBFSGraph, \cf11 \strokec11 1\cf4 \strokec4 )\cb1 \
+\cb8 bfs(exBFSGraph, \cf7 1\cf4 )\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \outl0\strokewidth0 \
+\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // TRIE
-\f1\b0 \cf4 \cb1 \outl0\strokewidth0 \strokec4 \
+\f1\b0 \cf4 \cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf5 \cb9 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 (keys, end) \{\cb1 \
-\cb9 \'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .keys = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Map\cf4 \strokec4 ();\cb1 \
-\cb9 \'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .end = \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9 \}\cb1 \
-\cb9 \'a0\'a0setEnd() \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 this\cf4 \strokec4 .end = \cf5 \strokec5 true\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0isEnd() \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .end;\cb1 \
-\cb9 \'a0\'a0\};\cb1 \
-\cb9 \};\cb1 \
+\cf5 \cb8 class\cf4  \cf6 Node\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 (keys, end) \{\cb1 \
+\cb8 \'a0\'a0\cf5 this\cf4 .keys = \cf5 new\cf4  \cf6 Map\cf4 ();\cb1 \
+\cb8 \'a0\'a0\cf5 this\cf4 .end = \cf5 false\cf4 ;\cb1 \
+\cb8 \}\cb1 \
+\cb8 \'a0\'a0setEnd() \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 this\cf4 .end = \cf5 true\cf4 ;\cb1 \
+\cb8 \'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0isEnd() \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 return\cf4  \cf5 this\cf4 .end;\cb1 \
+\cb8 \'a0\'a0\};\cb1 \
+\cb8 \};\cb1 \
 \
-\cf5 \cb9 \strokec5 class\cf4 \strokec4  \cf10 \strokec10 Trie\cf4 \strokec4  \{\cb1 \
-\cb9   \cf5 \strokec5 constructor\cf4 \strokec4 (root) \{\cb1 \
-\cb9     \cf5 \strokec5 this\cf4 \strokec4 .root = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 ();\cb1 \
-\cb9   \}\cb1 \
-\cb9 \'a0\'a0\cb1 \
+\cf5 \cb8 class\cf4  \cf6 Trie\cf4  \{\cb1 \
+\cb8   \cf5 constructor\cf4 (root) \{\cb1 \
+\cb8     \cf5 this\cf4 .root = \cf5 new\cf4  \cf6 Node\cf4 ();\cb1 \
+\cb8   \}\cb1 \
+\cb8 \'a0\'a0\cb1 \
 \
-\cb9 \'a0\'a0add(input, node = \cf5 \strokec5 this\cf4 \strokec4 .root) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (input.length == \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0node.setEnd();\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\} \cf5 \strokec5 else\cf4 \strokec4  \cf5 \strokec5 if\cf4 \strokec4  (!node.keys.has(input[\cf11 \strokec11 0\cf4 \strokec4 ])) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0node.keys.\cf5 \strokec5 set\cf4 \strokec4 (input[\cf11 \strokec11 0\cf4 \strokec4 ], \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Node\cf4 \strokec4 ());\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .add(input.substr(\cf11 \strokec11 1\cf4 \strokec4 ), node.keys.\cf5 \strokec5 get\cf4 \strokec4 (input[\cf11 \strokec11 0\cf4 \strokec4 ]));\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 this\cf4 \strokec4 .add(input.substr(\cf11 \strokec11 1\cf4 \strokec4 ), node.keys.\cf5 \strokec5 get\cf4 \strokec4 (input[\cf11 \strokec11 0\cf4 \strokec4 ]));\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0add(input, node = \cf5 this\cf4 .root) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 if\cf4  (input.length == \cf7 0\cf4 ) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0node.setEnd();\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4 ;\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\} \cf5 else\cf4  \cf5 if\cf4  (!node.keys.has(input[\cf7 0\cf4 ])) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0node.keys.\cf5 set\cf4 (input[\cf7 0\cf4 ], \cf5 new\cf4  \cf6 Node\cf4 ());\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4  \cf5 this\cf4 .add(input.substr(\cf7 1\cf4 ), node.keys.\cf5 get\cf4 (input[\cf7 0\cf4 ]));\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\} \cf5 else\cf4  \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4  \cf5 this\cf4 .add(input.substr(\cf7 1\cf4 ), node.keys.\cf5 get\cf4 (input[\cf7 0\cf4 ]));\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\};\cb1 \
 \
-\cb9 \'a0\'a0isWord(word) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  node = \cf5 \strokec5 this\cf4 \strokec4 .root;\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 while\cf4 \strokec4  (word.length > \cf11 \strokec11 1\cf4 \strokec4 ) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (!node.keys.has(word[\cf11 \strokec11 0\cf4 \strokec4 ])) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0node = node.keys.\cf5 \strokec5 get\cf4 \strokec4 (word[\cf11 \strokec11 0\cf4 \strokec4 ]);\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0word = word.substr(\cf11 \strokec11 1\cf4 \strokec4 );\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  (node.keys.has(word) && node.keys.\cf5 \strokec5 get\cf4 \strokec4 (word).isEnd()) ? \cb1 \
-\cb9       \cf5 \strokec5 true\cf4 \strokec4  : \cf5 \strokec5 false\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0isWord(word) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 let\cf4  node = \cf5 this\cf4 .root;\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 while\cf4  (word.length > \cf7 1\cf4 ) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (!node.keys.has(word[\cf7 0\cf4 ])) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4  \cf5 false\cf4 ;\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\} \cf5 else\cf4  \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0node = node.keys.\cf5 get\cf4 (word[\cf7 0\cf4 ]);\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0word = word.substr(\cf7 1\cf4 );\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 return\cf4  (node.keys.has(word) && node.keys.\cf5 get\cf4 (word).isEnd()) ? \cb1 \
+\cb8       \cf5 true\cf4  : \cf5 false\cf4 ;\cb1 \
+\cb8 \'a0\'a0\};\cb1 \
 \
-\cb9 \'a0\'a0print() \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  words = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Array\cf4 \strokec4 ();\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 let\cf4 \strokec4  search = (node, string) => \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (node.keys.size != \cf11 \strokec11 0\cf4 \strokec4 ) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 for\cf4 \strokec4  (\cf5 \strokec5 let\cf4 \strokec4  letter \cf5 \strokec5 of\cf4 \strokec4  node.keys.keys()) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0search(node.keys.\cf5 \strokec5 get\cf4 \strokec4 (letter), string.concat(letter));\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 if\cf4 \strokec4  (node.isEnd()) \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0words.push(string);\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\} \cf5 \strokec5 else\cf4 \strokec4  \{\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0string.length > \cf11 \strokec11 0\cf4 \strokec4  ? words.push(string) : \cf5 \strokec5 undefined\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\};\cb1 \
-\cb9 \'a0\'a0\'a0\'a0search(\cf5 \strokec5 this\cf4 \strokec4 .root, \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 String\cf4 \strokec4 ());\cb1 \
-\cb9 \'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf4 \strokec4  words.length > \cf11 \strokec11 0\cf4 \strokec4  ? words : \cf17 \strokec17 ''\cf4 \strokec4 ;\cb1 \
-\cb9 \'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0print() \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 let\cf4  words = \cf5 new\cf4  \cf6 Array\cf4 ();\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 let\cf4  search = (node, string) => \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (node.keys.size != \cf7 0\cf4 ) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 for\cf4  (\cf5 let\cf4  letter \cf5 of\cf4  node.keys.keys()) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0search(node.keys.\cf5 get\cf4 (letter), string.concat(letter));\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 if\cf4  (node.isEnd()) \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0words.push(string);\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\} \cf5 else\cf4  \{\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0string.length > \cf7 0\cf4  ? words.push(string) : \cf5 undefined\cf4 ;\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 return\cf4 ;\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\};\cb1 \
+\cb8 \'a0\'a0\'a0\'a0search(\cf5 this\cf4 .root, \cf5 new\cf4  \cf6 String\cf4 ());\cb1 \
+\cb8 \'a0\'a0\'a0\'a0\cf5 return\cf4  words.length > \cf7 0\cf4  ? words : \cf15 \cb8 ''\cf4 \cb8 ;\cb1 \
+\cb8 \'a0\'a0\};\cb1 \
 \
-\cb9 \};\cb1 \
+\cb8 \};\cb1 \
 \
-\cb9 myTrie = \cf5 \strokec5 new\cf4 \strokec4  \cf10 \strokec10 Trie\cf4 \strokec4 ()\cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'ball'\cf4 \strokec4 ); \cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'bat'\cf4 \strokec4 ); \cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'doll'\cf4 \strokec4 ); \cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'dork'\cf4 \strokec4 ); \cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'do'\cf4 \strokec4 ); \cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'dorm'\cf4 \strokec4 )\cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'send'\cf4 \strokec4 )\cb1 \
-\cb9 myTrie.add(\cf17 \strokec17 'sense'\cf4 \strokec4 )\cb1 \
-\cb9 console.log(myTrie.isWord(\cf17 \strokec17 'doll'\cf4 \strokec4 ))\cb1 \
-\cb9 console.log(myTrie.isWord(\cf17 \strokec17 'dor'\cf4 \strokec4 ))\cb1 \
-\cb9 console.log(myTrie.isWord(\cf17 \strokec17 'dorf'\cf4 \strokec4 ))\cb1 \
-\cb9 console.log(myTrie.print())\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \outl0\strokewidth0 \
+\cb8 myTrie = \cf5 new\cf4  \cf6 Trie\cf4 ()\cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'ball'\cf4 \cb8 ); \cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'bat'\cf4 \cb8 ); \cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'doll'\cf4 \cb8 ); \cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'dork'\cf4 \cb8 ); \cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'do'\cf4 \cb8 ); \cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'dorm'\cf4 \cb8 )\cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'send'\cf4 \cb8 )\cb1 \
+\cb8 myTrie.add(\cf15 \cb8 'sense'\cf4 \cb8 )\cb1 \
+\cb8 console.log(myTrie.isWord(\cf15 \cb8 'doll'\cf4 \cb8 ))\cb1 \
+\cb8 console.log(myTrie.isWord(\cf15 \cb8 'dor'\cf4 \cb8 ))\cb1 \
+\cb8 console.log(myTrie.isWord(\cf15 \cb8 'dorf'\cf4 \cb8 ))\cb1 \
+\cb8 console.log(myTrie.print())\cb1 \
+\
 \pard\pardeftab720\sl282\partightenfactor0
 
-\f3 \cf18 \cb3 \
+\f3 \cf16 \cb3 \
 }
