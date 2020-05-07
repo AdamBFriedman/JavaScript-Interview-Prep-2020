@@ -651,7 +651,7 @@ The total probability the knight stays on the board is 0.0625.\
 \cb12     \cf6 \strokec6 let\cf4 \strokec4  permU = \cf6 \strokec6 function\cf4 \strokec4 (nums) \{\cb1 \
 \cb12         \cf6 \strokec6 if\cf4 \strokec4  (nums.length == \cf15 \strokec15 1\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  [nums];\cb1 \
 \cb12         \cf6 \strokec6 let\cf4 \strokec4  res = []\cb1 \
-\cb12         \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i=\cf15 \strokec15 0\cf4 \strokec4 ;i<nums.length;i++) \{\cb1 \
+\cb12         \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf15 \strokec15 0\cf4 \strokec4 ; i < nums.length; i++) \{\cb1 \
 \cb12             \cf6 \strokec6 let\cf4 \strokec4  temp = [...nums.slice(\cf15 \strokec15 0\cf4 \strokec4 , i), ...nums.slice(i+\cf15 \strokec15 1\cf4 \strokec4 )];\cb1 \
 \cb12             \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  c \cf6 \strokec6 of\cf4 \strokec4  permU(temp)) \{\cb1 \
 \cb12                 res.push([nums[i], ...c]); \cb1 \
