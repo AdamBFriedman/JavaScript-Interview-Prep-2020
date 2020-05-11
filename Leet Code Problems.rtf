@@ -591,20 +591,20 @@ The total probability the knight stays on the board is 0.0625.\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb5 const\cf4 \cb5  productExceptSelf = nums => \{\cb1 \
+\cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  productExceptSelf = nums => \{\cb1 \
+\cb11     \cf6 \strokec6 let\cf4 \strokec4  result = [\cf12 \strokec12 1\cf4 \strokec4 ];\cb1 \
+\cb11     \cf6 \strokec6 let\cf4 \strokec4  temp = \cf12 \strokec12 1\cf4 \strokec4 ;\cb1 \
+\cb11     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 1\cf4 \strokec4 ; i < nums.length; i++) \{\cb1 \
+\cb11         result[i] = result[i - \cf12 \strokec12 1\cf4 \strokec4 ] * nums[i - \cf12 \strokec12 1\cf4 \strokec4 ];\cb1 \
+\cb11     \};\cb1 \
+\cb11     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = nums.length - \cf12 \strokec12 1\cf4 \strokec4 ; i > -\cf12 \strokec12 1\cf4 \strokec4 ; i--) \{\cb1 \
+\cb11         result[i] *= temp;\cb1 \
+\cb11         temp *= nums[i];\cb1 \
+\cb11     \};\cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  result;\cb1 \
+\cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 \cb5 let\cf4 \cb5  length = nums.length;\cb1 \
-\cb5     \cf6 \cb5 let\cf4 \cb5  result = [\cf8 \cb5 1\cf4 \cb5 ];\cb1 \
-\cb5     \cf6 \cb5 let\cf4 \cb5  temp = \cf8 \cb5 1\cf4 \cb5 ;\cb1 \
-\cb5     \cf6 \cb5 for\cf4 \cb5  (\cf6 \cb5 let\cf4 \cb5  i = \cf8 \cb5 1\cf4 \cb5 ; i < length; i++) \{\cb1 \
-\cb5         result[i] = result[i - \cf8 \cb5 1\cf4 \cb5 ] * nums[i - \cf8 \cb5 1\cf4 \cb5 ];\cb1 \
-\cb5     \};\cb1 \
-\cb5     \cf6 \cb5 for\cf4 \cb5  (\cf6 \cb5 let\cf4 \cb5  i = length - \cf8 \cb5 1\cf4 \cb5 ; i > -\cf8 \cb5 1\cf4 \cb5 ; i--) \{\cb1 \
-\cb5         result[i] = result[i] * temp;\cb1 \
-\cb5         temp = temp * nums[i];\cb1 \
-\cb5     \};\cb1 \
-\cb5     \cf6 \cb5 return\cf4 \cb5  result;\cb1 \
-\cb5 \};\cb1 \
+\cf4 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
