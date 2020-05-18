@@ -1036,23 +1036,42 @@ The binary search tree is guaranteed to have unique values.
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Next Problem
-\f1\b0 \cf4 \cb5 \
-\
+\f0\b \cf2 \cb3 // Longest Common Prefix\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = arr => \{\cb1 \
-\
-\}\
+
+\f1\b0 \cf4 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  longestCommonPrefix = strs => \{\cb1 \
+\cb15   \cf6 \strokec6 if\cf4 \strokec4  (strs.length === \cf17 \strokec17 0\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf18 \strokec18 ''\cf4 \strokec4 ;\cb1 \
+\cb15   \cf6 \strokec6 let\cf4 \strokec4  result = \cf18 \strokec18 ''\cf4 \strokec4 ;\cb1 \
+\cb15   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf17 \strokec17 0\cf4 \strokec4 ; i < strs[\cf17 \strokec17 0\cf4 \strokec4 ].length; i++) \{\cb1 \
+\cb15     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  j = \cf17 \strokec17 1\cf4 \strokec4 ; j < strs.length; j++) \{\cb1 \
+\cb15       \cf6 \strokec6 if\cf4 \strokec4  (strs[\cf17 \strokec17 0\cf4 \strokec4 ][i] !== strs[j][i]) \cf6 \strokec6 return\cf4 \strokec4  result;\cb1 \
+\cb15     \}\cb1 \
+\cb15     result += strs[\cf17 \strokec17 0\cf4 \strokec4 ][i];\cb1 \
+\cb15   \}\cb1 \
+\cb15   \cf6 \strokec6 return\cf4 \strokec4  result;\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Next Problem
+\f0\b \cf2 \cb3 // Remove Duplicate Numbers from Array
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = arr => \{\cb1 \
-\
-\}\
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  removeDuplicates = nums => \{\cb1 \
+\cb15     \cf6 \strokec6 var\cf4 \strokec4  i = \cf17 \strokec17 0\cf4 \strokec4 ;\cb1 \
+\cb15     nums.forEach(\cf6 \strokec6 function\cf4 \strokec4  (elem) \{\cb1 \
+\cb15         \cf6 \strokec6 if\cf4 \strokec4  (elem !== nums[i]) \{\cb1 \
+\cb15             nums[++i] = elem;\cb1 \
+\cb15         \}\cb1 \
+\cb15     \});\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  nums.length && i + \cf17 \strokec17 1\cf4 \strokec4 ;\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
