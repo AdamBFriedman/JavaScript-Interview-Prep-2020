@@ -14,7 +14,7 @@
 }
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
-\margl1440\margr1440\vieww14320\viewh17140\viewkind0
+\margl1440\margr1440\vieww12980\viewh17140\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -1554,43 +1554,83 @@ The binary search tree is guaranteed to have unique values.
 \cb1 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 \outl0\strokewidth0 // Coming Soon
+\f0\b \cf2 \cb3 \outl0\strokewidth0 // Contains Duplicate
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  containsDuplicate = nums => \{\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  nums.length !== \cf6 \strokec6 new\cf4 \strokec4  \cf16 \strokec16 Set\cf4 \strokec4 (nums).size\cb1 \
+\cb15 \};\cb5 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Roman to Integer
+\f1\b0 \cf4 \cb5 \
 \
-\cb5 \};\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  romanToInt = str => \{\cb1 \
+\cb15   \cf6 \strokec6 if\cf4 \strokec4  (!str || str.length === \cf17 \strokec17 0\cf4 \strokec4 ) \{\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  \cf17 \strokec17 0\cf4 \strokec4 ;\cb1 \
+\cb15   \}\cb1 \
+\
+\cb15   \cf6 \strokec6 const\cf4 \strokec4  map = \cf6 \strokec6 new\cf4 \strokec4  \cf16 \strokec16 Map\cf4 \strokec4 ([[\cf18 \strokec18 'I'\cf4 \strokec4 , \cf17 \strokec17 1\cf4 \strokec4 ], [\cf18 \strokec18 'V'\cf4 \strokec4 , \cf17 \strokec17 5\cf4 \strokec4 ], [\cf18 \strokec18 'X'\cf4 \strokec4 , \cf17 \strokec17 10\cf4 \strokec4 ], [\cf18 \strokec18 'L'\cf4 \strokec4 , \cf17 \strokec17 50\cf4 \strokec4 ], [\cf18 \strokec18 'C'\cf4 \strokec4 , \cf17 \strokec17 100\cf4 \strokec4 ], [\cf18 \strokec18 'D'\cf4 \strokec4 , \cf17 \strokec17 500\cf4 \strokec4 ], [\cf18 \strokec18 'M'\cf4 \strokec4 , \cf17 \strokec17 1000\cf4 \strokec4 ]]);\cb1 \
+\
+\cb15   \cf6 \strokec6 let\cf4 \strokec4  i = str.length - \cf17 \strokec17 1\cf4 \strokec4 ;\cb1 \
+\cb15   \cf6 \strokec6 let\cf4 \strokec4  result = map.\cf6 \strokec6 get\cf4 \strokec4 (str[i]);\cb1 \
+\
+\cb15   \cf6 \strokec6 while\cf4 \strokec4  (i > \cf17 \strokec17 0\cf4 \strokec4 ) \{\cb1 \
+\cb15     \cf6 \strokec6 const\cf4 \strokec4  curr = map.\cf6 \strokec6 get\cf4 \strokec4 (str[i]);\cb1 \
+\cb15     \cf6 \strokec6 const\cf4 \strokec4  prev = map.\cf6 \strokec6 get\cf4 \strokec4 (str[i - \cf17 \strokec17 1\cf4 \strokec4 ]);\cb1 \
+\
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (prev >= curr) \{\cb1 \
+\cb15       result += prev;\cb1 \
+\cb15     \} \cf6 \strokec6 else\cf4 \strokec4  \{\cb1 \
+\cb15       result -= prev;\cb1 \
+\cb15     \}\cb1 \
+\
+\cb15     i--;\cb1 \
+\cb15   \}\cb1 \
+\
+\cb15   \cf6 \strokec6 return\cf4 \strokec4  result;\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Coming Soon
+\f0\b \cf2 \cb3 // Excel Sheet Column Number
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  titleToNumber = (str) => \{\cb1 \
+\cb15   \cf6 \strokec6 const\cf4 \strokec4  letterToNumber = char => char.charCodeAt(\cf17 \strokec17 0\cf4 \strokec4 ) - \cf17 \strokec17 64\cf4 \strokec4 ;\cb1 \
+\cb15   \cb1 \
+\cb15   \cf6 \strokec6 return\cf4 \strokec4  [...str]\cb1 \
+\cb15     .reverse()\cb1 \
+\cb15     .map((char, i) => letterToNumber(char) * \cf16 \strokec16 Math\cf4 \strokec4 .pow(\cf17 \strokec17 26\cf4 \strokec4 , i))\cb1 \
+\cb15     .reduce((prev, current) => prev + current, \cf17 \strokec17 0\cf4 \strokec4 );\cb1 \
+\cb15 \};\cb1 \
 \
-\cb5 \};\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Coming Soon
+\f0\b \cf2 \cb3 // First Unique Character
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
-\
-\cb5 \};\
-\
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  firstUniqChar = str => \{\cb1 \
+\cb15    \cf6 \strokec6 for\cf4 \strokec4 (i = \cf17 \strokec17 0\cf4 \strokec4 ; i < str.length; i++)\{\cb1 \
+\cb15        \cf6 \strokec6 if\cf4 \strokec4  (str.indexOf(str[i])=== str.lastIndexOf(str[i]))\{\cb1 \
+\cb15           \cf6 \strokec6 return\cf4 \strokec4  i;\cb1 \
+\cb15       \} \cb1 \
+\cb15    \}\cb1 \
+\cb15    \cf6 \strokec6 return\cf4 \strokec4  -\cf17 \strokec17 1\cf4 \strokec4 ;\cb1 \
+\cb15 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-
-\f0\b \cf2 \cb3 // Coming Soon
-\f1\b0 \cf4 \cb5 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
-\
-\cb5 \};\
+\cf4 \cb5 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
