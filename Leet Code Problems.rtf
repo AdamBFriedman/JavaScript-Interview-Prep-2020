@@ -68,7 +68,7 @@
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
-let\cf4  twoSum = (nums, target) => \{\cb1 \
+const\cf4  twoSum = (nums, target) => \{\cb1 \
 \cb5     \cf6 let\cf4  idx = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
 \cb5     \cf6 let\cf4  result = [];\cb1 \
 \
@@ -1299,6 +1299,108 @@ The binary search tree is guaranteed to have unique values.
 \cb15 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Same Tree
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  isSameTree = (p, q) => \{\cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (!p && !q) \{\cb1 \
+\cb15         \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 true\cf4 \strokec4 ;\cb1 \
+\cb15     \}\cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (!p || !q || p.val !== q.val) \{\cb1 \
+\cb15         \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb15     \}\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  isSameTree(p.left, q.left) && isSameTree(p.right, q.right);\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Path Sum
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  hasPathSum = (root, sum) => \{\cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (!root) \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (!root.left && !root.right) \cf6 \strokec6 return\cf4 \strokec4  sum-root.val==\cf17 \strokec17 0\cf4 \strokec4 ;\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);    \cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
