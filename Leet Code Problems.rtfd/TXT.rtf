@@ -2166,23 +2166,43 @@ Return True if\'a0
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Coming Soon
+\f0\b \cf2 \cb3 // Linked List Cycle
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
-\
-\cb5 \};\
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  hasCycle = head => \{\cb1 \
+\cb15   \cf6 \strokec6 let\cf4 \strokec4  fast = head;\cb1 \
+\cb15   \cf6 \strokec6 let\cf4 \strokec4  slow = head;\cb1 \
+\cb15   \cb1 \
+\cb15   \cf6 \strokec6 while\cf4 \strokec4  (fast && fast.next) \{\cb1 \
+\cb15     fast = fast.next.next;\cb1 \
+\cb15     slow = slow.next;\cb1 \
+\cb15     \cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (fast === slow) \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 true\cf4 \strokec4 ;\cb1 \
+\cb15   \}\cb1 \
+\cb15   \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Coming Soon
+\f0\b \cf2 \cb3 // Intersection of Two Linked Lists
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
-\
-\cb5 \};\
+\cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  getIntersectionNode = (headA, headB) => \{\cb1 \
+\cb15     \cf6 \strokec6 if\cf4 \strokec4  (!headA || !headB) \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 null\cf4 \strokec4 ;\cb1 \
+\cb15     \cf6 \strokec6 var\cf4 \strokec4  curA = headA;\cb1 \
+\cb15     \cf6 \strokec6 var\cf4 \strokec4  curB = headB;\cb1 \
+\cb15     \cf6 \strokec6 while\cf4 \strokec4  (curA != curB) \{\cb1 \
+\cb15         curA = curA == \cf6 \strokec6 null\cf4 \strokec4  ? headB : curA.next;\cb1 \
+\cb15         curB = curB == \cf6 \strokec6 null\cf4 \strokec4  ? headA : curB.next;\cb1 \
+\cb15     \}\cb1 \
+\cb15     \cf6 \strokec6 return\cf4 \strokec4  curA;\cb1 \
+\cb15 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
