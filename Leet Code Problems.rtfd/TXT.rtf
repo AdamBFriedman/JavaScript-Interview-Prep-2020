@@ -6,12 +6,14 @@
 \red255\green255\blue254;\red0\green0\blue255;\red144\green1\blue18;\red19\green120\blue72;\red14\green110\blue109;
 \red154\green154\blue154;\red255\green255\blue254;\red19\green120\blue72;\red14\green110\blue109;\red29\green38\blue42;
 \red67\green91\blue103;\red245\green247\blue249;\red29\green38\blue42;\red67\green91\blue103;\red245\green247\blue249;
-\red144\green1\blue18;\red78\green106\blue120;\red154\green154\blue154;\red107\green0\blue1;}
+\red144\green1\blue18;\red78\green106\blue120;\red154\green154\blue154;\red78\green78\blue78;\red107\green0\blue1;
+}
 {\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;
 \cssrgb\c100000\c100000\c99608;\cssrgb\c0\c0\c100000;\cssrgb\c63922\c8235\c8235;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;
 \cssrgb\c66667\c66667\c66667;\cssrgb\c100000\c100000\c99608;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;\cssrgb\c14902\c19608\c21961;
 \cssrgb\c32941\c43137\c47843;\cssrgb\c96863\c97647\c98039;\cssrgb\c14902\c19608\c21961;\cssrgb\c32941\c43137\c47843;\cssrgb\c96863\c97647\c98039;
-\cssrgb\c63922\c8235\c8235;\cssrgb\c37647\c49020\c54510;\cssrgb\c66667\c66667\c66667;\cssrgb\c50196\c0\c0;}
+\cssrgb\c63922\c8235\c8235;\cssrgb\c37647\c49020\c54510;\cssrgb\c66667\c66667\c66667;\cssrgb\c38039\c38039\c38039;\cssrgb\c50196\c0\c0;
+}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -1601,13 +1603,13 @@ If the town judge exists and can be identified, return the label of the town jud
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  findJudge = (\cf13 \strokec13 N\cf4 \strokec4 , trust) => \{\cb1 \
 \cb11   \cf6 \strokec6 var\cf4 \strokec4  graph = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Map\cf4 \strokec4  ()\cb1 \
-\cb11   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 1\cf4 \strokec4 ; i <= \cf13 \strokec13 N\cf4 \strokec4 ; i ++) \{\cb1 \
+\cb11   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 1\cf4 \strokec4 ; i <= \cf13 \strokec13 N\cf4 \strokec4 ; i++) \{\cb1 \
 \cb11     graph.\cf6 \strokec6 set\cf4 \strokec4 (i, \cf12 \strokec12 1\cf4 \strokec4 )\cb1 \
 \cb11   \}\cb1 \
 \cb11   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  [v, e] \cf6 \strokec6 of\cf4 \strokec4  trust) \{\cb1 \
 \cb11     \cf22 \strokec22 // console.log(v, e)\cf4 \cb1 \strokec4 \
-\cb11     graph.\cf6 \strokec6 set\cf4 \strokec4 (v, graph.\cf6 \strokec6 get\cf4 \strokec4 (v) - \cf12 \strokec12 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is not  trusted -1\cf4 \cb1 \strokec4 \
-\cb11     graph.\cf6 \strokec6 set\cf4 \strokec4 (e, graph.\cf6 \strokec6 get\cf4 \strokec4 (e) + \cf12 \strokec12 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is  trusted + 1\cf4 \cb1 \strokec4 \
+\cb11     graph.\cf6 \strokec6 set\cf4 \strokec4 (v, graph.\cf6 \strokec6 get\cf4 \strokec4 (v) - \cf12 \strokec12 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is not trusted -1\cf4 \cb1 \strokec4 \
+\cb11     graph.\cf6 \strokec6 set\cf4 \strokec4 (e, graph.\cf6 \strokec6 get\cf4 \strokec4 (e) + \cf12 \strokec12 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is trusted + 1\cf4 \cb1 \strokec4 \
 \cb11   \}\cb1 \
 \cb11   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  [key, value] \cf6 \strokec6 of\cf4 \strokec4  graph) \{\cb1 \
 \cb11     \cf6 \strokec6 if\cf4 \strokec4  (value === \cf13 \strokec13 N\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  key\cb1 \
@@ -1660,13 +1662,13 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 \cb11     \cb1 \
 \cb11     \cf6 \strokec6 if\cf4 \strokec4 (total%\cf12 \strokec12 2\cf4 \strokec4  != \cf12 \strokec12 0\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \cb1 \strokec4 \
 \cb11     \cb1 \
-\cb11     \cf6 \strokec6 let\cf4 \strokec4  target = total /\cf12 \strokec12 2\cf4 \cb1 \strokec4 \
+\cb11     \cf6 \strokec6 let\cf4 \strokec4  target = total / \cf12 \strokec12 2\cf4 \cb1 \strokec4 \
 \cb11     \cf6 \strokec6 let\cf4 \strokec4  arr = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Array\cf4 \strokec4 (target + \cf12 \strokec12 1\cf4 \strokec4 ).fill(\cf6 \strokec6 false\cf4 \strokec4 )\cb1 \
 \cb11     arr[\cf12 \strokec12 0\cf4 \strokec4 ] = \cf6 \strokec6 true\cf4 \cb1 \strokec4 \
 \cb11     \cb1 \
 \cb11     \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  el \cf6 \strokec6 of\cf4 \strokec4  nums) \{\cb1 \
 \cb11         \cb1 \
-\cb11         \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  i = target; i >=\cf12 \strokec12 0\cf4 \strokec4 ; i--) \{            \cb1 \
+\cb11         \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  i = target; i >= \cf12 \strokec12 0\cf4 \strokec4 ; i--) \{            \cb1 \
 \cb11             \cf6 \strokec6 let\cf4 \strokec4  complement = i - el\cb1 \
 \cb11             \cb1 \
 \cb11             \cf6 \strokec6 if\cf4 \strokec4 (!arr[i] && arr[complement])\{\cb1 \
@@ -1684,23 +1686,137 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 
 \f0\b \cf2 \cb3 // Balanced Binary Tree
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given a binary tree, determine if it is height-balanced.\
+For this problem, a height-balanced binary tree is defined as:\
+\pard\pardeftab720\sa280\partightenfactor0
+\cf23 \strokec23 a binary tree in which the left and right subtrees of\'a0
+\f5\i every
+\f3\i0 \'a0node differ in height by no more than 1.\cb1 \
+\pard\pardeftab720\sa280\partightenfactor0
+\cf17 \cb3 \strokec17 \'a0\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example 1:
+\f3\b0 \
+Given the following tree\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 [3,9,20,null,null,15,7]
+\f3\fs28 \cf17 \cb3 \strokec17 :\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19     3\
+   / \\\
+  9  20\
+    /  \\\
+   15   7\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\fs28 \cf17 \cb3 Return true.\cb1 \uc0\u8232 \u8232 
+\f6\b \cb3 Example 2:
+\f3\b0 \
+Given the following tree\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 [1,2,2,3,3,null,null,4,4]
+\f3\fs28 \cf17 \cb3 \strokec17 :\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19        1\
+      / \\\
+     2   2\
+    / \\\
+   3   3\
+  / \\\
+ 4   4\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\fs28 \cf17 \cb3 Return false.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f1 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  isBalanced = root => \{\cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  getHeight(root) !== -\cf12 \strokec12 1\cf4 \strokec4 ;\cb1 \
 \cb11     \cb1 \
-\cb11     \cf6 \strokec6 function\cf4 \strokec4  getHeight(root) \{\cb1 \
-\cb11         \cf6 \strokec6 if\cf4 \strokec4 (!root) \{\cb1 \
-\cb11             \cf6 \strokec6 return\cf4 \strokec4  \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
-\cb11         \}\cb1 \
-\cb11         \cf6 \strokec6 let\cf4 \strokec4  left = getHeight(root.left);\cb1 \
-\cb11         \cf6 \strokec6 let\cf4 \strokec4  right = getHeight(root.right);\cb1 \
-\cb11         \cf6 \strokec6 if\cf4 \strokec4 (left == -\cf12 \strokec12 1\cf4 \strokec4  || right == -\cf12 \strokec12 1\cf4 \strokec4  || \cf13 \strokec13 Math\cf4 \strokec4 .abs(left - right) > \cf12 \strokec12 1\cf4 \strokec4 ) \{\cb1 \
-\cb11             \cf6 \strokec6 return\cf4 \strokec4  -\cf12 \strokec12 1\cf4 \strokec4 ;\cb1 \
-\cb11         \}\cb1 \
-\cb11         \cf6 \strokec6 return\cf4 \strokec4  \cf12 \strokec12 1\cf4 \strokec4  + \cf13 \strokec13 Math\cf4 \strokec4 .max(left, right);\cb1 \
+\cb11     \cf6 \strokec6 let\cf4 \strokec4  dfs = node => \{\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4  (!node) \cf6 \strokec6 return\cf4 \strokec4  \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
+\cb11         \cf6 \strokec6 let\cf4 \strokec4  left = \cf12 \strokec12 1\cf4 \strokec4  + dfs(node.left);\cb1 \
+\cb11         \cf6 \strokec6 let\cf4 \strokec4  right = \cf12 \strokec12 1\cf4 \strokec4  + dfs(node.right);\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4  (\cf13 \strokec13 Math\cf4 \strokec4 .abs(left - right) > \cf12 \strokec12 1\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf13 \strokec13 Infinity\cf4 \strokec4 ;\cb1 \
+\cb11         \cf6 \strokec6 return\cf4 \strokec4  \cf13 \strokec13 Math\cf4 \strokec4 .max(left, right);\cb1 \
 \cb11     \}\cb1 \
-\cb11 \};\cb1 \
+\cb11     \cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  dfs(root) == \cf13 \strokec13 Infinity \cf4 \strokec4 ? \cf6 \strokec6 false \cf4 \strokec4 : \cf6 \strokec6 true\cf4 \strokec4 ;\cb1 \
+\cb11 \};\cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b \cf2 \cb3 // Same Tree
+\f1\b0 \cf4 \cb5 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf14 \cb3 Given two binary trees, write a function to check if they are the same or not.\
+Two binary trees are considered the same if they are structurally identical and the nodes have the same value.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf14 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf14 \cb16 Input:
+\f1\b0      1         1\
+          / \\       / \\\
+         2   3     2   3\
+\
+        [1,2,3],   [1,2,3]\
+\
+
+\f0\b Output:
+\f1\b0  true\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf14 \cb3 Example 2:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf14 \cb16 Input:
+\f1\b0      1         1\
+          /           \\\
+         2             2\
+\
+        [1,2],     [1,null,2]\
+\
+
+\f0\b Output:
+\f1\b0  false\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 /**\
+ * Definition for a binary tree node.\
+ * function TreeNode(val, left, right) \{\
+ *     this.val = (val===undefined ? 0 : val)\
+ *     this.left = (left===undefined ? null : left)\
+ *     this.right = (right===undefined ? null : right)\
+ * \}\
+ */\
+/**\
+ * @param \{TreeNode\} p\
+ * @param \{TreeNode\} q\
+ * @return \{boolean\}\
+ */\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb5 const\cf4  isSameTree = (p, q) => \{\cb1 \
+\cb5     \cf6 if\cf4  (!p && !q) \{\cb1 \
+\cb5         \cf6 return\cf4  \cf6 true\cf4 ; \cf10 \cb5 // Both nodes are null, ok\cf4 \cb1 \
+\cb5     \}\cb1 \
+\cb5     \cf6 if\cf4  (!p || !q || p.val !== q.val) \{\cb1 \
+\cb5         \cf6 return\cf4  \cf6 false\cf4 ; \cf10 \cb5 // Found a mismatch\cf4 \cb1 \
+\cb5     \}\cb1 \
+\cb5     \cf6 return\cf4  isSameTree(p.left, q.left) && isSameTree(p.right, q.right);\cb1 \
+\cb5 \};\cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
 \
@@ -1708,7 +1824,42 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 
 \f0\b \cf2 \cb3 // Symmetric Tree
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).\
+For example, this binary tree\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 [1,2,2,3,4,4,3]
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0is symmetric:\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19     1\
+   / \\\
+  2   2\
+ / \\ / \\\
+3  4 4  3\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\fs28 \cf17 \cb3 \'a0\
+But the following\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 [1,2,2,null,3,null,3]
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0is not:\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19     1\
+   / \\\
+  2   2\
+   \\   \\\
+   3    3\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\fs28 \cf17 \cb3 \'a0\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Follow up:
+\f3\b0 \'a0Solve it both recursively and iteratively.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f1 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  isSymmetric = root => \{\cb1 \
 \cb11     \cf6 \strokec6 if\cf4 \strokec4  (!root) \{\cb1 \
@@ -1716,38 +1867,76 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 \cb11     \}\cb1 \
 \
 \cb11     \cf22 \strokec22 // Check if tree s & t are mirroring each other\cf4 \cb1 \strokec4 \
-\cb11     \cf6 \strokec6 function\cf4 \strokec4  isMirror(s, t) \{\cb1 \
-\cb11         \cf6 \strokec6 if\cf4 \strokec4  (!s && !t) \{\cb1 \
+\cb11     \cf6 \strokec6 function\cf4 \strokec4  isMirror(p, q) \{\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4  (!p && !q) \{\cb1 \
 \cb11             \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 true\cf4 \strokec4 ; \cf22 \strokec22 // Both nodes are null, ok\cf4 \cb1 \strokec4 \
 \cb11         \}\cb1 \
-\cb11         \cf6 \strokec6 if\cf4 \strokec4  (!s || !t || s.val !== t.val) \{\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4  (!p || !q || p.val !== q.val) \{\cb1 \
 \cb11             \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ; \cf22 \strokec22 // Found a mismatch\cf4 \cb1 \strokec4 \
 \cb11         \}\cb1 \
 \cb11         \cf22 \strokec22 // Compare the left subtree of `s` with the right subtree of `t`\cf4 \cb1 \strokec4 \
 \cb11         \cf22 \strokec22 // and the right subtree of `s` with the left subtree of `t`\cf4 \cb1 \strokec4 \
-\cb11         \cf6 \strokec6 return\cf4 \strokec4  isMirror(s.left, t.right) && isMirror(s.right, t.left);\cb1 \
+\cb11         \cf6 \strokec6 return\cf4 \strokec4  isMirror(p.left, q.right) && isMirror(p.right, q.left);\cb1 \
 \cb11     \}\cb1 \
 \
 \cb11     \cf6 \strokec6 return\cf4 \strokec4  isMirror(root.left, root.right);\cb1 \
 \cb11 \};\cb1 \
+\outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \outl0\strokewidth0 \
+\cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Same Tree
-\f1\b0 \cf4 \cb5 \
+\f0\b \cf2 \cb3 // Convert Sorted Array to BST\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\b0 \cf14 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.\
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of\'a0
+\f5\i every
+\f3\i0 \'a0node never differ by more than 1.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf14 Example:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf14 \cb16 Given the sorted array: [-10,-3,0,5,9],\
+\
+One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:\
+\
+      0\
+     / \\\
+   -3   9\
+   /   /\
+ -10  5\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 /**\
+ * Definition for a binary tree node.\
+ * function TreeNode(val, left, right) \{\
+ *     this.val = (val===undefined ? 0 : val)\
+ *     this.left = (left===undefined ? null : left)\
+ *     this.right = (right===undefined ? null : right)\
+ * \}\
+ */\
+/**\
+ * @param \{number[]\} nums\
+ * @return \{TreeNode\}\
+ */\
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  isSameTree = (p, q) => \{\cb1 \
-\cb11     \cf6 \strokec6 if\cf4 \strokec4  (!p && !q) \{\cb1 \
-\cb11         \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 true\cf4 \strokec4 ;\cb1 \
-\cb11     \}\cb1 \
-\cb11     \cf6 \strokec6 if\cf4 \strokec4  (!p || !q || p.val !== q.val) \{\cb1 \
-\cb11         \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
-\cb11     \}\cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  isSameTree(p.left, q.left) && isSameTree(p.right, q.right);\cb1 \
-\cb11 \};\cb1 \
+\cf6 \cb5 const\cf4  sortedArrayToBST = nums => \{\cb1 \
+\cb5     \cf6 if\cf4  (!nums.length) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
+\cb5     \cb1 \
+\cb5     \cf6 const\cf4  mid = \cf9 Math\cf4 .floor(nums.length / \cf8 2\cf4 );\cb1 \
+\cb5     \cf6 const\cf4  root = \cf6 new\cf4  \cf9 TreeNode\cf4 (nums[mid]);\cb1 \
+\cb5     \cb1 \
+\cb5     \cf10 // subtrees are BSTs as well\cf4 \cb1 \
+\cb5     root.left = sortedArrayToBST(nums.slice(\cf8 0\cf4 , mid));\cb1 \
+\cb5     root.right = sortedArrayToBST(nums.slice(mid + \cf8 1\cf4 ));\cb1 \
+\cb5     \cb1 \
+\cb5     \cf6 return\cf4  root;\cb1 \
+\cb5 \};\cb1 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
 \
@@ -1816,7 +2005,7 @@ Given the below binary tree and\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  kidsWithCandies = (candies, extraCandies) => \{\cb1 \
 \cb11 \'a0\'a0\cf6 \strokec6 const\cf4 \strokec4  max = \cf13 \strokec13 Math\cf4 \strokec4 .max(...candies)\cb1 \
-\cb11 \'a0\'a0\cf6 \strokec6 const\cf4 \strokec4  result = candies.map((candy) => candy + extraCandies >= max)\cb1 \
+\cb11 \'a0\'a0\cf6 \strokec6 const\cf4 \strokec4  result = candies.map(candy => candy + extraCandies >= max)\cb1 \
 \cb11 \'a0\'a0\cf6 \strokec6 return\cf4 \strokec4  result\cb1 \
 \cb11 \}\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -1901,17 +2090,51 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 
 \f0\b \cf2 \cb3 // FizzBuzz
 \f1\b0 \cf4 \cb5 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Write a program that outputs the string representation of numbers from 1 to\'a0
+\f5\i n
+\f3\i0 .\
+But for multiples of three it should output \'93Fizz\'94 instead of the number and for the multiples of five output \'93Buzz\'94. For numbers which are multiples of both three and five output \'93FizzBuzz\'94.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19 n = 15,\
 \
+Return:\
+[\
+    "1",\
+    "2",\
+    "Fizz",\
+    "4",\
+    "Buzz",\
+    "Fizz",\
+    "7",\
+    "8",\
+    "Fizz",\
+    "Buzz",\
+    "11",\
+    "Fizz",\
+    "13",\
+    "14",\
+    "FizzBuzz"\
+]\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  fizzBuzz = num => \{\cb1 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  res = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Array\cf4 \strokec4 (num);\cb1 \
+\cb11     \cf6 \strokec6 const\cf4 \strokec4  result = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Array\cf4 \strokec4 (num);\cb1 \
 \cb11     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 1\cf4 \strokec4 ; i <= num ; i++)\{\cb1 \
-\cb11         \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 15\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) res[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'FizzBuzz'\cf4 \strokec4 ;\cb1 \
-\cb11         \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 3\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) res[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'Fizz'\cf4 \strokec4 ;\cb1 \
-\cb11         \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 5\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) res[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'Buzz'\cf4 \strokec4 ;\cb1 \
-\cb11         \cf6 \strokec6 else\cf4 \strokec4  res[i-\cf12 \strokec12 1\cf4 \strokec4 ] = i.toString();\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 15\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) result[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'FizzBuzz'\cf4 \strokec4 ;\cb1 \
+\cb11         \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 3\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) result[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'Fizz'\cf4 \strokec4 ;\cb1 \
+\cb11         \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4 (i % \cf12 \strokec12 5\cf4 \strokec4  === \cf12 \strokec12 0\cf4 \strokec4 ) result[i-\cf12 \strokec12 1\cf4 \strokec4 ] = \cf20 \strokec20 'Buzz'\cf4 \strokec4 ;\cb1 \
+\cb11         \cf6 \strokec6 else\cf4 \strokec4  result[i-\cf12 \strokec12 1\cf4 \strokec4 ] = i.toString();\cb1 \
 \cb11     \}\cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  res;\cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  result;\cb1 \
 \cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
@@ -2069,49 +2292,6 @@ You may assume that the array is non-empty and the majority element always exist
 \cb11     \}\cb1 \
 \cb11   \}\cb1 \
 \cb11 \}\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \outl0\strokewidth0 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-
-\f0\b \cf2 \cb3 // Convert Sorted Array to BST\
-\pard\pardeftab720\sa280\partightenfactor0
-
-\f3\b0 \cf17 \outl0\strokewidth0 \strokec17 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.\
-For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of\'a0
-\f5\i every
-\f3\i0 \'a0node never differ by more than 1.\
-\pard\pardeftab720\sa280\partightenfactor0
-
-\f6\b \cf17 Example:
-\f3\b0 \
-\pard\pardeftab720\sl400\partightenfactor0
-
-\f1\fs26 \cf17 \cb19 Given the sorted array: [-10,-3,0,5,9],\
-\
-One possible answer is: [0,-3,9,-10,null,5], which represents the following height balanced BST:\
-\
-      0\
-     / \\\
-   -3   9\
-   /   /\
- -10  5\
-\pard\pardeftab720\sl420\partightenfactor0
-
-\fs28 \cf4 \cb5 \outl0\strokewidth0 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  sortedArrayToBST = nums => \{\cb1 \
-\cb11     \cf6 \strokec6 if\cf4 \strokec4  (!nums.length) \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 null\cf4 \strokec4 ;\cb1 \
-\cb11     \cb1 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  mid = \cf13 \strokec13 Math\cf4 \strokec4 .floor(nums.length / \cf12 \strokec12 2\cf4 \strokec4 );\cb1 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  root = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 TreeNode\cf4 \strokec4 (nums[mid]);\cb1 \
-\cb11     \cb1 \
-\cb11     \cf22 \strokec22 // subtrees are BSTs as well\cf4 \cb1 \strokec4 \
-\cb11     root.left = sortedArrayToBST(nums.slice(\cf12 \strokec12 0\cf4 \strokec4 , mid));\cb1 \
-\cb11     root.right = sortedArrayToBST(nums.slice(mid + \cf12 \strokec12 1\cf4 \strokec4 ));\cb1 \
-\cb11     \cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  root;\cb1 \
-\cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
 \
@@ -2421,7 +2601,7 @@ Return True if\'a0
 \fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  hammingWeight = num => \{\cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  num.toString(\cf12 \strokec12 2\cf4 \strokec4 ).replace(\cf23 \strokec23 /0/\cf6 \strokec6 g\cf4 \strokec4 , \cf20 \strokec20 ''\cf4 \strokec4 ).length;\cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  num.toString(\cf12 \strokec12 2\cf4 \strokec4 ).replace(\cf24 \strokec24 /0/\cf6 \strokec6 g\cf4 \strokec4 , \cf20 \strokec20 ''\cf4 \strokec4 ).length;\cb1 \
 \cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
@@ -2523,7 +2703,7 @@ Return True if\'a0
 \cb11     \}\cb1 \
 \cb11     \cb1 \
 \cb11     \cf22 \strokec22 // 1. Remove non-alphanumeric chars from the string\cf4 \cb1 \strokec4 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  alphanum = str.toLowerCase().replace(\cf23 \strokec23 /[\\W]/\cf6 \strokec6 g\cf4 \strokec4 , \cf20 \strokec20 ""\cf4 \strokec4 );\cb1 \
+\cb11     \cf6 \strokec6 const\cf4 \strokec4  alphanum = str.toLowerCase().replace(\cf24 \strokec24 /[\\W]/\cf6 \strokec6 g\cf4 \strokec4 , \cf20 \strokec20 ""\cf4 \strokec4 );\cb1 \
 \cb11     \cb1 \
 \cb11     \cf6 \strokec6 let\cf4 \strokec4  front = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
 \cb11     \cf6 \strokec6 let\cf4 \strokec4  back = alphanum.length - \cf12 \strokec12 1\cf4 \strokec4 ;\cb1 \
