@@ -18,9 +18,10 @@
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
 {\list\listtemplateid4\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid301\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid4}
-{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
-\margl1440\margr1440\vieww12980\viewh17140\viewkind0
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\vieww16060\viewh17140\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -2175,8 +2176,35 @@ Return:\
 
 \f0\b \cf2 \cb3 // Merge Two Sorted Lists
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  1->2->4, 1->3->4\
+
+\f0\b Output:
+\f1\b0  1->1->2->3->4->4\
 \pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \strokec4 /**\
+ * Definition for singly-linked list.\
+ * function ListNode(val, next) \{\
+ *     this.val = (val===undefined ? 0 : val)\
+ *     this.next = (next===undefined ? null : next)\
+ * \}\
+ */\
+/**\
+ * @param \{ListNode\} l1\
+ * @param \{ListNode\} l2\
+ * @return \{ListNode\}\
+ */\outl0\strokewidth0 \
+\
 \cf6 const\cf4  mergeTwoLists = (l1, l2) => \{\cb1 \
 \cb5     \cf6 let\cf4  list = \cf6 new\cf4  \cf9 ListNode\cf4 ()\cb1 \
 \cb5     \cf6 let\cf4  head = list\cb1 \
@@ -2308,9 +2336,9 @@ You may assume that the array is non-empty and the majority element always exist
 \cb11     \cb1 \
 \cb11     \cf6 \strokec6 const\cf4 \strokec4  map = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Map\cf4 \strokec4 ();\cb1 \
 \cb11     \cb1 \
-\cb11     s.split(\cf20 \strokec20 ''\cf4 \strokec4 ).map((c, i) => \{\cb1 \
+\cb11     s.split(\cf20 \strokec20 ''\cf4 \strokec4 ).map((char, i) => \{\cb1 \
 \cb11         \cf22 \strokec22 // record character occurrences in s\cf4 \cb1 \strokec4 \
-\cb11         map.\cf6 \strokec6 set\cf4 \strokec4 (c, map.has(c) ? map.\cf6 \strokec6 get\cf4 \strokec4 (c) + \cf12 \strokec12 1\cf4 \strokec4  : \cf12 \strokec12 1\cf4 \strokec4 );\cb1 \
+\cb11         map.\cf6 \strokec6 set\cf4 \strokec4 (char, map.has(char) ? map.\cf6 \strokec6 get\cf4 \strokec4 (char) + \cf12 \strokec12 1\cf4 \strokec4  : \cf12 \strokec12 1\cf4 \strokec4 );\cb1 \
 \cb11         \cf22 \strokec22 // at the same time subtract the character occurrences from t\cf4 \cb1 \strokec4 \
 \cb11         map.\cf6 \strokec6 set\cf4 \strokec4 (t[i], map.has(t[i]) ? map.\cf6 \strokec6 get\cf4 \strokec4 (t[i]) - \cf12 \strokec12 1\cf4 \strokec4  : -\cf12 \strokec12 1\cf4 \strokec4 );\cb1 \
 \cb11     \});\cb1 \
@@ -2336,7 +2364,103 @@ You may assume that the array is non-empty and the majority element always exist
 
 \f0\b \cf2 \cb3 // Roman to Integer
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Roman numerals are represented by seven different symbols:\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 I
+\f3\fs28 \cf17 \cb3 \strokec17 ,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 V
+\f3\fs28 \cf17 \cb3 \strokec17 ,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 X
+\f3\fs28 \cf17 \cb3 \strokec17 ,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 L
+\f3\fs28 \cf17 \cb3 \strokec17 ,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 C
+\f3\fs28 \cf17 \cb3 \strokec17 ,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 D
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0and\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 M
+\f3\fs28 \cf17 \cb3 \strokec17 .\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Symbol
+\f1\b0        
+\f0\b Value
+\f1\b0 \
+I             1\
+V             5\
+X             10\
+L             50\
+C             100\
+D             500\
+M             1000\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\fs28 \cf17 \cb3 For example,\'a0two is written as\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 II
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0in Roman numeral, just two one's added together. Twelve is written as,\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 XII
+\f3\fs28 \cf17 \cb3 \strokec17 , which is simply\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 X
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0+\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 II
+\f3\fs28 \cf17 \cb3 \strokec17 . The number twenty seven is written as\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 XXVII
+\f3\fs28 \cf17 \cb3 \strokec17 , which is\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 XX
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0+\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 V
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0+\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 II
+\f3\fs28 \cf17 \cb3 \strokec17 .\
+Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 IIII
+\f3\fs28 \cf17 \cb3 \strokec17 . Instead, the number four is written as\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 IV
+\f3\fs28 \cf17 \cb3 \strokec17 . Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 IX
+\f3\fs28 \cf17 \cb3 \strokec17 . There are six instances where subtraction is used:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0
+\f4\fs26 \cf18 \cb19 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec18 I
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0can be placed before\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 V
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(5) and\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 X
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(10) to make 4 and 9.\'a0\cb1 \
+\ls6\ilvl0
+\f4\fs26 \cf18 \cb19 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec18 X
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0can be placed before\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 L
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(50) and\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 C
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(100) to make 40 and 90.\'a0\cb1 \
+\ls6\ilvl0
+\f4\fs26 \cf18 \cb19 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec18 C
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0can be placed before\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 D
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(500) and\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 M
+\f3\fs28 \cf17 \cb3 \strokec17 \'a0(1000) to make 400 and 900.\cb1 \
+\pard\pardeftab720\sa280\partightenfactor0
+\cf17 \cb3 Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0 \'a0"III"\
+
+\f0\b Output:
+\f1\b0  3\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  romanToInt = str => \{\cb1 \
 \cb11   \cf6 \strokec6 if\cf4 \strokec4  (!str || str.length === \cf12 \strokec12 0\cf4 \strokec4 ) \{\cb1 \
@@ -2370,7 +2494,45 @@ You may assume that the array is non-empty and the majority element always exist
 
 \f0\b \cf2 \cb3 // Excel Sheet Column Number
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given a column title as appear in an Excel sheet, return its corresponding column number.\
+For example:\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19     A -> 1\
+    B -> 2\
+    C -> 3\
+    ...\
+    Z -> 26\
+    AA -> 27\
+    AB -> 28 \
+    ...\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  "A"\
+
+\f0\b Output:
+\f1\b0  1\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Example 2:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input: 
+\f1\b0 "AB"\
+
+\f0\b Output:
+\f1\b0  28\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  titleToNumber = str => \{\cb1 \
 \cb11   \cf6 \strokec6 const\cf4 \strokec4  letterToNumber = char => char.charCodeAt(\cf12 \strokec12 0\cf4 \strokec4 ) - \cf12 \strokec12 64\cf4 \strokec4 ;\cb1 \
@@ -2388,7 +2550,23 @@ You may assume that the array is non-empty and the majority element always exist
 
 \f0\b \cf2 \cb3 // First Unique Character
 \f1\b0 \cf4 \cb5 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Examples:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f1\fs26 \cf17 \cb19 s = "leetcode"\
+return 0.\
 \
+s = "loveleetcode",\
+return 2.\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  firstUniqChar = str => \{\cb1 \
 \cb11    \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \cb5 \outl0\strokewidth0 let\cf4 \cb11 \outl0\strokewidth0 \strokec4  i = \cf12 \strokec12 0\cf4 \strokec4 ; i < str.length; i++)\{\cb1 \
@@ -2463,13 +2641,44 @@ You may assume that the array is non-empty and the majority element always exist
 
 \f0\b \cf2 \cb3 // Missing Number
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given an array containing\'a0
+\f5\i n
+\f3\i0 \'a0distinct numbers taken from\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 0, 1, 2, ..., n
+\f3\fs28 \cf17 \cb3 \strokec17 , find the one that is missing from the array.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  [3,0,1]\
+
+\f0\b Output:
+\f1\b0  2\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Example 2:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  [9,6,4,2,3,5,7,0,1]\
+
+\f0\b Output:
+\f1\b0  8\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  missingNumber = nums => \{\cb1 \
 \cb11     \cf6 \strokec6 const\cf4 \strokec4  numsLength = nums.length;\cb1 \
 \cb11     \cf6 \strokec6 const\cf4 \strokec4  expectedSum = (numsLength * (numsLength + \cf12 \strokec12 1\cf4 \strokec4 )) / \cf12 \strokec12 2\cf4 \strokec4 ;\cb1 \
 \cb11     \cb1 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  sum = nums.reduce((total, num) => total += num, \cf12 \strokec12 0\cf4 \strokec4 );\cb1 \
+\cb11     \cf6 \strokec6 const\cf4 \strokec4  sum = nums.reduce((acc, cur) => acc += cur, \cf12 \strokec12 0\cf4 \strokec4 );\cb1 \
 \cb11     \cf6 \strokec6 return\cf4 \strokec4  expectedSum - sum;\cb1 \
 \cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -2479,10 +2688,37 @@ You may assume that the array is non-empty and the majority element always exist
 
 \f0\b \cf2 \cb3 // Intersection of Two Arrays
 \f1\b0 \cf4 \cb5 \
-\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3 \cf17 \cb3 \outl0\strokewidth0 \strokec17 Given two arrays, write a function to compute their intersection.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input: 
+\f1\b0 nums1 = [1,2,2,1], nums2 = [2,2]\
+
+\f0\b Output: 
+\f1\b0 [2,2]\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Example 2:
+\f3\b0 \cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input: 
+\f1\b0 nums1 = [4,9,5], nums2 = [9,4,9,8,4]\
+
+\f0\b Output: 
+\f1\b0 [4,9]\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  intersect = (nums1, nums2) => \{\cb1 \
-\cb11     \cf6 \strokec6 const\cf4 \strokec4  hash = \{\}, arr = []\cb1 \
+\cb11     \cf6 \strokec6 const\cf4 \strokec4  hash = \{\}, result = []\cb1 \
 \cb11     \cb1 \
 \cb11     nums2.forEach(num => \{\cb1 \
 \cb11         hash[num] ? hash[num]++ : hash[num] = \cf12 \strokec12 1\cf4 \cb1 \strokec4 \
@@ -2490,11 +2726,11 @@ You may assume that the array is non-empty and the majority element always exist
 \cb11     \cb1 \
 \cb11     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 0\cf4 \strokec4 ; i < nums1.length; i++)\{\cb1 \
 \cb11         \cf6 \strokec6 if\cf4 \strokec4  (hash[nums1[i]] > \cf12 \strokec12 0\cf4 \strokec4 )\{\cb1 \
-\cb11             arr.push(nums1[i])\cb1 \
+\cb11             result.push(nums1[i])\cb1 \
 \cb11             hash[nums1[i]]--\cb1 \
 \cb11         \}\cb1 \
 \cb11     \}\cb1 \
-\cb11     \cf6 \strokec6 return\cf4 \strokec4  arr\cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  result\cb1 \
 \cb11 \};\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
@@ -2674,20 +2910,19 @@ Return True if\'a0
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb11 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  countPrimes = num => \{\cb1 \
-\cb11   \cf6 \strokec6 if\cf4 \strokec4  (num < \cf12 \strokec12 2\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
-\cb11   \cb1 \
-\cb11   \cf6 \strokec6 const\cf4 \strokec4  primeNums = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Array\cf4 \strokec4 (num).fill(\cf12 \strokec12 1\cf4 \strokec4 );\cb1 \
-\cb11   \cb1 \
-\cb11   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 2\cf4 \strokec4 ; i < num; i++) \{\cb1 \
-\cb11     \cf6 \strokec6 if\cf4 \strokec4  (primeNums[i] === \cf12 \strokec12 1\cf4 \strokec4 ) \{\cb1 \
-\cb11       \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  j = i + i; j < num; j = j + i) \{\cb1 \
-\cb11         primeNums[j] = \cf12 \strokec12 0\cf4 \strokec4 ;\cb1 \
-\cb11       \}  \cb1 \
+\cb11     \cf6 \strokec6 let\cf4 \strokec4  hash = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Array\cf4 \strokec4 (num).fill(\cf6 \strokec6 true\cf4 \strokec4 );\cb1 \
+\cb11     hash[\cf12 \strokec12 0\cf4 \strokec4 ] = \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb11     hash[\cf12 \strokec12 1\cf4 \strokec4 ] = \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb11     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf12 \strokec12 2\cf4 \strokec4 ; i*i < num; i++) \{\cb1 \
+\cb11         \cf6 \strokec6 if\cf4 \strokec4  (hash[i]) \{\cb1 \
+\cb11             \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  j=i*i; j < num; j+=i)\{\cb1 \
+\cb11                 hash[j] = \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
+\cb11             \}\cb1 \
+\cb11         \}\cb1 \
 \cb11     \}\cb1 \
-\cb11   \}\cb1 \
-\cb11   \cb1 \
-\cb11   \cf6 \strokec6 return\cf4 \strokec4  primeNums.filter(num => num).length - \cf12 \strokec12 2\cf4 \strokec4 ;\cb1 \
+\cb11     \cf6 \strokec6 return\cf4 \strokec4  hash.filter((val)=>val).length;\cb1 \
 \cb11 \};\cb1 \
+\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
 \
