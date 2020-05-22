@@ -1625,7 +1625,6 @@ If the town judge exists and can be identified, return the label of the town jud
 \cb10     graph.\cf6 \strokec6 set\cf4 \strokec4 (i, \cf11 \strokec11 1\cf4 \strokec4 )\cb1 \
 \cb10   \}\cb1 \
 \cb10   \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  [v, e] \cf6 \strokec6 of\cf4 \strokec4  trust) \{\cb1 \
-\cb10     \cf22 \strokec22 // console.log(v, e)\cf4 \cb1 \strokec4 \
 \cb10     graph.\cf6 \strokec6 set\cf4 \strokec4 (v, graph.\cf6 \strokec6 get\cf4 \strokec4 (v) - \cf11 \strokec11 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is not trusted -1\cf4 \cb1 \strokec4 \
 \cb10     graph.\cf6 \strokec6 set\cf4 \strokec4 (e, graph.\cf6 \strokec6 get\cf4 \strokec4 (e) + \cf11 \strokec11 1\cf4 \strokec4 ) \cf22 \strokec22 // the node which is trusted + 1\cf4 \cb1 \strokec4 \
 \cb10   \}\cb1 \
@@ -1750,15 +1749,30 @@ Given the following tree\'a0
 \f3\fs28 \cf17 \cb3 Return false.\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f1 \cf4 \cb5 \outl0\strokewidth0 \
+\f1 \cf4 \cb5 /**\
+ * Definition for a binary tree node.\
+ * function TreeNode(val, left, right) \{\
+ *     this.val = (val===undefined ? 0 : val)\
+ *     this.left = (left===undefined ? null : left)\
+ *     this.right = (right===undefined ? null : right)\
+ * \}\
+ */\
+/**\
+ * @param \{TreeNode\} root\
+ * @return \{boolean\}\
+ */\outl0\strokewidth0 \
+\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb10 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  isBalanced = root => \{\cb1 \
 \cb10     \cb1 \
 \cb10     \cf6 \strokec6 let\cf4 \strokec4  dfs = node => \{\cb1 \
-\cb10         \cf6 \strokec6 if\cf4 \strokec4  (!node) \cf6 \strokec6 return\cf4 \strokec4  \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb10         \cf6 \strokec6 if\cf4 \strokec4  (!node) \cf6 \strokec6 return\cf4 \strokec4  \cf11 \strokec11 0\cf4 \strokec4 ;\
+\cb1 \
 \cb10         \cf6 \strokec6 let\cf4 \strokec4  left = \cf11 \strokec11 1\cf4 \strokec4  + dfs(node.left);\cb1 \
-\cb10         \cf6 \strokec6 let\cf4 \strokec4  right = \cf11 \strokec11 1\cf4 \strokec4  + dfs(node.right);\cb1 \
-\cb10         \cf6 \strokec6 if\cf4 \strokec4  (\cf13 \strokec13 Math\cf4 \strokec4 .abs(left - right) > \cf11 \strokec11 1\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf13 \strokec13 Infinity\cf4 \strokec4 ;\cb1 \
+\cb10         \cf6 \strokec6 let\cf4 \strokec4  right = \cf11 \strokec11 1\cf4 \strokec4  + dfs(node.right);\
+\cb1 \
+\cb10         \cf6 \strokec6 if\cf4 \strokec4  (\cf13 \strokec13 Math\cf4 \strokec4 .abs(left - right) > \cf11 \strokec11 1\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  \cf13 \strokec13 Infinity\cf4 \strokec4 ;\
+\cb1 \
 \cb10         \cf6 \strokec6 return\cf4 \strokec4  \cf13 \strokec13 Math\cf4 \strokec4 .max(left, right);\cb1 \
 \cb10     \}\cb1 \
 \cb10     \cb1 \
