@@ -932,7 +932,7 @@ The binary search tree is guaranteed to have unique values.
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4 \cb5  quickSort = arr => \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \'a0\'a0\cf6 \cb5 if\cf4 \cb5  (arr.length <=\cf8 \cb5 1\cf4 \cb5  || arr === \cf6 \cb5 null\cf4 \cb5 ) \cf6 \cb5 return\cf4 \cb5  arr;\cb1 \
+\cf4 \cb5 \'a0\'a0\cf6 \cb5 if\cf4 \cb5  (arr.length <= \cf8 \cb5 1\cf4 \cb5  || arr === \cf6 \cb5 null\cf4 \cb5 ) \cf6 \cb5 return\cf4 \cb5  arr;\cb1 \
 \cb5 \'a0\'a0\cf6 \cb5 let\cf4 \cb5  pivot = arr[arr.length - \cf8 \cb5 1\cf4 \cb5 ];\cb1 \
 \cb5   \cf6 \cb5 let\cf4 \cb5  leftArr = [];\cb1 \
 \cb5   \cf6 \cb5 let\cf4 \cb5  rightArr = [];\cb1 \
@@ -1442,8 +1442,8 @@ If the last word does not exist, return 0.\
 \fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  lengthOfLastWord = str => \{\cb1 \
-\cb5     \cf6 const\cf4  arr = str.trim().split(\cf7 ' '\cf4 );\cb1 \
-\cb5     \cf6 return\cf4  arr[arr.length - \cf8 1\cf4 ].length;\cb1 \
+\cb5     \cf6 const\cf4  result = str.trim().split(\cf7 ' '\cf4 );\cb1 \
+\cb5     \cf6 return\cf4  result[result.length - \cf8 1\cf4 ].length;\cb1 \
 \cb5 \};\
 \
 \pard\pardeftab720\sl420\partightenfactor0
