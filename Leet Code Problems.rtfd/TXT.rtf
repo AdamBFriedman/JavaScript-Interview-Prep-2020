@@ -3260,14 +3260,81 @@ Note that after\'a0backspacing an empty text, the text will continue empty.\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f0\b \cf2 \cb3 // Coming Soon
-\f1\b0 \cf4 \cb5 \
-\
+\f0\b \cf2 \cb3 // Find Peak Element\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f3\b0 \cf17 \outl0\strokewidth0 \strokec17 A peak element is an element that is greater than its neighbors.\
+Given an input array\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 nums
+\f3\fs28 \cf17 \cb3 \strokec17 , where\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 nums[i] \uc0\u8800  nums[i+1]
+\f3\fs28 \cf17 \cb3 \strokec17 , find a peak element and return its index.\
+The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.\
+You may imagine that\'a0
+\f4\fs26 \cf18 \cb19 \strokec18 nums[-1] = nums[n] = -\uc0\u8734 
+\f3\fs28 \cf17 \cb3 \strokec17 .\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b \cf17 Example 1:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  
+\f0\b nums
+\f1\b0  = [1,2,3,1]\
+
+\f0\b Output:
+\f1\b0  2\
+
+\f0\b Explanation:
+\f1\b0  3 is a peak element and your function should return the index number 2.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Example 2:
+\f3\b0 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\b\fs26 \cf17 \cb19 Input:
+\f1\b0  
+\f0\b nums
+\f1\b0  = [1,2,1,3,5,6,4]\
+
+\f0\b Output:
+\f1\b0  1 or 5 \
+
+\f0\b Explanation:
+\f1\b0  Your function can return either index number 1 where the peak element is 2, \
+\'a0            or index number 5 where the peak element is 6.\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f6\b\fs28 \cf17 \cb3 Follow up:
+\f3\b0 \'a0Your solution should be in logarithmic complexity.
+\f1 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  functionName = () => \{\cb1 \
+\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb10 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  findPeakElement = nums => \{\cb1 \
+\cb10   \cf6 \strokec6 let\cf4 \strokec4  left = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
+\cb10   \cf6 \strokec6 let\cf4 \strokec4  right = nums.length -\cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
 \
-\cb5 \};\
+\cb10   \cf6 \strokec6 while\cf4 \strokec4 (left + \cf11 \strokec11 1\cf4 \strokec4 < right) \{\cb1 \
+\cb10     \cf6 \strokec6 let\cf4 \strokec4  middle = \cf13 \strokec13 Math\cf4 \strokec4 .floor(left + (right-left)/\cf11 \strokec11 2\cf4 \strokec4 );\cb1 \
 \
+\cb10     \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle-\cf11 \strokec11 1\cf4 \strokec4 ] \cb1 \
+\cb10       && nums[middle] > nums[middle+\cf11 \strokec11 1\cf4 \strokec4 ] ) \cb1 \
+\cb10     \{\cb1 \
+\cb10       \cf6 \strokec6 return\cf4 \strokec4  middle;\cb1 \
+\cb10     \} \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle-\cf11 \strokec11 1\cf4 \strokec4 ]) \{\cb1 \
+\cb10       left = middle;\cb1 \
+\cb10     \} \cf6 \strokec6 else\cf4 \strokec4  \{\cb1 \
+\cb10       right = middle;\cb1 \
+\cb10     \}\cb1 \
+\cb10   \}\cb1 \
+\cb10   \cf6 \strokec6 return\cf4 \strokec4  nums[left] > nums[right] ? left : right;\cb1 \
+\cb10 \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Coming Soon
