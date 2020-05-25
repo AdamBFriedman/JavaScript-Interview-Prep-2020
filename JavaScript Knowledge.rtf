@@ -3,20 +3,22 @@
 \f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 HelveticaNeue-Bold;\f5\fnil\fcharset0 Monaco;
 \f6\fnil\fcharset0 Menlo-Bold;\f7\fnil\fcharset0 Georgia;\f8\fnil\fcharset0 TrebuchetMS;
 \f9\fnil\fcharset0 AppleSymbols;\f10\fnil\fcharset0 TrebuchetMS-Bold;\f11\fswiss\fcharset0 ArialMT;
-\f12\froman\fcharset0 Times-Roman;\f13\fswiss\fcharset0 Arial-ItalicMT;\f14\fswiss\fcharset0 Arial-BoldMT;
+\f12\froman\fcharset0 Times-Roman;\f13\fswiss\fcharset0 Arial-BoldMT;\f14\fswiss\fcharset0 Arial-ItalicMT;
 }
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red255\green255\blue255;\red66\green1\blue120;
 \red38\green38\blue38;\red0\green0\blue255;\red0\green0\blue0;\red19\green120\blue72;\red251\green2\blue7;
 \red144\green1\blue18;\red154\green154\blue154;\red32\green35\blue35;\red0\green0\blue0;\red49\green49\blue50;
 \red255\green255\blue254;\red19\green120\blue72;\red14\green110\blue109;\red144\green1\blue18;\red12\green99\blue153;
 \red255\green255\blue255;\red135\green91\blue44;\red210\green50\blue85;\red135\green135\blue135;\red85\green138\blue3;
-\red133\green0\blue67;\red93\green108\blue125;\red27\green36\blue51;}
+\red133\green0\blue67;\red93\green108\blue125;\red191\green28\blue37;\red0\green0\blue255;\red121\green213\blue255;
+\red149\green155\blue194;\red27\green36\blue51;}
 {\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c100000\c100000\c100000;\cssrgb\c33333\c10196\c54510;
 \cssrgb\c20000\c20000\c20000;\cssrgb\c0\c0\c100000;\cssrgb\c0\c0\c0;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c14913\c0;
 \cssrgb\c63922\c8235\c8235;\cssrgb\c66667\c66667\c66667;\cssrgb\c16471\c18039\c18039;\cssrgb\c0\c0\c0\c84314;\cssrgb\c25098\c25098\c25490;
 \cssrgb\c100000\c100000\c99608;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c46667\c66667;
 \cssrgb\c100000\c100000\c100000;\cssrgb\c60392\c43137\c22745;\cssrgb\c86667\c29020\c40784;\cssrgb\c60000\c60000\c60000;\cssrgb\c40000\c60000\c0;
-\cssrgb\c60000\c0\c33333;\cssrgb\c43922\c50196\c56471;\cssrgb\c13725\c19216\c26275;}
+\cssrgb\c60000\c0\c33333;\cssrgb\c43922\c50196\c56471;\cssrgb\c80392\c19216\c19216;\cssrgb\c1680\c19835\c100000;\cssrgb\c53725\c86667\c100000;
+\cssrgb\c65098\c67451\c80392;\cssrgb\c13725\c19216\c26275;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
@@ -635,7 +637,11 @@ assertEqual(actual, expected, testName);\
 \
 Mitigation Strategies - 1)  Unique form tokens generated on every POST, PUT, DELETE request. 2) Re-authentication (captcha, password)\
 \
-XSS - Cross Site Scripting is \
+
+\f13\b How do I prevent XSS (cross-site scripting)?
+\f11\b0 \
+1. Encode data on output\
+2.  Validate input on arrival\
 \
 \
 \
@@ -752,7 +758,7 @@ arr.slice(-1)\
 //Try, Catch, Throw, Finally\
 try - lets you test a block of code for errors\
 catch - lets you handle the error\
-throw - lets you create custom errors\
+throw - lets you create custom errors // throw \'93Too big\'94 or throw 500\
 finally - lets you execute code after try and catch, regardless of the result\
 \
 //Date Object\
@@ -783,7 +789,87 @@ Date.getFullYear() returns 4 digit year\
 let prop = 95\
 console.log(window.prop) //undefined because let does not create a property on the global object (var does).\
 \
+//Console Tricks\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f3 \cf7 \cb15 \outl0\strokewidth0 \strokec7 console.time(\cf27 \strokec27 \'93\cf7 \strokec7 string\cf27 \strokec27 \'94\cf7 \strokec7 )\cb1 \
+\cb15 setTimeout(() => \{\cb1 \
+\cb15   console.timeEnd(\cf27 \strokec27 \'93\cf7 \strokec7 string\cf27 \strokec27 \'94\cf7 \strokec7 )\cb1 \
+\cb15 \}, \cf16 \strokec16 5000\cf7 \strokec7 )
+\f11 \cb3 \outl0\strokewidth0 \
+\pard\pardeftab720\sl400\partightenfactor0
+\cf7 \
+console.table(object, [\'91key1\'92, \'91key2\'92])\
+console.table(person, [\'91age\'92, \'91eyeColor\'92]\
 \
+//JSON\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f3 \cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  engineer = \{\cb1 \
+\cb15   name: \cf18 \strokec18 "Adam"\cf7 \strokec7 ,\cb1 \
+\cb15   age: \cf16 \strokec16 35\cf7 \strokec7 ,\cb1 \
+\cb15   lovesSeinfeld: \cf6 \strokec6 true\cf7 \cb1 \strokec7 \
+\cb15 \}\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f11 \cf7 \cb3 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f3 \cf6 \cb15 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  objToStr = \cf17 \strokec17 JSON\cf7 \strokec7 .stringify(engineer)\
+\cf6 \strokec6 const\cf7 \strokec7  strToObj = \cf17 \strokec17 JSON\cf7 \strokec7 .parse(objToStr)\cb1 \
+\
+\cb15 //Sort lexicographically\
+To compare strings alphabetically, use localeCompare().  This returns a negative value if the reference string is lexicographically (alphabetically) before the compared string (the parameter), a positive value if it comes afterward, and a value of 0 if they are equal\
+\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f11 \cf7 \cb3 \outl0\strokewidth0 //Center a div\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f3 \cf7 \cb15 \outl0\strokewidth0 \strokec7 <div \cf6 \strokec6 class\cf7 \strokec7 =\cf18 \strokec18 "out"\cf7 \strokec7 >\cb1 \
+\cb15   <div \cf6 \strokec6 class\cf7 \strokec7 =\cf18 \strokec18 "in"\cf7 \strokec7 ></div>\cb1 \
+\cb15 </div>\cb1 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f11 \cf7 \cb3 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f3 \cf7 \cb15 \outl0\strokewidth0 \strokec7 .\cf28 out\cf7  \{\cb1 \
+\cb15   height: \cf16 \strokec16 300\cf7 \strokec7 px;\cb1 \
+\cb15   border: \cf16 \strokec16 1\cf7 \strokec7 px solid green;\cb1 \
+\cb15   position: relative;\cb1 \
+\cb15 \}\cb1 \
+\
+\cb15 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
+\cb15   width: \cf16 \strokec16 100\cf7 \strokec7 px;\cb1 \
+\cb15   border: \cf16 \strokec16 1\cf7 \strokec7 px solid red;\cb1 \
+\cb15   position: absolute;\cb1 \
+\cb15   top: \cf16 \strokec16 50\cf7 \strokec7 %;\cb1 \
+\cb15   left: \cf16 \strokec16 50\cf7 \strokec7 %;\cb1 \
+\cb15   transform:translate(-\cf16 \strokec16 50\cf7 \strokec7 %, -\cf16 \strokec16 50\cf7 \strokec7 %);\cb1 \
+\cb15 \}\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs24 \cf29 \cb20 \strokec29 \
+\cf7 //Center a div with Flexbox\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs28 \cf7 \cb15 \strokec7 .\cf28 out\cf7  \{\cb1 \
+\cb15   display: flex;\cb1 \
+\cb15   align-items: center;\cb1 \
+\cb15   justify-content: center;\cb1 \
+\cb15 \}\cb1 \
+\
+\cb15 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
+\cb15   width: \cf16 \strokec16 100\cf7 \strokec7 px;\cb1 \
+\cb15   height: \cf16 \strokec16 100\cf7 \strokec7 px;\cb1 \
+\cb15 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\fs24 \cf30 \strokec30 \
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f11\fs28 \cf7 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl340\partightenfactor0
 
 \f1 \cf0 \kerning1\expnd0\expndtw0 \
@@ -806,30 +892,30 @@ console.log(window.prop) //undefined because let does not create a property on t
 \
 //Use STAR method for behavioral questions\
 \pard\pardeftab720\sl744\partightenfactor0
-\cf27 The STAR format stands for\'a0
-\f13\i Situation
+\cf31 The STAR format stands for\'a0
+\f14\i Situation
 \f11\i0 ,\'a0
-\f13\i Task
+\f14\i Task
 \f11\i0 ,\'a0
-\f13\i Action
+\f14\i Action
 \f11\i0 ,\'a0
-\f13\i Result
+\f14\i Result
 \f11\i0 :\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl768\partightenfactor0
 \ls6\ilvl0
-\f14\b \cf27 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f13\b \cf31 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 S
 \f11\b0 ituation: An event, project, or challenge faced\
 \ls6\ilvl0
-\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 T
 \f11\b0 ask: Your responsibilities and assignments for the situation\
 \ls6\ilvl0
-\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 A
 \f11\b0 ction: Steps or procedure taken to relieve or rectify situation\
 \ls6\ilvl0
-\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 R
 \f11\b0 esult: Results of actions taken.
 \f1 \
@@ -853,7 +939,7 @@ Maps\
 Binary Heaps\
 Trie (Prefix Tree)\
 Graphs
-\f14\b \cf2 \kerning1\expnd0\expndtw0 \
+\f13\b \cf2 \kerning1\expnd0\expndtw0 \
 \
 
 \f11\b0 \cf13 \expnd0\expndtw0\kerning0
