@@ -2996,11 +2996,10 @@ Return True if\'a0
 \cb10     \cf6 \strokec6 let\cf4 \strokec4  back = alphanum.length - \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
 \cb10     \cb1 \
 \cb10     \cf6 \strokec6 while\cf4 \strokec4  (front < back) \{\cb1 \
-\cb10         \cf6 \strokec6 const\cf4 \strokec4  frontChar = alphanum[front];\cb1 \
-\cb10         \cf6 \strokec6 const\cf4 \strokec4  backChar = alphanum[back];\cb1 \
-\cb10         \cf6 \strokec6 if\cf4 \strokec4  (frontChar != backChar) \{\cb1 \
+\cb10         \cf6 \strokec6 if\cf4 \strokec4  (\cb5 \outl0\strokewidth0 alphanum[front]\cb10 \outl0\strokewidth0  != \cb5 \outl0\strokewidth0 alphanum[back]\cb10 \outl0\strokewidth0 ) \{\cb1 \
 \cb10             \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4 ;\cb1 \
-\cb10         \}\cb1 \
+\cb10         \}\
+\cb1 \
 \cb10         front++;\cb1 \
 \cb10         back--;\cb1 \
 \cb10     \}\cb1 \
@@ -3164,12 +3163,11 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb10 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  rotate = (nums, k) => \{\cb1 \
-\cb10     \cf6 \strokec6 let\cf4 \strokec4  length = nums.length;\cb1 \
 \cb10     \cf6 \strokec6 let\cf4 \strokec4  result = [...nums];\cb1 \
 \cb10     \cb1 \
-\cb10     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < length; i++) \{\cb1 \
-\cb10         \cf6 \strokec6 let\cf4 \strokec4  index = (i + k) % length;\cb1 \
-\cb10         nums[index] = result[i];\cb1 \
+\cb10     \cf6 \strokec6 for\cf4 \strokec4  (\cf6 \strokec6 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < nums.length; i++) \{\cb1 \
+\cb10         \cf6 \strokec6 let\cf4 \strokec4  idx = (i + k) % nums.length;\cb1 \
+\cb10         nums[idx] = result[i];\cb1 \
 \cb10     \};\cb1 \
 \
 \cb10 \};\cb1 \
@@ -3317,16 +3315,16 @@ You may imagine that\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb10 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  findPeakElement = nums => \{\cb1 \
 \cb10   \cf6 \strokec6 let\cf4 \strokec4  left = \cf11 \strokec11 0\cf4 \strokec4 ;\cb1 \
-\cb10   \cf6 \strokec6 let\cf4 \strokec4  right = nums.length -\cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
+\cb10   \cf6 \strokec6 let\cf4 \strokec4  right = nums.length - \cf11 \strokec11 1\cf4 \strokec4 ;\cb1 \
 \
-\cb10   \cf6 \strokec6 while\cf4 \strokec4 (left + \cf11 \strokec11 1\cf4 \strokec4 < right) \{\cb1 \
+\cb10   \cf6 \strokec6 while\cf4 \strokec4 (left + \cf11 \strokec11 1 \cf4 \strokec4 < right) \{\cb1 \
 \cb10     \cf6 \strokec6 let\cf4 \strokec4  middle = \cf13 \strokec13 Math\cf4 \strokec4 .floor(left + (right-left)/\cf11 \strokec11 2\cf4 \strokec4 );\cb1 \
 \
-\cb10     \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle-\cf11 \strokec11 1\cf4 \strokec4 ] \cb1 \
-\cb10       && nums[middle] > nums[middle+\cf11 \strokec11 1\cf4 \strokec4 ] ) \cb1 \
+\cb10     \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle - \cf11 \strokec11 1\cf4 \strokec4 ] \cb1 \
+\cb10       && nums[middle] > nums[middle + \cf11 \strokec11 1\cf4 \strokec4 ] ) \cb1 \
 \cb10     \{\cb1 \
 \cb10       \cf6 \strokec6 return\cf4 \strokec4  middle;\cb1 \
-\cb10     \} \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle-\cf11 \strokec11 1\cf4 \strokec4 ]) \{\cb1 \
+\cb10     \} \cf6 \strokec6 else\cf4 \strokec4  \cf6 \strokec6 if\cf4 \strokec4  (nums[middle] > nums[middle - \cf11 \strokec11 1\cf4 \strokec4 ]) \{\cb1 \
 \cb10       left = middle;\cb1 \
 \cb10     \} \cf6 \strokec6 else\cf4 \strokec4  \{\cb1 \
 \cb10       right = middle;\cb1 \
@@ -3375,20 +3373,17 @@ Explanation:\
 \fs28 \cf4 \cb5 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb10 \outl0\strokewidth0 \strokec6 const\cf4 \strokec4  findTheDifference = (s, t) => \{\cb1 \
-\cb10   \cf6 \strokec6 let\cf4 \strokec4  map = \cf6 \strokec6 new\cf4 \strokec4  \cf13 \strokec13 Map\cf4 \strokec4 ();\cb1 \
-\
-\cb10   \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < t.length; i++)\{\cb1 \
-\cb10     map.\cf6 \strokec6 set\cf4 \strokec4 (t[i], (map.\cf6 \strokec6 get\cf4 \strokec4 (t[i]) || \cf11 \strokec11 0\cf4 \strokec4 ) + \cf11 \strokec11 1\cf4 \strokec4 );\cb1 \
-\cb10   \}\cb1 \
-\cb10   \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  i = \cf11 \strokec11 0\cf4 \strokec4 ; i < s.length; i++)\{\cb1 \
-\cb10     \cf6 \strokec6 if\cf4 \strokec4 (map.\cf6 \strokec6 get\cf4 \strokec4 (s[i])) \{\cb1 \
-\cb10     map.\cf6 \strokec6 set\cf4 \strokec4 (s[i], (map.\cf6 \strokec6 get\cf4 \strokec4 (s[i])) - \cf11 \strokec11 1\cf4 \strokec4 );\cb1 \
+\cb10     \cf6 \strokec6 let\cf4 \strokec4  sortedS = s.split(\cf20 \strokec20 ''\cf4 \strokec4 ).sort();\cb1 \
+\cb10     \cf6 \strokec6 let\cf4 \strokec4  sortedT = t.split(\cf20 \strokec20 ''\cf4 \strokec4 ).sort();\cb1 \
+\cb10     \cf6 \strokec6 let\cf4 \strokec4  i;\cb1 \
+\cb10     \cf6 \strokec6 for\cf4 \strokec4 (i = \cf11 \strokec11 0\cf4 \strokec4 ; i < sortedS.length; i++) \{\cb1 \
+\cb10         \cf6 \strokec6 if\cf4 \strokec4 (sortedT[i] !== sortedS[i]) \{\cb1 \
+\cb10             \cf6 \strokec6 return\cf4 \strokec4  sortedT[i];\cb1 \
+\cb10         \}\cb1 \
 \cb10     \}\cb1 \
-\cb10   \}\cb1 \
-\cb10   \cf6 \strokec6 for\cf4 \strokec4 (\cf6 \strokec6 let\cf4 \strokec4  [key, val] \cf6 \strokec6 of\cf4 \strokec4  map)\{\cb1 \
-\cb10     \cf6 \strokec6 if\cf4 \strokec4 (val === \cf11 \strokec11 1\cf4 \strokec4 ) \cf6 \strokec6 return\cf4 \strokec4  key;\cb1 \
-\cb10   \}\cb1 \
+\cb10     \cf6 \strokec6 return\cf4 \strokec4  sortedT[i];\cb1 \
 \cb10 \};\cb1 \
+\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \outl0\strokewidth0 \
