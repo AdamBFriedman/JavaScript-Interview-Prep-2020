@@ -2572,7 +2572,7 @@ For example:\
 \cb10   \cf6 \strokec6 return\cf4 \strokec4  [...str]\cb1 \
 \cb10     .reverse()\cb1 \
 \cb10     .map((char, i) => letterToNumber(char) * \cf13 \strokec13 Math\cf4 \strokec4 .pow(\cf11 \strokec11 26\cf4 \strokec4 , i))\cb1 \
-\cb10     .reduce((prev, current) => prev + current, \cf11 \strokec11 0\cf4 \strokec4 );\cb1 \
+\cb10     .reduce((acc, cur) => acc + cur, \cf11 \strokec11 0\cf4 \strokec4 );\cb1 \
 \cb10 \};\cb1 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -2832,7 +2832,7 @@ Return True if\'a0
 \cb10             \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 false\cf4 \strokec4  \cb1 \
 \cb10         \} \cf6 \strokec6 else\cf4 \strokec4  \{\cb1 \
 \cb10             seen[num] = num\cb1 \
-\cb10             num = num.toString().split(\cf20 \strokec20 ''\cf4 \strokec4 ).reduce((acc, num) => acc + (num * num), \cf11 \strokec11 0\cf4 \strokec4 )\cb1 \
+\cb10             num = num.toString().split(\cf20 \strokec20 ''\cf4 \strokec4 ).reduce((acc, cur) => acc + (cur * cur), \cf11 \strokec11 0\cf4 \strokec4 )\cb1 \
 \cb10         \}\cb1 \
 \cb10     \}\cb1 \
 \cb10     \cf6 \strokec6 return\cf4 \strokec4  \cf6 \strokec6 true\cf4 \strokec4  \cb1 \
