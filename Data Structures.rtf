@@ -906,12 +906,12 @@ Bob\'92s initial position will be represented by a \'91B\'92 and the house locat
 \cb8 \}\cb1 \
 \
 \cb8 detectCycle () \{\cb1 \
-\cb8   \cf5 const\cf4  graphNodes = \cf6 Object\cf4 .keys(\cf5 this\cf4 .adjList);\cb1 \
+\cb8   \cf5 const\cf4  nodes = \cf6 Object\cf4 .keys(\cf5 this\cf4 .adjList);\cb1 \
 \cb8   \cf5 const\cf4  visited = \{\};\cb1 \
 \cb8   \cf5 const\cf4  recStack = \{\};\cb1 \
 \cb8   \cb1 \
-\cb8   \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < graphNodes.length; i++) \{\cb1 \
-\cb8     \cf5 if\cf4  (\cf5 this\cf4 ._detectCycleUtil(graphNodes[i], visited , recStack)) \cb1 \
+\cb8   \cf5 for\cf4  (\cf5 let\cf4  i = \cf7 0\cf4 ; i < nodes.length; i++) \{\cb1 \
+\cb8     \cf5 if\cf4  (\cf5 this\cf4 ._detectCycleUtil(nodes[i], visited , recStack)) \cb1 \
 \cb8       \cf5 return\cf4  \cf13 "There is a cycle!"\cf4 \cb1 \
 \cb8   \}\cb1 \
 \cb8   \cf5 return\cf4  \cf13 "No cycle!"\cf4 \cb1 \
@@ -921,9 +921,9 @@ Bob\'92s initial position will be represented by a \'91B\'92 and the house locat
 \cb8   \cf5 if\cf4 (!visited[vertex])\{\cb1 \
 \cb8     visited[vertex] = \cf5 true\cf4 ;\cb1 \
 \cb8     recStack[vertex] = \cf5 true\cf4 ;\cb1 \
-\cb8     \cf5 const\cf4  nodeNeighbors = \cf5 this\cf4 .adjList[vertex];\cb1 \
-\cb8     \cf5 for\cf4 (\cf5 let\cf4  i = \cf7 0\cf4 ; i < nodeNeighbors.length; i++)\{\cb1 \
-\cb8       \cf5 let\cf4  currentNode = nodeNeighbors[i];\cb1 \
+\cb8     \cf5 const\cf4  neighbors = \cf5 this\cf4 .adjList[vertex];\cb1 \
+\cb8     \cf5 for\cf4 (\cf5 let\cf4  i = \cf7 0\cf4 ; i < neighbors.length; i++)\{\cb1 \
+\cb8       \cf5 let\cf4  currentNode = neighbors[i];\cb1 \
 \cb8       \cf5 if\cf4 (!visited[currentNode] && \cf5 this\cf4 ._detectCycleUtil(currentNode, visited, recStack))\{\cb1 \
 \cb8         \cf5 return\cf4  \cf5 true\cf4 ;\cb1 \
 \cb8       \} \cf5 else\cf4  \cf5 if\cf4  (recStack[currentNode])\{\cb1 \

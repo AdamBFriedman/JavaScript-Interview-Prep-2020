@@ -7,19 +7,19 @@
 }
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red255\green255\blue255;\red66\green1\blue120;
 \red38\green38\blue38;\red0\green0\blue255;\red0\green0\blue0;\red19\green120\blue72;\red251\green2\blue7;
-\red144\green1\blue18;\red154\green154\blue154;\red32\green35\blue35;\red27\green29\blue31;\red0\green0\blue0;
-\red49\green49\blue50;\red255\green255\blue254;\red19\green120\blue72;\red14\green110\blue109;\red144\green1\blue18;
-\red12\green99\blue153;\red255\green255\blue255;\red135\green91\blue44;\red210\green50\blue85;\red135\green135\blue135;
-\red85\green138\blue3;\red133\green0\blue67;\red93\green108\blue125;\red191\green28\blue37;\red0\green0\blue255;
-\red121\green213\blue255;\red149\green155\blue194;\red251\green2\blue7;\red26\green26\blue26;\red27\green36\blue51;
+\red251\green2\blue7;\red144\green1\blue18;\red154\green154\blue154;\red32\green35\blue35;\red27\green29\blue31;
+\red0\green0\blue0;\red49\green49\blue50;\red255\green255\blue254;\red19\green120\blue72;\red14\green110\blue109;
+\red144\green1\blue18;\red12\green99\blue153;\red255\green255\blue255;\red135\green91\blue44;\red210\green50\blue85;
+\red135\green135\blue135;\red85\green138\blue3;\red133\green0\blue67;\red93\green108\blue125;\red191\green28\blue37;
+\red0\green0\blue255;\red121\green213\blue255;\red149\green155\blue194;\red26\green26\blue26;\red27\green36\blue51;
 }
 {\*\expandedcolortbl;;\cssrgb\c1680\c19835\c100000;\cssrgb\c100000\c100000\c100000;\cssrgb\c33333\c10196\c54510;
 \cssrgb\c20000\c20000\c20000;\cssrgb\c0\c0\c100000;\cssrgb\c0\c0\c0;\cssrgb\c3529\c53333\c35294;\cssrgb\c100000\c14913\c0;
-\cssrgb\c63922\c8235\c8235;\cssrgb\c66667\c66667\c66667;\cssrgb\c16471\c18039\c18039;\cssrgb\c14118\c15294\c16078;\cssrgb\c0\c0\c0\c84314;
-\cssrgb\c25098\c25098\c25490;\cssrgb\c100000\c100000\c99608;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;\cssrgb\c63922\c8235\c8235;
-\cssrgb\c0\c46667\c66667;\cssrgb\c100000\c100000\c100000;\cssrgb\c60392\c43137\c22745;\cssrgb\c86667\c29020\c40784;\cssrgb\c60000\c60000\c60000;
-\cssrgb\c40000\c60000\c0;\cssrgb\c60000\c0\c33333;\cssrgb\c43922\c50196\c56471;\cssrgb\c80392\c19216\c19216;\cssrgb\c1680\c19835\c100000;
-\cssrgb\c53725\c86667\c100000;\cssrgb\c65098\c67451\c80392;\cssrgb\c100000\c14913\c0;\cssrgb\c13333\c13333\c13333;\cssrgb\c13725\c19216\c26275;
+\cssrgb\c100000\c14913\c0;\cssrgb\c63922\c8235\c8235;\cssrgb\c66667\c66667\c66667;\cssrgb\c16471\c18039\c18039;\cssrgb\c14118\c15294\c16078;
+\cssrgb\c0\c0\c0\c84314;\cssrgb\c25098\c25098\c25490;\cssrgb\c100000\c100000\c99608;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c50196\c50196;
+\cssrgb\c63922\c8235\c8235;\cssrgb\c0\c46667\c66667;\cssrgb\c100000\c100000\c100000;\cssrgb\c60392\c43137\c22745;\cssrgb\c86667\c29020\c40784;
+\cssrgb\c60000\c60000\c60000;\cssrgb\c40000\c60000\c0;\cssrgb\c60000\c0\c33333;\cssrgb\c43922\c50196\c56471;\cssrgb\c80392\c19216\c19216;
+\cssrgb\c1680\c19835\c100000;\cssrgb\c53725\c86667\c100000;\cssrgb\c65098\c67451\c80392;\cssrgb\c13333\c13333\c13333;\cssrgb\c13725\c19216\c26275;
 }
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
@@ -247,8 +247,7 @@ Fibonacci: O(2^n) without memoization O(n)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3 \cf6 \expnd0\expndtw0\kerning0
-function\cf7  fibonacci(n, memo) \{\
-    memo = memo || \{\}\
+function\cf7  fibonacci(n, memo = \{\}) \{\
     \cf6 if\cf7  (n <= \cf8 1\cf7 ) \{\
         \cf6 return\cf7  \cf8 1\cf7 \
     \} \cf6 else\cf7  \{\
@@ -266,7 +265,8 @@ Backtracking is a method to solve problems by making a series of choices that we
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f1 \cf0 \kerning1\expnd0\expndtw0 Anytime you see \'93print all\'94 \'93return all\'94 \'93compute all\'94 - it\'92s going to use backtracking/recursion\
+\f1\fs72 \cf10 \kerning1\expnd0\expndtw0 Anytime you see \'93print all\'94 \'93return all\'94 \'93compute all\'94 - it\'92s going to use backtracking/recursion
+\fs28 \cf0 \
 \
 Anything that can be written recursively *can* be written iteratively\
 Fibonacci \'97> fib(n) = fib(n-1) + fib(n-2)\
@@ -328,12 +328,12 @@ function\cf7  countDown(n) \{\
   \cf6 for\cf7  (\cf6 let\cf7  i = n; i > \cf8 0\cf7 ; i--) \{\
     console.log(i)\
   \}\
-  console.log(\cf10 'Hooray'\cf7 )\
+  console.log(\cf11 'Hooray'\cf7 )\
 \}\
 \
 \cf6 function\cf7  countDownRecursive(n) \{\
   \cf6 if\cf7  (n <= \cf8 0\cf7 ) \{\
-    console.log(\cf10 'Hooray'\cf7 )\
+    console.log(\cf11 'Hooray'\cf7 )\
     \cf6 return\cf7 \
   \}\
 \
@@ -357,7 +357,7 @@ function\cf7  countDown(n) \{\
 \}\
 \
 \cf6 function\cf7  printChildren(t) \{\
-  \cf11 // ???\cf7 \
+  \cf12 // ???\cf7 \
 \}\
 \
 \cf6 const\cf7  printChildrenRecursive = tree => \{\
@@ -371,17 +371,17 @@ function\cf7  countDown(n) \{\
 \}\
 \
 \cf6 const\cf7  tree = \{\
-  name: \cf10 'John'\cf7 ,\
+  name: \cf11 'John'\cf7 ,\
   children: [\
     \{\
-      name: \cf10 'Jim'\cf7 ,\
+      name: \cf11 'Jim'\cf7 ,\
       children: []\
     \},\
     \{\
-      name: \cf10 'Zoe'\cf7 ,\
+      name: \cf11 'Zoe'\cf7 ,\
       children: [\
-        \{ name: \cf10 'Kyle'\cf7 , children: [] \},\
-        \{ name: \cf10 'Sophia'\cf7 , children: [] \}\
+        \{ name: \cf11 'Kyle'\cf7 , children: [] \},\
+        \{ name: \cf11 'Sophia'\cf7 , children: [] \}\
       ]\
     \}\
   ]\
@@ -396,7 +396,7 @@ printChildrenRecursive(tree)\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f5\fs24 \cf12 \cb1 "#" + Math.random().toString(16).slice(2, 8)\
+\f5\fs24 \cf13 \cb1 "#" + Math.random().toString(16).slice(2, 8)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3\fs28 \cf7 \cb3 \
@@ -415,8 +415,8 @@ BFS uses: Check if path exists between nodes, finding hops or how many levels aw
 Regular Expression - Sequence of characters (pattern) that define a specific search pattern\
 \pard\pardeftab720\partightenfactor0
 
-\f3\fs26 \cf13 \cb1 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec13 "^[a-zA-Z0-9_]*$"
+\f3\fs26 \cf14 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 "^[a-zA-Z0-9_]*$"
 \f1\fs28 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 \
@@ -439,7 +439,7 @@ Math.PI;\
 
 \f6\b \cf9 \expnd0\expndtw0\kerning0
 // BIG O
-\f7\b0 \cf14 \
+\f7\b0 \cf15 \
 \pard\pardeftab720\sl280\partightenfactor0
 
 \f8 \cf7 Algorithm complexity is just a way to formally measure how fast a program or algorithm runs\
@@ -447,7 +447,7 @@ Math.PI;\
 Algorithms - Ideas of how something is computed\
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f1 \cf15 \'a0\'93an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values as output.\'94\
+\f1 \cf16 \'a0\'93an algorithm is any well-defined computational procedure that takes some value, or set of values, as input and produces some value, or set of values as output.\'94\
 \pard\pardeftab720\sl340\partightenfactor0
 
 \f8 \cf7 \
@@ -507,19 +507,19 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \f8\b0 \cf7 \
 \pard\pardeftab720\sl340\partightenfactor0
 
-\f1 \cf15 quicksort, heapsort and mergesort\
+\f1 \cf16 quicksort, heapsort and mergesort\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Shortest Path
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl340\partightenfactor0
-\cf15 Djikstra\'92s Algorithm (Shortest distance from A to B ie: Google Maps)\
+\cf16 Djikstra\'92s Algorithm (Shortest distance from A to B ie: Google Maps)\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Calculate run time of function
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 let time1 = Date.now();
@@ -542,15 +542,15 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3 \cf6 const\cf7  buildTable = (rows, cols) => \{\
-\'a0\'a0\cf6 let\cf7  table = \cf10 ""\cf7 ;\
+\'a0\'a0\cf6 let\cf7  table = \cf11 ""\cf7 ;\
 \'a0\'a0\cf6 for\cf7  (\cf6 let\cf7  r=\cf8 0\cf7 ; r<rows; r++) \{\
-\'a0\'a0\'a0\'a0table += \cf10 "<tr>"\cf7 \
+\'a0\'a0\'a0\'a0table += \cf11 "<tr>"\cf7 \
 \'a0\'a0\'a0\'a0\cf6 for\cf7  (\cf6 let\cf7  c=\cf8 1\cf7 ; c<=cols; c++) \{\
-\'a0\'a0\'a0\'a0\'a0\'a0table += \cf10 `<td> \cf7 $\{c\}\cf10  </td>`\cf7 \
+\'a0\'a0\'a0\'a0\'a0\'a0table += \cf11 `<td> \cf7 $\{c\}\cf11  </td>`\cf7 \
 \'a0\'a0\'a0\'a0\}\
-\'a0\'a0\'a0\'a0table += \cf10 "</tr>"\cf7 \
+\'a0\'a0\'a0\'a0table += \cf11 "</tr>"\cf7 \
 \'a0\'a0\}\
-\'a0\'a0document.write(\cf10 `<table>\cf7 $\{table\}\cf10 </table>`\cf7 )\
+\'a0\'a0document.write(\cf11 `<table>\cf7 $\{table\}\cf11 </table>`\cf7 )\
 \}\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -559,7 +559,7 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Reverse String
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 function reverse(str) \{
@@ -582,7 +582,7 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Call, Apply, Bind
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 Call - \
@@ -592,7 +592,7 @@ Bind - \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Test Your Code!!!
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \
@@ -600,9 +600,9 @@ Bind - \
 
 \f3 \cf6 function\cf7  assertEqual(actual, expected, testName) \{\
   \cf6 if\cf7  (actual === expected) \{\
-    console.log(\cf10 'Passed'\cf7 );\
+    console.log(\cf11 'Passed'\cf7 );\
   \} \cf6 else\cf7  \{\
-    console.log(\cf10 `\cf7 $\{testName\}\cf10  FAILED. Expected output: \cf7 $\{expected\}\cf10  but Actual output was: \cf7 $\{actual\}\cf10 `\cf7 )\
+    console.log(\cf11 `\cf7 $\{testName\}\cf11  FAILED. Expected output: \cf7 $\{expected\}\cf11  but Actual output was: \cf7 $\{actual\}\cf11 `\cf7 )\
   \}\
 \}\
 \
@@ -612,7 +612,7 @@ Bind - \
 \
 \cf6 let\cf7  actual = multiplyByTwo(\cf8 2\cf7 );\
 \cf6 let\cf7  expected = \cf8 4\cf7 ;\
-\cf6 let\cf7  testName = \cf10 'Multiplying by Two'\cf7 \
+\cf6 let\cf7  testName = \cf11 'Multiplying by Two'\cf7 \
 \
 assertEqual(actual, expected, testName);\
 \pard\pardeftab720\sl400\partightenfactor0
@@ -622,7 +622,7 @@ assertEqual(actual, expected, testName);\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Security
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 CSRF - Cross-Site Request Forgery is an attack that forces an end user to execute unwanted actions on a web application in which they\'92re currently authenticated.  With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker\'92s choosing\
@@ -640,7 +640,7 @@ Mitigation Strategies - 1)  Unique form tokens generated on every POST, PUT, DEL
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Improve Web Latency
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 //BASELINE\
@@ -665,7 +665,7 @@ Run Audit to see if performance improved\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f6\b \cf9 // Etc Etc Etc
-\f1\b0 \cf15 \
+\f1\b0 \cf16 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \'93use strict\'94; - ie if you forget to declare your variable in your for loop (var i) - normally it would then be available outside of the function but use strict will prevent that\
@@ -684,10 +684,6 @@ Execution Context - 1st phase is Creation, 2nd phase is Execution\
 Shallow - slice, concat, spread operator, Object.create, Object.assign, Array.from\
 clonedObj = Object.assign(\{\}, cloneTarget) or clonedObj =  \{ \'85object \}\
 Deep - JSON.parse(JSON.stringify())\
-\
-//Min/Max problem or array with only two values \'97> think about using Math.min/Math.max\
-\
-//climbStairs problem is Fibonacci sequence in disguise\
 \
 //Polyfill\
 Small piece of code used to allow old browsers to run modern code\
@@ -711,39 +707,39 @@ arr.slice(-1)\
 //Binary Search Tree\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf6 \cb16 \outl0\strokewidth0 \strokec6 let\cf7 \strokec7  binarySearch = (arr, x) => \{\cb1 \
-\cb16   \cf6 \strokec6 let\cf7 \strokec7  start = \cf17 \strokec17 0\cf7 \strokec7 ;\cb1 \
-\cb16   \cf6 \strokec6 let\cf7 \strokec7  end = arr.length - \cf17 \strokec17 1\cf7 \strokec7 ;\cb1 \
+\f3 \cf6 \cb17 \outl0\strokewidth0 \strokec6 let\cf7 \strokec7  binarySearch = (arr, x) => \{\cb1 \
+\cb17   \cf6 \strokec6 let\cf7 \strokec7  start = \cf18 \strokec18 0\cf7 \strokec7 ;\cb1 \
+\cb17   \cf6 \strokec6 let\cf7 \strokec7  end = arr.length - \cf18 \strokec18 1\cf7 \strokec7 ;\cb1 \
 \
-\cb16   \cf6 \strokec6 while\cf7 \strokec7  (start <= length) \{\cb1 \
-\cb16     \cf6 \strokec6 let\cf7 \strokec7  mid = \cf18 \strokec18 Math\cf7 \strokec7 .floor((start + end) / \cf17 \strokec17 2\cf7 \strokec7 )\cb1 \
+\cb17   \cf6 \strokec6 while\cf7 \strokec7  (start <= length) \{\cb1 \
+\cb17     \cf6 \strokec6 let\cf7 \strokec7  mid = \cf19 \strokec19 Math\cf7 \strokec7 .floor((start + end) / \cf18 \strokec18 2\cf7 \strokec7 )\cb1 \
 \
-\cb16     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] === x) \cf6 \strokec6 return\cf7 \strokec7  \cf6 \strokec6 true\cf7 \strokec7 ;\cb1 \
-\cb16     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] < x) start = mid + \cf17 \strokec17 1\cf7 \strokec7 ;\cb1 \
-\cb16     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] > x) end = mid - \cf17 \strokec17 1\cf7 \strokec7 ;\cb1 \
-\cb16   \}\cb1 \
+\cb17     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] === x) \cf6 \strokec6 return\cf7 \strokec7  \cf6 \strokec6 true\cf7 \strokec7 ;\cb1 \
+\cb17     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] < x) start = mid + \cf18 \strokec18 1\cf7 \strokec7 ;\cb1 \
+\cb17     \cf6 \strokec6 if\cf7 \strokec7  (arr[mid] > x) end = mid - \cf18 \strokec18 1\cf7 \strokec7 ;\cb1 \
+\cb17   \}\cb1 \
 \
-\cb16   \cf6 \strokec6 return\cf7 \strokec7  \cf6 \strokec6 false\cf7 \strokec7 ;\cb1 \
-\cb16 \}
+\cb17   \cf6 \strokec6 return\cf7 \strokec7  \cf6 \strokec6 false\cf7 \strokec7 ;\cb1 \
+\cb17 \}
 \f11 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl400\partightenfactor0
 \cf7 \
 //Make Change\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf6 \cb16 \outl0\strokewidth0 \strokec6 let\cf7 \strokec7  makeChange = (amount, coins, bag = []) => \{\cb1 \
-\cb16   \cf6 \strokec6 if\cf7 \strokec7  (amount === \cf17 \strokec17 0\cf7 \strokec7 ) \cf6 \strokec6 return\cf7 \strokec7  bag;\cb1 \
-\cb16   \cf6 \strokec6 let\cf7 \strokec7  largestCoin = getLargestCoin(amount, coins)\cb1 \
-\cb16   \cf6 \strokec6 return\cf7 \strokec7  makeChange(amount - largestCoin, coins, bag.concat([largestCoin]));\cb1 \
-\cb16 \}\cb1 \
+\f3 \cf6 \cb17 \outl0\strokewidth0 \strokec6 let\cf7 \strokec7  makeChange = (amount, coins, bag = []) => \{\cb1 \
+\cb17   \cf6 \strokec6 if\cf7 \strokec7  (amount === \cf18 \strokec18 0\cf7 \strokec7 ) \cf6 \strokec6 return\cf7 \strokec7  bag;\cb1 \
+\cb17   \cf6 \strokec6 let\cf7 \strokec7  largestCoin = getLargestCoin(amount, coins)\cb1 \
+\cb17   \cf6 \strokec6 return\cf7 \strokec7  makeChange(amount - largestCoin, coins, bag.concat([largestCoin]));\cb1 \
+\cb17 \}\cb1 \
 \
-\cf6 \cb16 \strokec6 let\cf7 \strokec7  getLargestCoin = (amount, coins) => \{\cb1 \
-\cb16   \cf6 \strokec6 let\cf7 \strokec7  sortedCoins = coins.sort((a,b) => a - b);\cb1 \
-\cb16   \cf6 \strokec6 for\cf7 \strokec7  (\cf6 \strokec6 let\cf7 \strokec7  i = sortedCoins.length; i >= \cf17 \strokec17 0\cf7 \strokec7 ; i--) \{\cb1 \
-\cb16     \cf6 \strokec6 if\cf7 \strokec7  (sortedCoins[i] <= amount) \cf6 \strokec6 return\cf7 \strokec7  sortedCoins[i]\cb1 \
-\cb16   \}\cb1 \
-\cb16   \cf6 \strokec6 throw\cf7 \strokec7  \cf6 \strokec6 new\cf7 \strokec7  \cf18 \strokec18 Error\cf7 \strokec7 (\cf19 \strokec19 'No coin is divisbly by that amount.'\cf7 \strokec7 )\cb1 \
-\cb16 \}\cb1 \
+\cf6 \cb17 \strokec6 let\cf7 \strokec7  getLargestCoin = (amount, coins) => \{\cb1 \
+\cb17   \cf6 \strokec6 let\cf7 \strokec7  sortedCoins = coins.sort((a,b) => a - b);\cb1 \
+\cb17   \cf6 \strokec6 for\cf7 \strokec7  (\cf6 \strokec6 let\cf7 \strokec7  i = sortedCoins.length; i >= \cf18 \strokec18 0\cf7 \strokec7 ; i--) \{\cb1 \
+\cb17     \cf6 \strokec6 if\cf7 \strokec7  (sortedCoins[i] <= amount) \cf6 \strokec6 return\cf7 \strokec7  sortedCoins[i]\cb1 \
+\cb17   \}\cb1 \
+\cb17   \cf6 \strokec6 throw\cf7 \strokec7  \cf6 \strokec6 new\cf7 \strokec7  \cf19 \strokec19 Error\cf7 \strokec7 (\cf20 \strokec20 'No coin is divisbly by that amount.'\cf7 \strokec7 )\cb1 \
+\cb17 \}\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \cb3 \outl0\strokewidth0 \
@@ -763,17 +759,17 @@ Date.getFullYear() returns 4 digit year\
 \
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f5\fs32 \cf20 \cb21 \outl0\strokewidth0 \strokec20 let\cf5 \strokec5  today \cf22 \strokec22 =\cf5 \strokec5  \cf20 \strokec20 new\cf5 \strokec5  \cf23 \strokec23 Date\cf24 \strokec24 ()\cf5 \strokec5 \
-\cf20 \strokec20 let\cf5 \strokec5  birthday \cf22 \strokec22 =\cf5 \strokec5  \cf20 \strokec20 new\cf5 \strokec5  \cf23 \strokec23 Date\cf24 \strokec24 (\cf25 \strokec25 'December 17, 1995 03:24:00'\cf24 \strokec24 )\cf5 \strokec5 \
-\cf20 \strokec20 let\cf5 \strokec5  birthday \cf22 \strokec22 =\cf5 \strokec5  \cf20 \strokec20 new\cf5 \strokec5  \cf23 \strokec23 Date\cf24 \strokec24 (\cf25 \strokec25 '1995-12-17T03:24:00'\cf24 \strokec24 )\cf5 \strokec5 \
-\cf20 \strokec20 let\cf5 \strokec5  birthday \cf22 \strokec22 =\cf5 \strokec5  \cf20 \strokec20 new\cf5 \strokec5  \cf23 \strokec23 Date\cf24 \strokec24 (\cf26 \strokec26 1995\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 11\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 17\cf24 \strokec24 )\cf5 \strokec5  \cf27 \strokec27 // the month is 0-indexed\cf5 \strokec5 \
-\cf20 \strokec20 let\cf5 \strokec5  birthday \cf22 \strokec22 =\cf5 \strokec5  \cf20 \strokec20 new\cf5 \strokec5  \cf23 \strokec23 Date\cf24 \strokec24 (\cf26 \strokec26 1995\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 11\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 17\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 3\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 24\cf24 \strokec24 ,\cf5 \strokec5  \cf26 \strokec26 0\cf24 \strokec24 )\cf5 \strokec5 \
+\f5\fs32 \cf21 \cb22 \outl0\strokewidth0 \strokec21 let\cf5 \strokec5  today \cf23 \strokec23 =\cf5 \strokec5  \cf21 \strokec21 new\cf5 \strokec5  \cf24 \strokec24 Date\cf25 \strokec25 ()\cf5 \strokec5 \
+\cf21 \strokec21 let\cf5 \strokec5  birthday \cf23 \strokec23 =\cf5 \strokec5  \cf21 \strokec21 new\cf5 \strokec5  \cf24 \strokec24 Date\cf25 \strokec25 (\cf26 \strokec26 'December 17, 1995 03:24:00'\cf25 \strokec25 )\cf5 \strokec5 \
+\cf21 \strokec21 let\cf5 \strokec5  birthday \cf23 \strokec23 =\cf5 \strokec5  \cf21 \strokec21 new\cf5 \strokec5  \cf24 \strokec24 Date\cf25 \strokec25 (\cf26 \strokec26 '1995-12-17T03:24:00'\cf25 \strokec25 )\cf5 \strokec5 \
+\cf21 \strokec21 let\cf5 \strokec5  birthday \cf23 \strokec23 =\cf5 \strokec5  \cf21 \strokec21 new\cf5 \strokec5  \cf24 \strokec24 Date\cf25 \strokec25 (\cf27 \strokec27 1995\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 11\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 17\cf25 \strokec25 )\cf5 \strokec5  \cf28 \strokec28 // the month is 0-indexed\cf5 \strokec5 \
+\cf21 \strokec21 let\cf5 \strokec5  birthday \cf23 \strokec23 =\cf5 \strokec5  \cf21 \strokec21 new\cf5 \strokec5  \cf24 \strokec24 Date\cf25 \strokec25 (\cf27 \strokec27 1995\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 11\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 17\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 3\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 24\cf25 \strokec25 ,\cf5 \strokec5  \cf27 \strokec27 0\cf25 \strokec25 )\cf5 \strokec5 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11\fs28 \cf7 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f5\fs32 \cf20 \cb21 \outl0\strokewidth0 \strokec20 let\cf5 \strokec5  seconds \cf22 \strokec22 =\cf5 \strokec5  Math\cf24 \strokec24 .\cf23 \strokec23 floor\cf24 \strokec24 (\cf5 \strokec5 Date\cf24 \strokec24 .\cf23 \strokec23 now\cf24 \strokec24 ()\cf5 \strokec5  \cf22 \strokec22 /\cf5 \strokec5  \cf26 \strokec26 1000\cf24 \strokec24 )\cf5 \strokec5 \
+\f5\fs32 \cf21 \cb22 \outl0\strokewidth0 \strokec21 let\cf5 \strokec5  seconds \cf23 \strokec23 =\cf5 \strokec5  Math\cf25 \strokec25 .\cf24 \strokec24 floor\cf25 \strokec25 (\cf5 \strokec5 Date\cf25 \strokec25 .\cf24 \strokec24 now\cf25 \strokec25 ()\cf5 \strokec5  \cf23 \strokec23 /\cf5 \strokec5  \cf27 \strokec27 1000\cf25 \strokec25 )\cf5 \strokec5 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11\fs28 \cf7 \cb3 \outl0\strokewidth0 \
@@ -784,10 +780,10 @@ console.log(window.prop) //undefined because let does not create a property on t
 //Console Tricks\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 \outl0\strokewidth0 \strokec7 console.time(\cf28 \strokec28 \'93\cf7 \strokec7 string\cf28 \strokec28 \'94\cf7 \strokec7 )\cb1 \
-\cb16 setTimeout(() => \{\cb1 \
-\cb16   console.timeEnd(\cf28 \strokec28 \'93\cf7 \strokec7 string\cf28 \strokec28 \'94\cf7 \strokec7 )\cb1 \
-\cb16 \}, \cf17 \strokec17 5000\cf7 \strokec7 )
+\f3 \cf7 \cb17 \outl0\strokewidth0 \strokec7 console.time(\cf29 \strokec29 \'93\cf7 \strokec7 string\cf29 \strokec29 \'94\cf7 \strokec7 )\cb1 \
+\cb17 setTimeout(() => \{\cb1 \
+\cb17   console.timeEnd(\cf29 \strokec29 \'93\cf7 \strokec7 string\cf29 \strokec29 \'94\cf7 \strokec7 )\cb1 \
+\cb17 \}, \cf18 \strokec18 5000\cf7 \strokec7 )
 \f11 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl400\partightenfactor0
 \cf7 \
@@ -797,20 +793,20 @@ console.table(person, [\'91age\'92, \'91eyeColor\'92]\
 //JSON\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf6 \cb16 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  engineer = \{\cb1 \
-\cb16   name: \cf19 \strokec19 "Adam"\cf7 \strokec7 ,\cb1 \
-\cb16   age: \cf17 \strokec17 35\cf7 \strokec7 ,\cb1 \
-\cb16   lovesSeinfeld: \cf6 \strokec6 true\cf7 \cb1 \strokec7 \
-\cb16 \}\cb1 \
+\f3 \cf6 \cb17 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  engineer = \{\cb1 \
+\cb17   name: \cf20 \strokec20 "Adam"\cf7 \strokec7 ,\cb1 \
+\cb17   age: \cf18 \strokec18 35\cf7 \strokec7 ,\cb1 \
+\cb17   lovesSeinfeld: \cf6 \strokec6 true\cf7 \cb1 \strokec7 \
+\cb17 \}\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf6 \cb16 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  objToStr = \cf18 \strokec18 JSON\cf7 \strokec7 .stringify(engineer)\
-\cf6 \strokec6 const\cf7 \strokec7  strToObj = \cf18 \strokec18 JSON\cf7 \strokec7 .parse(objToStr)\cb1 \
+\f3 \cf6 \cb17 \outl0\strokewidth0 \strokec6 const\cf7 \strokec7  objToStr = \cf19 \strokec19 JSON\cf7 \strokec7 .stringify(engineer)\
+\cf6 \strokec6 const\cf7 \strokec7  strToObj = \cf19 \strokec19 JSON\cf7 \strokec7 .parse(objToStr)\cb1 \
 \
-\cb16 //Sort lexicographically\
+\cb17 //Sort lexicographically\
 To compare strings alphabetically, use localeCompare().  This returns a negative value if the reference string is lexicographically (alphabetically) before the compared string (the parameter), a positive value if it comes afterward, and a value of 0 if they are equal\
 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
@@ -818,47 +814,47 @@ To compare strings alphabetically, use localeCompare().  This returns a negative
 \f11 \cf7 \cb3 \outl0\strokewidth0 //Center a div\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 \outl0\strokewidth0 \strokec7 <div \cf6 \strokec6 class\cf7 \strokec7 =\cf19 \strokec19 "out"\cf7 \strokec7 >\cb1 \
-\cb16   <div \cf6 \strokec6 class\cf7 \strokec7 =\cf19 \strokec19 "in"\cf7 \strokec7 ></div>\cb1 \
-\cb16 </div>\cb1 \
+\f3 \cf7 \cb17 \outl0\strokewidth0 \strokec7 <div \cf6 \strokec6 class\cf7 \strokec7 =\cf20 \strokec20 "out"\cf7 \strokec7 >\cb1 \
+\cb17   <div \cf6 \strokec6 class\cf7 \strokec7 =\cf20 \strokec20 "in"\cf7 \strokec7 ></div>\cb1 \
+\cb17 </div>\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \cb3 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 \outl0\strokewidth0 \strokec7 .\cf29 out\cf7  \{\cb1 \
-\cb16   height: \cf17 \strokec17 300\cf7 \strokec7 px;\cb1 \
-\cb16   border: \cf17 \strokec17 1\cf7 \strokec7 px solid green;\cb1 \
-\cb16   position: relative;\cb1 \
-\cb16 \}\cb1 \
+\f3 \cf7 \cb17 \outl0\strokewidth0 \strokec7 .\cf30 out\cf7  \{\cb1 \
+\cb17   height: \cf18 \strokec18 300\cf7 \strokec7 px;\cb1 \
+\cb17   border: \cf18 \strokec18 1\cf7 \strokec7 px solid green;\cb1 \
+\cb17   position: relative;\cb1 \
+\cb17 \}\cb1 \
 \
-\cb16 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
-\cb16   width: \cf17 \strokec17 100\cf7 \strokec7 px;\cb1 \
-\cb16   border: \cf17 \strokec17 1\cf7 \strokec7 px solid red;\cb1 \
-\cb16   position: absolute;\cb1 \
-\cb16   top: \cf17 \strokec17 50\cf7 \strokec7 %;\cb1 \
-\cb16   left: \cf17 \strokec17 50\cf7 \strokec7 %;\cb1 \
-\cb16   transform:translate(-\cf17 \strokec17 50\cf7 \strokec7 %, -\cf17 \strokec17 50\cf7 \strokec7 %);\cb1 \
-\cb16 \}\cb1 \
+\cb17 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
+\cb17   width: \cf18 \strokec18 100\cf7 \strokec7 px;\cb1 \
+\cb17   border: \cf18 \strokec18 1\cf7 \strokec7 px solid red;\cb1 \
+\cb17   position: absolute;\cb1 \
+\cb17   top: \cf18 \strokec18 50\cf7 \strokec7 %;\cb1 \
+\cb17   left: \cf18 \strokec18 50\cf7 \strokec7 %;\cb1 \
+\cb17   transform:translate(-\cf18 \strokec18 50\cf7 \strokec7 %, -\cf18 \strokec18 50\cf7 \strokec7 %);\cb1 \
+\cb17 \}\cb1 \
 \pard\pardeftab720\sl360\partightenfactor0
 
-\fs24 \cf30 \cb21 \strokec30 \
+\fs24 \cf31 \cb22 \strokec31 \
 \cf7 //Center a div with Flexbox\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\fs28 \cf7 \cb16 \strokec7 .\cf29 out\cf7  \{\cb1 \
-\cb16   display: flex;\cf29 \cb1 \
-\cf7 \cb16   align-items: center;\cb1 \
-\cb16   justify-content: center;\cb1 \
-\cb16 \}\cb1 \
+\fs28 \cf7 \cb17 \strokec7 .\cf30 out\cf7  \{\cb1 \
+\cb17   display: flex;\cf30 \cb1 \
+\cf7 \cb17   align-items: center;\cb1 \
+\cb17   justify-content: center;\cb1 \
+\cb17 \}\cb1 \
 \
-\cb16 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
-\cb16   width: \cf17 \strokec17 100\cf7 \strokec7 px;\cb1 \
-\cb16   height: \cf17 \strokec17 100\cf7 \strokec7 px;\cb1 \
-\cb16 \}\cb1 \
+\cb17 .\cf6 \strokec6 in\cf7 \strokec7  \{\cb1 \
+\cb17   width: \cf18 \strokec18 100\cf7 \strokec7 px;\cb1 \
+\cb17   height: \cf18 \strokec18 100\cf7 \strokec7 px;\cb1 \
+\cb17 \}\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\fs24 \cf31 \strokec31 \
+\fs24 \cf32 \strokec32 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11\fs28 \cf7 \cb3 \outl0\strokewidth0 //CSS box-model property\
@@ -869,36 +865,38 @@ Margin \'97> Border \'97> Padding \'97> Content\
 \f1 \cf0 \kerning1\expnd0\expndtw0 //Triangle in CSS\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec7 <div \cf6 \strokec6 class\cf7 \strokec7 =\cf19 \strokec19 "triangle"\cf7 \strokec7 >\cb1 \
-\cb16 </div>\cb1 \
+\f3 \cf7 \cb17 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 <div \cf6 \strokec6 class\cf7 \strokec7 =\cf20 \strokec20 "triangle"\cf7 \strokec7 >\cb1 \
+\cb17 </div>\cb1 \
 \pard\pardeftab720\sl340\partightenfactor0
 
 \f1 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec7 .\cf29 triangle\cf7  \{\cb1 \
-\cb16   height: \cf17 \strokec17 0\cf7 \strokec7 px;\cb1 \
-\cb16   width: \cf17 \strokec17 0\cf7 \strokec7 px;\cb1 \
-\cb16   border-top: \cf17 \strokec17 100\cf7 \strokec7 px solid transparent;\cb1 \
-\cb16   border-bottom: \cf17 \strokec17 100\cf7 \strokec7 px solid transparent;\cb1 \
-\cb16   border-right: \cf17 \strokec17 100\cf7 \strokec7 px solid yellow;\cb1 \
-\cb16 \}\cb1 \
+\f3 \cf7 \cb17 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 .\cf30 triangle\cf7  \{\cb1 \
+\cb17   height: \cf18 \strokec18 0\cf7 \strokec7 px;\cb1 \
+\cb17   width: \cf18 \strokec18 0\cf7 \strokec7 px;\cb1 \
+\cb17   border-top: \cf18 \strokec18 100\cf7 \strokec7 px solid transparent;\cb1 \
+\cb17   border-bottom: \cf18 \strokec18 100\cf7 \strokec7 px solid transparent;\cb1 \
+\cb17   border-right: \cf18 \strokec18 100\cf7 \strokec7 px solid yellow;\cb1 \
+\cb17 \}\cb1 \
 \pard\pardeftab720\sl340\partightenfactor0
 
 \f1 \cf0 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 //Web Browser Engines\
+\pard\pardeftab720\sl340\partightenfactor0
+\cf0 Brave - Blink & V8\
 Edge - Blink & V8\
-Firefox - Gecko (FASTEST)\
 Chrome - Blink\
-Brave - Blink & V8\
+Firefox - Gecko (FASTEST)\
 \
 //Frameworks pros vs cons\
 UI Frameworks (Bootstrap, Bulma, Material)\
-\cf29 Pros\cf0 : Faster development & prototyping, responsive by default, browser compatibility\
 \pard\pardeftab720\sl340\partightenfactor0
-\cf32 Cons\cf0 : Less customization, many sites look alike, lots of style overriding\
+\cf30 Pros\cf0 : Faster development & prototyping, responsive by default, browser compatibility\
+\pard\pardeftab720\sl340\partightenfactor0
+\cf10 Cons\cf0 : Less customization, many sites look alike, lots of style overriding\
 \
 Frontend Frameworks (Vue, React, Angular)\
 \cf2 Pros\cf0 : Much less work for larger apps, component based, robust data/state management\
@@ -927,7 +925,7 @@ Frontend Frameworks (Vue, React, Angular)\
 \f0\b \cf2 //Interview Tips\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f11\b0 \cf14 \expnd0\expndtw0\kerning0
+\f11\b0 \cf15 \expnd0\expndtw0\kerning0
 1.  Speak out loud\
 2.  Ask clarification questions\
 3.  Call out assumptions\
@@ -969,14 +967,14 @@ R
 \f1 \
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f7 \cf14 \
+\f7 \cf15 \
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\b \cf2 \kerning1\expnd0\expndtw0 //What you should fully comprehend\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f11\b0 \cf14 \expnd0\expndtw0\kerning0
+\f11\b0 \cf15 \expnd0\expndtw0\kerning0
 Data Structures (a way of organizing data so that it can be used effectively) to know:\
 Arrays\
 Linked Lists\
@@ -990,7 +988,7 @@ Graphs
 \f13\b \cf2 \kerning1\expnd0\expndtw0 \
 \
 
-\f11\b0 \cf14 \expnd0\expndtw0\kerning0
+\f11\b0 \cf15 \expnd0\expndtw0\kerning0
 Algorithms to know how to code:\
 Sorting, searching, binary search\
 Divide-and-conquer\
