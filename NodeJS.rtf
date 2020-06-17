@@ -121,4 +121,19 @@ console.log(myUrl.searchParams);\
 \
 // Loop through params\
 myUrl.searchParams.forEach((value, name) console.log(`$\{name\}: $\{value\}`));\
+\
+//Event Emitter\
+const EventEmitter = require(\'91events\'92);\
+\
+// Create class\
+class MyEmitter extends EventEmitter \{ \}\
+\
+// Init object\
+const myEmitter = new MyEmitter();\
+\
+// Event listener\
+myEmitter.on(\'91event\'92, () => console.log(\'91Event Fired!\'92);\
+\
+// Init event\
+myEmitter.emit(\'91event\'92);\
 }
