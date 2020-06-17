@@ -68,4 +68,28 @@ fs.rename(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), (path.join(__d
     If (err) throw err;\
     console.log(\'91File renamed\'85\'92);\
 \});\
+\
+// Operating System (OS)\
+const os = require(\'91os\'92);\
+\
+// Platform\
+console.log(os.platform());\
+\
+// CPU Arch\
+console.log(os.arch());\
+\
+// CPU Core Info\
+console.log(os.cpus());\
+\
+// Free memory\
+console.log(os.freemem());\
+\
+// Total memory\
+console.log(os.totalmem());\
+\
+// Home dir\
+console.log(os.homedir());\
+\
+// Uptime\
+console.log(os.uptime());\
 }
