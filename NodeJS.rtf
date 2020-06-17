@@ -55,4 +55,17 @@ fs.writeFile(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), \'91Hello W
     If (err) throw err;\
     console.log(\'91File written to\'85\'92);\
 \});\
-\});}
+\});\
+\
+// Read file \
+fs.readFile(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), \'91utf8\'92, (err, data) => \{\
+    If (err) throw err;\
+    console.log(data);\
+\});\
+\
+// Rename file \
+fs.rename(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), (path.join(__dirname, \'91/test\'92, \'91newName.txt\'92), err => \{\
+    If (err) throw err;\
+    console.log(\'91File renamed\'85\'92);\
+\});\
+}
