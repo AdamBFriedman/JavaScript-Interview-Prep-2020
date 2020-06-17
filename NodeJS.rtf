@@ -92,4 +92,33 @@ console.log(os.homedir());\
 \
 // Uptime\
 console.log(os.uptime());\
+\
+// URL\
+const url = require(\'91url\'92);\
+const myUrl = new URL(\'91http://mywebsite.com/hello.html?id=100&status=active\'92);\
+\
+// Serialized URL\
+console.log(myUrl.href);\
+\
+// Host (root domain)\
+console.log(myUrl.host);\
+\
+// Hostname (doesn\'92t include ports)\
+console.log(myUrl.hostname);\
+\
+// Pathname\
+console.log(myUrl.pathname);\
+\
+// Serialized query\
+console.log(myUrl.search);\
+\
+// Params object\
+console.log(myUrl.searchParams);\
+\
+// Add param\
+myUrl.searchParams.append(\'91abc\'92, \'91123\'92);\
+console.log(myUrl.searchParams);\
+\
+// Loop through params\
+myUrl.searchParams.forEach((value, name) console.log(`$\{name\}: $\{value\}`));\
 }
