@@ -39,9 +39,20 @@ fs.mkdir(path.join(__dirname, \'91/test\'92), \{\}, err => \{\
     console.log(\'91Folder create\'85\'92);\
 \});\
 \
-// Create and write to file\
+// Create and write to file (writeFile overwrites anything written in file)\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 fs.writeFile(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), \'91Hello World\'92, err => \{\
     If (err) throw err;\
     console.log(\'91File written to\'85\'92);\
+\});\
+\
+// Create and write to file then append more text\
+fs.writeFile(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), \'91Hello World\'92, err => \{\
+    If (err) throw err;\
+    console.log(\'91File written to\'85\'92);\
+    //Append file\
+    fs.appendFile(path.join(__dirname, \'91/test\'92, \'91hello.txt\'92), \'91More text added\'92, err => \{\
+    If (err) throw err;\
+    console.log(\'91File written to\'85\'92);\
+\});\
 \});}
