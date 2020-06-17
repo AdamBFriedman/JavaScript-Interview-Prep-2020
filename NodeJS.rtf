@@ -7,6 +7,7 @@
 
 \f0\fs24 \cf0 Node JS Cheat Sheet\
 \
+//CommonJS\
 Node doesn\'92t use es6, it uses commonJS so you need to use require as opposed to import\
 \
 //Path\
@@ -18,4 +19,12 @@ console.log(path.basename(__filename));\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf0 // Directory name\
 console.log(path.dirname(__filename));\
-}
+\
+// File extension\
+console.log(path.extname(__filename));\
+\
+// Create path object\
+console.log(path.parse(__filename));\
+\
+// Concatenate paths\
+console.log(path.join(__dirname, \'91test\'92, \'91hello.html\'92))}
