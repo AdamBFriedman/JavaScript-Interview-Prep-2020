@@ -19,11 +19,23 @@ app.get(\'91/\'91, (req, res) => \{\
   res.send(\'91Hello World!\'92);\
 \});\
 \
+// Create port\
+const PORT = process.env.PORT || 5000\
+\
 // Listen on a port\
-app.listen(5000);\
+app.listen(PORT, () => console.log(`Server started on port $\{PORT\}`));\
 \
 // Middleware\
 Middleware functions are functions that have access to the request and response object.  Express has built in middleware but middleware also comes from 3rd party packages/custom made\
+\
+// Setting up environment\
+\
+1.  Open up project folder in code editor\
+2.  Open terminal\
+3.  Run \'93npm init\'94 to create a package.json file\
+4.  Run \'93npm install express\'94\
+5.  Create main entry point file (index.js or app.js or server.js)\
+6.  Add server syntax (from above) to index.js\
 \
 \
 \
