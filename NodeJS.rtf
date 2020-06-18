@@ -154,4 +154,14 @@ module.exports = Logger;\
 const Logger = require(\'91./logger\'92);\
 const logger = new Logger();\
 logger.on(\'91message\'92, data => console.log(\'91Called Listener\'92, data));\
-logger.log(\'91Hello World\'92);}
+logger.log(\'91Hello World\'92);\
+\
+// Create simple server\
+const http = require(\'91http\'92);\
+\
+// Create server object\
+http.createServer((req, res) => \{\
+    // Write response\
+    res.write(\'91Hello World\'92);\
+    res.end();\
+\}).listen(5000, () => console.log(\'91Server running\'85\'92));}
