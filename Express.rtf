@@ -37,7 +37,17 @@ Middleware functions are functions that have access to the request and response 
 5.  Create main entry point file (index.js or app.js or server.js)\
 6.  Add server syntax (from above) to index.js\
 \
+// Send a single html file (res.sendFile)\
+const express = require(\'91Express\'92);\
+const path = require(\'91path\'92);\
 \
+const app = express();\
 \
+app.get(\'91/\'91, (req, res) => \{\
+  res.sendFile(path.join(__dirname, \'91public\'92, \'91index.html\'92));\
+\});\
+\
+// Set static folder using middleware (app.use)\
+app.use(express.static(path.join(__dirname, \'91public\'92)));\
 \
 }
