@@ -136,4 +136,22 @@ myEmitter.on(\'91event\'92, () => console.log(\'91Event Fired!\'92);\
 \
 // Init event\
 myEmitter.emit(\'91event\'92);\
-}
+\
+// Real example of EventEmitter\
+const EventEmitter = require(\'91events\'92);\
+const uuid = require(\'91uuid\'92);\
+\
+class Logger extends EventEmitter \{\
+    log(msg) \{\
+      // Call event\
+      this.emit(\'91message\'92, \{ id: uuid.v4(), msg \}\
+    \}\
+\}\
+\
+module.exports = Logger;\
+\
+// in index.js\
+const Logger = require(\'91./logger\'92);\
+const logger = new Logger();\
+logger.on(\'91message\'92, data => console.log(\'91Called Listener\'92, data));\
+logger.log(\'91Hello World\'92);}
