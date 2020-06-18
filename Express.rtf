@@ -5,4 +5,22 @@
 \margl1440\margr1440\vieww10800\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 Express Notes}
+\f0\fs24 \cf0 Express Notes\
+\
+// Basic server syntax\
+const express = require(\'91express\'92);\
+\
+// Init express\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 const app = express();\
+\
+// Create your endpoints/route handlers\
+app.get(\'91/\'91, (req, res) => \{\
+  res.send(\'91Hello World!\'92);\
+\});\
+\
+// Listen on a port\
+app.listen(5000);\
+\
+\
+}
