@@ -30,4 +30,24 @@ ReactDOM.render(element, document.getElementById(\'91root\'92));\
 // Importing Bootstrap CSS\
 1. npm install bootstrap\
 2. In index.js, add the following: \
-	import \'91bootstrap/dist/css/bootstrap.css\'92;}
+	import \'91bootstrap/dist/css/bootstrap.css\'92;\
+\
+// Create a component\
+1. Create \'93components\'94 folder in src root folder\
+2. Create file in components called \'93componentName.jsx\'94\
+3. React Snippet shortcut: \'93imrc\'94 will produce the following:\
+	import React, \{ Component \} from \'91react\'92;\
+4. React Snippet shortcut: \'93cc\'94 will produce the following:\
+	class extends Component \{\
+	  state = \{\}\
+	  render() \{\
+	    return ()\
+	  \}\
+	\}\
+	\
+	export default ;\
+5.  The above snippet will not give the name of the component so add it where the multi-cursor tells you to.  Always capitalize the name ie class Counter\'85 export default Counter;\
+6.  Go to index.js and add the following:\
+	import Counter from \'91./components/counter\'92;\
+	ReactDOM.render(<Counter />, document.getElementById(\'91root\'92));\
+}
