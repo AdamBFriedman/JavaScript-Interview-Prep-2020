@@ -97,5 +97,35 @@ app.get(\'91/api/members/:id\'92, (req, res) => \{\
   \} else \{\
     res.status(400).json(\{ msg: `No member with the id of $\{req.params.id\}` \});\
   \}\
+\});\
+\
+// Express Router\
+1.  Create \'93routes\'94 folder in root\
+2.  Create \'93api\'94 folder in routes\
+3.  Create file in api (we will use the above examples and create members.js)\
+\
+**Inside of members.js\
+const express = require(\'91express);\
+const router = express.Router();\
+const members = require(\'91../../Members); // Members is a JSON file with our members\
+\
+// Get ALL members\
+router.get(\'91/\'92, (req, res) => \{\
+  res.json(members);\
+\});\
+\
+// Get single member\
+router.get(\'91/:id\'92, (req, res) => \{\
+  const found = members.some(member => member.id === parseInt(req.params.id));\
   \
-\});}
+  if (found) \{\
+    res.json(members.filter(member => member.id === parseInt(req.params.id)));\
+  \} else \{\
+    res.status(400).json(\{ msg: `No member with the id of $\{req.params.id\}` \});\
+  \}\
+\});\
+\
+module.exports = router;\
+\
+4.  Go into index.js and add this under middleware:\
+	app.use(\'91/api/members\'92, require(\'91./routes/api/members\'92));}
