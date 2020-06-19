@@ -105,9 +105,9 @@
 \cb3 \});\cb1 \
 \
 \cf5 \cb3 \strokec5 // Express Router\cf4 \cb1 \strokec4 \
-\cf8 \cb3 \strokec8 1\cf4 \strokec4 .  \cf2 \strokec2 Create\cf4 \strokec4  \cf7 \strokec7 \'93\cf4 \strokec4 routes\cf7 \strokec7 \'94\cf4 \strokec4  folder \cf6 \strokec6 in\cf4 \strokec4  root\cb1 \
-\cf8 \cb3 \strokec8 2\cf4 \strokec4 .  \cf2 \strokec2 Create\cf4 \strokec4  \cf7 \strokec7 \'93\cf4 \strokec4 api\cf7 \strokec7 \'94\cf4 \strokec4  folder \cf6 \strokec6 in\cf4 \strokec4  routes\cb1 \
-\cf8 \cb3 \strokec8 3\cf4 \strokec4 .  \cf2 \strokec2 Create\cf4 \strokec4  file \cf6 \strokec6 in\cf4 \strokec4  api (we will use the above examples and create members.js)\cb1 \
+\cf8 \cb3 \strokec8 1\cf4 \strokec4 .  Create \cf7 \strokec7 \'93\cf4 \strokec4 routes\cf7 \strokec7 \'94\cf4 \strokec4  folder in root\cb1 \
+\cf8 \cb3 \strokec8 2\cf4 \strokec4 .  Create \cf7 \strokec7 \'93\cf4 \strokec4 api\cf7 \strokec7 \'94\cf4 \strokec4  folder in routes\cb1 \
+\cf8 \cb3 \strokec8 3\cf4 \strokec4 .  Create file in api (we will use the above examples and create members.js)\cb1 \
 \
 \cb3 **\cf2 \strokec2 Inside\cf4 \strokec4  \cf6 \strokec6 of\cf4 \strokec4  members.js\cb1 \
 \cf6 \cb3 \strokec6 const\cf4 \strokec4  express = require(\cf7 \strokec7 \'91\cf4 \strokec4 express);\cb1 \
@@ -154,7 +154,7 @@
 \cb3   \}\cb1 \
 \
 \cb3   \cf6 \strokec6 if\cf4 \strokec4  (!newMember.name || !newMember.email) \{\cb1 \
-\cb3     res.status(\cf8 \strokec8 400\cf4 \strokec4 ).json(\{ msg: \cf7 \strokec7 \'91\cf2 \strokec2 Please\cf4 \strokec4  include a name and email\cf7 \strokec7 \'92\cf4 \strokec4 \})\cb1 \
+\cb3     res.status(\cf8 \strokec8 400\cf4 \strokec4 ).json(\{ msg: \cf7 \strokec7 \'91\cf4 \strokec4 Please include a name and email\cf7 \strokec7 \'92\cf4 \strokec4 \})\cb1 \
 \cb3   \}\cb1 \
 \
 \cb3   members.push(newMember);\cb1 \
@@ -194,35 +194,38 @@ res.json(\{ msg: \cf7 \strokec7 \'91\cf2 \strokec2 Member\cf4 \strokec4  updated
 \cb3 \});\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \
-// Express Handlebars\
-1.  npm install express-handlebars\
-2.  Go to index.js and add the following:\
-	const exphbs = require(\'91express-handlebars\'92);\
-3.  Add middleware:\
-	app.engine(\'91handlebars\'92, exphbs(\{defaultLayout: \'91main\'92\}));\
-	app.set(\'91view engine\'92, \'91handlebars\'92);\
-4.  Create folder called \'93views\'94\
-5.  Inside views, create a folder called \'93layouts\'94\
-6.  In layouts, create a file named main.handlebars\
-7.  Standard html markup but in the body, add the following:\
-	<div class=\'93container\'94>\
-		\{\{\{body\}\}\}\
-	</div>\
-8.  In views, create a file called index.handlebars and put whatever markup you want ie <h1>Hello from index</h1>\
-9.  In index.js, add the following route:\
-	app.get(\'91/\'91, (req, res) => res.render(\'91index\'92));\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf5 \cb3 \strokec5 // Express Handlebars\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8 1\cf4 \strokec4 .  npm install express-handlebars\cb1 \
+\cf8 \cb3 \strokec8 2\cf4 \strokec4 .  Go to index.js and add the following:\cb1 \
+\cb3 \'a0\'a0\cf6 \strokec6 const\cf4 \strokec4  exphbs = require(\cf7 \strokec7 \'91\cf4 \strokec4 express-handlebars\cf7 \strokec7 \'92\cf4 \strokec4 );\cb1 \
+\cf8 \cb3 \strokec8 3\cf4 \strokec4 .  Add middleware:\cb1 \
+\cb3 \'a0\'a0app.engine(\cf7 \strokec7 \'91\cf4 \strokec4 handlebars\cf7 \strokec7 \'92\cf4 \strokec4 , exphbs(\{defaultLayout: \cf7 \strokec7 \'91\cf4 \strokec4 main\cf7 \strokec7 \'92\cf4 \strokec4 \}));\cb1 \
+\cb3 \'a0\'a0app.\cf6 \strokec6 set\cf4 \strokec4 (\cf7 \strokec7 \'91\cf4 \strokec4 view engine\cf7 \strokec7 \'92\cf4 \strokec4 , \cf7 \strokec7 \'91\cf4 \strokec4 handlebars\cf7 \strokec7 \'92\cf4 \strokec4 );\cb1 \
+\cf8 \cb3 \strokec8 4\cf4 \strokec4 .  Create folder called \cf7 \strokec7 \'93\cf4 \strokec4 views\cf7 \strokec7 \'94\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8 5\cf4 \strokec4 .  Inside views, create a folder called \cf7 \strokec7 \'93\cf4 \strokec4 layouts\cf7 \strokec7 \'94\cf4 \cb1 \strokec4 \
+\cf8 \cb3 \strokec8 6\cf4 \strokec4 .  In layouts, create a file named main.handlebars\cb1 \
+\cf8 \cb3 \strokec8 7\cf4 \strokec4 .  Standard html markup but in the body, add the following:\cb1 \
+\cb3 \'a0\'a0<div \cf6 \strokec6 class\cf4 \strokec4 =\cf7 \strokec7 \'93\cf4 \strokec4 container\cf7 \strokec7 \'94\cf4 \strokec4 >\cb1 \
+\cb3 \'a0\'a0\'a0\'a0\{\{\{body\}\}\}\cb1 \
+\cb3 \'a0\'a0</div>\cb1 \
+\cf8 \cb3 \strokec8 8\cf4 \strokec4 .  In views, create a file called index.handlebars and put whatever markup you want ie <h1>\cf2 \strokec2 Hello\cf4 \strokec4  \cf6 \strokec6 from\cf4 \strokec4  index</h1>\cb1 \
+\cf8 \cb3 \strokec8 9\cf4 \strokec4 .  In index.js, add the following route:\cb1 \
+\cb3 \'a0\'a0app.\cf6 \strokec6 get\cf4 \strokec4 (\cf7 \strokec7 \'91\cf4 \strokec4 /\cf7 \strokec7 \'91\cf4 \strokec4 , (req, res) => res.render(\cf7 \strokec7 \'91\cf4 \strokec4 index\cf7 \strokec7 \'92\cf4 \strokec4 ));\cb1 \
 \
-** You can pass data into the route to use in handlebars:\
-	\outl0\strokewidth0 app.get(\'91/\'91, (req, res) => res.render(\'91index\'92, \{\
-	  title: \'91Title Of Your Choice\'92\
-	\}));\
-** Then in index.handlebars, use double curly brackets for variable name:\
-	<h1>\{\{title\}\}</h1>\
+\cb3 ** \cf2 \strokec2 You\cf4 \strokec4  can pass data into the route to use \cf6 \strokec6 in\cf4 \strokec4  handlebars:\cb1 \
+\cb3 \'a0\'a0app.\cf6 \strokec6 get\cf4 \strokec4 (\cf7 \strokec7 \'91\cf4 \strokec4 /\cf7 \strokec7 \'91\cf4 \strokec4 , (req, res) => res.render(\cf7 \strokec7 \'91\cf4 \strokec4 index\cf7 \strokec7 \'92\cf4 \strokec4 , \{\cb1 \
+\cb3 \'a0\'a0  title: \cf7 \strokec7 \'91\cf2 \strokec2 Title\cf4 \strokec4  \cf2 \strokec2 Of\cf4 \strokec4  \cf2 \strokec2 Your\cf4 \strokec4  \cf2 \strokec2 Choice\cf7 \strokec7 \'92\cf4 \cb1 \strokec4 \
+\cb3 \'a0\'a0\}));\cb1 \
+\cb3 ** \cf2 \strokec2 Then\cf4 \strokec4  \cf6 \strokec6 in\cf4 \strokec4  index.handlebars, use double curly brackets \cf6 \strokec6 for\cf4 \strokec4  variable name:\cb1 \
+\cb3 \'a0\'a0<h1>\{\{title\}\}</h1>\cb1 \
 \
-//Loop in Handlebars\
-<ul>\
-  \{\{#each members\}\}\
-	<li>\{\{this.name\}\}: \{\{this.email\}\}</li>\
-  \{\{/each\}\}\
-</ul>\outl0\strokewidth0 \
+\cf5 \cb3 \strokec5 //Loop in Handlebars\cf4 \cb1 \strokec4 \
+\cb3 <ul>\cb1 \
+\cb3   \{\{\cf7 \strokec7 #\cf4 \strokec4 each members\}\}\cb1 \
+\cb3 \'a0\'a0<li>\{\{\cf6 \strokec6 this\cf4 \strokec4 .name\}\}: \{\{\cf6 \strokec6 this\cf4 \strokec4 .email\}\}</li>\cb1 \
+\cb3   \{\{/each\}\}\cb1 \
+\cb3 </ul>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \
 }
