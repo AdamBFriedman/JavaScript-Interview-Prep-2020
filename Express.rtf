@@ -220,7 +220,7 @@ res.json(\{ msg: \cf7 \strokec7 \'91\cf2 \strokec2 Member\cf4 \strokec4  updated
 \cb3 ** \cf2 \strokec2 Then\cf4 \strokec4  \cf6 \strokec6 in\cf4 \strokec4  index.handlebars, use double curly brackets \cf6 \strokec6 for\cf4 \strokec4  variable name:\cb1 \
 \cb3 \'a0\'a0<h1>\{\{title\}\}</h1>\cb1 \
 \
-\cf5 \cb3 \strokec5 //Loop in Handlebars\cf4 \cb1 \strokec4 \
+\cf5 \cb3 \strokec5 // Loop in Handlebars\cf4 \cb1 \strokec4 \
 \cb3 <ul>\cb1 \
 \cb3   \{\{\cf7 \strokec7 #\cf4 \strokec4 each members\}\}\cb1 \
 \cb3 \'a0\'a0<li>\{\{\cf6 \strokec6 this\cf4 \strokec4 .name\}\}: \{\{\cf6 \strokec6 this\cf4 \strokec4 .email\}\}</li>\cb1 \
@@ -228,4 +228,16 @@ res.json(\{ msg: \cf7 \strokec7 \'91\cf2 \strokec2 Member\cf4 \strokec4  updated
 \cb3 </ul>\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \
+// Form in handlebars\
+<form action=\'93/api/members\'94 method=\'93POST\'94>\
+  <div>\
+	<label for=\'93name\'94>Name</label>\
+	\outl0\strokewidth0 <input type=\'93text\'94 name=\'93name\'94>\outl0\strokewidth0 \
+  </div>\
+  \outl0\strokewidth0 <div>\
+	<label for=\'93email\'94>Email</label>\
+	<input type=\'93email\'94 name=\'93email\'94 >\
+  </div>\
+  <input type=\'93submit\'94 value=\'93Add Member\'94>\outl0\strokewidth0 \
+</form>\
 }
