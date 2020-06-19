@@ -67,4 +67,14 @@ const logger = (req, res, next) => \{\
 \});\
 \
 \'97> Using the above JSON route (members), each time you requested the members route in Postman, the following would log in Node: http://localhost:5000/api/members\
+\
+// Adding date and time using Moment\
+1.  npm i moment\
+2.  const moment = require(\'91moment\'92);\
+\
+// Logger with Moment\
+const logger = (req, res, next) => \{\
+  console.log(`$\{req.protocol\}://$\{req.get(\'91host\'92)\}$\{req.originalUrl\}: $\{moment().format()\}`);\
+  next();\
+\});\
 }
