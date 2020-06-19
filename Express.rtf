@@ -194,4 +194,35 @@ res.json(\{ msg: \cf7 \strokec7 \'91\cf2 \strokec2 Member\cf4 \strokec4  updated
 \cb3 \});\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \
+// Express Handlebars\
+1.  npm install express-handlebars\
+2.  Go to index.js and add the following:\
+	const exphbs = require(\'91express-handlebars\'92);\
+3.  Add middleware:\
+	app.engine(\'91handlebars\'92, exphbs(\{defaultLayout: \'91main\'92\}));\
+	app.set(\'91view engine\'92, \'91handlebars\'92);\
+4.  Create folder called \'93views\'94\
+5.  Inside views, create a folder called \'93layouts\'94\
+6.  In layouts, create a file named main.handlebars\
+7.  Standard html markup but in the body, add the following:\
+	<div class=\'93container\'94>\
+		\{\{\{body\}\}\}\
+	</div>\
+8.  In views, create a file called index.handlebars and put whatever markup you want ie <h1>Hello from index</h1>\
+9.  In index.js, add the following route:\
+	app.get(\'91/\'91, (req, res) => res.render(\'91index\'92));\
+\
+** You can pass data into the route to use in handlebars:\
+	\outl0\strokewidth0 app.get(\'91/\'91, (req, res) => res.render(\'91index\'92, \{\
+	  title: \'91Title Of Your Choice\'92\
+	\}));\
+** Then in index.handlebars, use double curly brackets for variable name:\
+	<h1>\{\{title\}\}</h1>\
+\
+//Loop in Handlebars\
+<ul>\
+  \{\{#each members\}\}\
+	<li>\{\{this.name\}\}: \{\{this.email\}\}</li>\
+  \{\{/each\}\}\
+</ul>\outl0\strokewidth0 \
 }
