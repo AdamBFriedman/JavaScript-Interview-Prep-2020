@@ -77,4 +77,25 @@ const logger = (req, res, next) => \{\
   console.log(`$\{req.protocol\}://$\{req.get(\'91host\'92)\}$\{req.originalUrl\}: $\{moment().format()\}`);\
   next();\
 \});\
-}
+\
+// Example route to get ALL members\
+app.get(\'91/api/members\'92, (req, res) => \{\
+  res.json(members);\
+\});\
+\
+// Example route to get a single member using params\
+app.get(\'91/api/members/:id\'92, (req, res) => \{\
+  res.json(members.filter(member => member.id === parseInt(req.params.id)));\
+\});\
+\
+// Example route to get a single member with error checks if that member doesn\'92t exist\
+app.get(\'91/api/members/:id\'92, (req, res) => \{\
+  const found = members.some(member => member.id === parseInt(req.params.id));\
+  \
+  if (found) \{\
+    res.json(members.filter(member => member.id === parseInt(req.params.id)));\
+  \} else \{\
+    res.status(400).json(\{ msg: `No member with the id of $\{req.params.id\}` \});\
+  \}\
+  \
+\});}
