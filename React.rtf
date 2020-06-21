@@ -8,7 +8,7 @@
 \cssrgb\c3529\c53333\c35294;\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c100000\c100000\c99608;\cssrgb\c80392\c19216\c19216;
 \cssrgb\c57046\c57047\c57046;\cssrgb\c0\c50196\c50196;\cssrgb\c80392\c19216\c19216;\cssrgb\c3529\c53333\c35294;\cssrgb\c57046\c57047\c57046;
 }
-\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\margl1440\margr1440\vieww13440\viewh10120\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -268,6 +268,39 @@ state = \{\cb1 \
 \cb3 \}\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb8 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf14 \cb8 // Passing Event Arguments\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8 handleIncrement = product => \{\
+  console.log(product)\cb1 \
+\cb8   \cf6 this\cf4 .setState(\{ count: \cf6 this\cf4 .state.count + \cf13 \cb8 1\cf4 \cb8  \});\cb1 \
+\cb8 \}\
 \
+doHandleIncrement = () => \{\cb1 \
+\cb8   \cf6 this\cf4 .handleIncrement(\{ id: \cf13 \cb8 1\cf4 \cb8  \});\cb1 \
+\cb8 \}\
 \cb1 \outl0\strokewidth0 \
-}
+\cb8 \outl0\strokewidth0 <button\cb1 \
+\cb8   onClick=\{\cf6 this\cf4 .doHandleIncrement\}\cb1 \
+\cb8   className=\cf12 \'93\cf4 btn btn-secondary\cf12 \'94\cf4 \cb1 \
+\cb8 >\cb1 \
+\cb8   \cf11 Increment\cf4 \cb1 \
+\cb8 </button>\
+\
+** A better solution is to remove the doHandleIncrement() and use an inline arrow function\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8 handleIncrement = product => \{\
+  console.log(product)\cb1 \
+\cb8   \cf6 this\cf4 .setState(\{ count: \cf6 this\cf4 .state.count + \cf13 \cb8 1\cf4 \cb8  \});\cb1 \
+\cb8 \}\
+\
+doHandleIncrement = () => \{\cb1 \
+\cb8   \cf6 this\cf4 .handleIncrement(\{ id: \cf13 \cb8 1\cf4 \cb8  \});\cb1 \
+\cb8 \}\
+\cb1 \
+\cb8 <button\cb1 \
+\cb8   onClick=\{ () => \cf6 this\cf4 .handleIncrement(product)\cf6  \cf4 \}\cb1 \
+\cb8   className=\cf12 \cb8 \'93\cf4 \cb8 btn btn-secondary\cf12 \cb8 \'94\cf4 \cb1 \
+\cb8 >\cb1 \
+\cb8   \cf11 Increment\cf4 \cb1 \
+\cb8 </button>}
