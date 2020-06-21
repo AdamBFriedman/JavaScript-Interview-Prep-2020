@@ -303,4 +303,29 @@ doHandleIncrement = () => \{\cb1 \
 \cb8   className=\cf12 \cb8 \'93\cf4 \cb8 btn btn-secondary\cf12 \cb8 \'94\cf4 \cb1 \
 \cb8 >\cb1 \
 \cb8   \cf11 Increment\cf4 \cb1 \
-\cb8 </button>}
+\cb8 </button>\
+\
+\cf10 // Composing Components\cf4 \
+React is made up of a tree of components\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3 \outl0\strokewidth0 \strokec6 import\cf4 \strokec4  \cf7 \strokec7 React\cf4 \strokec4 , \{ \cf7 \strokec7 Component\cf4 \strokec4  \} \cf6 \strokec6 from\cf4 \strokec4  \cf9 \strokec9 \'93\cf4 \strokec4 react\cf9 \strokec9 \'94\cf4 \strokec4 ;\cb1 \
+\cf6 \cb3 \strokec6 import\cf4 \strokec4  \cf7 \strokec7 Counter\cf4 \strokec4  \cf6 \strokec6 from\cf4 \strokec4  \cf9 \strokec9 \'93\cf4 \strokec4 ./counter\cf9 \strokec9 \'94\cf4 \strokec4 ;\cb1 \
+\
+\cf6 \cb3 \strokec6 class\cf4 \strokec4  \cf7 \strokec7 Counters\cf4 \strokec4  \cf6 \strokec6 extends\cf4 \strokec4  \cf7 \strokec7 Component\cf4 \strokec4  \{\cb1 \
+\cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 state = \{\cb1 \
+\cb3 \'a0\'a0counter: [\cb1 \
+\cb3 \'a0\'a0\'a0\'a0\{ id: \cf5 \strokec5 1\cf4 \strokec4 , value: \cf5 \strokec5 0\cf4 \strokec4  \}\cb1 \
+\cb3 \'a0\'a0  ]\cb1 \
+\cb3     \};\cb1 \
+\cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 render() \{\cb1 \
+\cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4   \cf6 \strokec6 return\cf4 \strokec4  (\cb1 \
+\cb3 	  <div>\cb1 \
+\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
+\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
+\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
+\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
+\cb3 	  </div>\cb1 \
+\cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4   );\cb1 \
+\cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 \}\cb1 \
+\cb3 \}\cb1 \
+}
