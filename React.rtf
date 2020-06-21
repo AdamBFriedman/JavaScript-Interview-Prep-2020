@@ -363,4 +363,24 @@ Props includes data that we give to a component\
 State includes data that is local/private to that component\
 Props are read-only, you can\'92t modify it \
 \
+\cf10 // Raising and Handling Events\
+\cf4 The component that owns a piece of the state, should be the one modifying it\
+Let\'92s say we want to add a delete button to our Counter component that deletes itself.  The state it would affect is in the Counters component so we would raise the event in <Counter /> with onDelete and then handle the event in <Counters /> with handleDelete()\
+\
+In <Counters />, add the following method:\
+  \cb3 handleDelete = () => \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0console.log(\cf9 \strokec9 \'91\cf7 \strokec7 Event\cf4 \strokec4  \cf7 \strokec7 Handler\cf4 \strokec4  \cf7 \strokec7 Called\cf9 \strokec9 \'92\cf4 \strokec4 );\cb1 \
+\cb3   \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 Then update the counter component inside of <Counters /> like this:\
+  \cb8 \outl0\strokewidth0 render() \{\cb1 \
+\cf12 \cb8 \'a0\'a0\cf4   \cf6 return\cf4  (\cb1 \
+\cb8 	  <div>\cb1 \
+\cb8 		\{\cf6 this\cf4 .state.counters.map(counter => (<\cf11 Counter\cf4  key=\{counter.id\} value=\{counter.value\} onDelete=\{this.handleDelete\} />)\}\cb1 \
+\cb8 	  </div>\cb1 \
+\cf12 \cb8 \'a0\'a0\cf4   );\cb1 \
+\cf12 \cb8 \'a0\'a0\cf4 \}\
+Go back to <Counter /> and add your delete button like this:\
+  \cb3 \outl0\strokewidth0 <button onClick=\{\cf6 \strokec6 this\cf4 \strokec4 .props.onDelete\} className=\cf9 \strokec9 \'93\cf4 \strokec4 btn btn-primary\cf9 \strokec9 \'94\cf4 \strokec4 >\cf7 \strokec7 Delete\cf4 \strokec4 </button>\cb1 \
 }
