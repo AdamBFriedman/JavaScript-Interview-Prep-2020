@@ -383,4 +383,18 @@ In <Counters />, add the following method:\
 \cf12 \cb8 \'a0\'a0\cf4 \}\
 Go back to <Counter /> and add your delete button like this:\
   \cb3 \outl0\strokewidth0 <button onClick=\{\cf6 \strokec6 this\cf4 \strokec4 .props.onDelete\} className=\cf9 \strokec9 \'93\cf4 \strokec4 btn btn-primary\cf9 \strokec9 \'94\cf4 \strokec4 >\cf7 \strokec7 Delete\cf4 \strokec4 </button>\cb1 \
+\
+\cf10 // Updating State\cf4 \
+\cb8 \outl0\strokewidth0   \cb3 \outl0\strokewidth0 handleDelete = (counterId) => \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 \strokec9 \'a0\'a0  \cf6 \strokec6 const\cf4 \strokec4  counters = \cf6 \strokec6 this\cf4 \strokec4 .state.counters.filter(c => c.id !== counterId);\cb1 \
+\cb3     \cf6 \strokec6 this\cf4 \strokec4 .setState(\{ counters \});\cb1 \
+\cb3   \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8 \outl0\strokewidth0 \
+  \cf10 // Go back to <Counter /> and update your button:\cf4 \
+  \cb3 \outl0\strokewidth0 <button onClick=\{() => \cf6 \strokec6 this\cf4 \strokec4 .props.onDelete(\cf6 \strokec6 this\cf4 \strokec4 .props.id)\}>\cf7 \strokec7 Delete\cf4 \strokec4 </button> \cb1 \
+\cb8 \outl0\strokewidth0 \
+\
+  \
 }
