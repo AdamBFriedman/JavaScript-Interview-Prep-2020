@@ -8,7 +8,7 @@
 \cssrgb\c3529\c53333\c35294;\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c100000\c100000\c99608;\cssrgb\c80392\c19216\c19216;
 \cssrgb\c57046\c57047\c57046;\cssrgb\c0\c50196\c50196;\cssrgb\c80392\c19216\c19216;\cssrgb\c3529\c53333\c35294;\cssrgb\c57046\c57047\c57046;
 }
-\margl1440\margr1440\vieww13440\viewh10120\viewkind0
+\margl1440\margr1440\vieww13440\viewh9180\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -314,16 +314,18 @@ React is made up of a tree of components\
 \cf6 \cb3 \strokec6 class\cf4 \strokec4  \cf7 \strokec7 Counters\cf4 \strokec4  \cf6 \strokec6 extends\cf4 \strokec4  \cf7 \strokec7 Component\cf4 \strokec4  \{\cb1 \
 \cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 state = \{\cb1 \
 \cb3 \'a0\'a0counter: [\cb1 \
-\cb3 \'a0\'a0\'a0\'a0\{ id: \cf5 \strokec5 1\cf4 \strokec4 , value: \cf5 \strokec5 0\cf4 \strokec4  \}\cb1 \
-\cb3 \'a0\'a0  ]\cb1 \
+\cb3 \'a0\'a0\'a0\'a0\{ id: \cf5 \strokec5 1\cf4 \strokec4 , value: \cf5 \strokec5 0\cf4 \strokec4  \},\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb8 \outl0\strokewidth0 	\{ id: \cf13 \cb8 2\cf4 \cb8 , value: \cf13 \cb8 0\cf4 \cb8  \},\
+	\{ id: \cf13 \cb8 3\cf4 \cb8 , value: \cf13 \cb8 0\cf4 \cb8  \},\
+	\{ id: \cf13 \cb8 4\cf4 \cb8 , value: \cf13 \cb8 0\cf4 \cb8  \}\cb1 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  ]\cb1 \
 \cb3     \};\cb1 \
 \cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 render() \{\cb1 \
 \cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4   \cf6 \strokec6 return\cf4 \strokec4  (\cb1 \
 \cb3 	  <div>\cb1 \
-\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
-\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
-\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
-\cb3 		<\cf7 \strokec7 Counter\cf4 \strokec4  />\cb1 \
+\cb3 		\{\cf6 \strokec6 this\cf4 \strokec4 .state.counters.map(counter => <\cf7 \strokec7 Counter\cf4 \strokec4  key=\{counter.id\} />)\}\cb1 \
 \cb3 	  </div>\cb1 \
 \cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4   );\cb1 \
 \cf9 \cb3 \strokec9 \'a0\'a0\cf4 \strokec4 \}\cb1 \
