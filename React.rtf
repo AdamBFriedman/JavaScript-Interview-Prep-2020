@@ -348,4 +348,14 @@ Add this to Counters.jsx\cb8 \outl0\strokewidth0 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb8 </div>\
 \
+\cf10 // Passing Children\cf4 \
+Sometimes you want to pass children to a component.  In Counters.jsx:\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \outl0\strokewidth0 <\cf7 \strokec7 Counter\cf4 \strokec4  key=\{counter.id\} value=\{counter.value\} selected=\{\cf6 \strokec6 true\cf4 \strokec4 \}>\cb1 \
+\cb3   <h4>\cf7 \strokec7 Title\cf4 \strokec4 </h4>\cb1 \
+\cb3 </\cf7 \strokec7 Counter\cf4 \strokec4 >\cb8 \outl0\strokewidth0 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 In Counter.jsx, you can display the children like this:\
+  \cb3 \outl0\strokewidth0 \{\cf6 \strokec6 this\cf4 \strokec4 .props.children\} \cf10 \cb1 // This will display \'93Title\'94 from above\
+\cf4 \
 }
