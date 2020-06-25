@@ -149,4 +149,24 @@ void\cf6  Update ()\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb8   \}
 \f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 // Collect Items\cf0 \
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f1 \cf4 \cb8 \expnd0\expndtw0\kerning0
+using\cf6  UnityEngine;\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \outl0\strokewidth0 \strokec4 public\cf6 \strokec6  \cf4 \strokec4 class\cf6 \strokec6  Collectable : MonoBehaviour\cb1 \
+\cb5 \{\cb1 \
+\cb5   \cf4 \strokec4 private\cf6 \strokec6  \cf4 \strokec4 void\cf6 \strokec6  onTriggerEnter(Collider other)\cb1 \
+\cb5   \{\cb1 \
+\cb5 \'a0\'a0\cf4 \strokec4 if\cf6 \strokec6  (other.tag == \'93Player\'94)\cb1 \
+\cb5 \'a0\'a0\{\cb1 \
+\cb5 \'a0\'a0\'a0\'a0\cf7 \strokec7 // Add points or power up ability\cf6 \cb1 \strokec6 \
+\cb5 \'a0\'a0\'a0\'a0Destroy(\cf4 \strokec4 this\cf6 \strokec6 .gameObject);\cb1 \
+\cb5 \'a0\'a0\}\cb1 \
+\cb5   \}\cb1 \
+\cb5 \}\cb1 \
 }
