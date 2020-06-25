@@ -102,7 +102,7 @@ This means we will need to increase our Forward Force\
 \cf3 // Lighting\cf0 \
 Go to Window and select Lighting\
 \
-\cf2 // Change player position in C#\cf0 \
+\cf2 // Change player position\cf0 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb5 \expnd0\expndtw0\kerning0
@@ -122,27 +122,31 @@ Go to Window and select Lighting\
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
-\cf2 // User Input in C#
-\f1 \cf6 \expnd0\expndtw0\kerning0
-\
+\cf2 // User Input (Must be in void Update () )\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 // When space key is pressed down\
-\cf4 \cb8 if (Input.GetKeyDown(KeyCode.Space))\cf6 \cb1 \
-\cb8 \{\cb1 \
-\cb8   Debug.Log(\'93Space Key Pressed\'94);\cb1 \
-\cb8 \}\
-\
-// When e key is held down\
+
+\f1 \cf4 \cb8 \expnd0\expndtw0\kerning0
+void\cf6  Update ()\cb1 \
+\cb8   \{\cb1 \
+	// When space key is pressed down\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb8 if (Input.GetKey(KeyCode.E))\cf6 \cb1 \
-\cb8 \{\cb1 \
-\cb8   Debug.Log(\'93E Key Pressed\'94);\cb1 \
-\cb8 \}\
+\cf4 \cb8 	if (Input.GetKeyDown(KeyCode.Space))\cf6 \cb1 \
+\cb8 	\{\cb1 \
+\cb8   		Debug.Log(\'93Space Key Pressed\'94);\cb1 \
+\cb8 	\}\
 \
-// When f key is lifted up\
-\cf4 if (Input.GetKeyUp(KeyCode.F))\cf6 \cb1 \
-\cb8 \{\cb1 \
-\cb8   Debug.Log(\'93F Key Pressed\'94);\cb1 \
-\cb8 \}
+	// When e key is held down\
+\cf4 	if (Input.GetKey(KeyCode.E))\cf6 \cb1 \
+\cb8 	\{\cb1 \
+\cb8 		Debug.Log(\'93E Key Pressed\'94);\cb1 \
+\cb8 	\}\
+\
+	// When f key is lifted up\
+\cf4 	if (Input.GetKeyUp(KeyCode.F))\cf6 \cb1 \
+\cb8 	\{\cb1 \
+\cb8 		Debug.Log(\'93F Key Pressed\'94);\cb1 \
+\cb8 	\}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb8   \}
 \f0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
 }
