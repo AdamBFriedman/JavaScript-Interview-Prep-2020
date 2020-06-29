@@ -34,8 +34,10 @@
 \f1\b0 \cf0 \
 \
 from() - creates an array from something let newArray = Array.from(something)\
-slice() - Returns a portion of the array as a second array - does not modify. Array.slice(from, until)\
-splice() - Modifies the array		Array.splice(idx, howMany)\
+slice() - Returns a portion of the array 
+\f0\b (does not modify)
+\f1\b0  Array.slice(start, end)\
+splice() - Modifies the array		Array.splice(idx, howMany, item1, item2, \'85)\
 filter() filters items out of an array (does NOT create a new array)\
 map() create a new array from current array\
 find() find and return a single object in an array\
@@ -711,7 +713,7 @@ arr.slice(-1)\
 \cb16   \cf6 let\cf7  end = arr.length - \cf8 1\cf7 ;\cb1 \
 \
 \cb16   \cf6 while\cf7  (start <= end) \{\cb1 \
-\cb16     \cf6 let\cf7  mid = \cf17 Math\cf7 .floor((start + end) / \cf8 2\cf7 )\cb1 \
+\cb16     \cf6 let\cf7  mid = \cf17 \cb16 Math\cf7 \cb16 .floor((start + end) / \cf8 2\cf7 )\cb1 \
 \
 \cb16     \cf6 if\cf7  (arr[mid] === x) \cf6 return\cf7  \cf6 true\cf7 ;\cb1 \
 \cb16     \cf6 if\cf7  (arr[mid] < x) start = mid + \cf8 1\cf7 ;\cb1 \
@@ -737,7 +739,7 @@ arr.slice(-1)\
 \cb16   \cf6 for\cf7  (\cf6 let\cf7  i = sortedCoins.length; i >= \cf8 0\cf7 ; i--) \{\cb1 \
 \cb16     \cf6 if\cf7  (sortedCoins[i] <= amount) \cf6 return\cf7  sortedCoins[i]\cb1 \
 \cb16   \}\cb1 \
-\cb16   \cf6 throw\cf7  \cf6 new\cf7  \cf17 Error\cf7 (\cf10 'No coin is divisble by that amount.'\cf7 )\cb1 \
+\cb16   \cf6 throw\cf7  \cf6 new\cf7  \cf17 \cb16 Error\cf7 \cb16 (\cf10 \cb16 'No coin is divisble by that amount.'\cf7 \cb16 )\cb1 \
 \cb16 \}\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -779,9 +781,9 @@ console.log(window.prop) //undefined because let does not create a property on t
 //Console Tricks\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 console.time(\cf25 \'93\cf7 string\cf25 \'94\cf7 )\cb1 \
+\f3 \cf7 \cb16 console.time(\cf25 \cb16 \'93\cf7 \cb16 string\cf25 \cb16 \'94\cf7 \cb16 )\cb1 \
 \cb16 setTimeout(() => \{\cb1 \
-\cb16   console.timeEnd(\cf25 \'93\cf7 string\cf25 \'94\cf7 )\cb1 \
+\cb16   console.timeEnd(\cf25 \cb16 \'93\cf7 \cb16 string\cf25 \cb16 \'94\cf7 \cb16 )\cb1 \
 \cb16 \}, \cf8 5000\cf7 )
 \f11 \cb3 \
 \pard\pardeftab720\sl400\partightenfactor0
@@ -793,7 +795,7 @@ console.table(person, [\'91age\'92, \'91eyeColor\'92]\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3 \cf6 \cb16 const\cf7  engineer = \{\cb1 \
-\cb16   name: \cf10 "Adam"\cf7 ,\cb1 \
+\cb16   name: \cf10 \cb16 "Adam"\cf7 \cb16 ,\cb1 \
 \cb16   age: \cf8 35\cf7 ,\cb1 \
 \cb16   lovesSeinfeld: \cf6 true\cf7 \cb1 \
 \cb16 \}\cb1 \
@@ -802,8 +804,8 @@ console.table(person, [\'91age\'92, \'91eyeColor\'92]\
 \f11 \cf7 \cb3 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf6 \cb16 const\cf7  objToStr = \cf17 JSON\cf7 .stringify(engineer)\
-\cf6 const\cf7  strToObj = \cf17 JSON\cf7 .parse(objToStr)\cb1 \
+\f3 \cf6 \cb16 const\cf7  objToStr = \cf17 \cb16 JSON\cf7 \cb16 .stringify(engineer)\
+\cf6 const\cf7  strToObj = \cf17 \cb16 JSON\cf7 \cb16 .parse(objToStr)\cb1 \
 \
 \cb16 //Sort lexicographically\
 To compare strings alphabetically, use localeCompare().  This returns a negative value if the reference string is lexicographically (alphabetically) before the compared string (the parameter), a positive value if it comes afterward, and a value of 0 if they are equal\
@@ -813,15 +815,15 @@ To compare strings alphabetically, use localeCompare().  This returns a negative
 \f11 \cf7 \cb3 //Center a div\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 <div \cf6 class\cf7 =\cf10 "out"\cf7 >\cb1 \
-\cb16   <div \cf6 class\cf7 =\cf10 "in"\cf7 ></div>\cb1 \
+\f3 \cf7 \cb16 <div \cf6 class\cf7 =\cf10 \cb16 "out"\cf7 \cb16 >\cb1 \
+\cb16   <div \cf6 class\cf7 =\cf10 \cb16 "in"\cf7 \cb16 ></div>\cb1 \
 \cb16 </div>\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \cb3 \
 \pard\pardeftab720\sl420\partightenfactor0
 
-\f3 \cf7 \cb16 .\cf2 out\cf7  \{\cb1 \
+\f3 \cf7 \cb16 .\cf2 \cb16 out\cf7 \cb16  \{\cb1 \
 \cb16   height: \cf8 300\cf7 px;\cb1 \
 \cb16   border: \cf8 1\cf7 px solid green;\cb1 \
 \cb16   position: relative;\cb1 \
@@ -841,7 +843,7 @@ To compare strings alphabetically, use localeCompare().  This returns a negative
 \cf7 //Center a div with Flexbox\
 \pard\pardeftab720\sl420\partightenfactor0
 
-\fs28 \cf7 \cb16 .\cf2 out\cf7  \{\cb1 \
+\fs28 \cf7 \cb16 .\cf2 \cb16 out\cf7 \cb16  \{\cb1 \
 \cb16   display: flex;\cf2 \cb1 \
 \cf7 \cb16   align-items: center;\cb1 \
 \cb16   justify-content: center;\cb1 \
@@ -865,7 +867,7 @@ Margin \'97> Border \'97> Padding \'97> Content\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3 \cf7 \cb16 \expnd0\expndtw0\kerning0
-<div \cf6 class\cf7 =\cf10 "triangle"\cf7 >\cb1 \
+<div \cf6 class\cf7 =\cf10 \cb16 "triangle"\cf7 \cb16 >\cb1 \
 \cb16 </div>\cb1 \
 \pard\pardeftab720\sl340\partightenfactor0
 
@@ -873,7 +875,7 @@ Margin \'97> Border \'97> Padding \'97> Content\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f3 \cf7 \cb16 \expnd0\expndtw0\kerning0
-.\cf2 triangle\cf7  \{\cb1 \
+.\cf2 \cb16 triangle\cf7 \cb16  \{\cb1 \
 \cb16   height: \cf8 0\cf7 px;\cb1 \
 \cb16   width: \cf8 0\cf7 px;\cb1 \
 \cb16   border-top: \cf8 100\cf7 px solid transparent;\cb1 \
@@ -907,8 +909,7 @@ Frontend Frameworks (Vue, React, Angular)\
 \ls6\ilvl0
 \f11\fs32 \cf28 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 No add-on support.\cb1 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\sa80\partightenfactor0
-\ls6\ilvl0\cf28 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\ls6\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 Slows down with newer versions, such as IE7.\cb1 \
 \ls6\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 May be less secure than other browsers.\cb1 \
