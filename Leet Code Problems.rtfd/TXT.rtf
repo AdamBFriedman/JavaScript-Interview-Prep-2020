@@ -28,26 +28,26 @@
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  anagram = ((str1, str2) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  sorted1 = str1.split(\cf7 ''\cf4 ).sort().join(\cf7 ''\cf4 ).toLowerCase();\cb1 \
+\cb5   \cf6 let\cf4  sorted1 = str1.split(\cf7 ''\cf4 ).sort().join(\cf7 ''\cf4 ).toLowerCase();\cb1 \
 \cb5   \cf6 let\cf4  sorted2 = str2.split(\cf7 ''\cf4 ).sort().join(\cf7 ''\cf4 ).toLowerCase();\cb1 \
 \
 \cb5   \cf6 return\cf4  (sorted1 === sorted2)\cb1 \
 \cb5 \})\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Sum All #\'92s In Range
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  sumAll = arr => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \'a0\'a0\cf6 let\cf4  sum = \cf8 0\cf4 ;\cb1 \
+\cb5 \'a0\'a0\cf6 let\cf4  sum = \cf8 0\cf4 ;\cb1 \
 \cb5 \'a0\'a0\cf6 for\cf4  (\cf6 let\cf4  i = \cf9 Math\cf4 .min( ...arr ); i <= \cf9 Math\cf4 .max( ...arr ); i++) \{\cb1 \
 \cb5 \'a0\'a0\'a0\'a0sum += i;\cb1 \
 \cb5 \'a0\'a0\}\cb1 \
 \cb5 \'a0\'a0\cf6 return\cf4  sum;\cb1 \
 \cb5 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 \
 // Fibonacci O(2^n) or O(n) with memoization
@@ -55,8 +55,7 @@
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb1 \
 \cf6 \cb5 const\cf4  fibonacci = (num, memo = \{\}) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (num <= \cf8 1\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (num <= \cf8 1\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf8 1\cf4 \cb1 \
 \cb5     \} \cf6 else\cf4  \{\cb1 \
 \cb5       memo[num] = fibonacci(num - \cf8 1\cf4 , memo) + fibonacci(num - \cf8 2\cf4 , memo)\cb1 \
@@ -64,20 +63,21 @@
 \cb5     \cf6 return\cf4  memo[num]\cb1 \
 \cb5 \}\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Factorial with memoization
 \f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb1 \
 \cf6 \cb5 const\cf4  factorial = (num, memo = \{\}) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (num <= \cf8 1\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (num <= \cf8 1\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf8 1\cf4 \cb1 \
 \cb5     \} \cf6 else\cf4  \{\cb1 \
 \cb5       memo[num] = factorial(num - \cf8 1\cf4 , memo) * num\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cf6 return\cf4  memo[num]\cb1 \
 \cb5 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 \
 \
@@ -89,8 +89,7 @@
 
 \f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
 const\cf4  twoSum = (nums, target) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  idx = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
+\cb5     \cf6 let\cf4  idx = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
 \cb5     \cf6 let\cf4  result = [];\cb1 \
 \
 \cb5     nums.forEach((num, i) => \{\cb1 \
@@ -111,14 +110,14 @@ const\cf4  twoSum = (nums, target) => \{\cb1 \
 \
 \cb5 twoSum([\cf8 2\cf4 , \cf8 3\cf4 , \cf8 8\cf4 , \cf8 7\cf4 , \cf8 4\cf4 ], \cf8 9\cf4 ) \cf10 //[0, 3]\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Three Sum
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  threeSum = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     nums.sort((a,b) => a - b);\cb1 \
+\cb5     nums.sort((a,b) => a - b);\cb1 \
 \cb5     \cf6 let\cf4  result = [];\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++) \{\cb1 \
 \cb5         \cf6 let\cf4  t = -nums[i];\cb1 \
@@ -138,6 +137,7 @@ const\cf4  twoSum = (nums, target) => \{\cb1 \
 \cb5     \cb1 \
 \cb5 \};\cf10 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // FIRST BAD VERSION (binary search)
 \f2\b0 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
@@ -148,8 +148,7 @@ const\cf4  twoSum = (nums, target) => \{\cb1 \
 \f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
 var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 return\cf4  \cf6 function\cf4 (n) \{\cb1 \
+\cb5     \cf6 return\cf4  \cf6 function\cf4 (n) \{\cb1 \
 \cb5         \cf6 let\cf4  left = \cf8 1\cf4 ;\cb1 \
 \cb5         \cf6 let\cf4  right = n;\cb1 \
 \cb5         \cf6 while\cf4 (left <= right)\{\cb1 \
@@ -169,14 +168,14 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Sqrt(x) (binary search)
 \f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb1 \
 \cf6 \cb5 const\cf4  mySqrt = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  left = \cf8 0\cf4 ;\cb1 \
+\cb5     \cf6 let\cf4  left = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 let\cf4  right = num;\cb1 \
 \cb5     \cf6 while\cf4  (left <= right) \{\cb1 \
 \cb5         \cf6 const\cf4  m = \cf9 Math\cf4 .floor(left + (right - left) / \cf8 2\cf4 );\cb1 \
@@ -188,18 +187,19 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5         \} \cf6 else\cf4  \{\cb1 \
 \cb5             left = m + \cf8 1\cf4 ;\cb1 \
 \cb5         \}\cb1 \
-\cb5     \}\cb1 \
+\cb5     \}\
+\cb1 \
 \cb5     \cf6 return\cf4  right;\cb1 \
 \cb5 \};\cb1 \
 \
 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // HOUSE ROBBER (dynamic programming)
 \f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  rob = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (nums === \cf6 null\cf4  || nums.length === \cf8 0\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (nums === \cf6 null\cf4  || nums.length === \cf8 0\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf8 0\cf4 ;\cb1 \
 \cb5     \} \cf6 else\cf4  \cf6 if\cf4  (nums.length == \cf8 1\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  nums[\cf8 0\cf4 ];\cb1 \
@@ -210,21 +210,20 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5     runningTotal[\cf8 1\cf4 ] = \cf9 Math\cf4 .max(nums[\cf8 0\cf4 ], nums[\cf8 1\cf4 ]);\cb1 \
 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 2\cf4 ; i < nums.length; i++) \{\cb1 \
-\
 \cb5        runningTotal[i] = \cf9 Math\cf4 .max(nums[i] + runningTotal[i - \cf8 2\cf4 ], runningTotal[i - \cf8 1\cf4 ]);\cb1 \
 \cb5     \}\cb1 \
 \
 \cb5     \cf6 return\cf4  runningTotal[runningTotal.length - \cf8 1\cf4 ];\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Number of Steps to Reach Zero
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  numberOfSteps = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  count = \cf8 0\cf4 \cb1 \
+\cb5     \cf6 let\cf4  count = \cf8 0\cf4 \cb1 \
 \
 \cb5     \cf6 while\cf4  (num > \cf8 0\cf4 ) \{\cb1 \
 \cb5         \cf6 if\cf4  (num % \cf8 2\cf4  === \cf8 1\cf4 ) \{\cb1 \
@@ -239,14 +238,14 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5     \cf6 return\cf4  count\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Number of Islands (Backtracking)
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  numIslands = grid => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 const\cf4  height = grid.length;\cb1 \
+\cb5   \cf6 const\cf4  height = grid.length;\cb1 \
 \cb5   \cf6 const\cf4  width = height && grid[\cf8 0\cf4 ].length;\cb1 \
 \cb5   \cf6 let\cf4  count = \cf8 0\cf4 ;\cb1 \
 \cb5   \cb1 \
@@ -272,14 +271,14 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5 \}\
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Max Area of Island\
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f1\b0 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  maxAreaOfIsland = (grid) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  res = \{ count: \cf8 0\cf4  \}\cb1 \
+\cb5     \cf6 const\cf4  res = \{ count: \cf8 0\cf4  \}\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  r = \cf8 0\cf4 ; r < grid.length; r++) \{\cb1 \
 \cb5         \cf6 for\cf4  (\cf6 let\cf4  c = \cf8 0\cf4 ; c < grid[\cf8 0\cf4 ].length; c++) \{\cb1 \
 \cb5             dfs(grid, r, c, res)\cb1 \
@@ -288,10 +287,8 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5     \cf6 return\cf4  res.count\cb1 \
 \cb5 \};\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  dfs = (grid, r, c, res, area = \{ count: \cf8 0\cf4  \}) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!grid[r] || !grid[r][c]) \cf6 return\cf4 \cb1 \
+\cb5     \cf6 if\cf4  (!grid[r] || !grid[r][c]) \cf6 return\cf4 \cb1 \
 \cb5     res.count = \cf9 Math\cf4 .max(res.count, area.count += grid[r][c])\cb1 \
 \cb5     grid[r][c] = \cf8 0\cf4 \cb1 \
 \cb5     dfs(grid, r, c - \cf8 1\cf4 , res, area)\cb1 \
@@ -301,20 +298,16 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5 \};\
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Largest Number in Array
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  largestNumber = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 const\cf4  finalNums = nums.map(elem => elem.toString());\cb1 \
-\cb5     \cf10 // -1 a goes before b\cf4 \cb1 \
-\cb5     \cf10 // 0  no change\cf4 \cb1 \
-\cb5     \cf10 // 1  b goes before a\cf4 \cb1 \
-\cb5     \cf6 const\cf4  compareFunc = (a, b) => \cf7 `\cf4 $\{b\}$\{a\}\cf7 `\cf4  - \cf7 `\cf4 $\{a\}$\{b\}\cf7 `\cf4 \cb1 \
+\cb5   \cf6 const\cf4  finalNums = nums.map(elem => elem.toString());\cb1 \
 \
-\cb5     finalNums.sort(compareFunc);\cb1 \
+\cb5     finalNums.sort((a, b) => \cf7 `\cf4 $\{b\}$\{a\}\cf7 `\cf4  - \cf7 `\cf4 $\{a\}$\{b\}\cf7 `\cf4 );\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 if\cf4 (finalNums[\cf8 0\cf4 ] === \cf7 '0'\cf4 ) \cf6 return\cf4  \cf7 '0'\cf4 ;\cb1 \
 \cb5     \cb1 \
@@ -322,7 +315,6 @@ var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
 \cb5 \};\cb1 \
 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf9 \cb5 Input\cf4 : [\cf8 3\cf4 ,\cf8 30\cf4 ,\cf8 34\cf4 ,\cf8 5\cf4 ,\cf8 9\cf4 ]\cb1 \
 \cf9 \cb5 Output\cf4 : \cf7 "9534330"\cf4 \cb1 \
 \
@@ -364,17 +356,14 @@ Repeat the previous step until there are no elements to read in\'a0
 \f3\i0 \'a0array.
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \
 \cf6 const\cf4  createTargetArray = (nums, idx) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  target = []\cb1 \
+\cb5     \cf6 let\cf4  target = []\cb1 \
 \cb5     \cf6 for\cf4 (\cf6 let\cf4  num \cf6 in\cf4  nums)target.splice(idx[num], \cf8 0\cf4 , nums[num])\cb1 \
 \cb5     \cf6 return\cf4  target\cb1 \
 \cb5 \};\cb1 \
 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 let\cf4  nums = [\cf8 0\cf4 ,\cf8 1\cf4 ,\cf8 2\cf4 ,\cf8 3\cf4 ,\cf8 4\cf4 ]\cb1 \
 \cf6 \cb5 let\cf4  index = [\cf8 0\cf4 ,\cf8 1\cf4 ,\cf8 2\cf4 ,\cf8 2\cf4 ,\cf8 1\cf4 ]\cb1 \
 \
@@ -388,14 +377,14 @@ Repeat the previous step until there are no elements to read in\'a0
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  climbStairs = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  arr=[\cf8 1\cf4 , \cf8 2\cf4 , \cf8 3\cf4 ];\cb1 \
+\cb5     \cf6 let\cf4  arr=[\cf8 1\cf4 , \cf8 2\cf4 , \cf8 3\cf4 ];\cb1 \
 \cb5     \cf6 for\cf4 (\cf6 let\cf4  i = \cf8 3\cf4 ; i < num; i++)\{\cb1 \
 \cb5         arr[i] = arr[i - \cf8 1\cf4 ] + arr[i - \cf8 2\cf4 ];\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cf6 return\cf4  arr[num - \cf8 1\cf4 ];\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Rotate Image 90deg
 \f1\b0 \cf4 \cb5 \
@@ -417,32 +406,26 @@ You have to rotate the image in-place, which means you have to modify the input 
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  rotate = grid => \{\cb1 \
 \
 \cf6 \cb5 for\cf4 (\cf6 let\cf4  i = \cf8 0\cf4 ;i < grid.length; i++)\{\cb1 \
 \cf6 \cb5 for\cf4 (\cf6 let\cf4  j = \cf8 0\cf4 ;j < i; j++)\{\cb1 \
 \
 \cf6 \cb5 let\cf4  temp = grid[i][j];\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 grid[i][j] = grid[j][i];\cb1 \
+\cb5 grid[i][j] = grid[j][i];\cb1 \
 \cb5 grid[j][i] = temp;\cb1 \
 \
 \cb5 \}\cb1 \
 \cb5 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 for\cf4  (\cf6 let\cf4  g \cf6 of\cf4  grid) g.reverse()\cb1 \
 \
 \cf6 \cb5 return\cf4  grid\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \};\cb1 \
+\cb5 \};\cb1 \
 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 let\cf4  x = [\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   [\cf8 1\cf4 ,\cf8 2\cf4 ,\cf8 3\cf4 ],\cb1 \
+\cb5   [\cf8 1\cf4 ,\cf8 2\cf4 ,\cf8 3\cf4 ],\cb1 \
 \cb5   [\cf8 4\cf4 ,\cf8 5\cf4 ,\cf8 6\cf4 ],\cb1 \
 \cb5   [\cf8 7\cf4 ,\cf8 8\cf4 ,\cf8 9\cf4 ]\cb1 \
 \cb5 ]\cb1 \
@@ -460,8 +443,7 @@ You have to rotate the image in-place, which means you have to modify the input 
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  transpose = arr => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4 (arr.length === \cf8 0\cf4 ) \cf6 return\cf4  [];\cb1 \
+\cb5     \cf6 if\cf4 (arr.length === \cf8 0\cf4 ) \cf6 return\cf4  [];\cb1 \
 \cb5     \cf6 let\cf4  width = arr[\cf8 0\cf4 ].length \cb1 \
 \cb5     \cf6 let\cf4  height = arr.length;\cb1 \
 \cb5     \cf6 var\cf4  result = [];\cb1 \
@@ -495,9 +477,8 @@ You have to rotate the image in-place, which means you have to modify the input 
 
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  maxSubArray = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  currentMax = nums[\cf8 0\cf4 ];\cb1 \
+\cf6 \cb5 const\cf4  maxSubArray = nums => \{\cb1 \
+\cb5     \cf6 let\cf4  currentMax = nums[\cf8 0\cf4 ];\cb1 \
 \cb5     \cf6 let\cf4  max = nums[\cf8 0\cf4 ];\cb1 \
 \
 \cb5   \cf6 for\cf4  (\cf6 let\cf4  num \cf6 of\cf4  nums) \{\cb1 \
@@ -509,6 +490,7 @@ You have to rotate the image in-place, which means you have to modify the input 
 \
 \cb5 maxSubArray([\cf8 1\cf4 , \cf8 3\cf4 , -\cf8 4\cf4 , \cf8 4\cf4 , -\cf8 6\cf4 , \cf8 3\cf4 , \cf8 9\cf4 , -\cf8 11\cf4 , \cf8 10\cf4 ])\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Knight Probability
 \f1\b0 \cf4 \cb5 \
@@ -548,10 +530,8 @@ From each of those positions, there are also two moves that will keep the knight
 The total probability the knight stays on the board is 0.0625.\
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  knightProbability = (\cf9 N\cf4 , \cf9 K\cf4 , r, c) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cb1 \
+\cb5     \cb1 \
 \cb5     \cf6 const\cf4  dp = \cf6 new\cf4  \cf9 Array\cf4 (\cf9 N\cf4 );\cb1 \
 \cb5     \cf6 const\cf4  movesR = [\cf8 2\cf4 ,\cf8 2\cf4 ,-\cf8 2\cf4 ,-\cf8 2\cf4 ,\cf8 1\cf4 ,\cf8 1\cf4 ,-\cf8 1\cf4 ,-\cf8 1\cf4 ];\cb1 \
 \cb5     \cf6 const\cf4  movesC = [\cf8 1\cf4 ,-\cf8 1\cf4 ,\cf8 1\cf4 ,-\cf8 1\cf4 ,\cf8 2\cf4 ,-\cf8 2\cf4 ,\cf8 2\cf4 ,-\cf8 2\cf4 ]; \cb1 \
@@ -582,6 +562,7 @@ The total probability the knight stays on the board is 0.0625.\
 \cb5     \cf6 return\cf4  dp[r][c][\cf9 K\cf4 ];\cb1 \
 \cb5 \};\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Product Except Self
 \f1\b0 \cf4 \cb5 \
@@ -626,11 +607,9 @@ The total probability the knight stays on the board is 0.0625.\
 \f3\i0 ).
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \
 \cf6 const\cf4  productExceptSelf = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  result = [\cf8 1\cf4 ];\cb1 \
+\cb5     \cf6 let\cf4  result = [\cf8 1\cf4 ];\cb1 \
 \cb5     \cf6 let\cf4  temp = \cf8 1\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i < nums.length; i++) \{\cb1 \
 \cb5         result[i] = result[i - \cf8 1\cf4 ] * nums[i - \cf8 1\cf4 ];\cb1 \
@@ -643,14 +622,14 @@ The total probability the knight stays on the board is 0.0625.\
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Largest Square in Grid
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  largestSquare = grid => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  height = grid.length;\cb1 \
+\cb5     \cf6 let\cf4  height = grid.length;\cb1 \
 \cb5     \cf6 let\cf4  width = height ? grid[\cf8 0\cf4 ].length : \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 let\cf4  max = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  row = \cf8 0\cf4 ; row < height; row++) \{\cb1 \
@@ -670,24 +649,22 @@ The total probability the knight stays on the board is 0.0625.\
 \cb5     \cf6 return\cf4  max * max;\cb1 \
 \cb5 \};\
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 let\cf4  items = [\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   [\cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 ],\cb1 \
+\cb5   [\cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 ],\cb1 \
 \cb5   [\cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 ],\cb1 \
 \cb5   [\cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 ],\cb1 \
 \cb5   [\cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 ],\cb1 \
 \cb5   [\cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 ]\cb1 \
 \cb5 ]\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Tower of Hanoi (Recursion)
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  hanoiTower = (height, srcP, destP, bufferP) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (height >= \cf8 1\cf4 ) \{\cb1 \
+\cb5   \cf6 if\cf4  (height >= \cf8 1\cf4 ) \{\cb1 \
 \
 \cb5     \cf10 // Move a tower of height-1 to the buffer peg, using the destination peg.\cf4 \cb1 \
 \cb5     hanoiTower(height - \cf8 1\cf4 , srcP, bufferP, destP);\cb1 \
@@ -704,14 +681,14 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \cb5 hanoiTower(\cf8 3\cf4 , \cf7 "A"\cf4 , \cf7 "C"\cf4 , \cf7 "B"\cf4 );\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Permutations
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  permute = (nums, memo = \cf8 0\cf4 ) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (memo >= nums.length) \cf6 return\cf4  [[]];\cb1 \
+\cb5     \cf6 if\cf4  (memo >= nums.length) \cf6 return\cf4  [[]];\cb1 \
 \cb5     \cf6 const\cf4  result = [];\cb1 \
 \cb5     \cf6 const\cf4  prevs = permute(nums, memo + \cf8 1\cf4 );  \cf10 // permutations of elements after n\cf4 \cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  prev \cf6 of\cf4  prevs) \{\cb1 \
@@ -726,6 +703,7 @@ The total probability the knight stays on the board is 0.0625.\
 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Permutations 2 (Unique)
 \f1\b0 \cf4 \cb5 \
@@ -775,9 +753,8 @@ The total probability the knight stays on the board is 0.0625.\
 The binary search tree is guaranteed to have unique values.
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  rangeSumBST = (root, \cf9 L\cf4 , \cf9 R\cf4 ) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf10 // check if value is in the given range\cf4 \cb1 \
+\cf6 \cb5 const\cf4  rangeSumBST = (root, \cf9 L\cf4 , \cf9 R\cf4 ) => \{\cb1 \
+\cb5     \cf10 // check if value is in the given range\cf4 \cb1 \
 \cb5     \cf6 const\cf4  isInBetween = val => val >= \cf9 L\cf4  && val <= \cf9 R\cf4 ;\cb1 \
 \cb5     \cf10 // sum the value if it's in the range\cf4 \cb1 \
 \cb5     \cf6 const\cf4  add = (val, sum) => isInBetween(val) ? sum += val : sum;\cb1 \
@@ -789,37 +766,31 @@ The binary search tree is guaranteed to have unique values.
 \cb5     \cf6 return\cf4  preorder(root, \cf8 0\cf4 )\cb1 \
 \cb5 \};\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Shortest Path in Maze
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 function\cf4  \cf9 Point\cf4 (x, y) \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 this\cf4 .x = x;\cb1 \
+\cb5   \cf6 this\cf4 .x = x;\cb1 \
 \cb5   \cf6 this\cf4 .y = y;\cb1 \
 \cb5 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 function\cf4  \cf9 Node\cf4 (pt, dist) \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 this\cf4 .pt = pt;\cb1 \
+\cb5   \cf6 this\cf4 .pt = pt;\cb1 \
 \cb5   \cf6 this\cf4 .dist = dist;\cb1 \
 \cb5 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 var\cf4  d = [\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \{x: \cf8 0\cf4 , y: \cf8 1\cf4 \},\cb1 \
+\cb5   \{x: \cf8 0\cf4 , y: \cf8 1\cf4 \},\cb1 \
 \cb5   \{x: \cf8 1\cf4 , y: \cf8 0\cf4 \},\cb1 \
 \cb5   \{x: \cf8 0\cf4 , y: -\cf8 1\cf4 \},\cb1 \
 \cb5   \{x: -\cf8 1\cf4 , y: \cf8 0\cf4 \}\cb1 \
 \cb5 ];\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 function\cf4  bfs(maze, src, dest) \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 var\cf4  minDist = -\cf8 1\cf4 ;\cb1 \
+\cb5   \cf6 var\cf4  minDist = -\cf8 1\cf4 ;\cb1 \
 \cb5     \cf6 if\cf4  (maze[src.x][src.y] != \cf8 1\cf4  || maze[dest.x][dest.y] != \cf8 1\cf4 )\cb1 \
 \cb5       \cf6 return\cf4  minDist;\cb1 \
 \cb5   \cf6 var\cf4  h = maze.length;\cb1 \
@@ -853,16 +824,12 @@ The binary search tree is guaranteed to have unique values.
 \cb5   \cf6 return\cf4  minDist;\cb1 \
 \cb5 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 function\cf4  isValid(maze, visited, width, height, row, col) \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 return\cf4  (row >= \cf8 0\cf4 ) && (row < width) && (col >= \cf8 0\cf4 ) && (col < height) && maze[row][col] == \cf8 1\cf4  && !visited[row][col];\cb1 \
+\cb5   \cf6 return\cf4  (row >= \cf8 0\cf4 ) && (row < width) && (col >= \cf8 0\cf4 ) && (col < height) && maze[row][col] == \cf8 1\cf4  && !visited[row][col];\cb1 \
 \cb5 \}\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 var\cf4  maze = [\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     [ \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4  ],\cb1 \
+\cb5     [ \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4  ],\cb1 \
 \cb5     [ \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4  ],\cb1 \
 \cb5     [ \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4  ],\cb1 \
 \cb5     [ \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 1\cf4  ],\cb1 \
@@ -874,20 +841,17 @@ The binary search tree is guaranteed to have unique values.
 \cb5     [ \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4 , \cf8 1\cf4 , \cf8 0\cf4 , \cf8 0\cf4 , \cf8 1\cf4  ]\cb1 \
 \cb5 ];\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 var\cf4  source = \cf6 new\cf4  \cf9 Point\cf4 (\cf8 0\cf4 , \cf8 0\cf4 );\cb1 \
 \cf6 \cb5 var\cf4  dest = \cf6 new\cf4  \cf9 Point\cf4 (\cf8 7\cf4 , \cf8 5\cf4 );\cb1 \
 \cf6 \cb5 var\cf4  dist = bfs(maze, source, dest);\cb1 \
 \
 \cf6 \cb5 if\cf4  (dist != -\cf8 1\cf4 )\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   console.log(\cf7 `The shortest path from (\cf4 $\{source.x\}\cf7 , \cf4 $\{source.y\}\cf7 ) to (\cf4 $\{dest.x\}\cf7 , \cf4 $\{dest.y\}\cf7 ) has length \cf4 $\{dist\}\cf7 \\n`\cf4 );\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
+\cb5   console.log(\cf7 `The shortest path from (\cf4 $\{source.x\}\cf7 , \cf4 $\{source.y\}\cf7 ) to (\cf4 $\{dest.x\}\cf7 , \cf4 $\{dest.y\}\cf7 ) has length \cf4 $\{dist\}\cf7 \\n`\cf4 );\cb1 \
 \cf6 \cb5 else\cf4 \cb1 \
+\cb5   console.log(\cf7 `Shortest path from \cf4 $\{(source.x, source.y)\}\cf7  to \cf4 $\{(dest.x, dest.y)\}\cf7  does not exist`\cf4 );\cb1 \
+\
+\
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   console.log(\cf7 `Shortest path from \cf4 $\{(source.x, source.y)\}\cf7  to \cf4 $\{(dest.x, dest.y)\}\cf7  does not exist`\cf4 );\cb1 \
-\
-\
 
 \f0\b \cf2 \cb3 // Repeated Substring Pattern
 \f1\b0 \cf4 \cb5 \
@@ -897,9 +861,8 @@ The binary search tree is guaranteed to have unique values.
 
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  repeatedSubstringPattern = string => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (string.length === \cf8 0\cf4  || string.length === \cf8 1\cf4 ) \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
+\cf6 \cb5 const\cf4  repeatedSubstringPattern = string => \{\cb1 \
+\cb5     \cf6 if\cf4  (string.length === \cf8 0\cf4  || string.length === \cf8 1\cf4 ) \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i <= string.length / \cf8 2\cf4 ; i++) \{\cb1 \
 \cb5         \cf6 if\cf4  (string.length % i === \cf8 0\cf4  && string.slice(\cf8 0\cf4 , i).repeat(string.length / i) === string) \{\cb1 \
 \cb5             \cf6 return\cf4  \cf6 true\cf4 ;\cb1 \
@@ -909,14 +872,14 @@ The binary search tree is guaranteed to have unique values.
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Merge Sort
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  merge = (arr1, arr2) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  sorted = [];\cb1 \
+\cb5   \cf6 let\cf4  sorted = [];\cb1 \
 \
 \cb5   \cf6 while\cf4  (arr1.length && arr2.length) \{\cb1 \
 \cb5     \cf6 if\cf4  (arr1[\cf8 0\cf4 ] < arr2[\cf8 0\cf4 ]) sorted.push(arr1.shift());\cb1 \
@@ -926,10 +889,8 @@ The binary search tree is guaranteed to have unique values.
 \cb5   \cf6 return\cf4  sorted.concat(arr1.slice().concat(arr2.slice()));\cb1 \
 \cb5 \};\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 \cb5 const\cf4  mergeSort = arr => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (arr.length <= \cf8 1\cf4 ) \cf6 return\cf4  arr;\cb1 \
+\cb5   \cf6 if\cf4  (arr.length <= \cf8 1\cf4 ) \cf6 return\cf4  arr;\cb1 \
 \cb5   \cf6 let\cf4  mid = \cf9 Math\cf4 .floor(arr.length / \cf8 2\cf4 ),\cb1 \
 \cb5       left = mergeSort(arr.slice(\cf8 0\cf4 , mid)),\cb1 \
 \cb5       right = mergeSort(arr.slice(mid));\cb1 \
@@ -938,14 +899,14 @@ The binary search tree is guaranteed to have unique values.
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Quick Sort
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  quickSort = arr => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \'a0\'a0\cf6 if\cf4  (arr.length <= \cf8 1\cf4  || arr === \cf6 null\cf4 ) \cf6 return\cf4  arr;\cb1 \
+\cb5 \'a0\'a0\cf6 if\cf4  (arr.length <= \cf8 1\cf4  || arr === \cf6 null\cf4 ) \cf6 return\cf4  arr;\cb1 \
 \cb5 \'a0\'a0\cf6 let\cf4  pivot = arr[arr.length - \cf8 1\cf4 ];\cb1 \
 \cb5   \cf6 let\cf4  leftArr = [];\cb1 \
 \cb5   \cf6 let\cf4  rightArr = [];\cb1 \
@@ -961,14 +922,14 @@ The binary search tree is guaranteed to have unique values.
 \cb5 \}\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Verifying an Alien Dictionary
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isAlienSorted = (words, order) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  charPosition = \cf6 new\cf4  \cf9 Map\cf4 ()\cb1 \
+\cb5     \cf6 let\cf4  charPosition = \cf6 new\cf4  \cf9 Map\cf4 ()\cb1 \
 \cb5     \cf6 for\cf4 (\cf6 let\cf4  position = \cf8 0\cf4 ; position < order.length; position++)\{\cb1 \
 \cb5         \cf6 let\cf4  char = order[position]\cb1 \
 \cb5         charPosition.\cf6 set\cf4 (char, position)\cb1 \
@@ -987,6 +948,7 @@ The binary search tree is guaranteed to have unique values.
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Destination City
 \f1\b0 \cf4 \cb5 \
@@ -1028,14 +990,13 @@ It is guaranteed that the graph of paths forms a line without any loop, therefor
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  destCity = paths => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  result = \cf6 new\cf4  \cf9 Set\cf4 (paths.map((path) => path[\cf8 0\cf4 ]));\cb1 \
+\cb5     \cf6 const\cf4  result = \cf6 new\cf4  \cf9 Set\cf4 (paths.map((path) => path[\cf8 0\cf4 ]));\cb1 \
 \cb5     \cf6 return\cf4  paths.filter((path) => !result.has(path[\cf8 1\cf4 ])).pop()[\cf8 1\cf4 ]\cb1 \
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Valid Parentheses
 \f1\b0 \cf4 \cb5 \
@@ -1076,10 +1037,8 @@ Open brackets must be closed in the correct order.\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isValid = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  stack = []\cb1 \
+\cb5     \cf6 const\cf4  stack = []\cb1 \
 \cb5     \cf6 const\cf4  keys = \{\cb1 \
 \cb5         \cf7 '('\cf4 : \cf7 ')'\cf4 ,\cb1 \
 \cb5         \cf7 '\{'\cf4 : \cf7 '\}'\cf4 ,\cb1 \
@@ -1098,6 +1057,7 @@ Open brackets must be closed in the correct order.\cb1 \
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Buy and Sell Stock
 \f1\b0 \cf4 \cb5 \
@@ -1129,10 +1089,8 @@ Note that you cannot sell a stock before you buy one.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  maxProfit = prices => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  bestBuy = prices[\cf8 0\cf4 ];\cb1 \
+\cb5     \cf6 let\cf4  bestBuy = prices[\cf8 0\cf4 ];\cb1 \
 \cb5     \cf6 let\cf4  profit = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i < prices.length; i++) \{\cb1 \
 \cb5         bestBuy = \cf9 Math\cf4 .min(bestBuy, prices[i])\cb1 \
@@ -1141,6 +1099,7 @@ Note that you cannot sell a stock before you buy one.\
 \cb5     \cf6 return\cf4  profit;\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Buy and Sell Stock II
 \f1\b0 \cf4 \cb5 \
@@ -1176,10 +1135,8 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  maxProfit = prices => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  profit = \cf8 0\cf4 ;\cb1 \
+\cb5     \cf6 let\cf4  profit = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < prices.length - \cf8 1\cf4 ; i++) \{\cb1 \
 \cb5         \cf6 const\cf4  possibleProfit = prices[i + \cf8 1\cf4 ] - prices[i];\cb1 \
 \cb5         profit = \cf9 Math\cf4 .max(profit + possibleProfit, profit);\cb1 \
@@ -1187,6 +1144,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 \cb5     \cf6 return\cf4  profit;\cb1 \
 \cb5 \};\cb1 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Reverse Integer
 \f1\b0 \cf4 \cb5 \
@@ -1218,9 +1176,8 @@ Assume we are dealing with an environment which could only store integers within
 
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 const\cf4  reverseInt = x => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  max = \cf9 Math\cf4 .pow(\cf8 2\cf4 , \cf8 31\cf4 ) - \cf8 1\cf4 \cb1 \
+\cf6 \cb5 const\cf4  reverseInt = x => \{\cb1 \
+\cb5     \cf6 const\cf4  max = \cf9 Math\cf4 .pow(\cf8 2\cf4 , \cf8 31\cf4 ) - \cf8 1\cf4 \cb1 \
 \cb5     \cf6 const\cf4  min = \cf9 Math\cf4 .pow(-\cf8 2\cf4 , \cf8 31\cf4 )\cb1 \
 \cb5     \cf6 const\cf4  sign = \cf9 Math\cf4 .sign(x)\cb1 \
 \cb5     \cf6 const\cf4  num = (x * sign).toString().split(\cf7 ''\cf4 ).reverse().join(\cf7 ''\cf4 )\cb1 \
@@ -1229,6 +1186,7 @@ Assume we are dealing with an environment which could only store integers within
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Longest Common Prefix\
 \pard\pardeftab720\sa280\partightenfactor0
@@ -1251,10 +1209,8 @@ If there is no common prefix, return an empty string\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  longestCommonPrefix = strs => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (!strs.length) \cf6 return\cf4  \cf7 ''\cf4 ;\cb1 \
+\cb5   \cf6 if\cf4  (!strs.length) \cf6 return\cf4  \cf7 ''\cf4 ;\cb1 \
 \cb5   \cb1 \
 \cb5   \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < strs[\cf8 0\cf4 ].length; i++) \{\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  str \cf6 of\cf4  strs) \{\cb1 \
@@ -1269,6 +1225,7 @@ If there is no common prefix, return an empty string\'a0
 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Remove Duplicate Numbers from Sorted Array
 \f1\b0 \cf4 \cb5 \
@@ -1309,10 +1266,8 @@ It doesn't matter what you leave beyond the returned length.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  removeDuplicates = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  i = \cf8 0\cf4 ;\cb1 \
+\cb5     \cf6 let\cf4  i = \cf8 0\cf4 ;\cb1 \
 \cb5     nums.forEach(num => \{\cb1 \
 \cb5         \cf6 if\cf4  (num !== nums[i]) \{\cb1 \
 \cb5             nums[++i] = num;\cb1 \
@@ -1322,14 +1277,14 @@ It doesn't matter what you leave beyond the returned length.\
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Remove Element from Array
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  removeElement = (nums, val) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++) \{\cb1 \
+\cb5   \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++) \{\cb1 \
 \cb5     \cf6 if\cf4  (nums[i] === val) \{\cb1 \
 \cb5       nums.splice(i, \cf8 1\cf4 );\cb1 \
 \cb5       i--;\cb1 \
@@ -1339,6 +1294,7 @@ It doesn't matter what you leave beyond the returned length.\
 \cb5 \};\cb1 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // strStr (Needle and Haystack)
 \f3\b0 \cf11 \
@@ -1371,11 +1327,9 @@ It doesn't matter what you leave beyond the returned length.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  strStr = (haystack, needle) => \{\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4 (needle === \cf7 ''\cf4  && haystack === \cf7 ''\cf4  )\{\cb1 \
+\cb5   \cf6 if\cf4 (needle === \cf7 ''\cf4  && haystack === \cf7 ''\cf4  )\{\cb1 \
 \cb5     \cf6 return\cf4  \cf8 0\cf4 \cb1 \
 \cb5   \}\cb1 \
 \
@@ -1389,6 +1343,7 @@ It doesn't matter what you leave beyond the returned length.\
 \
 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Search Insert Position
 \f1\b0 \cf4 \cb5 \
@@ -1410,10 +1365,8 @@ You may assume no duplicates in the array.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  searchInsert = (nums, target) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++)\{\cb1 \
+\cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++)\{\cb1 \
 \cb5         \cf6 if\cf4  (nums[i] >= target)\{\cb1 \
 \cb5             \cf6 return\cf4  i;\cb1 \
 \cb5         \}\cb1 \
@@ -1421,6 +1374,7 @@ You may assume no duplicates in the array.\
 \cb5     \cf6 return\cf4  nums.length;\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Length of Last Word
 \f1\b0 \cf4 \cb5 \
@@ -1451,13 +1405,12 @@ If the last word does not exist, return 0.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  lengthOfLastWord = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  result = str.trim().split(\cf7 ' '\cf4 );\cb1 \
+\cb5     \cf6 const\cf4  result = str.trim().split(\cf7 ' '\cf4 );\cb1 \
 \cb5     \cf6 return\cf4  result[result.length - \cf8 1\cf4 ].length;\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Plus One
 \f1\b0 \cf4 \cb5 \
@@ -1485,10 +1438,8 @@ You may assume the integer does not contain any leading zero, except the number 
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  plusOne = digits => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 for\cf4 (\cf6 let\cf4  i = digits.length - \cf8 1\cf4 ; i >= \cf8 0\cf4 ; i--)\{\cb1 \
+\cb5   \cf6 for\cf4 (\cf6 let\cf4  i = digits.length - \cf8 1\cf4 ; i >= \cf8 0\cf4 ; i--)\{\cb1 \
 \cb5     \cf6 if\cf4 (digits[i] === \cf8 9\cf4 )\{\cb1 \
 \cb5       digits[i] = \cf8 0\cf4 ;\cb1 \
 \cb5     \}\cb1 \
@@ -1501,6 +1452,7 @@ You may assume the integer does not contain any leading zero, except the number 
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Merge Sorted Array
 \f1\b0 \cf4 \cb5 \
@@ -1557,10 +1509,8 @@ nums2 = [2,5,6],       n = 3\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  merge = (nums1, m, nums2, n) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cb1 \
+\cb5     \cb1 \
 \cb5    \cf6 let\cf4  len = nums1.length - \cf8 1\cf4 \cb1 \
 \cb5    m--;\cb1 \
 \cb5    n--;\cb1 \
@@ -1579,6 +1529,7 @@ nums2 = [2,5,6],       n = 3\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Find the Town Judge
 \f1\b0 \cf4 \cb5 \
@@ -1627,10 +1578,8 @@ If the town judge exists and can be identified, return the label of the town jud
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  findJudge = (\cf9 N\cf4 , trust) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 var\cf4  graph = \cf6 new\cf4  \cf9 Map\cf4  ()\cb1 \
+\cb5   \cf6 var\cf4  graph = \cf6 new\cf4  \cf9 Map\cf4  ()\cb1 \
 \cb5   \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i <= \cf9 N\cf4 ; i++) \{\cb1 \
 \cb5     graph.\cf6 set\cf4 (i, \cf8 1\cf4 )\cb1 \
 \cb5   \}\cb1 \
@@ -1645,6 +1594,7 @@ If the town judge exists and can be identified, return the label of the town jud
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Partition Equal Subset Sum
 \f1\b0 \cf4 \cb5 \
@@ -1680,10 +1630,8 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  canPartition = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4 (!nums) \cf6 return\cf4  \cf6 false\cf4 \cb1 \
+\cb5     \cf6 if\cf4 (!nums) \cf6 return\cf4  \cf6 false\cf4 \cb1 \
 \cb5     \cf6 let\cf4  total = nums.reduce((a,b) => a + b, \cf8 0\cf4 )\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 if\cf4 (total % \cf8 2\cf4  != \cf8 0\cf4 ) \cf6 return\cf4  \cf6 false\cf4 \cb1 \
@@ -1707,6 +1655,7 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 \cb5     \cf6 return\cf4  \cf6 false\cf4 \cb1 \
 \cb5 \};\cb1 \
 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Balanced Binary Tree
 \f1\b0 \cf4 \cb5 \
@@ -1769,31 +1718,24 @@ Given the following tree\'a0
  * @return \{boolean\}\
  */\
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isBalanced = root => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cb1 \
+\cb5     \cb1 \
 \cb5     \cf6 let\cf4  dfs = node => \{\cb1 \
 \cb5         \cf6 if\cf4  (!node) \cf6 return\cf4  \cf8 0\cf4 ;\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5         \cf6 let\cf4  left = \cf8 1\cf4  + dfs(node.left);\cb1 \
+\cb1 \
+\cb5         \cf6 let\cf4  left = \cf8 1\cf4  + dfs(node.left);\cb1 \
 \cb5         \cf6 let\cf4  right = \cf8 1\cf4  + dfs(node.right);\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5         \cf6 if\cf4  (\cf9 Math\cf4 .abs(left - right) > \cf8 1\cf4 ) \cf6 return\cf4  \cf9 Infinity\cf4 ;\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5         \cf6 return\cf4  \cf9 Math\cf4 .max(left, right);\cb1 \
+\cb1 \
+\cb5         \cf6 if\cf4  (\cf9 Math\cf4 .abs(left - right) > \cf8 1\cf4 ) \cf6 return\cf4  \cf9 Infinity\cf4 ;\
+\cb1 \
+\cb5         \cf6 return\cf4  \cf9 Math\cf4 .max(left, right);\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 return\cf4  dfs(root) == \cf9 Infinity \cf4 ? \cf6 false \cf4 : \cf6 true\cf4 ;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Same Tree
 \f1\b0 \cf4 \cb5 \
@@ -1849,10 +1791,8 @@ Two binary trees are considered the same if they are structurally identical and 
  * @return \{boolean\}\
  */\
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isSameTree = (p, q) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!p && !q) \{\cb1 \
+\cb5     \cf6 if\cf4  (!p && !q) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf6 true\cf4 ; \cf10 // Both nodes are null, ok\cf4 \cb1 \
 \cb5     \}\cb1 \
 \cb5     \cf6 if\cf4  (!p || !q || p.val !== q.val) \{\cb1 \
@@ -1863,6 +1803,7 @@ Two binary trees are considered the same if they are structurally identical and 
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Symmetric Tree
 \f1\b0 \cf4 \cb5 \
@@ -1902,10 +1843,8 @@ But the following\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isSymmetric = root => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!root) \{\cb1 \
+\cb5     \cf6 if\cf4  (!root) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf6 true\cf4 ;\cb1 \
 \cb5     \}\cb1 \
 \
@@ -1927,6 +1866,7 @@ But the following\'a0
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Convert Sorted Array to BST\
 \pard\pardeftab720\sa280\partightenfactor0
@@ -1965,10 +1905,8 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
  * @return \{TreeNode\}\
  */\
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  sortedArrayToBST = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!nums.length) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
+\cb5     \cf6 if\cf4  (!nums.length) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 const\cf4  mid = \cf9 Math\cf4 .floor(nums.length / \cf8 2\cf4 );\cb1 \
 \cb5     \cf6 const\cf4  root = \cf6 new\cf4  \cf9 TreeNode\cf4 (nums[mid]);\cb1 \
@@ -1981,6 +1919,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Path Sum
 \f1\b0 \cf4 \cb5 \
@@ -2028,36 +1967,34 @@ Given the below binary tree and\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  hasPathSum = (root, sum) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!root) \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
+\cb5     \cf6 if\cf4  (!root) \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
 \cb5     \cf6 if\cf4  (!root.left && !root.right) \cf6 return\cf4  sum - root.val == \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 return\cf4  hasPathSum(root.left, sum - root.val) || hasPathSum(root.right, sum - root.val);    \cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Kids With the Greatest Number of Candies
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  kidsWithCandies = (candies, extraCandies) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \'a0\'a0\cf6 const\cf4  max = \cf9 Math\cf4 .max(...candies)\cb1 \
+\cb5 \'a0\'a0\cf6 const\cf4  max = \cf9 Math\cf4 .max(...candies)\cb1 \
 \cb5 \'a0\'a0\cf6 const\cf4  result = candies.map(candy => candy + extraCandies >= max)\cb1 \
 \cb5 \'a0\'a0\cf6 return\cf4  result\cb1 \
 \cb5 \}\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Reverse String
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  reverseString = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (str.length < \cf8 2\cf4 ) \cf6 return\cf4  str;\cb1 \
+\cb5   \cf6 if\cf4  (str.length < \cf8 2\cf4 ) \cf6 return\cf4  str;\cb1 \
 \cb5   \cf6 let\cf4  start = \cf8 0\cf4 ; \
   \cf6 let \cf4 end = str.length - \cf8 1\cf4 ;\cb1 \
 \cb5   \cf6 while\cf4  (end > start) \{\cb1 \
@@ -2068,18 +2005,19 @@ Given the below binary tree and\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Max Depth of Binary Tree
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  maxDepth = root => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (root === \cf6 null\cf4 ) \cf6 return\cf4  \cf8 0\cf4 \cb1 \
+\cb5     \cf6 if\cf4  (root === \cf6 null\cf4 ) \cf6 return\cf4  \cf8 0\cf4 \cb1 \
 \cb5     \cf6 return\cf4  \cf9 Math\cf4 .max(maxDepth(root.left), maxDepth(root.right)) + \cf8 1\cf4 \cb1 \
 \cb5 \}\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Single Number
 \f1\b0 \cf4 \cb5 \
@@ -2108,10 +2046,8 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  singleNumber = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 const\cf4  map = \{\};\cb1 \
+\cb5   \cf6 const\cf4  map = \{\};\cb1 \
 \cb5   \cf6 for\cf4  (\cf6 let\cf4  num \cf6 of\cf4  nums) \{\cb1 \
 \cb5     \cf6 if\cf4  (map[num] == \cf6 null\cf4 ) map[num] = \cf8 0\cf4 ;\cb1 \
 \cb5     map[num]++;\cb1 \
@@ -2123,6 +2059,7 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 \cb5 \}\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // FizzBuzz
 \f1\b0 \cf4 \cb5 \
@@ -2161,10 +2098,8 @@ Return:\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  fizzBuzz = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  result = \cf6 new\cf4  \cf9 Array\cf4 (num);\cb1 \
+\cb5     \cf6 const\cf4  result = \cf6 new\cf4  \cf9 Array\cf4 (num);\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i <= num ; i++)\{\cb1 \
 \cb5         \cf6 if\cf4 (i % \cf8 15\cf4  === \cf8 0\cf4 ) result[i-\cf8 1\cf4 ] = \cf7 'FizzBuzz'\cf4 ;\cb1 \
 \cb5         \cf6 else\cf4  \cf6 if\cf4 (i % \cf8 3\cf4  === \cf8 0\cf4 ) result[i-\cf8 1\cf4 ] = \cf7 'Fizz'\cf4 ;\cb1 \
@@ -2175,14 +2110,14 @@ Return:\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Reverse Linked List
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  reverseList = head => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  prev = \cf6 null\cf4 ;\cb1 \
+\cb5     \cf6 let\cf4  prev = \cf6 null\cf4 ;\cb1 \
 \cb5     \cf6 while\cf4 (head) \{\cb1 \
 \cb5         \cf6 let\cf4  temp = head.next;\cb1 \
 \cb5         head.next = prev;\cb1 \
@@ -2193,18 +2128,19 @@ Return:\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Delete Node in Linked List
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  deleteNode = node => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     node.val = node.next.val;\cb1 \
+\cb5     node.val = node.next.val;\cb1 \
 \cb5     node.next = node.next.next;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Merge Two Sorted Lists
 \f1\b0 \cf4 \cb5 \
@@ -2237,10 +2173,8 @@ Return:\
  * @return \{ListNode\}\
  */\
 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  mergeTwoLists = (l1, l2) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  list = \cf6 new\cf4  \cf9 ListNode\cf4 ()\cb1 \
+\cb5     \cf6 let\cf4  list = \cf6 new\cf4  \cf9 ListNode\cf4 ()\cb1 \
 \cb5     \cf6 let\cf4  head = list\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 while\cf4  (l1 !== \cf6 null\cf4  && l2 !== \cf6 null\cf4 ) \{\cb1 \
@@ -2269,6 +2203,7 @@ Return:\
 \cb5     \cf6 return\cf4  head.next\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Majority Element
 \f1\b0 \cf4 \cb5 \
@@ -2298,10 +2233,8 @@ You may assume that the array is non-empty and the majority element always exist
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  majorityElement = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  hash = \{\}\cb1 \
+\cb5     \cf6 const\cf4  hash = \{\}\cb1 \
 \cb5     \cf6 let\cf4  max = \cf8 0;\cf4 \
 	\cf6 let\cf4  val;\cb1 \
 \cb5     \cb1 \
@@ -2317,6 +2250,7 @@ You may assume that the array is non-empty and the majority element always exist
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Move Zeroes
 \f1\b0 \cf4 \cb5 \
@@ -2341,10 +2275,8 @@ You may assume that the array is non-empty and the majority element always exist
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  moveZeroes = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 var\cf4  idx = \cf8 0\cf4 ;\cb1 \
+\cb5   \cf6 var\cf4  idx = \cf8 0\cf4 ;\cb1 \
 \cb5   \cf6 for\cf4  (\cf6 var\cf4  i = \cf8 0\cf4 ; i < nums.length; i++) \{\cb1 \
 \cb5     \cf6 if\cf4  (nums[i] !== \cf8 0\cf4 ) \{\cb1 \
 \cb5       nums[idx] = nums[i];\cb1 \
@@ -2355,14 +2287,14 @@ You may assume that the array is non-empty and the majority element always exist
 \cb5 \}\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Anagram 2
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 var\cf4  isAnagram = \cf6 function\cf4 (s, t) \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (s.length !== t.length) \{\cb1 \
+\cb5     \cf6 if\cf4  (s.length !== t.length) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
@@ -2379,8 +2311,7 @@ You may assume that the array is non-empty and the majority element always exist
 \cb5     \cf6 return\cf4  \cf9 Array\cf4 .\cf6 from\cf4 (map.values()).reduce((acc, cur) => acc && cur === \cf8 0\cf4 , \cf6 true\cf4 );\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
+\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Contains Duplicate
@@ -2388,10 +2319,10 @@ You may assume that the array is non-empty and the majority element always exist
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  containsDuplicate = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 return\cf4  nums.length !== \cf6 new\cf4  \cf9 Set\cf4 (nums).size\cb1 \
+\cb5     \cf6 return\cf4  nums.length !== \cf6 new\cf4  \cf9 Set\cf4 (nums).size\cb1 \
 \cb5 \};\
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Roman to Integer
 \f1\b0 \cf4 \cb5 \
@@ -2492,10 +2423,8 @@ C
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  romanToInt = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (!str || str.length === \cf8 0\cf4 ) \{\cb1 \
+\cb5   \cf6 if\cf4  (!str || str.length === \cf8 0\cf4 ) \{\cb1 \
 \cb5     \cf6 return\cf4  \cf8 0\cf4 ;\cb1 \
 \cb5   \}\cb1 \
 \
@@ -2521,6 +2450,7 @@ C
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Excel Sheet Column Number
 \f1\b0 \cf4 \cb5 \
@@ -2563,10 +2493,8 @@ For example:\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  titleToNumber = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 const\cf4  letterToNumber = char => char.charCodeAt(\cf8 0\cf4 ) - \cf8 64\cf4 ;\cb1 \
+\cb5   \cf6 const\cf4  letterToNumber = char => char.charCodeAt(\cf8 0\cf4 ) - \cf8 64\cf4 ;\cb1 \
 \cb5   \cb1 \
 \cb5   \cf6 return\cf4  [...str]\cb1 \
 \cb5     .reverse()\cb1 \
@@ -2576,6 +2504,7 @@ For example:\
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // First Unique Character
 \f1\b0 \cf4 \cb5 \
@@ -2596,10 +2525,8 @@ return 2.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  firstUniqChar = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5    \cf6 for\cf4 (\cf6 let\cf4  i = \cf8 0\cf4 ; i < str.length; i++)\{\cb1 \
+\cb5    \cf6 for\cf4 (\cf6 let\cf4  i = \cf8 0\cf4 ; i < str.length; i++)\{\cb1 \
 \cb5        \cf6 if\cf4  (str.indexOf(str[i]) === str.lastIndexOf(str[i]))\{\cb1 \
 \cb5           \cf6 return\cf4  i;\cb1 \
 \cb5       \} \cb1 \
@@ -2608,6 +2535,7 @@ return 2.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Pascal\'92s Triangle
 \f1\b0 \cf4 \cb5 \
@@ -2643,10 +2571,8 @@ return 2.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  generate = numRows => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (numRows === \cf8 0\cf4 ) \cf6 return\cf4  [];\cb1 \
+\cb5     \cf6 if\cf4  (numRows === \cf8 0\cf4 ) \cf6 return\cf4  [];\cb1 \
 \
 \cb5     \cf6 const\cf4  result = [];\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < numRows; i++) \{\cb1 \
@@ -2664,6 +2590,7 @@ return 2.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Missing Number
 \f1\b0 \cf4 \cb5 \
@@ -2699,10 +2626,8 @@ return 2.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  missingNumber = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  numsLength = nums.length;\cb1 \
+\cb5     \cf6 const\cf4  numsLength = nums.length;\cb1 \
 \cb5     \cf6 const\cf4  expectedSum = (numsLength * (numsLength + \cf8 1\cf4 )) / \cf8 2\cf4 ;\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 const\cf4  sum = nums.reduce((acc, cur) => acc += cur, \cf8 0\cf4 );\cb1 \
@@ -2710,6 +2635,7 @@ return 2.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Intersection of Two Arrays
 \f1\b0 \cf4 \cb5 \
@@ -2741,10 +2667,8 @@ return 2.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  intersect = (nums1, nums2) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  hash = \{\}, result = []\cb1 \
+\cb5     \cf6 const\cf4  hash = \{\}, result = []\cb1 \
 \cb5     \cb1 \
 \cb5     nums2.forEach(num => \{\cb1 \
 \cb5         hash[num] ? hash[num]++ : hash[num] = \cf8 1\cf4 \cb1 \
@@ -2760,6 +2684,7 @@ return 2.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Happy Number
 \f1\b0 \cf4 \cb5 \
@@ -2815,10 +2740,8 @@ Return True if\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isHappy = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  seen = \{\}\cb1 \
+\cb5     \cf6 const\cf4  seen = \{\}\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 while\cf4  (num != \cf8 1\cf4 ) \{\cb1 \
 \cb5         \cf6 if\cf4  (num \cf6 in\cf4  seen) \{\cb1 \
@@ -2832,6 +2755,7 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Number of 1 Bits (Hamming Weight)
 \f1\b0 \cf4 \cb5 \
@@ -2858,21 +2782,19 @@ Return True if\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  hammingWeight = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 return\cf4  num.toString(\cf8 2\cf4 ).replace(\cf16 /0/\cf6 g\cf4 , \cf7 ''\cf4 ).length;\cb1 \
+\cb5     \cf6 return\cf4  num.toString(\cf8 2\cf4 ).replace(\cf16 \cb5 /0/\cf6 \cb5 g\cf4 , \cf7 ''\cf4 ).length;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Power of 3
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isPowerOfThree = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (num <= \cf8 0\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (num <= \cf8 0\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
 \cb5     \}\cb1 \
 \
@@ -2883,14 +2805,14 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Linked List Cycle
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  hasCycle = head => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  fast = head;\cb1 \
+\cb5   \cf6 let\cf4  fast = head;\cb1 \
 \cb5   \cf6 let\cf4  slow = head;\cb1 \
 \cb5   \cb1 \
 \cb5   \cf6 while\cf4  (fast && fast.next) \{\cb1 \
@@ -2904,34 +2826,32 @@ Return True if\'a0
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Palindrome Linked List
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isPalindrome = head => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  fast = head;\
+\cb5     \cf6 let\cf4  fast = head;\
 	\cf6 let \cf4 slow = head;\
 	\cf6 let \cf4 last = \cf6 null\cf4 ;\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 while\cf4 (fast && fast.next) [fast, slow] = [fast.next.next, slow.next]; \cf10 // get middle node\cf4 \cb1 \
+\cb1 \
+\cb5     \cf6 while\cf4 (fast && fast.next) [fast, slow] = [fast.next.next, slow.next]; \cf10 // get middle node\cf4 \cb1 \
 \cb5     \cf6 while\cf4 (slow) [slow.next, last, slow] = [last, slow, slow.next]; \cf10 //reverse right half link list\cf4 \cb1 \
 \cb5     \cf6 while\cf4 (last && last.val === head.val) [last, head] = [last.next, head.next]; \cf10 // check \cf4 \cb1 \
 \cb5     \cf6 return\cf4  !last;\cb1 \
 \cb5 \}\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Intersection of Two Linked Lists
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  getIntersectionNode = (headA, headB) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (!headA || !headB) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
+\cb5     \cf6 if\cf4  (!headA || !headB) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
 \cb5     \cf6 var\cf4  curA = headA;\cb1 \
 \cb5     \cf6 var\cf4  curB = headB;\cb1 \
 \cb5     \cf6 while\cf4  (curA != curB) \{\cb1 \
@@ -2942,14 +2862,14 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Count Primes
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  countPrimes = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  hash = \cf6 new\cf4  \cf9 Array\cf4 (num).fill(\cf6 true\cf4 );\cb1 \
+\cb5     \cf6 let\cf4  hash = \cf6 new\cf4  \cf9 Array\cf4 (num).fill(\cf6 true\cf4 );\cb1 \
 \cb5     hash[\cf8 0\cf4 ] = \cf6 false\cf4 ;\cb1 \
 \cb5     hash[\cf8 1\cf4 ] = \cf6 false\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 2\cf4 ; i*i < num; i++) \{\cb1 \
@@ -2964,19 +2884,19 @@ Return True if\'a0
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Valid Palindrome
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  isPalindrome = str => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (str === \cf7 ""\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (str === \cf7 ""\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  \cf6 true\cf4 ;\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
 \cb5     \cf10 // 1. Remove non-alphanumeric chars from the string\cf4 \cb1 \
-\cb5     \cf6 const\cf4  alphanum = str.toLowerCase().replace(\cf16 /[\\W]/\cf6 g\cf4 , \cf7 ""\cf4 );\cb1 \
+\cb5     \cf6 const\cf4  alphanum = str.toLowerCase().replace(\cf16 \cb5 /[\\W]/\cf6 \cb5 g\cf4 , \cf7 ""\cf4 );\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 let\cf4  front = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 let\cf4  back = alphanum.length - \cf8 1\cf4 ;\cb1 \
@@ -2985,10 +2905,8 @@ Return True if\'a0
 \cb5         \cf6 if\cf4  (alphanum[front] != alphanum[back]) \{\cb1 \
 \cb5             \cf6 return\cf4  \cf6 false\cf4 ;\cb1 \
 \cb5         \}\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5         front++;\cb1 \
+\cb1 \
+\cb5         front++;\cb1 \
 \cb5         back--;\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
@@ -2996,14 +2914,14 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Valid Palindrome II
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  validPalindrome = (str, corrections = \cf8 1\cf4 ) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  front = \cf8 0\cf4 ;\cb1 \
+\cb5   \cf6 let\cf4  front = \cf8 0\cf4 ;\cb1 \
 \cb5   \cf6 let\cf4  back = str.length - \cf8 1\cf4 ;\cb1 \
 \cb5   \cb1 \
 \cb5   \cf6 while\cf4  (front < back) \{\cb1 \
@@ -3025,14 +2943,14 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Reverse Bits
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  reverseBits = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  ret = \cf8 0\cf4 ;\cb1 \
+\cb5   \cf6 let\cf4  ret = \cf8 0\cf4 ;\cb1 \
 \cb5   \cf6 let\cf4  i = \cf8 0\cf4 ;\cb1 \
 \
 \cb5   \cf6 while\cf4 (num)\{\cb1 \
@@ -3049,6 +2967,7 @@ Return True if\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Factorial Trailing Zeroes
 \f1\b0 \cf4 \cb5 \
@@ -3090,14 +3009,13 @@ Return True if\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  trailingZeroes = num => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (num < \cf8 5\cf4 ) \cf6 return\cf4  \cf8 0\cf4 ;\cb1 \
+\cb5     \cf6 if\cf4  (num < \cf8 5\cf4 ) \cf6 return\cf4  \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 return\cf4  \cf9 Math\cf4 .floor(num / \cf8 5\cf4 ) + trailingZeroes(num / \cf8 5\cf4 );\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Rotate Array
 \f1\b0 \cf4 \cb5 \
@@ -3144,10 +3062,8 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  rotate = (nums, k) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  result = [...nums];\cb1 \
+\cb5     \cf6 let\cf4  result = [...nums];\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < nums.length; i++) \{\cb1 \
 \cb5         \cf6 let\cf4  idx = (i + k) % nums.length;\cb1 \
@@ -3157,14 +3073,14 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Binary Tree InOrder Traversal
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  inOrderTraversal = (root, result = []) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 if\cf4  (root) \{    \cb1 \
+\cb5   \cf6 if\cf4  (root) \{    \cb1 \
 \cb5     inOrderTraversal(root.left, result);\cb1 \
 \cb5     result.push(root.val);\cb1 \
 \cb5     inOrderTraversal(root.right, result);\cb1 \
@@ -3174,14 +3090,14 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Get Sum (Cannot use + or -)
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  getSum = (num1, num2) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  carry;\cb1 \
+\cb5     \cf6 let\cf4  carry;\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 while\cf4 (num2) \{\cb1 \
 \cb5         carry = num1 & num2;\cb1 \
@@ -3193,6 +3109,7 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Backspace String Compare\
 \pard\pardeftab720\sl420\partightenfactor0
@@ -3225,22 +3142,19 @@ Note that after\'a0backspacing an empty text, the text will continue empty.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  backspaceCompare = (\cf9 S\cf4 , \cf9 T\cf4 ) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 const\cf4  buildString = str => \cf9 Array\cf4 .\cf6 from\cf4 (str).reduce((acc, cur) => \{\cb1 \
+\cb5     \cf6 const\cf4  buildString = str => \cf9 Array\cf4 .\cf6 from\cf4 (str).reduce((acc, cur) => \{\cb1 \
 \cb5         \cf6 if\cf4 (cur === \cf7 '#'\cf4 ) \{\cb1 \
 \cb5             \cf6 return\cf4  acc.slice(\cf8 0\cf4 , acc.length - \cf8 1\cf4 );\cb1 \
 \cb5         \}\cb1 \
 \cb5         \cf6 return\cf4  [...acc, cur];\cb1 \
 \cb5     \}, []).join(\cf7 ''\cf4 );\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 return\cf4  buildString(\cf9 S\cf4 ) === buildString(\cf9 T\cf4 )\cb1 \
+\cb1 \
+\cb5     \cf6 return\cf4  buildString(\cf9 S\cf4 ) === buildString(\cf9 T\cf4 )\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Find Peak Element\
 \pard\pardeftab720\sa280\partightenfactor0
@@ -3294,11 +3208,9 @@ You may imagine that\'a0
 \f3\b0 \'a0Your solution should be in logarithmic complexity.
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \
-\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb5 \
 \cf6 const\cf4  findPeakElement = nums => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 let\cf4  left = \cf8 0\cf4 ;\cb1 \
+\cb5   \cf6 let\cf4  left = \cf8 0\cf4 ;\cb1 \
 \cb5   \cf6 let\cf4  right = nums.length - \cf8 1\cf4 ;\cb1 \
 \
 \cb5   \cf6 while\cf4 (left + \cf8 1 \cf4 < right) \{\cb1 \
@@ -3317,6 +3229,7 @@ You may imagine that\'a0
 \cb5   \cf6 return\cf4  nums[left] > nums[right] ? left : right;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Find the Difference\
 \pard\pardeftab720\sl420\partightenfactor0
@@ -3355,10 +3268,8 @@ Explanation:\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  findTheDifference = (s, t) => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  sortedS = s.split(\cf7 ''\cf4 ).sort();\cb1 \
+\cb5     \cf6 let\cf4  sortedS = s.split(\cf7 ''\cf4 ).sort();\cb1 \
 \cb5     \cf6 let\cf4  sortedT = t.split(\cf7 ''\cf4 ).sort();\cb1 \
 \cb5     \cf6 let\cf4  i;\cb1 \
 \cb5     \cf6 for\cf4 (i = \cf8 0\cf4 ; i < sortedS.length; i++) \{\cb1 \
@@ -3372,6 +3283,7 @@ Explanation:\
 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Minimum Area Rectangle
 \f1\b0 \cf4 \cb5 \
@@ -3405,10 +3317,8 @@ If there isn't any rectangle, return 0.\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  minAreaRect = points => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5   \cf6 const\cf4  map = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
+\cb5   \cf6 const\cf4  map = \cf6 new\cf4  \cf9 Map\cf4 ();\cb1 \
 \cb5   \cf6 for\cf4  (\cf6 const\cf4  [x, y] \cf6 of\cf4  points) \{\cb1 \
 \cb5     \cf6 if\cf4  (!map.has(x)) map.\cf6 set\cf4 (x, \cf6 new\cf4  \cf9 Set\cf4 ());\cb1 \
 \cb5     map.\cf6 get\cf4 (x).add(y);\cb1 \
@@ -3429,14 +3339,14 @@ If there isn't any rectangle, return 0.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Letter Combinations of a Phone Number
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  letterCombinations = digits => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 if\cf4  (digits === \cf7 ''\cf4 ) \{\cb1 \
+\cb5     \cf6 if\cf4  (digits === \cf7 ''\cf4 ) \{\cb1 \
 \cb5         \cf6 return\cf4  [];\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
@@ -3467,6 +3377,7 @@ If there isn't any rectangle, return 0.\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Flipping an Image
 \f1\b0 \cf4 \cb5 \
@@ -3511,10 +3422,8 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  flipAndInvertImage = grid => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i=\cf8 0\cf4 ; i<grid.length; i++) \{\cb1 \
+\cb5     \cf6 for\cf4  (\cf6 let\cf4  i=\cf8 0\cf4 ; i<grid.length; i++) \{\cb1 \
 \cb5         \cf6 let\cf4  start = \cf8 0\cf4 ;\cb1 \
 \cb5         \cf6 let\cf4  end = grid.length - \cf8 1\cf4 ;\cb1 \
 \cb5         \cb1 \
@@ -3532,6 +3441,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Kth Largest Element in Array
 \f1\b0 \cf4 \cb5 \
@@ -3546,8 +3456,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  totalFruit = tree => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 let\cf4  result = \cf8 0\cf4 \cb1 \
+\cb5     \cf6 let\cf4  result = \cf8 0\cf4 \cb1 \
 \cb5     \cf6 if\cf4  (!tree || !tree.length) \cf6 return\cf4  result\cb1 \
 \cb5     \cf6 let\cf4  map = \cf6 new\cf4  \cf9 Map\cf4 ()\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 , j = \cf8 0\cf4 ; j < tree.length; j++) \{\cb1 \
@@ -3563,6 +3472,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Unique Emails
 \f1\b0 \cf4 \cb5 \
@@ -3623,10 +3533,8 @@ Given a list of\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  numUniqueEmails = emails => \{\cb1 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5     \cf6 return\cf4  \cf6 new\cf4  \cf9 Set\cf4 (emails.map((item, index) => \{\cb1 \
+\cb5     \cf6 return\cf4  \cf6 new\cf4  \cf9 Set\cf4 (emails.map((item, index) => \{\cb1 \
 \cb5         \cf6 let\cf4  [name, domain] = item.split(\cf7 "@"\cf4 )\cb1 \
 \cb5         \cf6 let\cf4  [nameNoPlus, namePlus] = name.split(\cf7 "+"\cf4 );\cb1 \
 \cb5         \cf6 let\cf4  nameSimplified = nameNoPlus.split(\cf7 "."\cf4 ).join(\cf7 ""\cf4 )  \cb1 \
@@ -3637,12 +3545,13 @@ Given a list of\'a0
 \cb5 \};\cb1 \
 \cb5 \
 \
+\pard\pardeftab720\sl420\partightenfactor0
 
 \f0\b \cf2 \cb3 // Shuffle Array
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb5 const\cf4  shuffle = (nums, n) => \{\cb1 \
+\cf6 const\cf4  shuffle = (nums, n) => \{\cb1 \
 \cb5     \cf6 let\cf4  res = [nums[\cf8 0\cf4 ], nums[n]];\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i < n; i++) \{\cb1 \
@@ -3660,21 +3569,9 @@ Given a list of\'a0
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb5 const\cf4 \cb5  functionName = () => \{\cb1 \
+\cf6 const\cf4  functionName = () => \{\cb1 \
 \
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \};\
-\
-\pard\pardeftab720\sl420\partightenfactor0
-
-\f0\b \cf2 \cb3 // Coming Soon
-\f1\b0 \cf4 \cb5 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb5 const\cf4 \cb5  functionName = () => \{\cb1 \
-\
-\pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \};\
+\cb5 \};\
 \
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -3682,10 +3579,19 @@ Given a list of\'a0
 \f1\b0 \cf4 \cb5 \
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf6 \cb5 const\cf4 \cb5  functionName = () => \{\cb1 \
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\
 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 \cb5 \};\cb1 \
+
+\f0\b \cf2 \cb3 // Coming Soon
+\f1\b0 \cf4 \cb5 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 const\cf4  functionName = () => \{\cb1 \
+\
+\cb5 \};\cb1 \
 \
 \
 \
