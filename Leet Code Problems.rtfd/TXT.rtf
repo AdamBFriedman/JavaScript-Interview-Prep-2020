@@ -629,7 +629,7 @@ const\cf4  rob = nums => \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 1. Check if str.length === 0 || 1 return false\
 2. Create forLoop (i <= str.length / 2)\
-3. Create ifStatement str.length === 0 &&& str.slice(0,i).repeat(str.length / i) === str //\\\\ return true\
+3. Create ifStatement str.length % i === 0 && str.slice(0, i).repeat(str.length / i) === str //\\\\ return true\
 4. return false
 \f3 \cf12 \cb3 \
 \pard\pardeftab720\partightenfactor0
@@ -651,8 +651,16 @@ const\cf4  rob = nums => \{\cb1 \
 
 \f0\b \cf2 \cb3 // Merge Sort
 \f1\b0 \cf4 \cb5 \
-\
 \pard\pardeftab720\sl420\partightenfactor0
+\cf4 1. Create merge function (arr1, arr2)\
+2. Create sorted = []\
+3. Create whileLoop (arr1.length && arr2.length)\
+4. Create ifStatement (arr1[0] < arr2[0]) sorted.push(arr1.shift()) //\\\\ else sorted.push(arr2.shift())\
+5. return sorted.concat(arr1.slice().concat(arr2.slice()))\
+6. Create mergeSort function (arr)\
+7. Create mid, left, and right variable\
+8. return merge(left, right)\
+\
 \cf6 const\cf4  merge = (arr1, arr2) => \{\cb1 \
 \cb5   \cf6 let\cf4  sorted = [];\cb1 \
 \
