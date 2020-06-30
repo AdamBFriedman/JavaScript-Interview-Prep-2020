@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2513
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
-\f3\fnil\fcharset0 HelveticaNeue;\f4\fnil\fcharset0 HelveticaNeue-Italic;\f5\fnil\fcharset0 HelveticaNeue-Bold;
-\f6\fmodern\fcharset0 Courier;\f7\fnil\fcharset0 Menlo-Italic;\f8\fnil\fcharset0 HelveticaNeue-BoldItalic;
+\f3\fnil\fcharset0 HelveticaNeue;\f4\fmodern\fcharset0 Courier;\f5\fnil\fcharset0 HelveticaNeue-Italic;
+\f6\fnil\fcharset0 HelveticaNeue-Bold;\f7\fnil\fcharset0 Menlo-Italic;\f8\fnil\fcharset0 HelveticaNeue-BoldItalic;
 }
 {\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red255\green255\blue255;\red0\green0\blue0;
 \red255\green255\blue254;\red0\green0\blue255;\red144\green1\blue18;\red19\green120\blue72;\red14\green110\blue109;
@@ -333,7 +333,7 @@ const\cf4  rob = nums => \{\cb1 \
 \f0\b \cf2 \cb3 // Climb Stairs (Recursion/Fibonacci sequence)
 \f1\b0 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
-\cf4 1. Create arr variable\
+\cf4 1. Create arr = [1,2,3]\
 2. Create forLoop(i=3)\
 3. Fibonacci\
 4. Return arr[num-1]\
@@ -350,22 +350,12 @@ const\cf4  rob = nums => \{\cb1 \
 
 \f0\b \cf2 \cb3 // Rotate Image 90deg
 \f1\b0 \cf4 \cb5 \
-\pard\pardeftab720\sa280\partightenfactor0
-
-\f3 \cf12 \cb3 You are given an\'a0
-\f4\i n
-\f3\i0 \'a0x\'a0
-\f4\i n
-\f3\i0 \'a02D matrix representing an image.\
-Rotate the image by 90 degrees (clockwise).\
-\pard\pardeftab720\sa280\partightenfactor0
-
-\f5\b \cf12 Note:
-\f3\b0 \
-You have to rotate the image in-place, which means you have to modify the input 2D matrix directly.\'a0
-\f5\b DO NOT
-\f3\b0 \'a0allocate another 2D matrix and do the rotation.\
 \pard\pardeftab720\sl420\partightenfactor0
+\cf4 1. Create double forLoop (outer: i < grid.length)\
+2. Inner: j < i\
+3. Swap\
+4. Create forOfLoop g of grid g.reverse()
+\f3 \cf12 \cb3 \
 
 \f1 \cf4 \cb5 \
 \cf6 const\cf4  rotate = grid => \{\cb1 \
@@ -474,7 +464,7 @@ You have to rotate the image in-place, which means you have to modify the input 
 \pard\pardeftab720\partightenfactor0
 
 \f3 \cf12 \cb3 Given an integer array\'a0
-\f6 \cf13 \cb14 nums
+\f4 \cf13 \cb14 nums
 \f3 \cf12 \cb3 , find the contiguous subarray\'a0(containing at least one number) which has the largest sum and return its sum.\
 
 \f1 \cf4 \cb5 \
@@ -499,23 +489,23 @@ You have to rotate the image in-place, which means you have to modify the input 
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an array\'a0
-\f6 \cf13 \cb14 nums
+\f4 \cf13 \cb14 nums
 \f3 \cf12 \cb3 \'a0of\'a0
-\f4\i n
+\f5\i n
 \f3\i0 \'a0integers where\'a0
-\f4\i n
+\f5\i n
 \f3\i0 \'a0> 1, \'a0return an array\'a0
-\f6 \cf13 \cb14 output
+\f4 \cf13 \cb14 output
 \f3 \cf12 \cb3 \'a0such that\'a0
-\f6 \cf13 \cb14 output[i]
+\f4 \cf13 \cb14 output[i]
 \f3 \cf12 \cb3 \'a0is equal to the product of all the elements of\'a0
-\f6 \cf13 \cb14 nums
+\f4 \cf13 \cb14 nums
 \f3 \cf12 \cb3 \'a0except\'a0
-\f6 \cf13 \cb14 nums[i]
+\f4 \cf13 \cb14 nums[i]
 \f3 \cf12 \cb3 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -526,14 +516,14 @@ You have to rotate the image in-place, which means you have to modify the input 
 \f1\b0  [24,12,8,6]\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 \cb3 Constraint:
+\f6\b \cf12 \cb3 Constraint:
 \f3\b0 \'a0It's guaranteed that the product of the elements of any prefix or suffix of the array (including the whole array) fits in a 32 bit integer.\
 
-\f5\b Note:\'a0
+\f6\b Note:\'a0
 \f3\b0 Please solve it\'a0
-\f5\b without division
+\f6\b without division
 \f3\b0 \'a0and in O(
-\f4\i n
+\f5\i n
 \f3\i0 ).
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -638,11 +628,11 @@ You have to rotate the image in-place, which means you have to modify the input 
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given the\'a0
-\f6\fs26 \cf13 \cb14 root
+\f4\fs26 \cf13 \cb14 root
 \f3\fs28 \cf12 \cb3 \'a0node of a binary search tree, return the sum of values of all nodes with value between\'a0
-\f6\fs26 \cf13 \cb14 L
+\f4\fs26 \cf13 \cb14 L
 \f3\fs28 \cf12 \cb3 \'a0and\'a0
-\f6\fs26 \cf13 \cb14 R
+\f4\fs26 \cf13 \cb14 R
 \f3\fs28 \cf12 \cb3 \'a0(inclusive).\
 The binary search tree is guaranteed to have unique values.
 \f1 \cf4 \cb5 \
@@ -849,27 +839,27 @@ The binary search tree is guaranteed to have unique values.
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 You are given the array\'a0
-\f6\fs26 \cf13 \cb14 paths
+\f4\fs26 \cf13 \cb14 paths
 \f3\fs28 \cf12 \cb3 , where\'a0
-\f6\fs26 \cf13 \cb14 paths[i] = [cityA
+\f4\fs26 \cf13 \cb14 paths[i] = [cityA
 \fs19\fsmilli9750 i
 \fs26 , cityB
 \fs19\fsmilli9750 i
 \fs26 ]
 \f3\fs28 \cf12 \cb3 \'a0means there\'a0exists a direct path going from\'a0
-\f6\fs26 \cf13 \cb14 cityA
+\f4\fs26 \cf13 \cb14 cityA
 \fs19\fsmilli9750 i
 \f3\fs28 \cf12 \cb3 \'a0to\'a0
-\f6\fs26 \cf13 \cb14 cityB
+\f4\fs26 \cf13 \cb14 cityB
 \fs19\fsmilli9750 i
 \f3\fs28 \cf12 \cb3 .\'a0
-\f4\i Return the destination city, that is, the city without any path outgoing to another city.
+\f5\i Return the destination city, that is, the city without any path outgoing to another city.
 \f3\i0 \
 It is guaranteed that the graph of paths forms a line without any loop, therefore, there will be exactly one destination city.\
 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -897,17 +887,17 @@ It is guaranteed that the graph of paths forms a line without any loop, therefor
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a string containing just the characters\'a0
-\f6\fs26 \cf13 \cb14 '('
+\f4\fs26 \cf13 \cb14 '('
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 ')'
+\f4\fs26 \cf13 \cb14 ')'
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 '\{'
+\f4\fs26 \cf13 \cb14 '\{'
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 '\}'
+\f4\fs26 \cf13 \cb14 '\}'
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 '['
+\f4\fs26 \cf13 \cb14 '['
 \f3\fs28 \cf12 \cb3 \'a0and\'a0
-\f6\fs26 \cf13 \cb14 ']'
+\f4\fs26 \cf13 \cb14 ']'
 \f3\fs28 \cf12 \cb3 , determine if the input string is valid.\
 An input string is valid if:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
@@ -919,7 +909,7 @@ Open brackets must be closed in the correct order.\cb1 \
 \cf12 \cb3 Note that an empty string is\'a0also considered valid.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -958,16 +948,16 @@ Open brackets must be closed in the correct order.\cb1 \
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Say you have an array for which the\'a0
-\f4\i i
+\f5\i i
 \f3\i0\fs21 th
 \fs28 \'a0element is the price of a given stock on day\'a0
-\f4\i i
+\f5\i i
 \f3\i0 .\
 If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit.\
 Note that you cannot sell a stock before you buy one.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1000,20 +990,20 @@ Note that you cannot sell a stock before you buy one.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Say you have an array\'a0
-\f6\fs26 \cf13 \cb14 prices
+\f4\fs26 \cf13 \cb14 prices
 \f3\fs28 \cf12 \cb3 \'a0for which the\'a0
-\f4\i i
+\f5\i i
 \f3\i0\fs21 th
 \fs28 \'a0element is the price of a given stock on day\'a0
-\f4\i i
+\f5\i i
 \f3\i0 .\
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times).\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \'a0You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).\
 
-\f5\b Example 1:
+\f6\b Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1047,7 +1037,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 \f3 \cf12 \cb3 Given a 32-bit signed integer, reverse digits of an integer.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1058,7 +1048,7 @@ Design an algorithm to find the maximum profit. You may complete as many transac
 \f1\b0  321\
 \pard\pardeftab720\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 \
+\f6\b\fs28 \cf12 \cb3 \
 Note:
 \f3\b0 \
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [\uc0\u8722 2
@@ -1087,11 +1077,11 @@ Assume we are dealing with an environment which could only store integers within
 
 \f3\b0 \cf12 Write a function to find the longest common prefix string amongst an array of strings.\
 If there is no common prefix, return an empty string\'a0
-\f6\fs26 \cf13 \cb14 ""
+\f4\fs26 \cf13 \cb14 ""
 \f3\fs28 \cf12 \cb3 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1126,17 +1116,17 @@ If there is no common prefix, return an empty string\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a sorted array\'a0
-\f4\i nums
+\f5\i nums
 \f3\i0 , remove the duplicates\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/In-place_algorithm"}}{\fldrslt 
-\f5\b \cf15 in-place}}\'a0such that each element appear only\'a0
-\f4\i once
+\f6\b \cf15 in-place}}\'a0such that each element appear only\'a0
+\f5\i once
 \f3\i0 \'a0and return the new length.\
 Do not allocate extra space for another array, you must do this by\'a0
-\f5\b modifying the input array\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/In-place_algorithm"}}{\fldrslt \cf15 in-place}}
+\f6\b modifying the input array\'a0{\field{\*\fldinst{HYPERLINK "https://en.wikipedia.org/wiki/In-place_algorithm"}}{\fldrslt \cf15 in-place}}
 \f3\b0 \'a0with O(1) extra memory.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1194,11 +1184,11 @@ It doesn't matter what you leave beyond the returned length.\
 \f3\b0 \cf12 \
 \pard\pardeftab720\sa280\partightenfactor0
 \cf12 Return the index of the first occurrence of needle in haystack, or\'a0
-\f5\b -1
+\f6\b -1
 \f3\b0 \'a0if needle is not part of haystack.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1209,7 +1199,7 @@ It doesn't matter what you leave beyond the returned length.\
 \f1\b0  2\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1247,7 +1237,7 @@ It doesn't matter what you leave beyond the returned length.\
 You may assume no duplicates in the array.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1275,19 +1265,19 @@ You may assume no duplicates in the array.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a string\'a0
-\f4\i s
+\f5\i s
 \f3\i0 \'a0consists of upper/lower-case alphabets and empty space characters\'a0
-\f6\fs26 \cf13 \cb14 ' '
+\f4\fs26 \cf13 \cb14 ' '
 \f3\fs28 \cf12 \cb3 , return the length of last word (last word means the last appearing word if we loop from left to right) in the string.\
 If the last word does not exist, return 0.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \'a0A word is defined as a\'a0
-\f5\b maximal substring
+\f6\b maximal substring
 \f3\b0 \'a0consisting\'a0of non-space characters only.\
 
-\f5\b Example:
+\f6\b Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1311,13 +1301,13 @@ If the last word does not exist, return 0.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a\'a0
-\f5\b non-empty
+\f6\b non-empty
 \f3\b0 \'a0array of digits\'a0representing a non-negative integer, plus one to the integer.\
 The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit.\
 You may assume the integer does not contain any leading zero, except the number 0 itself.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1353,42 +1343,42 @@ You may assume the integer does not contain any leading zero, except the number 
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given two sorted integer arrays\'a0
-\f4\i nums1
+\f5\i nums1
 \f3\i0 \'a0and\'a0
-\f4\i nums2
+\f5\i nums2
 \f3\i0 , merge\'a0
-\f4\i nums2
+\f5\i nums2
 \f3\i0 \'a0into\'a0
-\f4\i nums1
+\f5\i nums1
 \f3\i0 \'a0as one sorted array.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls2\ilvl0\cf12 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 The number of elements initialized in\'a0
-\f4\i nums1
+\f5\i nums1
 \f3\i0 \'a0and\'a0
-\f4\i nums2
+\f5\i nums2
 \f3\i0 \'a0are\'a0
-\f4\i m
+\f5\i m
 \f3\i0 \'a0and\'a0
-\f4\i n
+\f5\i n
 \f3\i0 \'a0respectively.\cb1 \
 \ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 You may assume that\'a0
-\f4\i nums1
+\f5\i nums1
 \f3\i0 \'a0has enough space (size that is greater or equal to\'a0
-\f4\i m
+\f5\i m
 \f3\i0 \'a0+\'a0
-\f4\i n
+\f5\i n
 \f3\i0 ) to hold additional elements from\'a0
-\f4\i nums2
+\f5\i nums2
 \f3\i0 .\cb1 \
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 \cb3 Example:
+\f6\b \cf12 \cb3 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1430,11 +1420,11 @@ nums2 = [2,5,6],       n = 3\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 In a town, there are\'a0
-\f6\fs26 \cf13 \cb14 N
+\f4\fs26 \cf13 \cb14 N
 \f3\fs28 \cf12 \cb3 \'a0people labelled from\'a0
-\f6\fs26 \cf13 \cb14 1
+\f4\fs26 \cf13 \cb14 1
 \f3\fs28 \cf12 \cb3 \'a0to\'a0
-\f6\fs26 \cf13 \cb14 N
+\f4\fs26 \cf13 \cb14 N
 \f3\fs28 \cf12 \cb3 .\'a0 There is a rumor that one of these people is secretly the town judge.\
 If the\'a0town judge exists, then:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
@@ -1446,21 +1436,21 @@ Everybody (except for the town judge) trusts the town judge.\cb1 \
 There is exactly one person that satisfies properties 1 and 2.\cb1 \
 \pard\pardeftab720\sa280\partightenfactor0
 \cf12 \cb3 You are given\'a0
-\f6\fs26 \cf13 \cb14 trust
+\f4\fs26 \cf13 \cb14 trust
 \f3\fs28 \cf12 \cb3 , an array of pairs\'a0
-\f6\fs26 \cf13 \cb14 trust[i] = [a, b]
+\f4\fs26 \cf13 \cb14 trust[i] = [a, b]
 \f3\fs28 \cf12 \cb3 \'a0representing that the person labelled\'a0
-\f6\fs26 \cf13 \cb14 a
+\f4\fs26 \cf13 \cb14 a
 \f3\fs28 \cf12 \cb3 \'a0trusts the person labelled\'a0
-\f6\fs26 \cf13 \cb14 b
+\f4\fs26 \cf13 \cb14 b
 \f3\fs28 \cf12 \cb3 .\
 If the town judge exists and can be identified, return the label of the town judge.\'a0 Otherwise, return\'a0
-\f6\fs26 \cf13 \cb14 -1
+\f4\fs26 \cf13 \cb14 -1
 \f3\fs28 \cf12 \cb3 .\
 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1495,13 +1485,13 @@ If the town judge exists and can be identified, return the label of the town jud
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a\'a0
-\f5\b non-empty
+\f6\b non-empty
 \f3\b0 \'a0array containing\'a0
-\f5\b only positive integers
+\f6\b only positive integers
 \f3\b0 , find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls4\ilvl0\cf12 \kerning1\expnd0\expndtw0 {\listtext	1.	}\expnd0\expndtw0\kerning0
@@ -1512,7 +1502,7 @@ The array size will not exceed 200.\cb1 \
 \cf12 \cb3 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1559,16 +1549,16 @@ Explanation: The array can be partitioned as [1, 5, 5] and [11].\
 For this problem, a height-balanced binary tree is defined as:\
 \pard\pardeftab720\sa280\partightenfactor0
 \cf16 a binary tree in which the left and right subtrees of\'a0
-\f4\i every
+\f5\i every
 \f3\i0 \'a0node differ in height by no more than 1.\cb1 \
 \pard\pardeftab720\sa280\partightenfactor0
 \cf12 \cb3 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 Given the following tree\'a0
-\f6\fs26 \cf13 \cb14 [3,9,20,null,null,15,7]
+\f4\fs26 \cf13 \cb14 [3,9,20,null,null,15,7]
 \f3\fs28 \cf12 \cb3 :\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1580,10 +1570,10 @@ Given the following tree\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3\fs28 \cf12 \cb3 Return true.\cb1 \uc0\u8232 \u8232 
-\f5\b \cb3 Example 2:
+\f6\b \cb3 Example 2:
 \f3\b0 \
 Given the following tree\'a0
-\f6\fs26 \cf13 \cb14 [1,2,2,3,3,null,null,4,4]
+\f4\fs26 \cf13 \cb14 [1,2,2,3,3,null,null,4,4]
 \f3\fs28 \cf12 \cb3 :\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1639,7 +1629,7 @@ Given the following tree\'a0
 Two binary trees are considered the same if they are structurally identical and the nodes have the same value.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1655,7 +1645,7 @@ Two binary trees are considered the same if they are structurally identical and 
 \f1\b0  true\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1705,7 +1695,7 @@ Two binary trees are considered the same if they are structurally identical and 
 
 \f3 \cf12 \cb3 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).\
 For example, this binary tree\'a0
-\f6\fs26 \cf13 \cb14 [1,2,2,3,4,4,3]
+\f4\fs26 \cf13 \cb14 [1,2,2,3,4,4,3]
 \f3\fs28 \cf12 \cb3 \'a0is symmetric:\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1718,7 +1708,7 @@ For example, this binary tree\'a0
 
 \f3\fs28 \cf12 \cb3 \'a0\
 But the following\'a0
-\f6\fs26 \cf13 \cb14 [1,2,2,null,3,null,3]
+\f4\fs26 \cf13 \cb14 [1,2,2,null,3,null,3]
 \f3\fs28 \cf12 \cb3 \'a0is not:\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1732,7 +1722,7 @@ But the following\'a0
 \f3\fs28 \cf12 \cb3 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Follow up:
+\f6\b \cf12 Follow up:
 \f3\b0 \'a0Solve it both recursively and iteratively.\
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -1767,11 +1757,11 @@ But the following\'a0
 
 \f3\b0 \cf12 Given an array where elements are sorted in ascending order, convert it to a height balanced BST.\
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of\'a0
-\f4\i every
+\f5\i every
 \f3\i0 \'a0node never differ by more than 1.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1822,13 +1812,13 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 \f3 \cf12 \cb3 Given a binary tree and a sum, determine if the tree has a root-to-leaf path such that adding up all the values along the path equals the given sum.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \'a0A leaf is a node with no children.\
 
-\f5\b Example:
+\f6\b Example:
 \f3\b0 \
 Given the below binary tree and\'a0
-\f6\fs26 \cf13 \cb14 sum = 22
+\f4\fs26 \cf13 \cb14 sum = 22
 \f3\fs28 \cf12 \cb3 ,\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1856,7 +1846,7 @@ Given the below binary tree and\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3\fs28 \cf12 \cb3 return true, as there exist a root-to-leaf path\'a0
-\f6\fs26 \cf13 \cb14 5->4->11->2
+\f4\fs26 \cf13 \cb14 5->4->11->2
 \f3\fs28 \cf12 \cb3 \'a0which sum is 22.\
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -1918,17 +1908,17 @@ Given the below binary tree and\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a\'a0
-\f5\b non-empty
+\f6\b non-empty
 \f3\b0 \'a0array of integers, every element appears\'a0
-\f4\i twice
+\f5\i twice
 \f3\i0 \'a0except for one. Find that single one.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Note:
+\f6\b \cf12 Note:
 \f3\b0 \
 Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?\
 
-\f5\b Example 1:
+\f6\b Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -1960,12 +1950,12 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Write a program that outputs the string representation of numbers from 1 to\'a0
-\f4\i n
+\f5\i n
 \f3\i0 .\
 But for multiples of three it should output \'93Fizz\'94 instead of the number and for the multiples of five output \'93Buzz\'94. For numbers which are multiples of both three and five output \'93FizzBuzz\'94.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2043,7 +2033,7 @@ Return:\
 \f3 \cf12 \cb3 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2104,18 +2094,18 @@ Return:\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an array of size\'a0
-\f4\i n
+\f5\i n
 \f3\i0 , find the majority element. The majority element is the element that appears\'a0
-\f5\b more than
+\f6\b more than
 \f3\b0 \'a0
 \f1\fs26 \cf13 \cb14 \uc0\u8970 
-\f6  n/2 
+\f4  n/2 
 \f1 \uc0\u8971 
 \f3\fs28 \cf12 \cb3 \'a0times.\
 You may assume that the array is non-empty and the majority element always exist in the array.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2151,13 +2141,13 @@ You may assume that the array is non-empty and the majority element always exist
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an array\'a0
-\f6\fs26 \cf13 \cb14 nums
+\f4\fs26 \cf13 \cb14 nums
 \f3\fs28 \cf12 \cb3 , write a function to move all\'a0
-\f6\fs26 \cf13 \cb14 0
+\f4\fs26 \cf13 \cb14 0
 \f3\fs28 \cf12 \cb3 's to the end of it while maintaining the relative order of the non-zero elements.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2223,19 +2213,19 @@ You may assume that the array is non-empty and the majority element always exist
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Roman numerals are represented by seven different symbols:\'a0
-\f6\fs26 \cf13 \cb14 I
+\f4\fs26 \cf13 \cb14 I
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 V
+\f4\fs26 \cf13 \cb14 V
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 X
+\f4\fs26 \cf13 \cb14 X
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 L
+\f4\fs26 \cf13 \cb14 L
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 C
+\f4\fs26 \cf13 \cb14 C
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 D
+\f4\fs26 \cf13 \cb14 D
 \f3\fs28 \cf12 \cb3 \'a0and\'a0
-\f6\fs26 \cf13 \cb14 M
+\f4\fs26 \cf13 \cb14 M
 \f3\fs28 \cf12 \cb3 .\
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2253,59 +2243,59 @@ M             1000\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3\fs28 \cf12 \cb3 For example,\'a0two is written as\'a0
-\f6\fs26 \cf13 \cb14 II
+\f4\fs26 \cf13 \cb14 II
 \f3\fs28 \cf12 \cb3 \'a0in Roman numeral, just two one's added together. Twelve is written as,\'a0
-\f6\fs26 \cf13 \cb14 XII
+\f4\fs26 \cf13 \cb14 XII
 \f3\fs28 \cf12 \cb3 , which is simply\'a0
-\f6\fs26 \cf13 \cb14 X
+\f4\fs26 \cf13 \cb14 X
 \f3\fs28 \cf12 \cb3 \'a0+\'a0
-\f6\fs26 \cf13 \cb14 II
+\f4\fs26 \cf13 \cb14 II
 \f3\fs28 \cf12 \cb3 . The number twenty seven is written as\'a0
-\f6\fs26 \cf13 \cb14 XXVII
+\f4\fs26 \cf13 \cb14 XXVII
 \f3\fs28 \cf12 \cb3 , which is\'a0
-\f6\fs26 \cf13 \cb14 XX
+\f4\fs26 \cf13 \cb14 XX
 \f3\fs28 \cf12 \cb3 \'a0+\'a0
-\f6\fs26 \cf13 \cb14 V
+\f4\fs26 \cf13 \cb14 V
 \f3\fs28 \cf12 \cb3 \'a0+\'a0
-\f6\fs26 \cf13 \cb14 II
+\f4\fs26 \cf13 \cb14 II
 \f3\fs28 \cf12 \cb3 .\
 Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not\'a0
-\f6\fs26 \cf13 \cb14 IIII
+\f4\fs26 \cf13 \cb14 IIII
 \f3\fs28 \cf12 \cb3 . Instead, the number four is written as\'a0
-\f6\fs26 \cf13 \cb14 IV
+\f4\fs26 \cf13 \cb14 IV
 \f3\fs28 \cf12 \cb3 . Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as\'a0
-\f6\fs26 \cf13 \cb14 IX
+\f4\fs26 \cf13 \cb14 IX
 \f3\fs28 \cf12 \cb3 . There are six instances where subtraction is used:\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
 \ls5\ilvl0
-\f6\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f4\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 I
 \f3\fs28 \cf12 \cb3 \'a0can be placed before\'a0
-\f6\fs26 \cf13 \cb14 V
+\f4\fs26 \cf13 \cb14 V
 \f3\fs28 \cf12 \cb3 \'a0(5) and\'a0
-\f6\fs26 \cf13 \cb14 X
+\f4\fs26 \cf13 \cb14 X
 \f3\fs28 \cf12 \cb3 \'a0(10) to make 4 and 9.\'a0\cb1 \
 \ls5\ilvl0
-\f6\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f4\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 X
 \f3\fs28 \cf12 \cb3 \'a0can be placed before\'a0
-\f6\fs26 \cf13 \cb14 L
+\f4\fs26 \cf13 \cb14 L
 \f3\fs28 \cf12 \cb3 \'a0(50) and\'a0
-\f6\fs26 \cf13 \cb14 C
+\f4\fs26 \cf13 \cb14 C
 \f3\fs28 \cf12 \cb3 \'a0(100) to make 40 and 90.\'a0\cb1 \
 \ls5\ilvl0
-\f6\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f4\fs26 \cf13 \cb14 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 C
 \f3\fs28 \cf12 \cb3 \'a0can be placed before\'a0
-\f6\fs26 \cf13 \cb14 D
+\f4\fs26 \cf13 \cb14 D
 \f3\fs28 \cf12 \cb3 \'a0(500) and\'a0
-\f6\fs26 \cf13 \cb14 M
+\f4\fs26 \cf13 \cb14 M
 \f3\fs28 \cf12 \cb3 \'a0(1000) to make 400 and 900.\cb1 \
 \pard\pardeftab720\sa280\partightenfactor0
 \cf12 \cb3 Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2364,7 +2354,7 @@ For example:\
     ...\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 1:
+\f6\b\fs28 \cf12 \cb3 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2375,7 +2365,7 @@ For example:\
 \f1\b0  1\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2407,7 +2397,7 @@ For example:\
 \f3 \cf12 \cb3 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Examples:
+\f6\b \cf12 Examples:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2436,9 +2426,9 @@ return 2.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a non-negative integer\'a0
-\f4\i numRows
+\f5\i numRows
 \f3\i0 , generate the first\'a0
-\f4\i numRows
+\f5\i numRows
 \f3\i0 \'a0of Pascal's triangle.\
 \pard\pardeftab720\sa280\partightenfactor0
 \cf12 \cb1 \uc0\u8232 
@@ -2446,7 +2436,7 @@ return 2.\
 \fs28 \
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2491,13 +2481,13 @@ return 2.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an array containing\'a0
-\f4\i n
+\f5\i n
 \f3\i0 \'a0distinct numbers taken from\'a0
-\f6\fs26 \cf13 \cb14 0, 1, 2, ..., n
+\f4\fs26 \cf13 \cb14 0, 1, 2, ..., n
 \f3\fs28 \cf12 \cb3 , find the one that is missing from the array.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2508,7 +2498,7 @@ return 2.\
 \f1\b0  2\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2538,7 +2528,7 @@ return 2.\
 \f3 \cf12 \cb3 Given two arrays, write a function to compute their intersection.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2549,7 +2539,7 @@ return 2.\
 \f1\b0 [2,2]\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2585,19 +2575,19 @@ return 2.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Write an algorithm to determine if a number\'a0
-\f6\fs26 \cf13 \cb14 n
+\f4\fs26 \cf13 \cb14 n
 \f3\fs28 \cf12 \cb3 \'a0is "happy".\
 A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits, and repeat the process until the number equals 1 (where it will stay), or it\'a0
-\f5\b loops endlessly in a cycle
+\f6\b loops endlessly in a cycle
 \f3\b0 \'a0which does not include 1. Those numbers for which this process\'a0
-\f5\b ends in 1
+\f6\b ends in 1
 \f3\b0 \'a0are happy numbers.\
 Return True if\'a0
-\f6\fs26 \cf13 \cb14 n
+\f4\fs26 \cf13 \cb14 n
 \f3\fs28 \cf12 \cb3 \'a0is a happy number, and False if not.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:\'a0
+\f6\b \cf12 Example:\'a0
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2659,7 +2649,7 @@ Return True if\'a0
 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2868,13 +2858,13 @@ Return True if\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an integer\'a0
-\f4\i n
+\f5\i n
 \f3\i0 , return the number of trailing zeroes in\'a0
-\f4\i n
+\f5\i n
 \f3\i0 !.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2888,7 +2878,7 @@ Return True if\'a0
 \f1\b0 \'a03! = 6, no trailing zero.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2916,13 +2906,13 @@ Return True if\'a0
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given an array, rotate the array to the right by\'a0
-\f4\i k
+\f5\i k
 \f3\i0 \'a0steps, where\'a0
-\f4\i k
+\f5\i k
 \f3\i0 \'a0is non-negative.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -2939,7 +2929,7 @@ rotate 2 steps to the right: [6,7,1,2,3,4,5]\
 rotate 3 steps to the right: [5,6,7,1,2,3,4]\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3012,16 +3002,16 @@ rotate 2 steps to the right: [3,99,-1,-100]\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given two\'a0strings\'a0
-\f6\fs26 \cf13 \cb14 S
+\f4\fs26 \cf13 \cb14 S
 \f3\fs28 \cf12 \cb3 \'a0and\'a0
-\f6\fs26 \cf13 \cb14 T
+\f4\fs26 \cf13 \cb14 T
 \f3\fs28 \cf12 \cb3 ,\'a0return if they are equal when both are typed into empty text editors.\'a0
-\f6\fs26 \cf13 \cb14 #
+\f4\fs26 \cf13 \cb14 #
 \f3\fs28 \cf12 \cb3 \'a0means a backspace character.\
 Note that after\'a0backspacing an empty text, the text will continue empty.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3055,17 +3045,17 @@ Note that after\'a0backspacing an empty text, the text will continue empty.\
 
 \f3\b0 \cf12 A peak element is an element that is greater than its neighbors.\
 Given an input array\'a0
-\f6\fs26 \cf13 \cb14 nums
+\f4\fs26 \cf13 \cb14 nums
 \f3\fs28 \cf12 \cb3 , where\'a0
-\f6\fs26 \cf13 \cb14 nums[i] \uc0\u8800  nums[i+1]
+\f4\fs26 \cf13 \cb14 nums[i] \uc0\u8800  nums[i+1]
 \f3\fs28 \cf12 \cb3 , find a peak element and return its index.\
 The array may contain multiple peaks, in that case return the index to any one of the peaks is fine.\
 You may imagine that\'a0
-\f6\fs26 \cf13 \cb14 nums[-1] = nums[n] = -\uc0\u8734 
+\f4\fs26 \cf13 \cb14 nums[-1] = nums[n] = -\uc0\u8734 
 \f3\fs28 \cf12 \cb3 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3081,7 +3071,7 @@ You may imagine that\'a0
 \f1\b0  3 is a peak element and your function should return the index number 2.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3098,7 +3088,7 @@ You may imagine that\'a0
 \'a0            or index number 5 where the peak element is 6.\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Follow up:
+\f6\b\fs28 \cf12 \cb3 Follow up:
 \f3\b0 \'a0Your solution should be in logarithmic complexity.
 \f1 \cf4 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
@@ -3146,7 +3136,7 @@ Find the letter that was added in\'a0
 \f3\i0\b0 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example:
+\f6\b \cf12 Example:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3188,7 +3178,7 @@ If there isn't any rectangle, return 0.\
 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3199,7 +3189,7 @@ If there isn't any rectangle, return 0.\
 \f1\b0 4\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b\fs28 \cf12 \cb3 Example 2:
+\f6\b\fs28 \cf12 \cb3 Example 2:
 \f3\b0 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3278,29 +3268,29 @@ If there isn't any rectangle, return 0.\
 \pard\pardeftab720\sa280\partightenfactor0
 
 \f3 \cf12 \cb3 Given a binary matrix\'a0
-\f6\fs26 \cf13 \cb14 A
+\f4\fs26 \cf13 \cb14 A
 \f3\fs28 \cf12 \cb3 , we want to flip the image horizontally, then invert it, and return the resulting image.\
 To flip an image horizontally means that each row of the image is reversed.\'a0 For example, flipping\'a0
-\f6\fs26 \cf13 \cb14 [1, 1, 0]
+\f4\fs26 \cf13 \cb14 [1, 1, 0]
 \f3\fs28 \cf12 \cb3 \'a0horizontally results in\'a0
-\f6\fs26 \cf13 \cb14 [0, 1, 1]
+\f4\fs26 \cf13 \cb14 [0, 1, 1]
 \f3\fs28 \cf12 \cb3 .\
 To invert an image means\'a0that each\'a0
-\f6\fs26 \cf13 \cb14 0
+\f4\fs26 \cf13 \cb14 0
 \f3\fs28 \cf12 \cb3 \'a0is replaced by\'a0
-\f6\fs26 \cf13 \cb14 1
+\f4\fs26 \cf13 \cb14 1
 \f3\fs28 \cf12 \cb3 , and each\'a0
-\f6\fs26 \cf13 \cb14 1
+\f4\fs26 \cf13 \cb14 1
 \f3\fs28 \cf12 \cb3 \'a0is replaced by\'a0
-\f6\fs26 \cf13 \cb14 0
+\f4\fs26 \cf13 \cb14 0
 \f3\fs28 \cf12 \cb3 .\'a0For example, inverting\'a0
-\f6\fs26 \cf13 \cb14 [0, 1, 1]
+\f4\fs26 \cf13 \cb14 [0, 1, 1]
 \f3\fs28 \cf12 \cb3 \'a0results in\'a0
-\f6\fs26 \cf13 \cb14 [1, 0, 0]
+\f4\fs26 \cf13 \cb14 [1, 0, 0]
 \f3\fs28 \cf12 \cb3 .\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -3374,45 +3364,45 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 
 \f3 \cf12 \cb3 Every email consists of a local name and a domain name, separated by the @ sign.\
 For example, in\'a0
-\f6\fs26 \cf13 \cb14 alice@leetcode.com
+\f4\fs26 \cf13 \cb14 alice@leetcode.com
 \f3\fs28 \cf12 \cb3 ,\'a0
-\f6\fs26 \cf13 \cb14 alice
+\f4\fs26 \cf13 \cb14 alice
 \f3\fs28 \cf12 \cb3 \'a0is the local name, and\'a0
-\f6\fs26 \cf13 \cb14 leetcode.com
+\f4\fs26 \cf13 \cb14 leetcode.com
 \f3\fs28 \cf12 \cb3 \'a0is the domain name.\
 Besides lowercase letters, these emails may contain\'a0
-\f6\fs26 \cf13 \cb14 '.'
+\f4\fs26 \cf13 \cb14 '.'
 \f3\fs28 \cf12 \cb3 s or\'a0
-\f6\fs26 \cf13 \cb14 '+'
+\f4\fs26 \cf13 \cb14 '+'
 \f3\fs28 \cf12 \cb3 s.\
 If you add periods (
-\f6\fs26 \cf13 \cb14 '.'
+\f4\fs26 \cf13 \cb14 '.'
 \f3\fs28 \cf12 \cb3 ) between some characters in the\'a0
-\f5\b local name
+\f6\b local name
 \f3\b0 \'a0part of an email address, mail sent there will be forwarded to the same address without dots in the local name.\'a0 For example,\'a0
-\f6\fs26 \cf13 \cb14 "alice.z@leetcode.com"
+\f4\fs26 \cf13 \cb14 "alice.z@leetcode.com"
 \f3\fs28 \cf12 \cb3 \'a0and\'a0
-\f6\fs26 \cf13 \cb14 "alicez@leetcode.com"
+\f4\fs26 \cf13 \cb14 "alicez@leetcode.com"
 \f3\fs28 \cf12 \cb3 \'a0forward to the same email address.\'a0 (Note that this rule does not apply for domain names.)\
 If you add a plus (
-\f6\fs26 \cf13 \cb14 '+'
+\f4\fs26 \cf13 \cb14 '+'
 \f3\fs28 \cf12 \cb3 ) in the\'a0
-\f5\b local name
+\f6\b local name
 \f3\b0 , everything after the first plus sign will be\'a0
-\f5\b ignored
+\f6\b ignored
 \f3\b0 . This allows certain emails to be filtered, for example\'a0
-\f6\fs26 \cf13 \cb14 m.y+name@email.com
+\f4\fs26 \cf13 \cb14 m.y+name@email.com
 \f3\fs28 \cf12 \cb3 \'a0will be forwarded to\'a0
-\f6\fs26 \cf13 \cb14 my@email.com
+\f4\fs26 \cf13 \cb14 my@email.com
 \f3\fs28 \cf12 \cb3 .\'a0 (Again, this rule does not apply for domain names.)\
 It is possible to use both of these rules at the same time.\
 Given a list of\'a0
-\f6\fs26 \cf13 \cb14 emails
+\f4\fs26 \cf13 \cb14 emails
 \f3\fs28 \cf12 \cb3 , we send one email to each address in the list.\'a0\'a0How many different addresses actually receive mails?\'a0\
 \'a0\
 \pard\pardeftab720\sa280\partightenfactor0
 
-\f5\b \cf12 Example 1:
+\f6\b \cf12 Example 1:
 \f3\b0 \cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
