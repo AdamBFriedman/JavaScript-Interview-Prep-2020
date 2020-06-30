@@ -18,7 +18,7 @@
 {\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid401\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid5}
 {\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
-\margl1440\margr1440\vieww15900\viewh17140\viewkind0
+\margl1440\margr1440\vieww33500\viewh19880\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -147,25 +147,24 @@ Output: [0, 3]\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \f1 \cf6 \cb5 \expnd0\expndtw0\kerning0
-var\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
-\
-\cb5     \cf6 return\cf4  \cf6 function\cf4 (n) \{\cb1 \
-\cb5         \cf6 let\cf4  left = \cf8 1\cf4 ;\cb1 \
-\cb5         \cf6 let\cf4  right = n;\cb1 \
-\cb5         \cf6 while\cf4 (left <= right)\{\cb1 \
-\cb5             \cf6 let\cf4  mid = left + \cf9 Math\cf4 .floor((right - left) / \cf8 2\cf4 );\cb1 \
-\cb5             \cf6 if\cf4 (isBadVersion(mid))\{\cb1 \
-\cb5                 \cf6 if\cf4  ((mid-\cf8 1\cf4  > \cf8 0\cf4  && !isBadVersion(mid-\cf8 1\cf4 )) || (mid === \cf8 1\cf4 ))\{\cb1 \
-\cb5                     \cf6 return\cf4  mid;\cb1 \
-\cb5                 \}\cf6 else\cf4 \{\cb1 \
-\cb5                     right = mid - \cf8 1\cf4 ;\cb1 \
-\cb5                 \}\cb1 \
-\cb5             \}\cf6 else\cf4 \{\cb1 \
-\cb5                 left = mid + \cf8 1\cf4 ;\cb1 \
-\cb5             \}\cb1 \
-\cb5         \}\cb1 \
-\cb5         \cf6 return\cf4  -\cf8 1\cf4 ;\cb1 \
-\cb5     \};\cb1 \
+const\cf4  solution = \cf6 function\cf4 (isBadVersion) \{\cb1 \
+  \cf6 \cb5 return\cf4  \cf6 function\cf4 (n) \{\cb1 \
+\cb5 	\cf6 let\cf4  left = \cf8 1\cf4 ;\cb1 \
+\cb5 	\cf6 let\cf4  right = n;\cb1 \
+\cb5 	\cf6 while\cf4 (left <= right)\{\cb1 \
+\cb5 	  \cf6 let\cf4  mid = left + \cf9 Math\cf4 .floor((right - left) / \cf8 2\cf4 );\cb1 \
+\cb5 	  \cf6 if\cf4 (isBadVersion(mid))\{\cb1 \
+\cb5 		\cf6 if\cf4  ((mid-\cf8 1\cf4  > \cf8 0\cf4  && !isBadVersion(mid-\cf8 1\cf4 )) || (mid === \cf8 1\cf4 ))\{\cb1 \
+\cb5 		  \cf6 return\cf4  mid;\cb1 \
+\cb5 		\} \cf6 else \cf4 \{\cb1 \
+\cb5 		  right = mid - \cf8 1\cf4 ;\cb1 \
+\cb5 		\}\cb1 \
+\cb5  		\} \cf6 else \cf4 \{\cb1 \
+\cb5  		  left = mid + \cf8 1\cf4 ;\cb1 \
+\cb5 		\}\cb1 \
+\cb5 	  \}\cb1 \
+\cb5 	\cf6 return\cf4  -\cf8 1\cf4 ;\cb1 \
+\cb5   \};\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \

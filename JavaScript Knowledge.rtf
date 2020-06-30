@@ -38,17 +38,19 @@ slice() - Returns a portion of the array
 \f0\b (does not modify)
 \f1\b0  Array.slice(start, end)\
 splice() - Modifies the array		Array.splice(idx, howMany, item1, item2, \'85)\
-filter() filters items out of an array (does NOT create a new array)\
+filter() filters items out of an array (
+\f0\b does not create a new array
+\f1\b0 )\
 map() create a new array from current array\
 find() find and return a single object in an array\
 	let match = cities.find(item => \{\
-		if (city === item) return true\
+	    if (city === item) return true\
 	\})\
 some() returns a true/false statement based on if at least one element in the array passes the condition\
 every() returns a true/false statement based on if all elements pass the condition\
 reduce() \
 includes() items.include(2) // return boolean\
-for in - iterate over the properties of an object (keys) or to iterate over index values of an array/string\
+for in - iterate over the properties of an object (keys) or iterate over index values of an array/string\
 for of - Iterate over the values in maps, sets, arrays or strings\
 concat() used to join two arrays:\
 	let array1 = ["Cecilie", "Lone"];\
