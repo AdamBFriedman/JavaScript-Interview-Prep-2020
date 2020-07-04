@@ -2962,23 +2962,23 @@ You may imagine that\'a0
 \pard\pardeftab720\sl420\partightenfactor0
 \cf4 \cb5 \
 \cf6 const\cf4  findPeakElement = nums => \{\cb1 \
-\cb5   \cf6 let\cf4  left = \cf8 0\cf4 ;\cb1 \
-\cb5   \cf6 let\cf4  right = nums.length - \cf8 1\cf4 ;\cb1 \
+\cb5   \cf6 let\cf4  start = \cf8 0\cf4 ;\cb1 \
+\cb5   \cf6 let\cf4  end = nums.length - \cf8 1\cf4 ;\cb1 \
 \
-\cb5   \cf6 while\cf4 (left + \cf8 1 \cf4 < right) \{\cb1 \
-\cb5     \cf6 let\cf4  middle = \cf9 Math\cf4 .floor(left + (right-left)/\cf8 2\cf4 );\cb1 \
+\cb5   \cf6 while\cf4 (start + \cf8 1 \cf4 < end) \{\cb1 \
+\cb5     \cf6 let\cf4  middle = \cf9 Math\cf4 .floor(start + (end - start)/\cf8 2\cf4 );\cb1 \
 \
 \cb5     \cf6 if\cf4  (nums[middle] > nums[middle - \cf8 1\cf4 ] \cb1 \
 \cb5       && nums[middle] > nums[middle + \cf8 1\cf4 ] ) \cb1 \
 \cb5     \{\cb1 \
 \cb5       \cf6 return\cf4  middle;\cb1 \
 \cb5     \} \cf6 else\cf4  \cf6 if\cf4  (nums[middle] > nums[middle - \cf8 1\cf4 ]) \{\cb1 \
-\cb5       left = middle;\cb1 \
+\cb5       start = middle;\cb1 \
 \cb5     \} \cf6 else\cf4  \{\cb1 \
-\cb5       right = middle;\cb1 \
+\cb5       end = middle;\cb1 \
 \cb5     \}\cb1 \
 \cb5   \}\cb1 \
-\cb5   \cf6 return\cf4  nums[left] > nums[right] ? left : right;\cb1 \
+\cb5   \cf6 return\cf4  nums[start] > nums[end] ? start : end;\cb1 \
 \cb5 \};\cb1 \
 \cb5 \
 \pard\pardeftab720\sl420\partightenfactor0
