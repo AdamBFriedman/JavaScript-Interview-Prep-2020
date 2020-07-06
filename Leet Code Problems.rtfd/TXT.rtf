@@ -3020,16 +3020,16 @@ Explanation:\
 \pard\pardeftab720\sl420\partightenfactor0
 
 \fs28 \cf4 \cb5 \
-\cf6 const\cf4  findTheDifference = (s, t) => \{\cb1 \
-\cb5     \cf6 let\cf4  sortedS = s.split(\cf7 ''\cf4 ).sort();\cb1 \
-\cb5     \cf6 let\cf4  sortedT = t.split(\cf7 ''\cf4 ).sort();\cb1 \
+\cf6 const\cf4  findTheDifference = (str1, str2) => \{\cb1 \
+\cb5     \cf6 let\cf4  sortedStr1 = str1.split(\cf7 ''\cf4 ).sort();\cb1 \
+\cb5     \cf6 let\cf4  sortedStr2 = str2.split(\cf7 ''\cf4 ).sort();\cb1 \
 \cb5     \cf6 let\cf4  i;\cb1 \
 \cb5     \cf6 for\cf4 (i = \cf8 0\cf4 ; i < sortedS.length; i++) \{\cb1 \
-\cb5         \cf6 if\cf4 (sortedT[i] !== sortedS[i]) \{\cb1 \
-\cb5             \cf6 return\cf4  sortedT[i];\cb1 \
+\cb5         \cf6 if\cf4 (sortedStr2[i] !== sortedStr1[i]) \{\cb1 \
+\cb5             \cf6 return\cf4  sortedStr2[i];\cb1 \
 \cb5         \}\cb1 \
 \cb5     \}\cb1 \
-\cb5     \cf6 return\cf4  sortedT[i];\cb1 \
+\cb5     \cf6 return\cf4  sortedStr2[i];\cb1 \
 \cb5 \};\cb1 \
  \
 \
@@ -3175,7 +3175,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 
 \fs28 \cf4 \cb5 \
 \cf6 const\cf4  flipAndInvertImage = grid => \{\cb1 \
-\cb5     \cf6 for\cf4  (\cf6 let\cf4  i=\cf8 0\cf4 ; i<grid.length; i++) \{\cb1 \
+\cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 0\cf4 ; i < grid.length; i++) \{\cb1 \
 \cb5         \cf6 let\cf4  start = \cf8 0\cf4 ;\cb1 \
 \cb5         \cf6 let\cf4  end = grid.length - \cf8 1\cf4 ;\cb1 \
 \cb5         \cb1 \
@@ -3185,7 +3185,7 @@ Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]\
 \cb5             grid[i][end--] = temp\cb1 \
 \cb5         \}\cb1 \
 \cb5         \cb1 \
-\cb5         \cf6 for\cf4  (\cf6 let\cf4  j=\cf8 0\cf4 ; j<grid[i].length; j++) \{\cb1 \
+\cb5         \cf6 for\cf4  (\cf6 let\cf4  j = \cf8 0\cf4 ; j < grid[i].length; j++) \{\cb1 \
 \cb5             grid[i][j] = grid[i][j] === \cf8 1\cf4  ? \cf8 0\cf4  : \cf8 1\cf4 \cb1 \
 \cb5         \}\cb1 \
 \cb5     \}\cb1 \
@@ -3308,7 +3308,7 @@ Given a list of\'a0
 \cb5     \cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  i = \cf8 1\cf4 ; i < n; i++) \{\cb1 \
 \cb5         res.push(nums[i]);\cb1 \
-\cb5         res.push(nums[i+n]);\cb1 \
+\cb5         res.push(nums[i + n]);\cb1 \
 \cb5     \}\cb1 \
 \cb5     \cb1 \
 \cb5     \cf6 return\cf4  res;\cb1 \
