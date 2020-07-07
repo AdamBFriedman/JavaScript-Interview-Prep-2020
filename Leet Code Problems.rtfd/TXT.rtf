@@ -16,7 +16,7 @@
 {\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid201\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid3}
 {\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
-\margl1440\margr1440\vieww33400\viewh17740\viewkind0
+\margl1440\margr1440\vieww33700\viewh17740\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
 
@@ -158,12 +158,12 @@ Output: [0, 3]\
 \cb5 	\cf6 const\cf4  mid2 = mid * mid;\cb1 \
 \cb5 	  \cf6 if\cf4  (num === mid2) \{\cb1 \
 \cb5 		\cf6 return\cf4  mid;\cb1 \
-\cb5 	  \} \
-	  \cf6 else\cf4  \cf6 if\cf4  (num < mid2) \{\cb1 \
-\cb5 		end = mid - \cf8 1\cf4 ;\cb1 \
-\cb5 	  \} \
-	  \cf6 else\cf4  \{\cb1 \
+\cb5 	  \}  \
+	  \cf6 else if\cf4  (num > mid2) \{\cb1 \
 \cb5 		start = mid + \cf8 1\cf4 ;\cb1 \
+\cb5 	  \}\
+	  \cf6 else\cf4  (num < mid2) \{\cb1 \
+\cb5 		end = mid - \cf8 1\cf4 ;\cb1 \
 \cb5 	  \}\cb1 \
 \cb5   \}\
 \cb1   \cf6 \cb5 return\cf4  end;\cb1 \
@@ -396,13 +396,13 @@ const\cf4  rob = nums => \{\cb1 \
 \pard\pardeftab720\sl420\partightenfactor0
 \cf6 const\cf4  largestSquare = grid => \{\cb1 \
 \cb5     \cf6 let\cf4  height = grid.length;\cb1 \
-\cb5     \cf6 let\cf4  width = height ? grid[\cf8 0\cf4 ].length : \cf8 0\cf4 ;\cb1 \
+\cb5     \cf6 let\cf4  width = grid[\cf8 0\cf4 ].length;\cb1 \
 \cb5     \cf6 let\cf4  max = \cf8 0\cf4 ;\cb1 \
 \cb5     \cf6 for\cf4  (\cf6 let\cf4  row = \cf8 0\cf4 ; row < height; row++) \{\cb1 \
 \cb5         \cf6 for\cf4  (\cf6 let\cf4  col = \cf8 0\cf4 ; col < width; col++) \{\cb1 \
-\cb5             \cf6 let\cf4  left = col === \cf8 0\cf4  ? \cf8 0\cf4  : grid[row][col - \cf8 1\cf4 ];\cb1 \
-\cb5             \cf6 let\cf4  up = row === \cf8 0\cf4  ? \cf8 0\cf4  : grid[row - \cf8 1\cf4 ][col];\cb1 \
-\cb5             \cf6 let\cf4  back = row && col ? grid[row - \cf8 1\cf4 ][col - \cf8 1\cf4 ] : \cf8 0\cf4 ;\cb1 \
+\cb5             \cf6 let\cf4  left = grid[row][col - \cf8 1\cf4 ];\cb1 \
+\cb5             \cf6 let\cf4  up = grid[row - \cf8 1\cf4 ][col];\cb1 \
+\cb5             \cf6 let\cf4  back = grid[row - \cf8 1\cf4 ][col - \cf8 1\cf4 ];\cb1 \
 \cb5             \cf6 if\cf4  (grid[row][col] == \cf8 1\cf4 ) \{\cb1 \
 \cb5                 grid[row][col] = \cf9 \cb5 Math\cf4 \cb5 .min(left, up, back) + grid[row][col] * \cf8 1\cf4 ;\cb1 \
 \cb5             \} \cf6 else\cf4  \{\cb1 \
