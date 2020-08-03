@@ -3,8 +3,8 @@
 \f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 HelveticaNeue-Bold;\f5\fnil\fcharset0 Monaco;
 \f6\fnil\fcharset0 Menlo-Bold;\f7\fnil\fcharset0 Georgia;\f8\fnil\fcharset0 TrebuchetMS;
 \f9\fnil\fcharset0 AppleSymbols;\f10\fnil\fcharset0 TrebuchetMS-Bold;\f11\fswiss\fcharset0 ArialMT;
-\f12\froman\fcharset0 Times-Roman;\f13\fswiss\fcharset0 Arial-BoldMT;\f14\fswiss\fcharset0 Arial-ItalicMT;
-}
+\f12\froman\fcharset0 Times-Roman;\f13\fnil\fcharset0 Menlo-Italic;\f14\fswiss\fcharset0 Arial-BoldMT;
+\f15\fswiss\fcharset0 Arial-ItalicMT;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red255\green255\blue255;\red66\green1\blue120;
 \red38\green38\blue38;\red0\green0\blue255;\red0\green0\blue0;\red19\green120\blue72;\red251\green2\blue7;
 \red144\green1\blue18;\red154\green154\blue154;\red32\green35\blue35;\red27\green29\blue31;\red0\green0\blue0;
@@ -27,7 +27,7 @@
 {\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid501\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}
 {\list\listtemplateid7\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid601\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid7}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}{\listoverride\listid7\listoverridecount0\ls7}}
-\margl1440\margr1440\vieww14780\viewh17440\viewkind0
+\margl1440\margr1440\vieww10540\viewh16380\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f0\b\fs28 \cf2 \cb3 //Popular Array Methods
@@ -554,6 +554,45 @@ Iterating over all cells in a matrix of size n by m: O(nm)\
 \'a0\'a0\}\
 \'a0\'a0document.write(\cf10 `<table>\cf7 $\{table\}\cf10 </table>`\cf7 )\
 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f6\b\fs36 \cf9 // Create Table from 2D Array
+\f3\b0\fs24 \cf7 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf7 \
+function twoD(rows, cols) \{\
+\
+let grid = new Array(rows);\
+let num = 0;\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f13\i \cf7 for
+\f3\i0  (let i=0; i<rows; i++) \{\
+  grid[i] = []\
+  
+\f13\i for
+\f3\i0  (let j=1; j<= cols; j++) \{\
+    grid[i][j-1] = j + num\
+  \}\
+  num += cols\
+\}\
+let table = document.createElement('table');\
+
+\f13\i for
+\f3\i0  (let row of grid) \{\
+  table.insertRow();\
+  
+\f13\i for
+\f3\i0  (let cell of row) \{\
+    let newCell = table.rows[table.rows.length - 1].insertCell();\
+    newCell.textContent = cell;\
+  \}\
+\}\
+document.body.appendChild(table);\
+\}
+\fs28 \
 \pard\pardeftab720\sl400\partightenfactor0
 
 \f11 \cf7 \
@@ -633,7 +672,7 @@ Mitigation Strategies - 1)  Unique form tokens generated on every POST, PUT, DEL
 \
 \pard\pardeftab720\sl400\partightenfactor0
 
-\f13\b \cf7 How do I prevent XSS (cross-site scripting)?
+\f14\b \cf7 How do I prevent XSS (cross-site scripting)?
 \f11\b0 \
 1. Encode data on output\
 2.  Validate input on arrival\
@@ -741,7 +780,7 @@ arr.slice(-1)\
 \cb16   \cf6 for\cf7  (\cf6 let\cf7  i = sortedCoins.length; i >= \cf8 0\cf7 ; i--) \{\cb1 \
 \cb16     \cf6 if\cf7  (sortedCoins[i] <= amount) \cf6 return\cf7  sortedCoins[i]\cb1 \
 \cb16   \}\cb1 \
-\cb16   \cf6 throw\cf7  \cf6 new\cf7  \cf17 \cb16 Error\cf7 \cb16 (\cf10 \cb16 'No coin is divisble by that amount.'\cf7 \cb16 )\cb1 \
+\cb16   \cf6 throw\cf7  \cf6 new\cf7  \cf17 \cb16 Error\cf7 \cb16 (\cf10 \cb16 'No coin is divisible by that amount.'\cf7 \cb16 )\cb1 \
 \cb16 \}\cb1 \
 \pard\pardeftab720\sl400\partightenfactor0
 
@@ -942,29 +981,29 @@ Targeted by hackers.\cb1 \
 //Use STAR method for behavioral questions\
 \pard\pardeftab720\sl744\partightenfactor0
 \cf29 The STAR format stands for\'a0
-\f14\i Situation
+\f15\i Situation
 \f11\i0 ,\'a0
-\f14\i Task
+\f15\i Task
 \f11\i0 ,\'a0
-\f14\i Action
+\f15\i Action
 \f11\i0 ,\'a0
-\f14\i Result
+\f15\i Result
 \f11\i0 :\
 \pard\tx220\tx720\pardeftab720\li720\fi-720\sl768\partightenfactor0
 \ls7\ilvl0
-\f13\b \cf29 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f14\b \cf29 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 S
 \f11\b0 ituation: An event, project, or challenge faced\
 \ls7\ilvl0
-\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 T
 \f11\b0 ask: Your responsibilities and assignments for the situation\
 \ls7\ilvl0
-\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 A
 \f11\b0 ction: Steps or procedure taken to relieve or rectify situation\
 \ls7\ilvl0
-\f13\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\f14\b \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
 R
 \f11\b0 esult: Results of actions taken.
 \f1 \
@@ -988,7 +1027,7 @@ Maps\
 Binary Heaps\
 Trie (Prefix Tree)\
 Graphs
-\f13\b \cf2 \kerning1\expnd0\expndtw0 \
+\f14\b \cf2 \kerning1\expnd0\expndtw0 \
 \
 
 \f11\b0 \cf14 \expnd0\expndtw0\kerning0

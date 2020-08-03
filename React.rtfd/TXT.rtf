@@ -1,0 +1,615 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red154\green154\blue154;\red255\green255\blue254;\red0\green0\blue0;
+\red19\green120\blue72;\red0\green0\blue255;\red14\green110\blue109;\red191\green28\blue37;\red127\green127\blue127;
+\red251\green2\blue7;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c66667\c66667\c66667;\cssrgb\c100000\c100000\c99608;\cssrgb\c0\c0\c0;
+\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c0\c100000;\cssrgb\c0\c50196\c50196;\cssrgb\c80392\c19216\c19216;\cssrgb\c57046\c57047\c57046;
+\cssrgb\c100000\c14913\c0;\cssrgb\c1680\c19835\c100000;}
+\margl1440\margr1440\vieww33100\viewh17440\viewkind0
+\deftab720
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+// React Cheat Sheet\cf4 \cb1 \
+\
+\cf2 \cb3 // Install React\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf5 \cb3 1\cf4 .  Open terminal and type \cf6 in\cf4 : npm i -g create-react-app\cb1 \
+\cf5 \cb3 2\cf4 .  \cf7 \cb3 OPTIONAL\cf4 \cb3  - \cf6 in\cf4  \cf7 \cb3 VSCode\cf4 \cb3  install \cf7 \cb3 Simple\cf4 \cb3  \cf7 \cb3 React\cf4 \cb3  \cf7 \cb3 Snippets\cf4 \cb3  and \cf7 \cb3 Prettier\cf4 \cb1 \
+\cf5 \cb3 3\cf4 .  In terminal type \cf6 in\cf4 : create-react-app nameOfProject\cb1 \
+\cf5 \cb3 4\cf4 .  You will be prompted to change directories and open your app \cf6 with\cf4  npm start\cb1 \
+\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Modern JS features you use in React\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf5 \cb3 1\cf4 . Classes\cb1 \
+\cf5 \cb3 2\cf4 . JSX (\cf7 \cb3 JavaScript\cf4 \cb3  \cf7 \cb3 XML\cf4 \cb3 )\cb1 \
+\cf5 \cb3 3\cf4 .  Babel takes our \cf7 \cb3 JSX\cf4 \cb3  and converts it to \cf7 \cb3 JavaScript\cf4 \cb3  code that our browsers will understand\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Basic React index.js\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3 import\cf4  \cf7 \cb3 React\cf4 \cb3  \cf6 from\cf4  \cf8 \cb3 \'91\cf4 \cb3 react\cf8 \cb3 \'92\cf4 \cb3 ;\cb1 \
+\cf6 \cb3 import\cf4  \cf7 \cb3 ReactDOM\cf4 \cb3  \cf6 from\cf4  \cf8 \cb3 \'91\cf4 \cb3 react-dom\cf8 \cb3 \'92\cf4 \cb3 ;\cb1 \
+\
+\cf6 \cb3 const\cf4  element = <h1>\cf7 \cb3 Hello\cf4 \cb3  \cf7 \cb3 World\cf4 \cb3 </h1>;\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf7 \cb3 ReactDOM\cf4 \cb3 .render(element, document.getElementById(\cf8 \cb3 \'91\cf4 \cb3 root\cf8 \cb3 \'92\cf4 \cb3 ));\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Importing Bootstrap CSS\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf5 \cb3 1\cf4 . npm install bootstrap\cb1 \
+\cf5 \cb3 2\cf4 . In index.js, add the following: \cb1 \
+\cb3 \'a0\'a0\cf6 import\cf4  \cf8 \cb3 \'91\cf4 \cb3 bootstrap/dist/css/bootstrap.css\cf8 \cb3 \'92\cf4 \cb3 ;\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Create a component\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf5 \cb3 1\cf4 . Create \cf8 \cb3 \'93\cf4 \cb3 components\cf8 \cb3 \'94\cf4 \cb3  folder \cf6 in\cf4  src root folder\cb1 \
+\cf5 \cb3 2\cf4 . Create file \cf6 in\cf4  components called \cf8 \cb3 \'93\cf4 \cb3 componentName.jsx\cf8 \cb3 \'94\cf4 \cb1 \
+\cf5 \cb3 3\cf4 . \cf7 \cb3 React\cf4 \cb3  \cf7 \cb3 Snippet\cf4 \cb3  shortcut: \cf8 \cb3 \'93\cf4 \cb3 imrc\cf8 \cb3 \'94\cf4 \cb3  will produce the following:\cb1 \
+\cb3 \'a0\'a0\cf6 import\cf4  \cf7 \cb3 React\cf4 \cb3 , \{ \cf7 \cb3 Component\cf4 \cb3  \} \cf6 from\cf4  \cf8 \cb3 \'91\cf4 \cb3 react\cf8 \cb3 \'92\cf4 \cb3 ;\cb1 \
+\cf5 \cb3 4\cf4 . \cf7 \cb3 React\cf4 \cb3  \cf7 \cb3 Snippet\cf4 \cb3  shortcut: \cf8 \cb3 \'93\cf4 \cb3 cc\cf8 \cb3 \'94\cf4 \cb3  will produce the following:\cb1 \
+\cb3 \'a0\'a0\cf6 class\cf4  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\cb3 \'a0\'a0  state = \{\}\cb1 \
+\cb3 \'a0\'a0  render() \{\cb1 \
+\cb3 \'a0\'a0    \cf6 return\cf4  ()\cb1 \
+\cb3 \'a0\'a0  \}\cb1 \
+\cb3 \'a0\'a0\}\cb1 \
+\cb3 \'a0\'a0\cb1 \
+\cb3 \'a0\'a0\cf6 export\cf4  \cf6 default\cf4  ;\cb1 \
+\cf5 \cb3 5\cf4 .  The above snippet will not give the name \cf6 of\cf4  the component so add it where the multi-cursor tells you to.  \cf7 \cb3 Always\cf4 \cb3  capitalize the name ie \cf6 class\cf4  \cf7 \cb3 Counter\cf8 \cb3 \'85\cf4 \cb3  \cf6 export\cf4  \cf6 default\cf4  \cf7 \cb3 Counter\cf4 \cb3 ;\cb1 \
+\cf5 \cb3 6\cf4 .  Go to index.js and add the following:\cb1 \
+\cb3 \'a0\'a0\cf6 import\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 from\cf4  \cf8 \cb3 \'91\cf4 \cb3 ./components/counter\cf8 \cb3 \'92\cf4 \cb3 ;\cb1 \
+\cb3 \'a0\'a0\cf7 \cb3 ReactDOM\cf4 \cb3 .render(<\cf7 \cb3 Counter\cf4 \cb3  />, document.getElementById(\cf8 \cb3 \'91\cf4 \cb3 root\cf8 \cb3 \'92\cf4 \cb3 ));\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Embedding Expressions\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 Babel cannot read a \cf6 return\cf4  statement \cf6 with\cf4  two elements ie \cf6 return\cf4  <h1></h1><h2></h2>\cb1 \
+\cb3 You need to wrap it \cf6 in\cf4  one element (\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 )\cb1 \
+\cb3 \'a0\'a0\cf6 class\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\cb3 \'a0\'a0  state = \{\}\cb1 \
+\cb3 \'a0\'a0  render() \{\cb1 \
+\cb3 \'a0\'a0    \cf6 return\cf4  (\cb1 \
+\cb3 \'a0\'a0      <\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cb3 \'a0\'a0\'a0\'a0<h1>\cf7 \cb3 Hello\cf4 \cb3  \cf7 \cb3 World\cf4 \cb3 </h1>\cb1 \
+\cb3 \'a0\'a0\'a0\'a0<h2>\cf7 \cb3 Goodbye\cf4 \cb3  \cf7 \cb3 World\cf4 \cb3 </h2>\cb1 \
+\cb3 \'a0\'a0      </\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cb3 \'a0\'a0    );\cb1 \
+\cb3 \'a0\'a0  \}\cb1 \
+\cb3 \'a0\'a0\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Using variables from state property\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 You use curly braces \{\} to write any javascript code\cb1 \
+\cf6 \cb3 class\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  count: \cf5 0\cf4 ;\cb1 \
+\cb3     \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   render() \{\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       <\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0\cf4 \cb3 <span>\{\cf6 this\cf4 .state.count\}</span>\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0\cf4 \cb3 <button>\cf7 \cb3 Increment\cf4 \cb3 </button>\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       </\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 \}\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Object destructuring\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 formatCount() \{\cb1 \
+\cb3   \cf6 return\cf4  \cf6 this\cf4 .state.count === \cf5 0\cf4  ? \cf8 \cb3 \'91\cf7 \cb3 Zero\cf8 \cb3 \'92\cf4 \cb3  : \cf6 this\cf4 .state.count;\cb1 \
+\cb3 \}\cb1 \
+\cb3 The above code can be changed to the following:\cb1 \
+\cb3 formatCount() \{\cb1 \
+\cb3   \cf6 const\cf4  \{ count \} = \cf6 this\cf4 .state;\cb1 \
+\cb3   \cf6 return\cf4  count === \cf5 0\cf4  ? \cf8 \cb3 \'91\cf7 \cb3 Zero\cf8 \cb3 \'92\cf4 \cb3  : count;\cb1 \
+\cb3 \}\cb1 \
+\cb3 We would use the formatCount() like \cf6 this\cf4 :\cb1 \
+\cb3   render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       <\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0		\cf4 \cb3 <span>\{\cf6 this\cf4 .formatCount()\}</span>\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0		\cf4 \cb3 <button>\cf7 \cb3 Increment\cf4 \cb3 </button>\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       </\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 To take the formatCount() even further, we can use \cf7 \cb3 JSX\cf4 \cb3 :\cb1 \
+\cb3   formatCount() \{\cb1 \
+\cb3    \cf6 const\cf4  \{ count \} = \cf6 this\cf4 .state;\cb1 \
+\cb3    \cf6 return\cf4  count === \cf5 0\cf4  ? <h1>\cf7 \cb3 Zero\cf4 \cb3 </h1> : count;\cb1 \
+\cb3 \}\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Setting attributes\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3   class\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  count: \cf5 0\cf4 ,\
+    imageUrl: \'91https://picsum.photos/200\'92\cb1 \
+\cb3     \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   render() \{\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       <\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\
+		<img src=\{this.state.imageUrl\} alt=\'93\'94 />\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0		\cf4 \cb3 <span>\{\cf6 this\cf4 .state.count\}</span>\cb1 \
+\cf8 \cb3 \'a0\'a0\'a0\'a0		\cf4 \cb3 <button>\cf7 \cb3 Increment\cf4 \cb3 </button>\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3       </\cf7 \cb3 React\cf4 \cb3 .\cf7 \cb3 Fragment\cf4 \cb3 >\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // CSS class in React\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 <button className=\cf8 \cb3 \'93\cf4 \cb3 btn btn-secondary>\cf7 \cb3 Increment\cf4 \cb3 </button>\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Adding styles\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 styles = \{\cb1 \
+\cb3   fontSize: \cf5 30\cf4 ,\
+\cb1 \
+\cb3   fontWeight: \cf8 \cb3 \'91\cf4 \cb3 bold\cf8 \cb3 \'92\cf4 \cb1 \
+\cb3 \}\cb1 \
+\cb3 <span style = \{\cf6 this\cf4 .styles\}>\cf7 \cb3 Hello\cf4 \cb3 </span>\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf2 \cb3 // Inline styling (we use double curly brackets \{\{\}\} )\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 <h1 style = \{\{ fontSize: \cf5 30\cf4 , fontWeight: \cf8 \cb3 \'91\cf4 \cb3 bold\cf8 \cb3 \'92\cf4 \cb3  \}\}>\cf7 \cb3 Hello\cf4 \cb3 </h1>\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Rendering classes dynamically\cf4 \cb3 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb1 let classes = \'93badge m-2 badge-\'93\
+classes += this.state.count === 0 ? \'93warning\'94 : \'93primary\'94;\
+\cb3 <span style = \{\cf6 classes\cf4 \}>\cf7 \cb3 Hello\cf4 \cb3 </span>\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Refactor in React\cf4 \cb3 \
+If you highlight the first two lines in the above code and then right click, you will see an option called \'93refactor\'94.  This will turn the above into the following method:\
+	\cf6 let\cf4  classes = \cf6 this\cf4 .newMethod();\
+	<span style = \{\cf6 classes\cf4 \}>\cf7 \cb3 Hello\cf4 \cb3 </span>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0newMethod() \{\cb1 \
+\cb3 \'a0\'a0  \cf6 let\cf4  classes = \cf8 \cb3 \'93\cf4 \cb3 badge m-\cf5 2\cf4  badge-\cf8 \cb3 \'93\cf4 \cb1 \
+\cb3 \'a0\'a0  classes += \cf6 this\cf4 .state.count === \cf5 0\cf4  ? \cf8 \cb3 \'93\cf4 \cb3 warning\cf8 \cb3 \'94\cf4 \cb3  : \cf8 \cb3 \'93\cf4 \cb3 primary\cf8 \cb3 \'94\cf4 \cb3 ;\cb1 \
+\cb3 \'a0\'a0\}\
+	\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // You can simplify the above code by the following:\cf4 \
+	\cb3 getBadgeClasses() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  \cf6 let\cf4  classes = \cf8 \cb3 \'93\cf4 \cb3 badge m-\cf5 2\cf4  badge-\cf8 \cb3 \'93\cf4 \cb1 \
+\cb3 \'a0\'a0  classes += \cf6 this\cf4 .state.count === \cf5 0\cf4  ? \cf8 \cb3 \'93\cf4 \cb3 warning\cf8 \cb3 \'94\cf4 \cb3  : \cf8 \cb3 \'93\cf4 \cb3 primary\cf8 \cb3 \'94\cf4 \cb3 ;\cb1 \
+\cb3 \'a0\'a0  \}\
+	\'85 <span style = \{\cf6 this.getBadgeClasses()\cf4 \}>\cf7 \cb3 Hello\cf4 \cb3 </span>\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Render lists\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   count: \cf5 0\cf4 ,\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3     \cf7 \cb3 Tags\cf4 \cb3 : [\cf8 \cb3 \'93\cf7 \cb3 Tag1\cf8 \cb3 \'94\cf4 \cb3 , \cf8 \cb3 \'93\cf7 \cb3 Tag2\cf8 \cb3 \'94\cf4 \cb3 , \cf8 \cb3 \'93\cf7 \cb3 Tag3\cf8 \cb3 \'94\cf4 \cb3 ]\cb1 \
+\cb3     \};\cb1 \
+\
+\cb3 	render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\cb1 \
+\cf8 \cb3 		\cf4 \cb3 <ul>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  \{ \cf6 this\cf4 .state.tags.map(tag => <li key=\{tag\}>\{tag\}</li>) \}\cb1 \
+\cb3 \'a0\'a0		</ul>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\cb1 \
+\}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Conditional rendering\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 renderTags() \{\cb1 \
+\cb3  \cf6 if\cf4  (\cf6 this\cf4 .state.tags.length === \cf5 0\cf4 ) \cf6 return\cf4  \cf6 null\cf4 ;\cb1 \
+\cb3  \cf6 return\cf4  <ul> \{ \cf6 this\cf4 .state.tags.map(tag => <li key=\{tag\}>\{tag\}</li>) \} </ul>\cb1 \
+\cb3 \}\
+\
+render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\cb1 \
+\cf8 \cb3 		\cf4 \cb3 <div>\{\cf6 this\cf4 .renderTags()\}</div>\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\
+\
+**You can also do the following without a helper function:\
+	render() \{\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     \cf6 return\cf4  (\
+		\{\cf6 this\cf4 .state.tags.length === \cf5 0\cf4  && \cf8 \cb3 \'93\cf4 \cb3 Create tag!\cf8 \cb3 \'94\cf4 \cb3 \}\cb1 \
+\cf8 \cb3 		\cf4 \cb3 <div>\{\cf6 this\cf4 .renderTags()\}</div>\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3     );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Handle Events\cf4 \cb3 \
+handleIncrement() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3   console.log(\cf8 \cb3 \'93\cf7 \cb3 Clicked\cf4 \cb3 !\cf8 \cb3 \'94\cf4 \cb3 );\cb1 \
+\cb3 \}\cb1 \
+\
+\cb3 <button\cb1 \
+\cb3   onClick=\{\cf6 this\cf4 .handleIncrement\}\cb1 \
+\cb3   className=\cf8 \cb3 \'93\cf4 \cb3 btn btn-secondary\cf8 \cb3 \'94\cf4 \cb1 \
+\cb3 >\cb1 \
+\cb3   \cf7 \cb3 Increment\cf4 \cb1 \
+\cb3 </button>\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Binding Event Handlers\cf4 \cb3 \
+state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3   \cf4 \cb3 count: \cf5 0\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \};\
+\
+\cf6 constructor\cf4 () \{\cb1 \
+\cb3   \cf6 super\cf4 ();\cb1 \
+\cb3   \cf6 this\cf4 .handleIncrement = \cf6 this\cf4 .handleIncrement.bind(\cf6 this\cf4 );\cb1 \
+\cb3 \}\cb1 \
+\
+\cb3 handleIncrement() \{\cb1 \
+\cb3   console.log(\cf6 this\cf4 .state);\cb1 \
+\cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Binding Event Handlers with Arrow function because arrow functions don\'92t bind the this keyword, they inherit it\cf4 \cb3 \
+state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3   \cf4 \cb3 count: \cf5 0\cf4 \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \};\cb1 \
+\
+\cb3 handleIncrement = () => \{\cb1 \
+\cb3   console.log(\cf6 this\cf4 .state);\cb1 \
+\cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Updating State (this.setState())\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 handleIncrement = () => \{\cb1 \
+\cb3   \cf6 this\cf4 .setState(\{ count: \cf6 this\cf4 .state.count + \cf5 1\cf4  \});\cb1 \
+\cb3 \}\cb1 \
+\cb3 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Passing Event Arguments\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 handleIncrement = product => \{\
+  console.log(product)\cb1 \
+\cb3   \cf6 this\cf4 .setState(\{ count: \cf6 this\cf4 .state.count + \cf5 1\cf4  \});\cb1 \
+\cb3 \}\
+\
+doHandleIncrement = () => \{\cb1 \
+\cb3   \cf6 this\cf4 .handleIncrement(\{ id: \cf5 1\cf4  \});\cb1 \
+\cb3 \}\
+\cb1 \
+\cb3 <button\cb1 \
+\cb3   onClick=\{\cf6 this\cf4 .doHandleIncrement\}\cb1 \
+\cb3   className=\cf8 \cb3 \'93\cf4 \cb3 btn btn-secondary\cf8 \cb3 \'94\cf4 \cb1 \
+\cb3 >\cb1 \
+\cb3   \cf7 \cb3 Increment\cf4 \cb1 \
+\cb3 </button>\
+\
+** A better solution is to remove the doHandleIncrement() and use an inline arrow function\
+handleIncrement = product => \{\
+  console.log(product)\cb1 \
+\cb3   \cf6 this\cf4 .setState(\{ count: \cf6 this\cf4 .state.count + \cf5 1\cf4  \});\cb1 \
+\cb3 \}\
+\
+doHandleIncrement = () => \{\cb1 \
+\cb3   \cf6 this\cf4 .handleIncrement(\{ id: \cf5 1\cf4  \});\cb1 \
+\cb3 \}\
+\cb1 \
+\cb3 <button\cb1 \
+\cb3   onClick=\{ () => \cf6 this\cf4 .handleIncrement(product)\cf6  \cf4 \}\cb1 \
+\cb3   className=\cf8 \cb3 \'93\cf4 \cb3 btn btn-secondary\cf8 \cb3 \'94\cf4 \cb1 \
+\cb3 >\cb1 \
+\cb3   \cf7 \cb3 Increment\cf4 \cb1 \
+\cb3 </button>\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Composing Components\cf4 \cb3 \
+React is made up of a tree of components\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 import\cf4  \cf7 \cb3 React\cf4 \cb3 , \{ \cf7 \cb3 Component\cf4 \cb3  \} \cf6 from\cf4  \cf8 \cb3 \'93\cf4 \cb3 react\cf8 \cb3 \'94\cf4 \cb3 ;\cb1 \
+\cf6 \cb3 import\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 from\cf4  \cf8 \cb3 \'93\cf4 \cb3 ./counter\cf8 \cb3 \'94\cf4 \cb3 ;\cb1 \
+\
+\cf6 \cb3 class\cf4  \cf7 \cb3 Counters\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 state = \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0counter: [\cb1 \
+\cb3 \'a0\'a0\'a0\'a0\{ id: \cf5 1\cf4 , value: \cf5 0\cf4  \},\
+	\{ id: \cf5 2\cf4 , value: \cf5 0\cf4  \},\
+	\{ id: \cf5 3\cf4 , value: \cf5 0\cf4  \},\
+	\{ id: \cf5 4\cf4 , value: \cf5 0\cf4  \}\cb1 \
+\cb3 \'a0\'a0  ]\cb1 \
+\cb3     \};\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 render() \{\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \cf6 return\cf4  (\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 	  <div>\cb1 \
+\cb3 		\{\cf6 this\cf4 .state.counters.map(counter => (<\cf7 \cb3 Counter\cf4 \cb3  key=\{counter.id\} />)\}\cb1 \
+\cb3 	  </div>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 \}\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \}\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Passing data to components\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 In Counter.jsx, change the state to the following:\
+  state = \{\cb1 \
+\cb3 \'a0\'a0count:\cf6 this\cf4 .props.value\cb1 \
+\cb3   \}\
+Add this to Counters.jsx\
+<div>\cb1 \
+\cb3   \{\cf6 this\cf4 .state.counters.map(counter => (\cb1 \
+\cb3 	<\cf7 \cb3 Counter\cf4 \cb3  key=\{counter.id\} value=\{counter.value\} selected=\{\cf6 true\cf4 \} />\cb1 \
+\cb3   )\}\cb1 \
+\cb3 </div>\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Passing Children\cf4 \cb3 \
+Sometimes you want to pass children to a component.  In Counters.jsx:\
+<\cf7 \cb3 Counter\cf4 \cb3  key=\{counter.id\} value=\{counter.value\} selected=\{\cf6 true\cf4 \}>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3   <h4>\cf7 \cb3 Title\cf4 \cb3 </h4>\cb1 \
+\cb3 </\cf7 \cb3 Counter\cf4 \cb3 >\
+In Counter.jsx, you can display the children like this:\
+  \{\cf6 this\cf4 .props.children\} \cf9 \cb1 // This will display \'93Title\'94 from above\
+\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Props vs State\cf4 \
+Props includes data that we give to a component\
+State includes data that is local/private to that component\
+Props are read-only, you can\'92t modify it \
+\
+\cf9 // Raising and Handling Events\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 The component that owns a piece of the state, should be the one modifying it\
+Let\'92s say we want to add a delete button to our Counter component that deletes itself.  The state it would affect is in the Counters component so we would raise the event in <Counter /> with onDelete and then handle the event in <Counters /> with handleDelete()\
+\
+In <Counters />, add the following method:\
+  \cb3 handleDelete = () => \{\cb1 \
+\cb3 \'a0\'a0console.log(\cf8 \cb3 \'91\cf7 \cb3 Event\cf4 \cb3  \cf7 \cb3 Handler\cf4 \cb3  \cf7 \cb3 Called\cf8 \cb3 \'92\cf4 \cb3 );\cb1 \
+\cb3   \}\cb1 \
+Then update the counter component inside of <Counters /> like this:\
+  \cb3 render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \cf6 return\cf4  (\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 	  <div>\cb1 \
+\cb3 		\{\cf6 this\cf4 .state.counters.map(counter => (<\cf7 \cb3 Counter\cf4 \cb3  key=\{counter.id\} value=\{counter.value\} onDelete=\{this.handleDelete\} />)\}\cb1 \
+\cb3 	  </div>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 \}\
+Go back to <Counter /> and add your delete button like this:\
+  <button onClick=\{\cf6 this\cf4 .props.onDelete\} className=\cf8 \cb3 \'93\cf4 \cb3 btn btn-primary\cf8 \cb3 \'94\cf4 \cb3 >\cf7 \cb3 Delete\cf4 \cb3 </button>\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Updating State\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3   handleDelete = (counterId) => \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0  \cf6 \cb3 const\cf4  counters = \cf6 this\cf4 .state.counters.filter(c => c.id !== counterId);\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3     \cf6 this\cf4 .setState(\{ counters \});\cb1 \
+\cb3   \}\cb1 \
+\cb3 \
+  \cf9 \cb3 // Go back to <Counter /> and update your button:\cf4 \cb3 \
+  <button onClick=\{() => \cf6 this\cf4 .props.onDelete(\cf6 this\cf4 .props.id)\}>\cf7 \cb3 Delete\cf4 \cb3 </button> \cb1 \
+\cb3 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Single Source of Truth (Removing the Local State)\cf4 \cb3 \
+1. Remove state property from <Counter />\
+2. Remove handleIncrement method (it was updating state so no need for it) \
+3. Our current Increment button has onClick=\{this.handleIncrement\} but we just removed it so we will change it to the following:\
+	onClick=\{() => this.props.onIncrement(this.props.counter)\}\
+4. Remove any other \'93this.state\'94 and replace with this.props.counter\
+\
+// Go back to <Counters />\
+1. Add handleIncrement (which we removed above):\
+  handleIncrement = counter => \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 \'a0\'a0  \cf6 const\cf4  counters = [\cf8 \cb3 \'85\cf6 \cb3 this\cf4 .state.counters];\cb1 \
+\cb3 \'a0\'a0  \cf6 const\cf4  index = counters.indexOf(counter);\cb1 \
+\cb3 \'a0\'a0  counters[index] = \{ \cf8 \cb3 \'85\cf4 \cb3 counter \};\cb1 \
+\cb3 \'a0\'a0  counters[index].value++;\cb1 \
+\cb3 \'a0\'a0  \cf6 this\cf4 .setState(\{ counters \});\cb1 \
+\cb3 \'a0\'a0\}\cb1 \
+\cb3 \
+2. Go to render method and update <Counter /> with handleIncrement:\
+	render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   \cf6 return\cf4  (\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 	  <div>\cb1 \
+\cb3 		\{\cf6 this\cf4 .state.counters.map(counter => (<\cf7 \cb3 Counter\cf4 \cb3  key=\{counter.id\} value=\{counter.value\} onDelete=\{this.handleDelete\} onIncrement=\{this.handleIncrement\} />)\}\cb1 \
+\cb3 	  </div>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 \'a0\'a0\cf4 \cb3   );\cb1 \
+\cf8 \cb3 \'a0\'a0\cf4 \cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Lifting State Up\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 In index.js, we\'92re currently rendering <Counters /> but we want to have a larger tree that looks like this:\
+			<App />\
+			  /\\\
+		<Nav /> <Counters />\
+					\\\
+				 <Counter />\
+\
+The goal is to pass state from <Counters /> to <Nav /> so we want to \'93lift the state up\'94 to the <App />\
+\
+1. In <Counters />, remove the state property and other methods and paste them into <App />\
+2. In <App />, we\'92re rendering <Counters /> but we need to pass what we just pasted from step 1 as props to send to its children:\
+	<\cf7 \cb3 Counters\cf4 \cb1 \
+\cb3 \'a0\'a0    onReset=\{\cf6 this\cf4 .handleReset\}\cb1 \
+\cb3 \'a0\'a0    onIncrement=\{\cf6 this\cf4 .handleIncrement\}\cb1 \
+\cb3 \'a0\'a0    onDelete=\{\cf6 this\cf4 .handleDelete\}\cb1 \
+\cb3 	/>\cb1 \
+3. Back in <Counters />, change reset button\'92s onClick method from onClick=\{this.handleReset\} to:\
+	onClick=\{this.props.onReset\}\
+4. Do this for any of the old methods that need to be updated\
+5. Still in <App />, change any \'93this.state\'94 to \'93this.props\'94\
+6. Back in <App />, add a new property to <Counters />:\
+	\cb3 <\cf7 \cb3 Counters\
+	  \cf4 \cb3 counters=\{\cf6 this\cf4 .state.counters\}\cb1 \
+\cb3 \'a0\'a0    onReset=\{\cf6 this\cf4 .handleReset\}\cb1 \
+\cb3 \'a0\'a0    onIncrement=\{\cf6 this\cf4 .handleIncrement\}\cb1 \
+\cb3 \'a0\'a0    onDelete=\{\cf6 this\cf4 .handleDelete\}\cb1 \
+\cb3 	/>\
+7. Still in <App />, pass the counters to the <Nav />:\
+	<\cf7 \cb3 NavBar\cf4 \cb1 \
+\cb3 \'a0\'a0  totalCounters=\{\cf6 this\cf4 .state.counters.filter(c => c.value > \cf5 0\cf4 ).length\}\cb1 \
+\cb3 	/>\cb1 \
+\cb3 \
+8. Go to our new <NavBar /> we created and display the counters like this:\
+	<nav \cf8 \cb3 \'85\cf4 \cb3  >\cb1 \
+\cb3 \'a0\'a0  \{\cf6 this\cf4 .props.totalCounters\}\cb1 \
+\cb3 	</nav>\cb1 \
+\cb3 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Stateless Functional Components\cf4 \cb3 \
+For example, in our <Nav />, we aren\'92t using the state property.  We can rewrite the component from a Class to a Function like this (note: we only have access to props in Class components. In functional components, we pass props as a parameter):\
+  \cf6 const\cf4  \cf7 \cb3 NavBar\cf4 \cb3  = (props) => \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 	\cf6 \cb3 return\cf4  (\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 	  <nav \cf8 \cb3 \'85\cf4 \cb3  >\cb1 \
+\cb3 	  \{props.totalCounters\}\cb1 \
+\cb3 	  </nav>\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf8 \cb3 	\cf4 \cb3 );\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3   \};\
+\
+\cf6 export\cf4  \cf6 default\cf4  \cf7 \cb3 NavBar\cf4 \cb3 ;\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Destructuring Arguments\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3 <\cf7 \cb3 Counters\cf4 \cb1 \
+\cb3   onIncrement=\{\cf6 this\cf4 .props.handleIncrement\}\cb1 \
+\cb3   onDelete=\{\cf6 this\cf4 .props.handleDelete\}\cb1 \
+\cb3 /> \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3   //The above can be rewritten with object destructuring:\cf4 \cb3 \
+\
+render() \{\cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb3   \cf6 const\cf4  \{ counters, onReset, onDelete, onIncrement \} = \cf6 this\cf4 .props;\cb1 \
+\
+\cb3   \cf6 return\cf4  (\cb1 \
+\cb3 \'a0\'a0<\cf7 \cb3 Counters\cf4 \cb1 \
+\cb3 \'a0\'a0  onIncrement=\{handleIncrement\}\cb1 \
+\cb3 \'a0\'a0  onDelete=\{handleDelete\}\cb1 \
+\cb3 \'a0\'a0/> \cb1 \
+\cb3   );\cb1 \
+\cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // Lifecycle Hooks\cf4 \cb3 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf4 \cb1 Lifecycle hooks allow us to hook into a certain moments during the lifecycle of a component and do something\
+1. Mount phase has three lifecycle hooks: constructor, render, and componentDidMount\
+2. Update (when state or props change) phase has two lifecycle hooks: render, componentDidUpdate\
+3. Unmount (when component is removed from the dom ie delete counter) phase has one lifecycle hook: componentWillUnmount\
+\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Mounting Phase\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3 class\cf4  \cf7 \cb3 App\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\cb3   state = \{\};\cb1 \
+\
+\cf6 \cb3   constructor\cf4 () \{\cb1 \
+\cb3 	\cf6 super\cf4 ();\cb1 \
+\cb3 	console.log(\cf8 \cb3 \'91\cf7 \cb3 App\cf4 \cb3  - \cf7 \cb3 Constructor\cf8 \cb3 \'92\cf4 \cb3 ); \cb1 \
+\cb3   \}\cb1 \
+\
+\cb3   componentDidMount() \{\cb1 \
+\cb3 	\cf2 \cb3 // Fetch data from somewhere with Ajax call\cf4 \cb1 \
+\cb3 	\cf6 this\cf4 .setState(\{ data \})\cb1 \
+\cb3 	console.log(\cf8 \cb3 \'91\cf7 \cb3 App\cf4 \cb3  - \cf7 \cb3 Mounted\cf8 \cb3 \'92\cf4 \cb3 );\cb1 \
+\cb3   \}\cb1 \
+\cb3 \} \cb1 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf10 ** The order goes like this: constructor, render, componentDidMount\cf4 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Updating Phase\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3 class\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\cb3   componentDidUpdate(prevProps) \{\cb1 \
+\cb3 	\cf6 if\cf4  (prevProps.counter.value !== \cf6 this\cf4 .props.counter.value \{\cb1 \
+\cb3 	  \cf2 \cb3 // We can make an Ajax call to get updated data from server\cf4 \cb1 \
+\cb3 	\}\cb1 \
+\cb3 	\cf8 \cb3 \'85\cf4 \cb1 \
+\cb3   \}\cb1 \
+\cb3 \}\cb1 \
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 // Unmounting Phase\cf4 \
+\pard\pardeftab720\sl420\partightenfactor0
+\cf6 \cb3 class\cf4  \cf7 \cb3 Counter\cf4 \cb3  \cf6 extends\cf4  \cf7 \cb3 Component\cf4 \cb3  \{\cb1 \
+\cb3   componentDidUpdate(prevProps) \{\cb1 \
+\cb3 	\cf6 if\cf4  (prevProps.counter.value !== \cf6 this\cf4 .props.counter.value \{\cb1 \
+\cb3 	  \cf2 \cb3 // We can make an Ajax call to get updated data from server\cf4 \cb1 \
+\cb3 	\}\cb1 \
+\cb3 	\cf8 \cb3 \'85\cf4 \cb1 \
+\cb3   \}\
+\
+  componentWillUnmount() \{\cb1 \
+\cb3 	\cf9 \cb1 // For example, when we delete a counter, we can do something like clear 	event listeners or any kind of cleanup before this component is removed from the dom\cf4 \
+\cb3   \}\cb1 \
+\cb3 \}\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+\cf9 \cb3 // React-Router-Dom\
+  // npm install react-router-dom\cf4 \cb3 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screen Shot 2020-07-09 at 1.57.50 PM.png \width12260 \height11220 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+
+\f0\fs28 \cf11 // HOOKS\cf0 \
+\
+useEffect(() => console.log(\'91testing\'92, []) with a 2nd argument set as an empty array is the equivalent of componentDidMount()}
