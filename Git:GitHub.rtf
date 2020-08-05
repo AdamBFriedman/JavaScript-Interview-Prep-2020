@@ -1,7 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf2513
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red127\green127\blue127;}
-{\*\expandedcolortbl;;\cssrgb\c57046\c57047\c57046;}
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red127\green127\blue127;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c57046\c57047\c57046;\csgray\c0;}
 \margl1440\margr1440\vieww10800\viewh16960\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
@@ -14,6 +14,7 @@ GIT is a Version Control System (VCS) for tracking changes in computer files.\
 -You can revert back at any time\
 -Local and remote repos\
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 \cf2 // Concepts of Git\cf0 \
 -Keeps track of code history\
 -Takes \'93snapshots\'94 of your files\
@@ -61,4 +62,11 @@ $ git clone		\cf2 // Clone Repository into a New Directory\cf0 \
 \cf2 // Merge Branch to Master\cf0 \
 1. In Master, run: git merge branchName\
 \
+\cf2 // Use curl to create new repo on GitHub\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf3 \CocoaLigature0 curl -u \'93<\'93GITHUB_USERNAME\'94> https://api.github.com/user/repos -d '\{"name\'94:\'94<REPO_NAME>\'94\}\'92
+\f0\fs24 \cf0 \CocoaLigature1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
 }
